@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case study</title>
+<meta name="theme-color" content="#fafcfd" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;450;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html"><span class="brand__dot"></span><span data-name>&nbsp;</span></a>
+      <div class="menu">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#experience" data-hide>Experience</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap" id="content"><!-- rendered --></main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__big">Let's build<br><span>something good.</span></div>
+        <div class="foot__links" data-socials></div>
+      </div>
+      <div class="foot__legal">Designed + built by <span data-name>&nbsp;</span> · © <span data-year></span></div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script>
+  const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+  const esc = (s='') => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  async function loadJSON(path){
+    const r = await fetch(path, {cache:'no-store'});
+    if(!r.ok) throw new Error('Failed to load '+path);
+    return r.json();
+  }
+
+  function renderChrome(site){
+    document.querySelectorAll('[data-name]').forEach(el => el.textContent = site.name || 'Your Name');
+    document.querySelector('[data-year]').textContent = new Date().getFullYear();
+    const soc = document.querySelector('[data-socials]');
+    if(soc){
+      const links = (site.socials || []).map(l =>
+        '<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' '+ARROW+'</a>');
+      if(site.email) links.push('<a href="mailto:'+esc(site.email)+'">Email '+ARROW+'</a>');
+      soc.innerHTML = links.join('');
+    }
+  }
+
+  function fact(label, value){
+    if(!value) return '';
+    return '<div><div class="fact__label">'+esc(label)+'</div><div class="fact__value">'+esc(value)+'</div></div>';
+  }
+
+  function renderCase(p, next, siteName){
+    document.title = (p.title || 'Case study') + (siteName ? ' — ' + siteName : '');
+    const el = document.getElementById('content');
+
+    const facts =
+      fact('Role', p.role) +
+      fact('Timeline', p.timeline) +
+      (Array.isArray(p.tools) && p.tools.length
+        ? '<div><div class="fact__label">Tools</div><div class="fact__value">'+p.tools.map(esc).join(', ')+'</div></div>'
+        : '');
+
+    const cover = p.cover
+      ? '<div class="case__cover" data-reveal><img src="'+esc(p.cover)+'" alt="'+esc(p.title)+'" /></div>' : '';
+
+    const bodyHTML = p.body ? marked.parse(p.body) : '<p>Case study coming soon.</p>';
+
+    const nextBlock = next
+      ? '<div class="case__nextwrap"><a class="case__next" href="work.html#'+encodeURIComponent(next.slug)+'">'
+        + '<div><div class="lbl">Next project</div><div class="ttl">'+esc(next.title)+'</div></div>'
+        + '<span class="proj__go">'+ARROW+'</span></a></div>'
+      : '';
+
+    el.innerHTML =
+      '<div class="case">'
+      + '<a class="back" href="index.html#work"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> All work</a>'
+      + '<header class="case__head">'
+      +   '<div class="case__tagrow"><span class="case__tag">'+esc(p.tag||'Project')+'</span><span class="case__metatop">'+esc(p.meta||'')+'</span></div>'
+      +   '<h1 class="case__title">'+esc(p.title||'')+'</h1>'
+      +   (p.summary ? '<p class="case__summary">'+esc(p.summary)+'</p>' : '')
+      +   (facts ? '<div class="case__facts">'+facts+'</div>' : '')
+      + '</header>'
+      + cover
+      + '<article class="prose" data-reveal>'+bodyHTML+'</article>'
+      + nextBlock
+      + '</div>';
+  }
+
+  function renderNotFound(){
+    document.title = 'Not found';
+    document.getElementById('content').innerHTML =
+      '<div class="notfound"><h1>Project not found</h1><p>That case study doesn\'t exist yet.</p>'
+      + '<p style="margin-top:20px"><a href="index.html#work">Back to all work</a></p></div>';
+  }
+
+  function setupNav(){
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+  }
+  function setupReveal(){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.08, rootMargin:'0px 0px -6% 0px'});
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+  }
+
+  window.addEventListener('hashchange', () => location.reload());
+
+  (async function init(){
+    try{
+      const slug = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+      const [site, proj] = await Promise.all([ loadJSON('data/site.json'), loadJSON('data/projects.json') ]);
+      renderChrome(site);
+      const list = proj.projects || [];
+      const idx = list.findIndex(p => p.slug === slug);
+      if(idx === -1){ renderNotFound(); }
+      else {
+        const next = list[(idx + 1) % list.length];
+        renderCase(list[idx], list.length > 1 ? next : null, site.name);
+      }
+    }catch(err){
+      console.error(err); renderNotFound();
+    }finally{
+      document.body.classList.add('ready');
+      setupNav(); setupReveal();
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio</title>
+<meta name="description" content="Product designer & engineer." />
+<meta name="theme-color" content="#fafcfd" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;450;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top"><span class="brand__dot"></span><span data-name>&nbsp;</span></a>
+      <div class="menu">
+        <a href="#work" class="is-active">Work</a>
+        <a href="#experience" data-hide>Experience</a>
+        <a href="#" data-role="resume">Résumé</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow" data-reveal><span class="live"></span><span data-eyebrow></span></span>
+      <h1 class="display" data-reveal data-headline></h1>
+      <div class="hero__meta" data-reveal data-meta></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="experience" data-reveal>
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__label">Experience</span>
+          <span class="section__note">Most recent first</span>
+        </div>
+        <div data-experience></div>
+      </div>
+    </section>
+
+    <section class="section" id="work" data-reveal>
+      <div class="wrap">
+        <div class="section__head">
+          <span class="section__label">Selected work</span>
+          <span class="section__note" data-work-range></span>
+        </div>
+        <div class="grid" data-projects></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__big" data-reveal>Let's build<br><span>something good.</span></div>
+        <div class="foot__links" data-reveal data-socials></div>
+      </div>
+      <div class="foot__legal">Designed + built by <span data-name>&nbsp;</span> · © <span data-year></span></div>
+    </div>
+  </footer>
+
+<script>
+  const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+  const esc = (s='') => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  async function loadJSON(path){
+    const r = await fetch(path, {cache:'no-store'});
+    if(!r.ok) throw new Error('Failed to load '+path);
+    return r.json();
+  }
+
+  function renderSite(s){
+    document.querySelectorAll('[data-name]').forEach(el => el.textContent = s.name || 'Your Name');
+    document.title = (s.name ? s.name + ' — ' : '') + (s.role_title || 'Product Designer + Engineer');
+    const eb = document.querySelector('[data-eyebrow]');
+    if(eb) eb.textContent = s.eyebrow || '';
+    document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+    const h = document.querySelector('[data-headline]');
+    if(h){
+      const lead = esc(s.headline_lead || '');
+      const soft = s.headline_soft ? ' <span class="soft">'+esc(s.headline_soft)+'</span>' : '';
+      const acc  = s.headline_accent ? ' <em>'+esc(s.headline_accent)+'</em>' : '';
+      h.innerHTML = lead + soft + acc;
+    }
+
+    const meta = document.querySelector('[data-meta]');
+    if(meta && Array.isArray(s.meta)){
+      meta.innerHTML = s.meta.map((m,i) =>
+        (i ? '<span class="dot" aria-hidden="true"></span>' : '') +
+        '<span>'+esc(m.text || m)+'</span>'
+      ).join('');
+    }
+
+    const res = document.querySelector('[data-role="resume"]');
+    if(res){ if(s.resume_url){ res.href = s.resume_url; } else { res.remove(); } }
+
+    const soc = document.querySelector('[data-socials]');
+    if(soc){
+      const links = (s.socials || []).map(l =>
+        '<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' '+ARROW+'</a>'
+      );
+      if(s.email) links.push('<a href="mailto:'+esc(s.email)+'">Email '+ARROW+'</a>');
+      soc.innerHTML = links.join('');
+    }
+  }
+
+  function renderExperience(roles){
+    const wrap = document.querySelector('[data-experience]');
+    if(!wrap) return;
+    wrap.innerHTML = roles.map(r => {
+      const tag = r.url ? 'a' : 'div';
+      const href = r.url ? ' href="'+esc(r.url)+'" target="_blank" rel="noopener"' : '';
+      return '<'+tag+' class="xp__row"'+href+'>'
+        + '<span class="xp__year">'+esc(r.year)+'</span>'
+        + '<span class="xp__co">'+esc(r.company)+'</span>'
+        + '<span class="xp__role"><span class="r-text" data-hide>'+esc(r.role)+'</span>'
+        + '<span class="xp__arrow">'+ARROW+'</span></span>'
+        + '</'+tag+'>';
+    }).join('');
+  }
+
+  function renderProjects(list){
+    const grid = document.querySelector('[data-projects]');
+    if(!grid) return;
+    grid.innerHTML = list.map(p =>
+      '<a class="proj" href="work.html#'+encodeURIComponent(p.slug || '')+'">'
+      + '<span class="proj__tag">'+esc(p.tag || 'Project')+'</span>'
+      + '<div class="proj__body">'
+      +   '<h3 class="proj__title">'+esc(p.title || '')+'</h3>'
+      +   '<div class="proj__foot">'
+      +     '<span class="proj__meta">'+esc(p.meta || '')+'</span>'
+      +     '<span class="proj__go">'+ARROW+'</span>'
+      +   '</div>'
+      + '</div>'
+      + '</a>'
+    ).join('');
+
+    // derive year range for the section note
+    const years = list.map(p => (p.meta||'').match(/\d{4}/)).filter(Boolean).map(m => +m[0]);
+    const note = document.querySelector('[data-work-range]');
+    if(note && years.length){
+      const lo = Math.min(...years), hi = Math.max(...years);
+      note.textContent = lo === hi ? String(hi) : lo + ' — ' + hi;
+    }
+  }
+
+  function setupNav(){
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+  }
+
+  function setupReveal(){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if(e.isIntersecting){
+          e.target.style.transitionDelay = e.target.dataset.delay || (i*60)+'ms';
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('[data-reveal]').forEach((el, i) => {
+      if(el.closest('.hero')) el.dataset.delay = (i*110)+'ms';
+      io.observe(el);
+    });
+  }
+
+  (async function init(){
+    try{
+      const [site, exp, proj] = await Promise.all([
+        loadJSON('data/site.json'),
+        loadJSON('data/experience.json'),
+        loadJSON('data/projects.json'),
+      ]);
+      renderSite(site);
+      renderExperience(exp.roles || []);
+      renderProjects((proj.projects || []).filter(p => p.featured !== false));
+    }catch(err){
+      console.error(err);
+    }finally{
+      document.body.classList.add('ready');
+      setupNav();
+      setupReveal();
+    }
+  })();
+</script>
+</body>
+</html>
