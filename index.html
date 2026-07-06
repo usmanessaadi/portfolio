@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +39,20 @@
       </div>
     </div>
   </header>
+
+  <section class="slider" data-reveal>
+    <div class="slider__frame" id="sliderFrame">
+      <img class="slider__img is-active" src="assets/img/slides/01.webp" alt="" />
+      <img class="slider__img" src="assets/img/slides/02.webp" alt="" />
+      <img class="slider__img" src="assets/img/slides/03.webp" alt="" />
+      <img class="slider__img" src="assets/img/slides/04.webp" alt="" />
+      <button class="slider__btn" id="sliderToggle" type="button" aria-label="Pause slideshow" aria-pressed="false">
+        <svg class="slider__ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20"/></svg>
+        <svg class="slider__icon slider__icon--pause" viewBox="0 0 10 12"><rect x="0" y="0" width="3" height="12"/><rect x="7" y="0" width="3" height="12"/></svg>
+        <svg class="slider__icon slider__icon--play" viewBox="0 0 10 12"><path d="M0 0 L10 6 L0 12 Z"/></svg>
+      </button>
+    </div>
+  </section>
 
   <main>
     <section class="section" id="experience" data-reveal>
@@ -161,6 +176,51 @@
     }
   }
 
+  function setupSlider(){
+    const frame = document.getElementById('sliderFrame');
+    if(!frame) return;
+    const imgs = Array.from(frame.querySelectorAll('.slider__img'));
+    const btn = document.getElementById('sliderToggle');
+    const ring = frame.querySelector('.slider__ring');
+    if(!imgs.length || !btn || !ring) return;
+
+    const DURATION = 4000;
+    let idx = 0, timer = null, paused = false;
+
+    function restartRing(){
+      ring.classList.remove('is-animating');
+      void ring.offsetWidth;
+      ring.classList.add('is-animating');
+    }
+    function goTo(next){
+      imgs[idx].classList.remove('is-active');
+      idx = next;
+      imgs[idx].classList.add('is-active');
+    }
+    function tick(){
+      if(paused) return;
+      goTo((idx + 1) % imgs.length);
+      restartRing();
+      timer = setTimeout(tick, DURATION);
+    }
+
+    restartRing();
+    timer = setTimeout(tick, DURATION);
+
+    btn.addEventListener('click', () => {
+      paused = !paused;
+      btn.classList.toggle('is-paused', paused);
+      btn.setAttribute('aria-pressed', String(paused));
+      btn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+      if(paused){
+        clearTimeout(timer);
+      } else {
+        restartRing();
+        timer = setTimeout(tick, DURATION);
+      }
+    });
+  }
+
   function setupNav(){
     const nav = document.getElementById('nav');
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
@@ -200,6 +260,7 @@
       document.body.classList.add('ready');
       setupNav();
       setupReveal();
+      setupSlider();
     }
   })();
 </script>
