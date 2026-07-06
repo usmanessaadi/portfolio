@@ -93,6 +93,7 @@ img{max-width:100%;display:block}
 
 /* ---------- hero (Figma exact, 100vh) ---------- */
 .hero{
+  position:relative;
   background:#121417;
   color:#fdfdfd;
   overflow:hidden;
@@ -103,6 +104,8 @@ img{max-width:100%;display:block}
   box-sizing:border-box;
 }
 .hero__inner{
+  position:relative;
+  z-index:1;
   width:100%;
   max-width:1521.5px;
   margin:0 auto;
@@ -181,6 +184,86 @@ h1.display em{
   object-fit:cover;
   display:block;
 }
+
+/* ---------- hero background effects ---------- */
+.hero__fx{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+
+.hero__blob{
+  position:absolute;
+  width:56vw;
+  height:56vw;
+  max-width:820px;
+  max-height:820px;
+  border-radius:50%;
+  filter:blur(90px);
+  mix-blend-mode:screen;
+  will-change:transform;
+}
+.hero__blob--a{
+  top:-18%;
+  left:-12%;
+  background:radial-gradient(circle at 30% 30%,#aea8fe,transparent 70%);
+  opacity:.32;
+  animation:heroBlobA 26s ease-in-out infinite;
+}
+.hero__blob--b{
+  bottom:-22%;
+  right:-12%;
+  background:radial-gradient(circle at 70% 40%,#ebe1b0,transparent 70%);
+  opacity:.28;
+  animation:heroBlobB 32s ease-in-out infinite;
+}
+.hero__blob--c{
+  top:28%;
+  right:18%;
+  width:38vw;
+  height:38vw;
+  max-width:560px;
+  max-height:560px;
+  background:radial-gradient(circle at 50% 50%,#4aa36c,transparent 72%);
+  opacity:.16;
+  animation:heroBlobC 40s ease-in-out infinite;
+}
+@keyframes heroBlobA{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(6%,8%) scale(1.08)}
+}
+@keyframes heroBlobB{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(-7%,-6%) scale(1.1)}
+}
+@keyframes heroBlobC{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(-5%,9%) scale(.95)}
+}
+
+.hero__grain{
+  position:absolute;
+  inset:-20px;
+  opacity:.05;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+}
+
+.hero__glow{
+  position:absolute;
+  width:520px;
+  height:520px;
+  left:calc(var(--x, 50%) - 260px);
+  top:calc(var(--y, 40%) - 260px);
+  background:radial-gradient(circle,rgba(174,168,254,.20),transparent 70%);
+  border-radius:50%;
+  opacity:0;
+  transition:opacity .4s var(--ease);
+}
+.hero:hover .hero__glow{opacity:1}
 
 /* ---------- image slider ---------- */
 .slider{
