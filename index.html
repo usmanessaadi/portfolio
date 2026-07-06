@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;450;500;600;700;800&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -30,12 +29,12 @@
 
   <header class="hero" id="top">
     <div class="hero__inner">
-      <div class="hero__col">
-        <h1 class="display" data-reveal data-headline></h1>
+      <h1 class="display" data-reveal data-headline></h1>
+      <div class="hero__bottom">
         <div class="hero__meta" data-reveal data-meta></div>
-      </div>
-      <div class="hero__photo" data-reveal>
-        <img src="assets/img/portrait.webp" alt="Portrait of Otmane Essaadi" loading="eager" />
+        <div class="hero__photo" data-reveal>
+          <img src="assets/img/portrait.webp" alt="Portrait of Otmane Essaadi" loading="eager" />
+        </div>
       </div>
     </div>
   </header>
@@ -91,7 +90,7 @@
     const navCta = document.querySelector('[data-nav-cta]');
     if(navCta && s.email) navCta.href = 'mailto:' + s.email;
 
-   const h = document.querySelector('[data-headline]');
+    const h = document.querySelector('[data-headline]');
     if(h){
       const pre  = esc(s.headline_pre || '');
       const city = s.headline_city ? '<em>'+esc(s.headline_city)+'</em>' : '';
@@ -205,4 +204,4 @@
   })();
 </script>
 </body>
-</html>>
+</html>

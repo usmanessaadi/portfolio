@@ -1,35 +1,14 @@
 {
   "meta_grid": [
-    {
-      "label": "Based",
-      "value": "Marrakech, Morocco"
-    },
-    {
-      "label": "Focus",
-      "value": "Product UX/UI, Design Systems"
-    },
-    {
-      "label": "Languages",
-      "value": "English, French, Arabic"
-    },
-    {
-      "label": "Open for",
-      "value": "Smaller freelance work"
-    }
+    { "label": "Based", "value": "Marrakech, Morocco" },
+    { "label": "Focus", "value": "Product UX/UI, Design Systems" },
+    { "label": "Languages", "value": "English, French, Arabic" },
+    { "label": "Open for", "value": "Smaller freelance work" }
   ],
   "socials": [
-    {
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/usmanessaadi/"
-    },
-    {
-      "label": "X",
-      "url": "https://x.com/EssaadiU"
-    },
-    {
-      "label": "GitHub",
-      "url": "https://github.com/usmanessaadi"
-    }
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/usmanessaadi/" },
+    { "label": "X", "url": "https://x.com/EssaadiU" },
+    { "label": "GitHub", "url": "https://github.com/usmanessaadi" }
   ],
   "headline_pre": "Designer based in ",
   "headline_city": "Marrakech",
