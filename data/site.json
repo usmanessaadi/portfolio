@@ -31,12 +31,16 @@
       "url": "https://github.com/usmanessaadi"
     }
   ],
-  "headline_lead": "I design the thing,",
+  "headline_pre": "Designer based in ",
+  "headline_city": "Marrakech",
+  "headline_lines": [
+    "Shaping digital products,",
+    "websites and design systems",
+    "with clarity and character."
+  ],
   "eyebrow": "UX/UI Designer · open for 2026",
   "name": "Otmane Essaadi",
   "role_title": "UX/UI Designer ",
-  "headline_accent": "build it.",
-  "headline_soft": "then I",
   "email": "mrotmanessaadi@gmail.com",
   "resume_url": "https://drive.google.com/file/d/16vMfSImp61lLP7h5ARGm9ZMyYeIUetr_/view?usp=sharing"
 }

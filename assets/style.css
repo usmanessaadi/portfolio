@@ -1,6 +1,6 @@
 /* ============================================================
    Portfolio — shared styles
-   Manrope · cool off-white (#fafcfd) · restrained green accent
+   Instrument Sans (body/UI) · Newsreader (headline) · cool off-white (#fafcfd) · restrained green accent
    ============================================================ */
 
 :root{
@@ -22,8 +22,8 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
   background:var(--bg);
   color:var(--ink);
-  font-family:"Manrope",system-ui,sans-serif;
-  font-weight:500;
+  font-family:"Instrument Sans",system-ui,sans-serif;
+  font-weight:400;
   line-height:1.55;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
@@ -106,8 +106,6 @@ img{max-width:100%;display:block}
 .hero__col{
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  height:100%;
   max-width:900px;
 }
 h1.display{
@@ -120,7 +118,6 @@ h1.display{
   letter-spacing:-4.08px;
   color:#fdfdfd;
 }
-h1.display .soft{color:rgba(253,253,253,.65)}
 h1.display em{
   font-family:"Newsreader","Georgia",serif;
   font-style:italic;
@@ -135,7 +132,7 @@ h1.display em{
 }
 
 .hero__meta{
-  margin-top:80px;
+  margin-top:160px;
   display:grid;
   grid-template-columns:repeat(2,320.88px);
   column-gap:25.5px;

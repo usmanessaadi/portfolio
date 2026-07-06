@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portfolio</title>
 <meta name="description" content="Product designer & engineer." />
-<meta name="theme-color" content="#121417" />
+<meta name="theme-color" content="#fafcfd" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;450;500;600;700;800&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -30,11 +31,11 @@
   <header class="hero" id="top">
     <div class="hero__inner">
       <div class="hero__col">
-        <h1 class="display" data-headline></h1>
-        <div class="hero__meta" data-meta></div>
+        <h1 class="display" data-reveal data-headline></h1>
+        <div class="hero__meta" data-reveal data-meta></div>
       </div>
-      <div class="hero__photo">
-        <img src="assets/img/portrait.jpg" alt="Portrait of Otmane Essaadi" loading="eager" />
+      <div class="hero__photo" data-reveal>
+        <img src="assets/img/portrait.webp" alt="Portrait of Otmane Essaadi" loading="eager" />
       </div>
     </div>
   </header>
@@ -90,12 +91,12 @@
     const navCta = document.querySelector('[data-nav-cta]');
     if(navCta && s.email) navCta.href = 'mailto:' + s.email;
 
-    const h = document.querySelector('[data-headline]');
+   const h = document.querySelector('[data-headline]');
     if(h){
-      const lead = esc(s.headline_lead || '');
-      const soft = s.headline_soft ? ' <span class="soft">'+esc(s.headline_soft)+'</span>' : '';
-      const acc  = s.headline_accent ? ' <em>'+esc(s.headline_accent)+'</em>' : '';
-      h.innerHTML = lead + soft + acc;
+      const pre  = esc(s.headline_pre || '');
+      const city = s.headline_city ? '<em>'+esc(s.headline_city)+'</em>' : '';
+      const lines = Array.isArray(s.headline_lines) ? s.headline_lines.map(esc) : [];
+      h.innerHTML = pre + city + '.' + (lines.length ? '<br>' + lines.join('<br>') : '');
     }
 
     const meta = document.querySelector('[data-meta]');
@@ -204,4 +205,4 @@
   })();
 </script>
 </body>
-</html>
+</html>>
