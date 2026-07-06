@@ -27,7 +27,7 @@ auth:
   avatar_url_claim: avatar_url
 
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
-site_url: https://otmanessaadi.pages.dev
+site_url: https://otmane.design/
 
 # Lets you preview the CMS locally with `npx decap-server`
 local_backend: true
