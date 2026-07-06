@@ -1,56 +1,71 @@
 {
   "projects": [
     {
-      "title": "An ambient interface for AI hardware",
-      "slug": "ambient-ai",
-      "tag": "Concept",
-      "meta": "Personal · 2025",
-      "featured": true,
-      "summary": "A calm, screen-optional companion device that surfaces the right thing at the right moment instead of demanding attention.",
-      "role": "Design + prototyping",
       "timeline": "6 weeks",
-      "tools": ["Figma", "SwiftUI", "Rive"],
-      "cover": "",
-      "body": "## The problem\n\nMost AI hardware borrows the phone's playbook: a screen, a feed, a stream of notifications. That's exactly the interaction model people say they want less of.\n\nThe goal here was to design a device that earns its place on the desk by staying quiet until it has something genuinely useful to say.\n\n## Approach\n\n- Mapped the moments where a glanceable cue beats a full screen\n- Prototyped an ambient light + audio language for status\n- Tested three escalation levels, from a soft glow to a spoken summary\n\n## What I learned\n\nRestraint is a feature. The version people trusted most was the one that interrupted least.\n\n> Replace this placeholder with your real write-up — the CMS gives you a full rich-text editor for headings, images, lists, and quotes."
-    },
-    {
-      "title": "Rethinking onboarding for a fintech app",
-      "slug": "fintech-onboarding",
-      "tag": "Shipped",
-      "meta": "Contract · 2025",
+      "body": "## The problem\n\nMost AI hardware borrows the phone's playbook: a screen, a feed, a stream of notifications. That's exactly the interaction model people say they want less of.\n\nThe goal here was to design a device that earns its place on the desk by staying quiet until it has something genuinely useful to say.\n\n## Approach\n\n- Mapped the moments where a glanceable cue beats a full screen\n- Prototyped an ambient light + audio language for status\n- Tested three escalation levels, from a soft glow to a spoken summary\n\n## What I learned\n\nRestraint is a feature. The version people trusted most was the one that interrupted least.\n\n> Replace this placeholder with your real write-up — the CMS gives you a full rich-text editor for headings, images, lists, and quotes.",
+      "meta": "Personal · 2025",
+      "summary": "A calm, screen-optional companion device that surfaces the right thing at the right moment instead of demanding attention.",
+      "slug": "ambient-ai",
       "featured": true,
-      "summary": "Cut a 9-step signup down to 4 without losing a single compliance requirement, lifting activation meaningfully.",
-      "role": "Product design + front-end",
-      "timeline": "3 months",
-      "tools": ["Figma", "React", "TypeScript"],
-      "cover": "",
-      "body": "## Context\n\nThe original flow asked for everything up front. People dropped off before they ever saw the product.\n\n## What changed\n\n- Deferred non-essential steps until after first value\n- Rebuilt the form components for inline validation\n- Instrumented each step so drop-off was finally visible\n\nSwap this text for your real case study whenever you're ready."
-    },
-    {
-      "title": "A smarter way to triage support tickets",
-      "slug": "support-triage",
-      "tag": "Patent-pending",
-      "meta": "Handed off · 2024",
-      "featured": true,
-      "summary": "An assistive model that clusters and routes incoming tickets, giving agents a running head start on every conversation.",
       "role": "Design + prototyping",
-      "timeline": "4 months",
-      "tools": ["Figma", "Python"],
       "cover": "",
-      "body": "## Overview\n\nPlaceholder case study. Describe the problem, your process, and the outcome here."
+      "title": "An ambient interface for AI hardware",
+      "tag": "Concept",
+      "tools": [
+        "Figma",
+        "SwiftUI",
+        "Rive"
+      ]
     },
     {
-      "title": "Bringing a design system to native mobile",
-      "slug": "design-system-mobile",
-      "tag": "Shipped",
-      "meta": "Open source · 2025",
+      "timeline": "3 months",
+      "body": "## Context\n\nThe original flow asked for everything up front. People dropped off before they ever saw the product.\n\n## What changed\n\n- Deferred non-essential steps until after first value\n- Rebuilt the form components for inline validation\n- Instrumented each step so drop-off was finally visible\n\nSwap this text for your real case study whenever you're ready.",
+      "meta": "Contract · 2025",
+      "summary": "Cut a 9-step signup down to 4 without losing a single compliance requirement, lifting activation meaningfully.",
+      "slug": "fintech-onboarding",
       "featured": true,
-      "summary": "Ported a web-first component library to iOS and Android with a shared token pipeline so both platforms stay in sync.",
-      "role": "Design engineering",
-      "timeline": "Ongoing",
-      "tools": ["Figma", "SwiftUI", "Jetpack Compose"],
+      "role": "Product design + front-end",
+      "cover": "/assets/uploads/hero-mockup-2.png",
+      "title": "Rethinking onboarding for a fintech app",
+      "tag": "Shipped",
+      "tools": [
+        "Figma",
+        "React",
+        "TypeScript"
+      ]
+    },
+    {
+      "timeline": "4 months",
+      "body": "## Overview\n\nPlaceholder case study. Describe the problem, your process, and the outcome here.",
+      "meta": "Handed off · 2024",
+      "summary": "An assistive model that clusters and routes incoming tickets, giving agents a running head start on every conversation.",
+      "slug": "support-triage",
+      "featured": true,
+      "role": "Design + prototyping",
       "cover": "",
-      "body": "## Overview\n\nPlaceholder case study. Replace with your real work."
+      "title": "A smarter way to triage support tickets",
+      "tag": "Patent-pending",
+      "tools": [
+        "Figma",
+        "Python"
+      ]
+    },
+    {
+      "timeline": "Ongoing",
+      "body": "## Overview\n\nPlaceholder case study. Replace with your real work.",
+      "meta": "Open source · 2025",
+      "summary": "Ported a web-first component library to iOS and Android with a shared token pipeline so both platforms stay in sync.",
+      "slug": "design-system-mobile",
+      "featured": true,
+      "role": "Design engineering",
+      "cover": "",
+      "title": "Bringing a design system to native mobile",
+      "tag": "Shipped",
+      "tools": [
+        "Figma",
+        "SwiftUI",
+        "Jetpack Compose"
+      ]
     }
   ]
 }
