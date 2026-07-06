@@ -1,0 +1,103 @@
+# ============================================================
+#  Decap CMS configuration
+#  Edit the two placeholders below after you create the repo.
+# ============================================================
+
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   # <-- change this
+  branch: main
+  # --- Auth (recommended: DecapBridge, free) -----------------
+  # After signing up at https://decapbridge.com and connecting
+  # this repo, DecapBridge gives you two URLs. Uncomment the
+  # lines below, switch name to "git-gateway", and paste them:
+  #
+  # name: git-gateway
+  # identity_url: https://auth.decapbridge.com/sites/YOUR_SITE_ID
+  # gateway_url: https://gateway.decapbridge.com
+
+# Lets you preview the CMS locally with `npx decap-server`
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Nicer commit messages in your Git history
+commit_messages:
+  create: 'Add {{collection}} "{{slug}}"'
+  update: 'Update {{collection}} "{{slug}}"'
+  delete: 'Delete {{collection}} "{{slug}}"'
+  uploadMedia: 'Upload "{{path}}"'
+  deleteMedia: 'Delete "{{path}}"'
+
+collections:
+  - name: content
+    label: Content
+    files:
+      # ---------- Site settings ----------
+      - name: site
+        label: Site settings
+        file: data/site.json
+        fields:
+          - { name: name, label: Your name, widget: string }
+          - { name: role_title, label: Role (for browser tab), widget: string, required: false }
+          - { name: eyebrow, label: Eyebrow / availability line, widget: string }
+          - { name: headline_lead, label: Headline — main part, widget: string }
+          - { name: headline_soft, label: Headline — muted part, widget: string, required: false }
+          - { name: headline_accent, label: Headline — underlined word(s), widget: string, required: false }
+          - name: meta
+            label: Hero facts (small line under headline)
+            widget: list
+            fields:
+              - { name: text, label: Text, widget: string }
+          - { name: resume_url, label: Résumé link (leave blank to hide), widget: string, required: false }
+          - { name: email, label: Email, widget: string }
+          - name: socials
+            label: Social links
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: URL, widget: string }
+
+      # ---------- Experience ----------
+      - name: experience
+        label: Experience
+        file: data/experience.json
+        fields:
+          - name: roles
+            label: Roles
+            label_singular: Role
+            widget: list
+            summary: '{{fields.year}} — {{fields.company}}'
+            fields:
+              - { name: year, label: Year, widget: string }
+              - { name: company, label: Company, widget: string }
+              - { name: role, label: Role, widget: string }
+              - { name: url, label: Link (optional), widget: string, required: false }
+
+      # ---------- Projects / works ----------
+      - name: projects
+        label: Projects (works)
+        file: data/projects.json
+        fields:
+          - name: projects
+            label: Projects
+            label_singular: Project
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: slug, label: Slug (URL), widget: string, hint: "lowercase, dashes, no spaces — e.g. fintech-onboarding" }
+              - { name: tag, label: Tag, widget: string, hint: "e.g. Shipped, Concept, Patent-pending" }
+              - { name: meta, label: Meta line, widget: string, hint: "e.g. Contract · 2025" }
+              - { name: featured, label: Show on homepage, widget: boolean, default: true }
+              - { name: summary, label: Short summary, widget: text, required: false }
+              - { name: role, label: Your role, widget: string, required: false }
+              - { name: timeline, label: Timeline, widget: string, required: false }
+              - name: tools
+                label: Tools
+                widget: list
+                required: false
+                field: { name: tool, label: Tool, widget: string }
+              - { name: cover, label: Cover image (optional), widget: image, required: false }
+              - { name: body, label: Case study, widget: markdown, required: false }

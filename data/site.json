@@ -1,0 +1,20 @@
+{
+  "name": "Senna Cole",
+  "role_title": "Product Designer + Engineer",
+  "eyebrow": "Product designer & engineer · open for 2026",
+  "headline_lead": "I design the thing,",
+  "headline_soft": "then I",
+  "headline_accent": "build it.",
+  "meta": [
+    { "text": "Based in Toronto" },
+    { "text": "5 years shipping product" },
+    { "text": "Figma to production" }
+  ],
+  "resume_url": "",
+  "email": "hello@example.com",
+  "socials": [
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/your-handle" },
+    { "label": "X", "url": "https://x.com/your-handle" },
+    { "label": "GitHub", "url": "https://github.com/your-handle" }
+  ]
+}
