@@ -5,30 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portfolio</title>
 <meta name="description" content="Product designer & engineer." />
-<meta name="theme-color" content="#fafcfd" />
+<meta name="theme-color" content="#121417" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;450;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;450;500;600;700;800&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
   <nav class="nav" id="nav">
-    <div class="wrap nav__inner">
-      <a class="brand" href="#top"><span class="brand__dot"></span><span data-name>&nbsp;</span></a>
-      <div class="menu">
-        <a href="#work" class="is-active">Work</a>
-        <a href="#experience" data-hide>Experience</a>
-        <a href="#" data-role="resume">Résumé</a>
+    <div class="nav__inner">
+      <div class="nav__id">
+        <span class="nav__name" data-name></span>
+        <span class="nav__role" data-role-title></span>
+      </div>
+      <div class="nav__links">
+        <a href="#work">Work</a>
+        <a href="#experience">About</a>
+        <a href="#" class="nav__cta" data-nav-cta>Get in touch</a>
       </div>
     </div>
   </nav>
 
   <header class="hero" id="top">
-    <div class="wrap">
-      <span class="eyebrow" data-reveal><span class="live"></span><span data-eyebrow></span></span>
-      <h1 class="display" data-reveal data-headline></h1>
-      <div class="hero__meta" data-reveal data-meta></div>
+    <div class="hero__inner">
+      <div class="hero__col">
+        <h1 class="display" data-headline></h1>
+        <div class="hero__meta" data-meta></div>
+      </div>
+      <div class="hero__photo">
+        <img src="assets/img/portrait.jpg" alt="Portrait of Otmane Essaadi" loading="eager" />
+      </div>
     </div>
   </header>
 
@@ -77,9 +84,11 @@
   function renderSite(s){
     document.querySelectorAll('[data-name]').forEach(el => el.textContent = s.name || 'Your Name');
     document.title = (s.name ? s.name + ' — ' : '') + (s.role_title || 'Product Designer + Engineer');
-    const eb = document.querySelector('[data-eyebrow]');
-    if(eb) eb.textContent = s.eyebrow || '';
+    document.querySelectorAll('[data-role-title]').forEach(el => el.textContent = s.role_title || '');
     document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+    const navCta = document.querySelector('[data-nav-cta]');
+    if(navCta && s.email) navCta.href = 'mailto:' + s.email;
 
     const h = document.querySelector('[data-headline]');
     if(h){
@@ -90,10 +99,12 @@
     }
 
     const meta = document.querySelector('[data-meta]');
-    if(meta && Array.isArray(s.meta)){
-      meta.innerHTML = s.meta.map((m,i) =>
-        (i ? '<span class="dot" aria-hidden="true"></span>' : '') +
-        '<span>'+esc(m.text || m)+'</span>'
+    if(meta && Array.isArray(s.meta_grid)){
+      meta.innerHTML = s.meta_grid.map(m =>
+        '<div class="hero__meta-item">'
+        + '<span class="hero__meta-label">'+esc(m.label || '')+'</span>'
+        + '<span class="hero__meta-value">'+esc(m.value || '')+'</span>'
+        + '</div>'
       ).join('');
     }
 

@@ -1,13 +1,20 @@
 {
-  "meta": [
+  "meta_grid": [
     {
-      "text": "Based in Marrakech"
+      "label": "Based",
+      "value": "Marrakech, Morocco"
     },
     {
-      "text": "6 years designing marketing SaaS websites"
+      "label": "Focus",
+      "value": "Product UX/UI, Design Systems"
     },
     {
-      "text": "Figma to production"
+      "label": "Languages",
+      "value": "English, French, Arabic"
+    },
+    {
+      "label": "Open for",
+      "value": "Smaller freelance work"
     }
   ],
   "socials": [
