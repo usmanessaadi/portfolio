@@ -118,12 +118,12 @@
           <p>Sincerely</p>
         </blockquote>
         <div class="kindwords__footer">
-          <img class="kindwords__signature" src="assets/img/signature.png" alt="Rhami Aboud signature" />
           <div class="kindwords__author">
             <span class="kindwords__author-name">Rhami Aboud</span>
             <span class="kindwords__author-role">Founder &amp; CEO</span>
             <span class="kindwords__author-role">Arch Web Design</span>
           </div>
+          <img class="kindwords__signature" src="assets/img/signature.png" alt="Rhami Aboud signature" />
         </div>
       </div>
     </div>
@@ -218,11 +218,19 @@
     updateClock();
     setInterval(updateClock, 30000);
 
+    const SOCIAL_ICONS = {
+      'linkedin': '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 8.75h4v11.5H3zM9 8.75h3.8v1.57h.05A4.17 4.17 0 0 1 16.6 8.4c4 0 4.75 2.63 4.75 6.05v6.8H17.6v-6.03c0-1.44-.03-3.29-2-3.29s-2.32 1.57-2.32 3.19v6.13H9z"/></svg>',
+      'behance': '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M9.04 5.5c.77 0 1.48.06 2.12.2.64.13 1.2.35 1.64.67.45.31.79.72 1.03 1.23.24.5.36 1.12.36 1.86 0 .8-.18 1.47-.54 2a3.5 3.5 0 0 1-1.54 1.24c.93.27 1.63.74 2.09 1.42.46.67.69 1.48.69 2.42 0 .82-.17 1.52-.5 2.1a4.1 4.1 0 0 1-1.34 1.43c-.56.37-1.2.63-1.91.79-.7.16-1.42.24-2.14.24H2V5.5h7.04zm-.4 6.22c.63 0 1.15-.15 1.55-.45.4-.3.6-.77.6-1.41 0-.35-.06-.64-.19-.88a1.5 1.5 0 0 0-.52-.56 2.1 2.1 0 0 0-.76-.3 4.1 4.1 0 0 0-.9-.09H5v3.69h3.64zm.2 6.52c.34 0 .67-.04.97-.1.31-.07.58-.18.81-.33.24-.16.43-.37.57-.63.14-.26.21-.59.21-.98 0-.78-.22-1.34-.66-1.67-.43-.33-1.01-.5-1.72-.5H5v4.2h3.84zm9.54-1.37c.42.41.97.61 1.72.61.54 0 1-.13 1.39-.39.39-.26.63-.54.72-.83h2.64c-.42 1.3-1.07 2.23-1.95 2.78-.87.55-1.93.83-3.16.83-.86 0-1.63-.14-2.32-.41a5.04 5.04 0 0 1-1.74-1.16 5.23 5.23 0 0 1-1.1-1.78 6.4 6.4 0 0 1-.39-2.26c0-.8.14-1.56.41-2.25.28-.7.67-1.3 1.17-1.8a5.3 5.3 0 0 1 1.77-1.18c.68-.28 1.44-.42 2.27-.42.93 0 1.74.18 2.44.54.7.36 1.27.84 1.72 1.44.44.6.76 1.28.94 2.04.19.77.25 1.57.19 2.41h-7.88c.04.85.3 1.53.72 1.94zm3.02-4.98c-.34-.37-.85-.56-1.52-.56-.44 0-.82.08-1.12.23-.3.15-.55.34-.73.57-.19.22-.32.46-.4.72a3 3 0 0 0-.13.73h4.56c-.1-.73-.32-1.32-.66-1.69z"/></svg>',
+      'dribbble': '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.6 4.84a8.35 8.35 0 0 1 1.9 4.71c-.28-.06-3.06-.62-5.86-.27-.06-.16-.13-.32-.2-.48-.18-.43-.38-.86-.59-1.27 3.13-1.28 4.56-3.11 4.75-3.69zM12 3.67c2.16 0 4.14.79 5.67 2.08-.17.55-1.47 2.26-4.48 3.38A38.5 38.5 0 0 0 9.34 3.9 8.38 8.38 0 0 1 12 3.67zM7.6 4.67a36.6 36.6 0 0 1 3.79 5.18C8.38 10.73 5.5 10.75 5.19 10.75h-.05A8.38 8.38 0 0 1 7.6 4.67zM3.67 12l.03-.3c.29.01 3.73.08 6.88-.96.19.38.38.76.55 1.14-.1.03-.19.06-.28.1-3.26 1.05-5 4.15-5.14 4.4A8.35 8.35 0 0 1 3.67 12zm8.33 8.33c-1.97 0-3.79-.68-5.22-1.81.1-.24 1.41-2.97 4.97-4.2.02 0 .03-.01.05-.01a33.5 33.5 0 0 1 1.72 5.82 8.3 8.3 0 0 1-1.52.2zm3.38-.87A34.9 34.9 0 0 0 13.83 14c2.6-.41 4.88.27 5.16.35a8.37 8.37 0 0 1-3.61 5.11z"/></svg>'
+    };
+
     const socWrap = document.querySelector('[data-contact-socials]');
     if(socWrap && Array.isArray(s.socials)){
-      socWrap.innerHTML = s.socials.map(l =>
-        '<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+'</a>'
-      ).join('');
+      socWrap.innerHTML = s.socials.map(l => {
+        const key = (l.label || '').toLowerCase();
+        const icon = SOCIAL_ICONS[key] || '';
+        return '<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+icon+esc(l.label)+'</a>';
+      }).join('');
     }
 
     const servicesCta = document.querySelector('[data-services-cta]');
@@ -320,27 +328,51 @@
     const ring = frame.querySelector('.slider__ring');
     if(!imgs.length || !btn || !ring) return;
 
-    const DURATION = 4000;
+    const DURATION = 3000;
+    const CIRCUMFERENCE = 126;
     let idx = 0, timer = null, paused = false;
+    let elapsed = 0, lastTs = null, rafId = null;
 
-    function restartRing(){
-      ring.classList.remove('is-animating');
-      void ring.offsetWidth;
-      ring.classList.add('is-animating');
+    ring.style.strokeDasharray = CIRCUMFERENCE;
+    ring.style.strokeDashoffset = CIRCUMFERENCE;
+
+    function animateRing(ts){
+      if(lastTs) elapsed += ts - lastTs;
+      lastTs = ts;
+      const progress = Math.min(elapsed / DURATION, 1);
+      ring.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress);
+      if(progress < 1 && !paused){
+        rafId = requestAnimationFrame(animateRing);
+      }
     }
+
+    function startRing(){
+      if(rafId) cancelAnimationFrame(rafId);
+      elapsed = 0;
+      lastTs = null;
+      ring.style.strokeDashoffset = CIRCUMFERENCE;
+      rafId = requestAnimationFrame(animateRing);
+    }
+
+    function resumeRing(){
+      lastTs = null;
+      rafId = requestAnimationFrame(animateRing);
+    }
+
     function goTo(next){
       imgs[idx].classList.remove('is-active');
       idx = next;
       imgs[idx].classList.add('is-active');
     }
+
     function tick(){
       if(paused) return;
       goTo((idx + 1) % imgs.length);
-      restartRing();
+      startRing();
       timer = setTimeout(tick, DURATION);
     }
 
-    restartRing();
+    startRing();
     timer = setTimeout(tick, DURATION);
 
     btn.addEventListener('click', () => {
@@ -350,9 +382,11 @@
       btn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
       if(paused){
         clearTimeout(timer);
+        if(rafId) cancelAnimationFrame(rafId);
       } else {
-        restartRing();
-        timer = setTimeout(tick, DURATION);
+        resumeRing();
+        const remaining = DURATION - elapsed;
+        timer = setTimeout(tick, remaining);
       }
     });
   }
