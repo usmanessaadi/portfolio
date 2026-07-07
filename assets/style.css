@@ -599,8 +599,8 @@ h1.display em{
 }
 @media (max-width:720px){
   .wrap{padding:0 22px}
-  .nav__inner{padding:16px 22px}
-  h1.display{font-size:44px;line-height:1.1;letter-spacing:-1.5px}
+  .nav__inner{padding:20px}
+  h1.display{font-size:clamp(40px,9vw,60px);line-height:1;letter-spacing:-0.04em}
   .hero__meta{grid-template-columns:1fr}
   .slider{padding-top:32px}
   .slider__btn{right:16px;bottom:16px}
