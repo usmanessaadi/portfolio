@@ -102,6 +102,33 @@
     </div>
   </section>
 
+  <section class="kindwords">
+    <div class="kindwords__wrap">
+      <h2 class="kindwords__heading" data-reveal>Kind words</h2>
+      <div class="kindwords__article" data-reveal>
+        <span class="kindwords__date">June 8, 2026 — reference letter</span>
+        <blockquote class="kindwords__quote">
+          <p>To Whom It May Concern,</p>
+          <p>It's my genuine pleasure to write this reference for Otmane Essaadi. Otmane has been with Arch Web Design since day one, over six years ago, and that alone tells you more than anything I could write in this letter.</p>
+          <p>He joined us as a Junior UX Designer and grew into our Lead Designer role, earning it every step of the way. He has the skills and experience to design any website, app or marketing material you can dream up. Over six years, he's delivered close to 150 projects for our clients.</p>
+          <p>But honestly, what I'll remember most isn't the technical output. It's the person. Otmane is truly an amazing person. He's kind, caring, honest, loyal and truly cares about the work he's putting out. Anytime I reach out to him, he's there and he genuinely loves what he does. That combination, real technical skills plus the kind of character you can actually count on, is something that's extremely hard to find these days. I've been truly grateful to have him on this team.</p>
+          <p>Most recently, Otmane played a key role in our push to integrate AI into our workflows, helping us work smarter and build better. He embraced it fully and made the whole team better for it.</p>
+          <p>The last thing I want to mention is how Otmane embodies all of our company values: love (for our team and our clients), work smarter not harder, proactive, going above and beyond, we not me.</p>
+          <p>Any team that brings Otmane on board is getting someone special. I can't recommend him highly enough.</p>
+          <p>Sincerely</p>
+        </blockquote>
+        <div class="kindwords__footer">
+          <img class="kindwords__signature" src="assets/img/signature.png" alt="Rhami Aboud signature" />
+          <div class="kindwords__author">
+            <span class="kindwords__author-name">Rhami Aboud</span>
+            <span class="kindwords__author-role">Founder &amp; CEO</span>
+            <span class="kindwords__author-role">Arch Web Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="contact">
     <div class="contact__wrap">
       <span class="contact__label" data-reveal>Let's work together</span>
@@ -109,7 +136,15 @@
       <div class="contact__row" data-reveal>
         <div class="contact__meta">
           <span data-contact-credit></span>
-          <span data-contact-location></span>
+          <div class="contact__location">
+            <span data-contact-city></span>
+            <svg class="contact__clock-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ebe1b0"/><stop offset="100%" stop-color="#aea8fe"/></linearGradient></defs>
+              <circle cx="10" cy="10" r="8" stroke="url(#cg)" stroke-width="1.5"/>
+              <path d="M10 6v4l3 2" stroke="url(#cg)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span data-contact-time></span>
+          </div>
         </div>
         <div class="contact__socials" data-contact-socials></div>
       </div>
@@ -164,22 +199,24 @@
     }
 
     const contactEmail = document.querySelector('[data-contact-email]');
-    if(contactEmail && s.email){ contactEmail.href = 'mailto:' + s.email; contactEmail.textContent = s.email; }
+    if(contactEmail){ contactEmail.href = 'mailto:hello@otmane.design'; contactEmail.textContent = 'hello@otmane.design'; }
 
     const credit = document.querySelector('[data-contact-credit]');
     if(credit) credit.textContent = 'Designed and built by ' + (s.name || '');
 
-    const locEl = document.querySelector('[data-contact-location]');
-    if(locEl && Array.isArray(s.meta_grid)){
+    const cityEl = document.querySelector('[data-contact-city]');
+    if(cityEl && Array.isArray(s.meta_grid)){
       const based = s.meta_grid.find(m => (m.label || '').toLowerCase() === 'based');
-      const city = based ? (based.value || '').split(',')[0] : '';
-      function updateClock(){
-        const time = new Intl.DateTimeFormat('en-GB', { hour:'2-digit', minute:'2-digit', hour12:false, timeZone:'Africa/Casablanca' }).format(new Date());
-        locEl.textContent = city ? (city + ', ' + time) : time;
-      }
-      updateClock();
-      setInterval(updateClock, 30000);
+      if(cityEl) cityEl.textContent = based ? (based.value || '').split(',')[0] : '';
     }
+
+    const timeEl = document.querySelector('[data-contact-time]');
+    function updateClock(){
+      if(!timeEl) return;
+      timeEl.textContent = new Intl.DateTimeFormat('en-GB', { hour:'2-digit', minute:'2-digit', hour12:false, timeZone:'Africa/Casablanca' }).format(new Date());
+    }
+    updateClock();
+    setInterval(updateClock, 30000);
 
     const socWrap = document.querySelector('[data-contact-socials]');
     if(socWrap && Array.isArray(s.socials)){
@@ -189,7 +226,7 @@
     }
 
     const servicesCta = document.querySelector('[data-services-cta]');
-    if(servicesCta && s.email) servicesCta.href = 'mailto:' + s.email;
+    if(servicesCta) servicesCta.href = 'mailto:hello@otmane.design';
   }
 
   function renderServices(list){
@@ -362,7 +399,7 @@
           io.unobserve(e.target);
         }
       });
-    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    }, {threshold:.08, rootMargin:'0px 0px 0px 0px'});
 
     const groups = new Map();
     document.querySelectorAll('[data-reveal]').forEach((el) => {
