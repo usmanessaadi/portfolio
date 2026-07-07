@@ -35,9 +35,15 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="#work">Work</a>
-      <a href="#experience">About</a>
-      <a href="#" data-mobile-cta>Get in touch</a>
+      <div class="mobile-menu__links">
+        <a href="#work">Work</a>
+        <a href="#experience">About</a>
+      </div>
+      <a href="#" class="mobile-menu__cta" data-mobile-cta>Get in touch</a>
+      <div class="mobile-menu__foot">
+        <a href="#" data-mobile-email></a>
+        <span data-mobile-location></span>
+      </div>
     </div>
 
     <div class="hero__fx" aria-hidden="true">
@@ -121,6 +127,13 @@
     if(navCta && s.email) navCta.href = 'mailto:' + s.email;
     const mobileCta = document.querySelector('[data-mobile-cta]');
     if(mobileCta && s.email) mobileCta.href = 'mailto:' + s.email;
+    const mobileEmail = document.querySelector('[data-mobile-email]');
+    if(mobileEmail && s.email){ mobileEmail.href = 'mailto:' + s.email; mobileEmail.textContent = s.email; }
+    const mobileLocation = document.querySelector('[data-mobile-location]');
+    if(mobileLocation && Array.isArray(s.meta_grid)){
+      const based = s.meta_grid.find(m => (m.label || '').toLowerCase() === 'based');
+      if(based) mobileLocation.textContent = based.value || '';
+    }
 
     const h = document.querySelector('[data-headline]');
     if(h){
