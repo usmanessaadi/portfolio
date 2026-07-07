@@ -1,0 +1,28 @@
+{
+  "services": [
+    {
+      "title": "Web & UI design",
+      "description": "Responsive websites and product interfaces for SaaS, B2B and marketing teams — from wireframes to production-ready UI, built with conversion and clarity in mind."
+    },
+    {
+      "title": "Design systems",
+      "description": "Component libraries and design foundations in Figma, structured for smooth developer handoff and built to stay consistent as a product grows."
+    },
+    {
+      "title": "Responsive & handoff-ready UI",
+      "description": "Layouts that hold up across breakpoints, with the structure, spacing and naming developers actually want to build from."
+    },
+    {
+      "title": "Conversion-focused UX",
+      "description": "Flows and layouts shaped around what a page needs to do — sign-ups, demos, leads — without losing sight of how it should feel to use."
+    },
+    {
+      "title": "Brand & visual assets",
+      "description": "Logos, colour palettes and lightweight brand guides that keep a business's presence consistent across web, social and print."
+    },
+    {
+      "title": "Client & stakeholder collaboration",
+      "description": "Working directly with founders, marketers and developers to turn feedback and briefs into decisions, not just design files."
+    }
+  ]
+}
