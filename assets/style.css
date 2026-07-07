@@ -1056,6 +1056,12 @@ h1.display em{
 
 /* cover */
 .cs-cover-wrap{margin-top:80px}
+.cs-cover-wrap .cs-img--full,.cs-cover-wrap .cs-cover{
+  max-width:1521.5px;
+  margin:0 auto;
+  padding:0 40px;
+  box-sizing:border-box;
+}
 .cs-cover{width:100%;overflow:hidden}
 .cs-cover img{width:100%;height:auto;display:block}
 
