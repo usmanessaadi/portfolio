@@ -1,71 +1,53 @@
 {
   "projects": [
     {
-      "timeline": "6 weeks",
-      "body": "## The problem\n\nMost AI hardware borrows the phone's playbook: a screen, a feed, a stream of notifications. That's exactly the interaction model people say they want less of.\n\nThe goal here was to design a device that earns its place on the desk by staying quiet until it has something genuinely useful to say.\n\n## Approach\n\n- Mapped the moments where a glanceable cue beats a full screen\n- Prototyped an ambient light + audio language for status\n- Tested three escalation levels, from a soft glow to a spoken summary\n\n## What I learned\n\nRestraint is a feature. The version people trusted most was the one that interrupted least.\n\n> Replace this placeholder with your real write-up — the CMS gives you a full rich-text editor for headings, images, lists, and quotes.",
-      "meta": "Personal · 2025",
-      "summary": "A calm, screen-optional companion device that surfaces the right thing at the right moment instead of demanding attention.",
-      "slug": "ambient-ai",
-      "featured": true,
-      "role": "Design + prototyping",
-      "cover": "/assets/uploads/widescreen-autocomplete-scene.png",
-      "title": "An ambient interface for AI hardware",
-      "tag": "Concept",
-      "tools": [
-        "Figma",
-        "SwiftUI",
-        "Rive"
-      ]
+      "slug": "boldideas",
+      "title": "Boldideas consulting",
+      "tag": "Soon",
+      "year": "2026",
+      "description": "Brand direction for a consulting studio turning bold ideas into products.",
+      "image": "assets/img/slides/01.webp",
+      "url": null
     },
     {
-      "timeline": "3 months",
-      "body": "## Context\n\nThe original flow asked for everything up front. People dropped off before they ever saw the product.\n\n## What changed\n\n- Deferred non-essential steps until after first value\n- Rebuilt the form components for inline validation\n- Instrumented each step so drop-off was finally visible\n\nSwap this text for your real case study whenever you're ready.",
-      "meta": "Contract · 2025",
-      "summary": "Cut a 9-step signup down to 4 without losing a single compliance requirement, lifting activation meaningfully.",
-      "slug": "fintech-onboarding",
-      "featured": true,
-      "role": "Product design + front-end",
-      "cover": "/assets/uploads/hero-mockup-2.png",
-      "title": "Rethinking onboarding for a fintech app",
-      "tag": "Shipped",
-      "tools": [
-        "Figma",
-        "React",
-        "TypeScript"
-      ]
+      "slug": "veevoy",
+      "title": "Veevoy web",
+      "year": "2025–2026",
+      "description": "Website and visual direction for a software studio building digital healthcare products.",
+      "image": "assets/img/slides/02.webp",
+      "url": "work.html#veevoy"
     },
     {
-      "timeline": "4 months",
-      "body": "## Overview\n\nPlaceholder case study. Describe the problem, your process, and the outcome here.",
-      "meta": "Handed off · 2024",
-      "summary": "An assistive model that clusters and routes incoming tickets, giving agents a running head start on every conversation.",
-      "slug": "support-triage",
-      "featured": true,
-      "role": "Design + prototyping",
-      "cover": "",
-      "title": "A smarter way to triage support tickets",
-      "tag": "Patent-pending",
-      "tools": [
-        "Figma",
-        "Python"
-      ]
+      "slug": "sportelo",
+      "title": "Sportelo",
+      "year": "2025–2026",
+      "description": "Product and visual direction for a sports platform, combining community, content and digital services.",
+      "image": "assets/img/slides/03.webp",
+      "url": "work.html#sportelo"
     },
     {
-      "timeline": "Ongoing",
-      "body": "## Overview\n\nPlaceholder case study. Replace with your real work.",
-      "meta": "Open source · 2025",
-      "summary": "Ported a web-first component library to iOS and Android with a shared token pipeline so both platforms stay in sync.",
-      "slug": "design-system-mobile",
-      "featured": true,
-      "role": "Design engineering",
-      "cover": "",
-      "title": "Bringing a design system to native mobile",
-      "tag": "Shipped",
-      "tools": [
-        "Figma",
-        "SwiftUI",
-        "Jetpack Compose"
-      ]
+      "slug": "eqvista",
+      "title": "Eqvista",
+      "year": "2025–2026",
+      "description": "Mobile app design for an equity management platform, focused on clarity, dashboards and financial data.",
+      "image": "assets/img/slides/04.webp",
+      "url": "work.html#eqvista"
+    },
+    {
+      "slug": "mapwhizz",
+      "title": "Mapwhizz",
+      "year": "2026",
+      "description": "B2B product redesign for office location analysis, commute insights and workplace planning.",
+      "image": "assets/img/slides/01.webp",
+      "url": "work.html#mapwhizz"
+    },
+    {
+      "slug": "social-point",
+      "title": "Social Point",
+      "year": "2025",
+      "description": "Website for a platform helping people with health or social disadvantages find work and support.",
+      "image": "assets/img/slides/02.webp",
+      "url": "work.html#social-point"
     }
   ]
 }

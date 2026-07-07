@@ -22,12 +22,21 @@
           <span class="nav__role" data-role-title></span>
         </div>
         <div class="nav__links">
-          <a href="#work">Work</a>
-          <a href="#experience">About</a>
+          <a href="#work" class="nav__link--desktop">Work</a>
+          <a href="#experience" class="nav__link--desktop">About</a>
           <a href="#" class="nav__cta" data-nav-cta>Get in touch</a>
+          <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#work">Work</a>
+      <a href="#experience">About</a>
+      <a href="#" data-mobile-cta>Get in touch</a>
+    </div>
 
     <div class="hero__fx" aria-hidden="true">
       <div class="hero__grain"></div>
@@ -57,6 +66,16 @@
       </button>
     </div>
   </section>
+    <section class="work" id="work" data-reveal>
+    <div class="work__wrap">
+      <h2 class="work__heading">Selected work</h2>
+      <div class="work__cols">
+        <div class="work__col" data-work-col-a></div>
+        <div class="work__col work__col--offset" data-work-col-b></div>
+      </div>
+    </div>
+  </section>
+
 
   <main>
     <section class="section" id="experience" data-reveal>
@@ -68,17 +87,8 @@
         <div data-experience></div>
       </div>
     </section>
-
-    <section class="section" id="work" data-reveal>
-      <div class="wrap">
-        <div class="section__head">
-          <span class="section__label">Selected work</span>
-          <span class="section__note" data-work-range></span>
-        </div>
-        <div class="grid" data-projects></div>
-      </div>
-    </section>
   </main>
+
 
   <footer class="foot">
     <div class="wrap">
@@ -108,6 +118,8 @@
 
     const navCta = document.querySelector('[data-nav-cta]');
     if(navCta && s.email) navCta.href = 'mailto:' + s.email;
+    const mobileCta = document.querySelector('[data-mobile-cta]');
+    if(mobileCta && s.email) mobileCta.href = 'mailto:' + s.email;
 
     const h = document.querySelector('[data-headline]');
     if(h){
@@ -155,29 +167,30 @@
     }).join('');
   }
 
-  function renderProjects(list){
-    const grid = document.querySelector('[data-projects]');
-    if(!grid) return;
-    grid.innerHTML = list.map(p =>
-      '<a class="proj" href="work.html#'+encodeURIComponent(p.slug || '')+'">'
-      + '<span class="proj__tag">'+esc(p.tag || 'Project')+'</span>'
-      + '<div class="proj__body">'
-      +   '<h3 class="proj__title">'+esc(p.title || '')+'</h3>'
-      +   '<div class="proj__foot">'
-      +     '<span class="proj__meta">'+esc(p.meta || '')+'</span>'
-      +     '<span class="proj__go">'+ARROW+'</span>'
-      +   '</div>'
-      + '</div>'
-      + '</a>'
-    ).join('');
+  function renderWork(list){
+    const colA = document.querySelector('[data-work-col-a]');
+    const colB = document.querySelector('[data-work-col-b]');
+    if(!colA || !colB) return;
 
-    // derive year range for the section note
-    const years = list.map(p => (p.meta||'').match(/\d{4}/)).filter(Boolean).map(m => +m[0]);
-    const note = document.querySelector('[data-work-range]');
-    if(note && years.length){
-      const lo = Math.min(...years), hi = Math.max(...years);
-      note.textContent = lo === hi ? String(hi) : lo + ' — ' + hi;
-    }
+    const card = (p) => {
+      const tag = p.url ? 'a' : 'div';
+      const href = p.url ? ' href="'+esc(p.url)+'"' : '';
+      const titleHTML = esc(p.title || '') + (p.tag ? ' <span class="work__badge">'+esc(p.tag)+'</span>' : '');
+      return '<'+tag+' class="work__card"'+href+'>'
+        + '<div class="work__figure"><img src="'+esc(p.image || '')+'" alt="'+esc(p.title || '')+'" loading="lazy" /></div>'
+        + '<div class="work__caption">'
+        +   '<div class="work__row">'
+        +     '<span class="work__title">'+titleHTML+'</span>'
+        +     '<span class="work__year">'+esc(p.year || '')+'</span>'
+        +   '</div>'
+        +   '<p class="work__desc">'+esc(p.description || '')+'</p>'
+        + '</div>'
+        + '</'+tag+'>';
+    };
+
+    const mid = Math.ceil(list.length / 2);
+    colA.innerHTML = list.slice(0, mid).map(card).join('');
+    colB.innerHTML = list.slice(mid).map(card).join('');
   }
 
   function setupHeroFX(){
@@ -245,6 +258,33 @@
     });
   }
 
+  function setupMobileMenu(){
+    const burger = document.getElementById('navBurger');
+    const menu = document.getElementById('mobileMenu');
+    if(!burger || !menu) return;
+
+    function closeMenu(){
+      burger.classList.remove('is-open');
+      menu.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-open');
+    }
+    function openMenu(){
+      burger.classList.add('is-open');
+      menu.classList.add('is-open');
+      burger.setAttribute('aria-expanded', 'true');
+      menu.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-open');
+    }
+
+    burger.addEventListener('click', () => {
+      burger.classList.contains('is-open') ? closeMenu() : openMenu();
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeMenu(); });
+  }
+
   function setupNav(){
     const nav = document.getElementById('nav');
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
@@ -277,7 +317,7 @@
       ]);
       renderSite(site);
       renderExperience(exp.roles || []);
-      renderProjects((proj.projects || []).filter(p => p.featured !== false));
+      renderWork(proj.projects || []);
     }catch(err){
       console.error(err);
     }finally{
@@ -286,6 +326,7 @@
       setupReveal();
       setupSlider();
       setupHeroFX();
+      setupMobileMenu();
     }
   })();
 </script>
