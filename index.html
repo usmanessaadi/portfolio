@@ -468,5 +468,49 @@
     }
   })();
 </script>
+  <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
+
+<script>
+(function(){
+  const overlay = document.getElementById('pgTransition');
+  if(!overlay) return;
+
+  function transitionTo(href){
+    overlay.classList.add('is-entering');
+    setTimeout(() => {
+      window.location.href = href;
+    }, 600);
+  }
+
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a');
+    if(!a) return;
+    const href = a.getAttribute('href');
+    if(!href) return;
+
+    // Skip: external links, hash-only anchors, mailto, target=_blank
+    if(a.target === '_blank') return;
+    if(href.startsWith('mailto:')) return;
+    if(href.startsWith('http')) return;
+    if(href.startsWith('#')) return;
+    // Only intercept links that navigate to a different page
+    // (allow hash on same page: index.html#work from index)
+    const isSamePage = href.split('#')[0] === '' ||
+      href.split('#')[0] === window.location.pathname.split('/').pop();
+    if(isSamePage) return;
+
+    e.preventDefault();
+    transitionTo(href);
+  });
+
+  // On page load — slide out (page entered)
+  overlay.classList.add('is-leaving');
+  overlay.addEventListener('animationend', () => {
+    overlay.classList.remove('is-leaving');
+  }, {once:true});
+})();
+</script>
+
 </body>
+
 </html>

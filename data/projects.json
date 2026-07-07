@@ -1,53 +1,112 @@
 {
   "projects": [
     {
+      "slug": "eqvista",
+      "title": "Eqvista",
+      "tag": "Mobile app design",
+      "year": "2025–2026",
+      "description": "Mobile app design for an equity management platform.",
+      "image": "assets/img/slides/01.webp",
+      "scope": "Mobile app design",
+      "role": "UX/UI Designer",
+      "client": "Eqvista",
+      "summary": "Designing a mobile app for an equity management platform focused on cap tables, company valuations, and shareholder workflows.",
+      "gallery": [
+        { "src": "assets/img/slides/01.webp", "alt": "Eqvista cap-table interface", "wide": true },
+        { "src": "assets/img/slides/02.webp", "alt": "Eqvista sign-in screen", "wide": false },
+        { "src": "assets/img/slides/03.webp", "alt": "Eqvista dashboard view", "wide": false },
+        { "src": "assets/img/slides/04.webp", "alt": "Eqvista valuation screen", "wide": true },
+        { "src": "assets/img/slides/01.webp", "alt": "Eqvista on iPhone home screen", "wide": false },
+        { "src": "assets/img/slides/02.webp", "alt": "Eqvista screens overview", "wide": false }
+      ],
+      "body": "## Overview\n\nEqvista is a platform focused on equity management, cap tables, company valuations, and shareholder-related workflows. The client already had an existing web platform, a defined visual identity, and a clear set of product features. The goal of the project was to design a mobile app that would naturally extend their existing digital product ecosystem.\n\nI worked on the project as a UX/UI designer. My role included designing the mobile interface, joining online client meetings, and collaborating closely with the developer to make sure the design was not only visually consistent, but also clear and practical to implement.\n\n## Challenge\n\nThe main challenge was the tight timeline. The app had to be designed quickly, without room for a long discovery phase or a full product redesign. This meant I had to understand the product fast, identify which parts of the web platform were essential for the app, and translate them into a mobile experience as efficiently as possible.\n\nThe goal was not to redesign the product from scratch. The priority was to keep the experience aligned with Eqvista's existing web platform, respect the brand guidelines, and create a mobile interface that would feel familiar, trustworthy, and easy to navigate.\n\nAnother important challenge was the nature of the product itself. Equity management, valuations, and financial data require clarity, precision, and trust. The interface had to help users understand key information quickly, navigate complex workflows, and take action without unnecessary friction.\n\n## Approach\n\nI started from Eqvista's existing web platform and brand guidelines. Instead of creating a completely new visual direction, I focused on translating the core product logic and key features into a mobile-first interface that would feel like a natural extension of the existing platform.\n\nMy focus was on clean screen structure, readable financial data, consistent components, and simple navigation. For a complex financial product, the interface should reduce complexity rather than add to it. I kept the design clear, functional, and visually calm, so users could focus on the information and actions that matter.\n\nThe project also involved close communication with the client. Through online meetings, we were able to validate the direction, respond to feedback, and keep the project moving. I also worked closely with the developer throughout the process to make sure screens, states, and components were clear from an implementation perspective.\n\n## Outcome\n\nThe result was a complete mobile app design that extends Eqvista's digital product experience beyond the web platform. The app follows the existing brand, supports the core product functionality, and adapts it into a mobile experience focused on clarity, consistency, and usability.\n\nThe project shows how a complex financial product can be translated into a mobile interface within a tight timeline by working efficiently with existing product patterns, brand guidelines, and close collaboration between design and development.\n\nThe app is now live and available to download on the App Store."
+    },
+    {
+      "slug": "veevoy",
+      "title": "Veevoy web",
+      "tag": "Website, Branding",
+      "year": "2025–2026",
+      "description": "Website and visual direction for a software studio building digital healthcare products.",
+      "image": "assets/img/slides/02.webp",
+      "scope": "Website design, Branding",
+      "role": "Lead Designer",
+      "client": "Veevoy",
+      "summary": "Full website redesign and brand direction for a digital healthcare software studio.",
+      "gallery": [
+        { "src": "assets/img/slides/02.webp", "alt": "Veevoy homepage hero", "wide": true },
+        { "src": "assets/img/slides/03.webp", "alt": "Veevoy brand identity", "wide": false },
+        { "src": "assets/img/slides//04.webp", "alt": "Veevoy services page", "wide": false }
+      ],
+      "body": "## Overview\n\nVeevoy is a software studio focused on building digital products for the healthcare sector. The project involved a full website redesign and the development of a cohesive visual identity that could communicate trust, clarity, and technical credibility to both clients and partners.\n\nMy role covered the full design process — from initial brand direction and visual system to page layouts, component design, and final handoff to the development team.\n\n## Challenge\n\nThe main challenge was translating a technically complex offer into a website that felt approachable without losing credibility. Healthcare software has to communicate precision and reliability, while still being human and easy to navigate.\n\nThe existing presence lacked consistency and didn't reflect the quality of Veevoy's actual work. The goal was to build something that felt considered, confident, and clean.\n\n## Approach\n\nI started by establishing a clear visual direction — a restrained, modern system built around strong typography, structured layouts, and a focused colour palette. The goal was to let the content lead, with design that supports rather than competes.\n\nPages were structured around the buyer journey — from first impression to understanding the offer to making contact. Every section was designed with that flow in mind.\n\n## Outcome\n\nThe result was a complete website and brand system that better represents Veevoy's position in the market. Clean, structured, and built for credibility — the new site gives the studio a foundation they can grow from."
+    },
+    {
+      "slug": "sportelo",
+      "title": "Sportelo",
+      "tag": "UX/UI, Branding",
+      "year": "2025–2026",
+      "description": "Product and visual direction for a sports platform combining community, content and digital services.",
+      "image": "assets/img/slides/03.webp",
+      "scope": "Product design, Branding",
+      "role": "Lead Designer",
+      "client": "Sportelo",
+      "summary": "End-to-end product and brand design for a sports platform bringing together community, content, and digital services.",
+      "gallery": [
+        { "src": "assets/img/slides/03.webp", "alt": "Sportelo platform overview", "wide": true },
+        { "src": "assets/img/slides/04.webp", "alt": "Sportelo community feed", "wide": false },
+        { "src": "assets/img/slides/01.webp", "alt": "Sportelo brand identity", "wide": false },
+        { "src": "assets/img/slides/02.webp", "alt": "Sportelo mobile screens", "wide": true }
+      ],
+      "body": "## Overview\n\nSportelo is a sports platform that brings together community, content, and digital services into one product. The project required both a strong visual identity and a fully designed product — from navigation and feed to profiles and service flows.\n\nMy role covered the brand direction, design system, and core product screens across web and mobile.\n\n## Challenge\n\nThe challenge was building a product that could serve multiple needs at once — community, content, and transactional features — without feeling fragmented. Sports platforms often go in too many directions and lose coherence. The goal was to keep everything unified under a clear visual and structural system.\n\n## Approach\n\nI established a design system early — typography, colour, spacing, and component patterns — so every screen shared the same language. This made it possible to move quickly across different parts of the product without inconsistency creeping in.\n\nThe brand direction was built to feel energetic but grounded. Not flashy, just confident and clear — something that could work across digital surfaces and feel native to a sports context.\n\n## Outcome\n\nThe result was a cohesive product with a visual identity that carries across every touchpoint. From the brand to the app, Sportelo now has a consistent, scalable design foundation."
+    },
+    {
+      "slug": "mapwhizz",
+      "title": "Mapwhizz",
+      "tag": "UX/UI",
+      "year": "2026",
+      "description": "B2B product redesign for office location analysis, commute insights and workplace planning.",
+      "image": "assets/img/slides/04.webp",
+      "scope": "Product redesign, UX/UI",
+      "role": "UX/UI Designer",
+      "client": "Mapwhizz",
+      "summary": "Redesigning a B2B tool for office location analysis and workforce commute insights.",
+      "gallery": [
+        { "src": "assets/img/slides/04.webp", "alt": "Mapwhizz dashboard", "wide": true },
+        { "src": "assets/img/slides/01.webp", "alt": "Mapwhizz map view", "wide": false },
+        { "src": "assets/img/slides/02.webp", "alt": "Mapwhizz commute analysis", "wide": false }
+      ],
+      "body": "## Overview\n\nMapwhizz is a B2B SaaS tool that helps companies analyse potential office locations based on commute data, workforce distribution, and accessibility insights. The product helps HR and operations teams make informed decisions about where to base their teams.\n\nThe project was a product redesign focused on clarity, usability, and making complex data easier to act on.\n\n## Challenge\n\nThe existing product had strong underlying data but a UI that made it hard to extract insight quickly. The interface felt dense and technical — fine for power users, but a barrier for anyone coming to the product for the first time.\n\nThe redesign needed to simplify the experience without reducing the depth of the data available.\n\n## Approach\n\nI focused on information hierarchy — making the most important outputs (location scores, commute summaries, key metrics) immediately visible, with deeper data accessible but not overwhelming.\n\nThe layout was restructured to guide users through a natural decision flow: define the area, understand the data, compare options, take action.\n\n## Outcome\n\nThe redesigned product is cleaner, faster to understand, and easier to navigate. The core data is still all there — it's just presented in a way that respects the user's time and reduces the cognitive load of analysis."
+    },
+    {
       "slug": "boldideas",
       "title": "Boldideas consulting",
       "tag": "Soon",
       "year": "2026",
       "description": "Brand direction for a consulting studio turning bold ideas into products.",
       "image": "assets/img/slides/01.webp",
-      "url": null
-    },
-    {
-      "slug": "veevoy",
-      "title": "Veevoy web",
-      "year": "2025–2026",
-      "description": "Website and visual direction for a software studio building digital healthcare products.",
-      "image": "assets/img/slides/02.webp",
-      "url": "work.html#veevoy"
-    },
-    {
-      "slug": "sportelo",
-      "title": "Sportelo",
-      "year": "2025–2026",
-      "description": "Product and visual direction for a sports platform, combining community, content and digital services.",
-      "image": "assets/img/slides/03.webp",
-      "url": "work.html#sportelo"
-    },
-    {
-      "slug": "eqvista",
-      "title": "Eqvista",
-      "year": "2025–2026",
-      "description": "Mobile app design for an equity management platform, focused on clarity, dashboards and financial data.",
-      "image": "assets/img/slides/04.webp",
-      "url": "work.html#eqvista"
-    },
-    {
-      "slug": "mapwhizz",
-      "title": "Mapwhizz",
-      "year": "2026",
-      "description": "B2B product redesign for office location analysis, commute insights and workplace planning.",
-      "image": "assets/img/slides/01.webp",
-      "url": "work.html#mapwhizz"
+      "scope": "Branding, Visual identity",
+      "role": "Brand Designer",
+      "client": "Boldideas",
+      "summary": "Building a brand identity for a consulting studio that helps founders turn ideas into real products.",
+      "gallery": [],
+      "body": "## Coming soon\n\nThis project is currently in progress. Full case study coming once the work is complete."
     },
     {
       "slug": "social-point",
       "title": "Social Point",
+      "tag": "Website, UX/UI",
       "year": "2025",
       "description": "Website for a platform helping people with health or social disadvantages find work and support.",
       "image": "assets/img/slides/02.webp",
-      "url": "work.html#social-point"
+      "scope": "Website design, UX/UI",
+      "role": "Lead Designer",
+      "client": "Social Point",
+      "summary": "Designing a website for a platform that connects people facing health or social disadvantages with employment support and local services.",
+      "gallery": [
+        { "src": "assets/img/slides/02.webp", "alt": "Social Point homepage", "wide": true },
+        { "src": "assets/img/slides/03.webp", "alt": "Social Point services", "wide": false },
+        { "src": "assets/img/slides/04.webp", "alt": "Social Point registration flow", "wide": false }
+      ],
+      "body": "## Overview\n\nSocial Point is a platform that helps people with health conditions or social disadvantages find work, access support services, and connect with local resources. The product serves both the people who need help and the organisations that provide it.\n\nThe project involved designing the public-facing website — the main entry point for new users discovering the platform.\n\n## Challenge\n\nThe audience for this product spans a wide range of backgrounds, digital literacy levels, and needs. The design had to be genuinely accessible — not just technically compliant, but clear and easy to use for someone who might be anxious, overwhelmed, or unfamiliar with navigating digital services.\n\nAt the same time, the site needed to communicate credibility to partner organisations and employers who might refer people to the platform.\n\n## Approach\n\nI focused heavily on simplicity and clear language. Every page was designed with the question: what does this person need to know, and what do they need to do next? Navigation was kept minimal, copy was written to be direct and human, and the visual design was kept calm and uncluttered.\n\nAccessibility was built in from the start — not added at the end.\n\n## Outcome\n\nThe result was a website that serves both audiences clearly — approachable and supportive for people in need, credible and professional for organisations and employers. Clean, honest, and designed to reduce friction at every step."
     }
   ]
 }

@@ -4,141 +4,274 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Case study</title>
-<meta name="theme-color" content="#fafcfd" />
+<meta name="theme-color" content="#121417" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;450;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
+  <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
+
+  <div class="cursor" id="cursorFollower" aria-hidden="true">
+    <svg class="cursor__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+  </div>
+
   <nav class="nav" id="nav">
-    <div class="wrap nav__inner">
-      <a class="brand" href="index.html"><span class="brand__dot"></span><span data-name>&nbsp;</span></a>
-      <div class="menu">
-        <a href="index.html#work">Work</a>
-        <a href="index.html#experience" data-hide>Experience</a>
+    <div class="nav__inner">
+      <div class="nav__id">
+        <span class="nav__name" data-name></span>
+        <span class="nav__role" data-role-title></span>
+      </div>
+      <div class="nav__links">
+        <a href="index.html#work" class="nav__link--desktop">Work</a>
+        <a href="index.html#services" class="nav__link--desktop">About</a>
+        <a href="mailto:hello@otmane.design" class="nav__cta">Get in touch</a>
+        <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="nav__burger-box"><span></span><span></span></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <main class="wrap" id="content"><!-- rendered --></main>
-
-  <footer class="foot">
-    <div class="wrap">
-      <div class="foot__grid">
-        <div class="foot__big">Let's build<br><span>something good.</span></div>
-        <div class="foot__links" data-socials></div>
-      </div>
-      <div class="foot__legal">Designed + built by <span data-name>&nbsp;</span> · © <span data-year></span></div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#services">About</a>
     </div>
-  </footer>
+    <a href="mailto:hello@otmane.design" class="mobile-menu__cta">Get in touch</a>
+    <div class="mobile-menu__foot">
+      <a href="mailto:hello@otmane.design">hello@otmane.design</a>
+      <span>Marrakech, Morocco</span>
+    </div>
+  </div>
+
+  <main id="caseContent"></main>
 
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script>
-  const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
-  const esc = (s='') => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const esc = (s='') => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
   async function loadJSON(path){
-    const r = await fetch(path, {cache:'no-store'});
-    if(!r.ok) throw new Error('Failed to load '+path);
+    const r = await fetch(path,{cache:'no-store'});
+    if(!r.ok) throw new Error('Failed: '+path);
     return r.json();
   }
 
   function renderChrome(site){
-    document.querySelectorAll('[data-name]').forEach(el => el.textContent = site.name || 'Your Name');
-    document.querySelector('[data-year]').textContent = new Date().getFullYear();
-    const soc = document.querySelector('[data-socials]');
-    if(soc){
-      const links = (site.socials || []).map(l =>
-        '<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' '+ARROW+'</a>');
-      if(site.email) links.push('<a href="mailto:'+esc(site.email)+'">Email '+ARROW+'</a>');
-      soc.innerHTML = links.join('');
-    }
+    document.querySelectorAll('[data-name]').forEach(el=>el.textContent=site.name||'');
+    document.querySelectorAll('[data-role-title]').forEach(el=>el.textContent=site.role_title||'');
   }
 
-  function fact(label, value){
+  function metaFact(label, value){
     if(!value) return '';
-    return '<div><div class="fact__label">'+esc(label)+'</div><div class="fact__value">'+esc(value)+'</div></div>';
+    return '<div class="cs-fact">'
+      + '<dt class="cs-fact__label">'+esc(label)+'</dt>'
+      + '<dd class="cs-fact__value">'+esc(value)+'</dd>'
+      + '</div>';
   }
 
-  function renderCase(p, next, siteName){
-    document.title = (p.title || 'Case study') + (siteName ? ' — ' + siteName : '');
-    const el = document.getElementById('content');
+  function renderCase(p, allProjects, site){
+    document.title = (p.title||'Case study')+' — '+(site.name||'');
+    const main = document.getElementById('caseContent');
 
-    const facts =
-      fact('Role', p.role) +
-      fact('Timeline', p.timeline) +
-      (Array.isArray(p.tools) && p.tools.length
-        ? '<div><div class="fact__label">Tools</div><div class="fact__value">'+p.tools.map(esc).join(', ')+'</div></div>'
-        : '');
+    // facts dl
+    const facts = [
+      metaFact('Scope', p.scope || p.tag),
+      metaFact('Role', p.role),
+      metaFact('Client', p.client || p.title),
+      metaFact('Year', p.year || (p.meta||'').match(/\d{4}[-–]\d{4}|\d{4}/)?.[0])
+    ].filter(Boolean).join('');
 
-    const cover = p.cover
-      ? '<div class="case__cover" data-reveal><img src="'+esc(p.cover)+'" alt="'+esc(p.title)+'" /></div>' : '';
+    // body prose
+    const bodyHTML = p.body ? marked.parse(p.body) : '';
 
-    const bodyHTML = p.body ? marked.parse(p.body) : '<p>Case study coming soon.</p>';
+    // more projects
+    const others = allProjects.filter(x=>x.slug!==p.slug).slice(0,3);
+    const moreCards = others.map(op=>'<a class="wcard" href="work.html#'+encodeURIComponent(op.slug||'')+'" data-reveal>'
+      + '<div class="wcard__img"><img src="'+esc(op.image||'')+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
+      + '<div class="wcard__info">'
+      +   '<div class="wcard__left"><span class="wcard__title">'+esc(op.title||'')+'</span>'
+      +     '<span class="wcard__discipline">'+esc(op.tag||'')+'</span></div>'
+      +   '<span class="wcard__year">'+esc(op.year||'')+'</span>'
+      + '</div></a>'
+    ).join('');
 
-    const nextBlock = next
-      ? '<div class="case__nextwrap"><a class="case__next" href="work.html#'+encodeURIComponent(next.slug)+'">'
-        + '<div><div class="lbl">Next project</div><div class="ttl">'+esc(next.title)+'</div></div>'
-        + '<span class="proj__go">'+ARROW+'</span></a></div>'
-      : '';
+    // build all gallery items
+    function buildGalleryItems(gallery){
+      const items = [];
+      let i = 0;
+      while(i < gallery.length){
+        const img = gallery[i];
+        if(img.wide){
+          items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
+          i++;
+        } else {
+          const next = gallery[i+1] && !gallery[i+1].wide ? gallery[i+1] : null;
+          if(next){
+            items.push('<div class="cs-img-grid" data-reveal>'
+              + '<div class="cs-img"><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>'
+              + '<div class="cs-img"><img src="'+esc(next.src)+'" alt="'+esc(next.alt||'')+'" loading="lazy" /></div>'
+              + '</div>');
+            i += 2;
+          } else {
+            items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
+            i++;
+          }
+        }
+      }
+      return items;
+    }
 
-    el.innerHTML =
-      '<div class="case">'
-      + '<a class="back" href="index.html#work"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> All work</a>'
-      + '<header class="case__head">'
-      +   '<div class="case__tagrow"><span class="case__tag">'+esc(p.tag||'Project')+'</span><span class="case__metatop">'+esc(p.meta||'')+'</span></div>'
-      +   '<h1 class="case__title">'+esc(p.title||'')+'</h1>'
-      +   (p.summary ? '<p class="case__summary">'+esc(p.summary)+'</p>' : '')
-      +   (facts ? '<div class="case__facts">'+facts+'</div>' : '')
-      + '</header>'
-      + cover
-      + '<article class="prose" data-reveal>'+bodyHTML+'</article>'
-      + nextBlock
-      + '</div>';
+    const gallery = Array.isArray(p.gallery) && p.gallery.length ? p.gallery : (p.image ? [{src:p.image,alt:p.title,wide:true}] : []);
+    const galleryItems = buildGalleryItems(gallery);
+    const coverHTML = galleryItems.length ? '<section class="cs-cover-wrap">'+galleryItems[0]+'</section>' : '';
+    const restGalleryHTML = galleryItems.length > 1 ? '<div class="cs-gallery">'+galleryItems.slice(1).join('')+'</div>' : '';
+
+    main.innerHTML =
+      '<section class="cs-hero" data-reveal>'
+      +   '<div class="cs-hero__wrap">'
+      +     '<a class="cs-back" href="work.html">← Work</a>'
+      +     '<p class="cs-category">'+esc(p.tag||p.scope||'Project')+'</p>'
+      +     '<h1 class="cs-title">'+esc(p.summary||p.title||'')+'</h1>'
+      +     (facts ? '<dl class="cs-facts">'+facts+'</dl>' : '')
+      +   '</div>'
+      + '</section>'
+      + coverHTML
+      + (bodyHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+bodyHTML+'</div></div></section>' : '')
+      + (restGalleryHTML ? '<section class="cs-body"><div class="cs-body__wrap">'+restGalleryHTML+'</div></section>' : '')
+      + (moreCards ? '<section class="cs-more"><div class="cs-more__wrap"><h2 class="cs-section-heading" data-reveal>More projects</h2><div class="cs-more__list">'+moreCards+'</div></div></section>' : '');
   }
 
   function renderNotFound(){
     document.title = 'Not found';
-    document.getElementById('content').innerHTML =
-      '<div class="notfound"><h1>Project not found</h1><p>That case study doesn\'t exist yet.</p>'
-      + '<p style="margin-top:20px"><a href="index.html#work">Back to all work</a></p></div>';
+    document.getElementById('caseContent').innerHTML =
+      '<section class="cs-hero"><div class="cs-hero__wrap">'
+      + '<a class="cs-back" href="work.html">← Work</a>'
+      + '<h1 class="cs-title">Project not found</h1>'
+      + '<p class="cs-summary"><a href="index.html">Back to home</a></p>'
+      + '</div></section>';
   }
 
   function setupNav(){
     const nav = document.getElementById('nav');
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-  }
-  function setupReveal(){
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.08, rootMargin:'0px 0px -6% 0px'});
-    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+    const onScroll = ()=>nav.classList.toggle('scrolled', window.scrollY>8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
   }
 
-  window.addEventListener('hashchange', () => location.reload());
+  function setupReveal(){
+    const io = new IntersectionObserver(entries=>{
+      const groups = new Map();
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const parent = e.target.parentElement;
+          const count = groups.get(parent)||0;
+          e.target.style.transitionDelay = (count*90)+'ms';
+          groups.set(parent, count+1);
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:.06});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  }
+
+  function setupCursor(){
+    if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+    const cursor = document.getElementById('cursorFollower');
+    if(!cursor) return;
+    let raf=null, mx=0, my=0;
+    document.addEventListener('mousemove', e=>{
+      mx=e.clientX; my=e.clientY;
+      cursor.style.opacity='1';
+      if(raf) return;
+      raf=requestAnimationFrame(()=>{
+        cursor.style.transform='translate3d('+mx+'px,'+my+'px,0) translate(-50%,-50%)';
+        raf=null;
+      });
+    });
+    document.addEventListener('mouseleave',()=>{ cursor.style.opacity='0'; });
+    document.querySelectorAll('.wcard').forEach(el=>{
+      el.addEventListener('mouseenter',()=>cursor.classList.add('is-project'));
+      el.addEventListener('mouseleave',()=>cursor.classList.remove('is-project'));
+    });
+    document.querySelectorAll('a:not(.wcard):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)').forEach(el=>{
+      el.addEventListener('mouseenter',()=>cursor.classList.add('is-link'));
+      el.addEventListener('mouseleave',()=>cursor.classList.remove('is-link'));
+    });
+  }
+
+  function setupMobileMenu(){
+    const burger = document.getElementById('navBurger');
+    const menu = document.getElementById('mobileMenu');
+    if(!burger||!menu) return;
+    function close(){
+      burger.classList.remove('is-open');
+      menu.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+      menu.setAttribute('aria-hidden','true');
+      document.body.classList.remove('menu-open');
+    }
+    burger.addEventListener('click',()=>{
+      burger.classList.contains('is-open') ? close() : (()=>{
+        burger.classList.add('is-open');
+        menu.classList.add('is-open');
+        burger.setAttribute('aria-expanded','true');
+        menu.setAttribute('aria-hidden','false');
+        document.body.classList.add('menu-open');
+      })();
+    });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    window.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
+  }
+
+  window.addEventListener('hashchange',()=>location.reload());
 
   (async function init(){
     try{
-      const slug = decodeURIComponent((location.hash || '').replace(/^#/, ''));
-      const [site, proj] = await Promise.all([ loadJSON('data/site.json'), loadJSON('data/projects.json') ]);
+      const slug = decodeURIComponent((location.hash||'').replace(/^#/,''));
+      const [site, proj] = await Promise.all([loadJSON('data/site.json'), loadJSON('data/projects.json')]);
       renderChrome(site);
-      const list = proj.projects || [];
-      const idx = list.findIndex(p => p.slug === slug);
-      if(idx === -1){ renderNotFound(); }
-      else {
-        const next = list[(idx + 1) % list.length];
-        renderCase(list[idx], list.length > 1 ? next : null, site.name);
-      }
+      const list = proj.projects||[];
+      const p = list.find(x=>x.slug===slug);
+      if(!p) renderNotFound();
+      else renderCase(p, list, site);
     }catch(err){
       console.error(err); renderNotFound();
     }finally{
       document.body.classList.add('ready');
-      setupNav(); setupReveal();
+      setupNav();
+      setupReveal();
+      setupCursor();
+      setupMobileMenu();
     }
   })();
 </script>
+
+<script>
+(function(){
+  const overlay = document.getElementById('pgTransition');
+  if(!overlay) return;
+  function transitionTo(href){
+    overlay.classList.add('is-entering');
+    setTimeout(()=>{ window.location.href=href; }, 600);
+  }
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a');
+    if(!a) return;
+    const href = a.getAttribute('href');
+    if(!href||a.target==='_blank'||href.startsWith('mailto:')||href.startsWith('http')||href.startsWith('#')) return;
+    const isSamePage = href.split('#')[0]===''||href.split('#')[0]===window.location.pathname.split('/').pop();
+    if(isSamePage) return;
+    e.preventDefault();
+    transitionTo(href);
+  });
+  overlay.classList.add('is-leaving');
+  overlay.addEventListener('animationend',()=>overlay.classList.remove('is-leaving'),{once:true});
+})();
+</script>
+
 </body>
 </html>
