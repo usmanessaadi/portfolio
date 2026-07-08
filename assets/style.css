@@ -334,11 +334,15 @@ h1.display em{
   pointer-events:none;
   display:grid;
   grid-template-rows:repeat(5,1fr);
+  transform:translateZ(0);
+  isolation:isolate;
 }
 .pg-transition__cell{
-  background:#121417;
+  background:linear-gradient(135deg,#ebe1b0,#aea8fe);
   transform:scaleX(0);
   transform-origin:right;
+  will-change:transform;
+  backface-visibility:hidden;
 }
 .pg-transition.is-entering .pg-transition__cell{
   animation:cellIn .8s cubic-bezier(.76,0,.24,1) forwards;
