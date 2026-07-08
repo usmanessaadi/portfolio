@@ -315,14 +315,14 @@
   const overlay = document.getElementById('pgTransition');
   if(!overlay) return;
 
-  const DURATION = 750;
-
   function transitionTo(href){
     overlay.style.pointerEvents = 'all';
     overlay.classList.remove('is-leaving');
     void overlay.offsetWidth;
     overlay.classList.add('is-entering');
-    setTimeout(()=>{ window.location.href=href; }, DURATION);
+    overlay.addEventListener('animationend', () => {
+      window.location.href = href;
+    }, {once: true});
   }
 
   document.addEventListener('click', function(e){
@@ -337,13 +337,18 @@
   });
 
   overlay.classList.remove('is-entering');
-  overlay.classList.remove('is-leaving');
-  void overlay.offsetWidth;
-  overlay.classList.add('is-leaving');
-  setTimeout(()=>{
-    overlay.classList.remove('is-leaving');
-    overlay.style.pointerEvents='';
-  }, DURATION);
+  overlay.style.transform = 'translateX(0%)';
+  overlay.style.animation = 'none';
+  requestAnimationFrame(() => {
+    overlay.style.transform = '';
+    overlay.style.animation = '';
+    void overlay.offsetWidth;
+    overlay.classList.add('is-leaving');
+    overlay.addEventListener('animationend', () => {
+      overlay.classList.remove('is-leaving');
+      overlay.style.pointerEvents = '';
+    }, {once: true});
+  });
 })();
 </script>
 

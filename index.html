@@ -476,16 +476,14 @@
   const overlay = document.getElementById('pgTransition');
   if(!overlay) return;
 
-  const DURATION = 750;
-
   function transitionTo(href){
     overlay.style.pointerEvents = 'all';
     overlay.classList.remove('is-leaving');
     void overlay.offsetWidth;
     overlay.classList.add('is-entering');
-    setTimeout(() => {
+    overlay.addEventListener('animationend', () => {
       window.location.href = href;
-    }, DURATION);
+    }, {once: true});
   }
 
   document.addEventListener('click', function(e){
@@ -505,16 +503,22 @@
     transitionTo(href);
   });
 
-  // On page load: overlay is already covering (is-entering state from prev page)
-  // reset and play the leave animation
+  // On page load: play the leave animation (panel slides out left revealing the page)
   overlay.classList.remove('is-entering');
-  overlay.classList.remove('is-leaving');
   void overlay.offsetWidth;
-  overlay.classList.add('is-leaving');
-  setTimeout(() => {
-    overlay.classList.remove('is-leaving');
-    overlay.style.pointerEvents = '';
-  }, DURATION);
+  // Set initial state to fully covering before animating out
+  overlay.style.transform = 'translateX(0%)';
+  overlay.style.animation = 'none';
+  requestAnimationFrame(() => {
+    overlay.style.transform = '';
+    overlay.style.animation = '';
+    void overlay.offsetWidth;
+    overlay.classList.add('is-leaving');
+    overlay.addEventListener('animationend', () => {
+      overlay.classList.remove('is-leaving');
+      overlay.style.pointerEvents = '';
+    }, {once: true});
+  });
 })();
 </script>
 
