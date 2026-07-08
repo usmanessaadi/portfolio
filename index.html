@@ -469,18 +469,23 @@
     }
   })();
 </script>
-  <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
+  <div class="pg-transition" id="pgTransition" aria-hidden="true"><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div>
 
 <script>
 (function(){
   const overlay = document.getElementById('pgTransition');
   if(!overlay) return;
 
+  // Total animation duration = longest delay (220ms) + animation (500ms) = 720ms
+  const DURATION = 1700;
+
   function transitionTo(href){
+    overlay.style.pointerEvents = 'all';
+    overlay.classList.remove('is-leaving');
     overlay.classList.add('is-entering');
     setTimeout(() => {
       window.location.href = href;
-    }, 600);
+    }, DURATION);
   }
 
   document.addEventListener('click', function(e){
@@ -488,28 +493,39 @@
     if(!a) return;
     const href = a.getAttribute('href');
     if(!href) return;
-
-    // Skip: external links, hash-only anchors, mailto, target=_blank
     if(a.target === '_blank') return;
     if(href.startsWith('mailto:')) return;
     if(href.startsWith('http')) return;
     if(href.startsWith('#')) return;
-    // Skip work.html links — let browser navigate directly to preserve #hash
     if(href.includes('work.html')) return;
-    // Only intercept links that navigate to a different page
     const isSamePage = href.split('#')[0] === '' ||
       href.split('#')[0] === window.location.pathname.split('/').pop();
     if(isSamePage) return;
-
     e.preventDefault();
     transitionTo(href);
   });
 
-  // On page load — slide out (page entered)
-  overlay.classList.add('is-leaving');
-  overlay.addEventListener('animationend', () => {
-    overlay.classList.remove('is-leaving');
-  }, {once:true});
+  // On every page load: force cells to fully covered state, then animate out
+  overlay.classList.remove('is-entering');
+  overlay.classList.remove('is-leaving');
+  // Force cells to scaleY(1) first, then trigger leaving animation
+  overlay.querySelectorAll('.pg-transition__cell').forEach(c => {
+    c.style.transform = 'scaleY(1)';
+    c.style.transformOrigin = 'top';
+  });
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      overlay.querySelectorAll('.pg-transition__cell').forEach(c => {
+        c.style.transform = '';
+        c.style.transformOrigin = '';
+      });
+      overlay.classList.add('is-leaving');
+      setTimeout(() => {
+        overlay.classList.remove('is-leaving');
+        overlay.style.pointerEvents = '';
+      }, DURATION);
+    });
+  });
 })();
 </script>
 

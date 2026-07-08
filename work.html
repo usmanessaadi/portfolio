@@ -9,11 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/style.css" />
-<link rel="icon" type="image/x-icon" href="/assets/img/favicon.png" />
 </head>
 <body>
 
-  <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
+  <div class="pg-transition" id="pgTransition" aria-hidden="true"><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div>
 
   <div class="cursor" id="cursorFollower" aria-hidden="true">
     <svg class="cursor__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -315,10 +314,16 @@
 (function(){
   const overlay = document.getElementById('pgTransition');
   if(!overlay) return;
+
+  const DURATION = 1700;
+
   function transitionTo(href){
+    overlay.style.pointerEvents = 'all';
+    overlay.classList.remove('is-leaving');
     overlay.classList.add('is-entering');
-    setTimeout(()=>{ window.location.href=href; }, 600);
+    setTimeout(()=>{ window.location.href=href; }, DURATION);
   }
+
   document.addEventListener('click', function(e){
     const a = e.target.closest('a');
     if(!a) return;
@@ -329,8 +334,26 @@
     e.preventDefault();
     transitionTo(href);
   });
-  overlay.classList.add('is-leaving');
-  overlay.addEventListener('animationend',()=>overlay.classList.remove('is-leaving'),{once:true});
+
+  overlay.classList.remove('is-entering');
+  overlay.classList.remove('is-leaving');
+  overlay.querySelectorAll('.pg-transition__cell').forEach(c=>{
+    c.style.transform='scaleX(1)';
+    c.style.transformOrigin='left';
+  });
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      overlay.querySelectorAll('.pg-transition__cell').forEach(c=>{
+        c.style.transform='';
+        c.style.transformOrigin='';
+      });
+      overlay.classList.add('is-leaving');
+      setTimeout(()=>{
+        overlay.classList.remove('is-leaving');
+        overlay.style.pointerEvents='';
+      }, DURATION);
+    });
+  });
 })();
 </script>
 
