@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
 
@@ -74,6 +74,7 @@
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script>
   const esc = (s='') => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const abs = (p='') => p.startsWith('http')||p.startsWith('/') ? p : '/'+p;
 
   async function loadJSON(path){
     const r = await fetch(path,{cache:'no-store'});
@@ -146,8 +147,8 @@
 
     // more projects
     const others = allProjects.filter(x=>x.slug!==p.slug).slice(0,3);
-    const moreCards = others.map(op=>'<a class="wcard" href="/work/'+esc(op.slug||'')+'" data-reveal>'
-      + '<div class="wcard__img"><img src="'+esc(op.image||'')+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
+    const moreCards = others.map(op=>'<a class="wcard" href="work.html#'+esc(op.slug||'')+'" data-reveal>'
+      + '<div class="wcard__img"><img src="'+esc(abs(op.image||''))+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
       + '<div class="wcard__info">'
       +   '<div class="wcard__left"><span class="wcard__title">'+esc(op.title||'')+'</span>'
       +     '<span class="wcard__discipline">'+esc(op.tag||'')+'</span></div>'
@@ -162,18 +163,18 @@
       while(i < gallery.length){
         const img = gallery[i];
         if(img.wide){
-          items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
+          items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
           i++;
         } else {
           const next = gallery[i+1] && !gallery[i+1].wide ? gallery[i+1] : null;
           if(next){
             items.push('<div class="cs-img-grid" data-reveal>'
-              + '<div class="cs-img"><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>'
+              + '<div class="cs-img"><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>'
               + '<div class="cs-img"><img src="'+esc(next.src)+'" alt="'+esc(next.alt||'')+'" loading="lazy" /></div>'
               + '</div>');
             i += 2;
           } else {
-            items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
+            items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
             i++;
           }
         }
@@ -189,7 +190,7 @@
     main.innerHTML =
       '<section class="cs-hero" data-reveal>'
       +   '<div class="cs-hero__wrap">'
-      +     '<a class="cs-back" href="/work">← Work</a>'
+      +     '<a class="cs-back" href="work.html">← Work</a>'
       +     '<p class="cs-category">'+esc(p.tag||p.scope||'Project')+'</p>'
       +     '<h1 class="cs-title">'+esc(p.summary||p.title||'')+'</h1>'
       +     (facts ? '<dl class="cs-facts">'+facts+'</dl>' : '')
@@ -205,7 +206,7 @@
     document.title = 'Not found';
     document.getElementById('caseContent').innerHTML =
       '<section class="cs-hero"><div class="cs-hero__wrap">'
-      + '<a class="cs-back" href="/work">← Work</a>'
+      + '<a class="cs-back" href="work.html">← Work</a>'
       + '<h1 class="cs-title">Project not found</h1>'
       + '<p class="cs-summary"><a href="index.html">Back to home</a></p>'
       + '</div></section>';
@@ -288,8 +289,10 @@
 
   (async function init(){
     try{
-      const slug = location.pathname.split('/').filter(Boolean).pop() || decodeURIComponent((location.hash||'').replace(/^#/,''));
-      const [site, proj] = await Promise.all([loadJSON('data/site.json'), loadJSON('data/projects.json')]);
+      const hashSlug = decodeURIComponent((location.hash||'').replace(/^#/,''));
+      const pathSlug = location.pathname.split('/').filter(Boolean).pop();
+      const slug = hashSlug || (pathSlug !== 'work.html' ? pathSlug : '');
+      const [site, proj] = await Promise.all([loadJSON('/data/site.json'), loadJSON('/data/projects.json')]);
       renderChrome(site);
       const list = proj.projects||[];
       const p = list.find(x=>x.slug===slug);

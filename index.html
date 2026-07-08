@@ -257,7 +257,7 @@
     const card = (p) => {
       const isSoon = p.tag === 'Soon';
       const tag = isSoon ? 'div' : 'a';
-      const href = isSoon ? '' : ' href="/work/'+esc(p.slug || '')+'"';
+      const href = isSoon ? '' : ' href="work.html#'+esc(p.slug || '')+'"';
       const titleHTML = esc(p.title || '') + (isSoon ? ' <span class="work__badge">Soon</span>' : '');
       return '<'+tag+' class="work__card" data-reveal'+href+'>'
         + '<div class="work__figure"><img src="'+esc(p.image || '')+'" alt="'+esc(p.title || '')+'" loading="lazy" /></div>'
