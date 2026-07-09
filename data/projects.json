@@ -1,6 +1,28 @@
 {
   "projects": [
     {
+      "slug": "deepdub",
+      "title": "Deepdub",
+      "tag": "Website redesign",
+      "year": "2024",
+      "description": "Complete website revamp for an AI-powered dubbing platform.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cac2ce2b0db354908d2f_Hero%20mockup%201%20%E2%80%93%201.webp",
+      "scope": "Website design, Webflow development",
+      "role": "Lead Designer",
+      "client": "Deepdub",
+      "summary": "A complete website revamp for Deepdub — an AI-powered dubbing solution that localises content into any language at scale.",
+      "gallery": [
+        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cac90d4f583e2eb0ddf2_Widescreen%20Autocomplete%20scene%20%E2%80%93%201.webp", "alt": "Deepdub hero section", "wide": true },
+        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb01bd43b23c4e55fec_deepdub%20display%201.webp", "alt": "Deepdub display screens", "wide": false },
+        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb51bd43b23c4e5628e_deepdub%20display%202.webp", "alt": "Deepdub product screens", "wide": false },
+        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f5871974a83a7de0dec9ca_deepdub-colors.webp", "alt": "Deepdub colour system", "wide": false },
+        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f5872111a772bd41495eb5_deepdub-typeface.webp", "alt": "Deepdub typeface", "wide": false },
+        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb7587e9ae25bd931abd_Old%20homepage%20%E2%80%93%201.webp", "alt": "Deepdub before", "wide": false },
+        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb78dc895f0582438f74_New%20Homepage%20%E2%80%93%201.webp", "alt": "Deepdub after", "wide": false }
+      ],
+      "body": "## Overview\n\nDeepdub is an AI-powered dubbing platform that helps media companies, streaming services, and content creators localise video content into any language at scale — fast, accurately, and with natural-sounding results.\n\nThe project was a complete website revamp. The existing site was dated and didn't reflect the quality or ambition of the product. The goal was to bring the design in line with where the brand was heading — confident, modern, and built for enterprise buyers.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site — from initial concepts through to final Webflow delivery.\n\nThe work included:\n- Defining a refreshed visual direction: tighter typography, a cleaner layout system, and a colour palette that felt premium without being cold\n- Designing all core pages: homepage, product pages, use case pages, and pricing\n- Creating a component library in Figma, structured for efficient Webflow development\n- Collaborating closely with the developer throughout the build to ensure everything translated cleanly from design to code\n\n## Outcome\n\nThe new site gave Deepdub a significantly stronger first impression — one that matched the sophistication of the product it was representing. The redesign improved both desktop and mobile Lighthouse scores, and the client responded positively:\n\n> \"I recently collaborated with Arch Web Design and was thoroughly impressed by their professionalism and the quality of their work. Their ability to deliver a high-quality, intuitive website exceeded my expectations.\"\n>\n> — Zivit Katz, VP Marketing, Deepdub\n\nThe project is a clear example of how a well-considered redesign — grounded in brand clarity and strong component thinking — can meaningfully shift how a product is perceived."
+    },
+    {
       "slug": "eqvista",
       "title": "Eqvista",
       "tag": "Mobile app design",
