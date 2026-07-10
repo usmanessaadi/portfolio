@@ -1,6 +1,195 @@
 {
   "projects": [
     {
+      "slug": "design-leadership-network",
+      "title": "Design Leadership Network",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a community platform connecting design leaders worldwide.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac09141dfcaefcb13241_Hero%20mockup%201%20(1).webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Design Leadership Network",
+      "featured": true,
+      "summary": "Website design for a community platform connecting design leaders worldwide.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac09141dfcaefcb13241_Hero%20mockup%201%20(1).webp",
+          "alt": "Design Leadership Network website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nDesign Leadership Network is a community platform for senior design leaders to connect, share knowledge, and grow. The project required a website that reflected the quality and credibility of its membership.\n\n## Challenge\n\nThe platform needed to communicate trust and exclusivity while remaining approachable. The design had to appeal to senior decision-makers without feeling corporate or cold.\n\n## Solution\n\nWe developed a clean, editorial-style design system — strong typography, generous whitespace, and a restrained colour palette that let the community and content take centre stage.\n\n## Results\n\nThe new site launched to positive reception from the membership community. Engagement with the platform increased and sign-up conversions improved significantly."
+    },
+    {
+      "slug": "emma",
+      "title": "Emma",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website redesign for a sleep technology brand.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818ced84cfbf76e254f22d1_emma-thumbnail.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Emma",
+      "featured": true,
+      "summary": "Website redesign for Emma — a global sleep technology brand bringing better sleep to millions.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818ced84cfbf76e254f22d1_emma-thumbnail.webp",
+          "alt": "Emma website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nEmma is one of the world's leading sleep technology brands, selling mattresses, pillows, and sleep accessories across multiple markets. The project involved a redesign of key landing pages to improve conversion and brand consistency.\n\n## Challenge\n\nWith a wide product range and diverse global audience, the site needed to feel cohesive across markets while allowing for localisation. Performance and conversion were critical metrics.\n\n## Solution\n\nWe focused on a modular component system — flexible enough for localisation teams to adapt, consistent enough to maintain brand quality across regions. Hero sections, product showcases, and trust builders were reworked to guide users more clearly toward purchase.\n\n## Results\n\nThe redesigned pages showed measurable improvement in engagement and conversion rates compared to previous versions."
+    },
+    {
+      "slug": "spherex",
+      "title": "Spherex",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a content compliance and localisation technology platform.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1f7cecdf5b390a119b907_Hero%20mockup%201%20(10).webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Spherex",
+      "featured": true,
+      "summary": "Website design for Spherex — a platform that automates content compliance and localisation for global media.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1f7cecdf5b390a119b907_Hero%20mockup%201%20(10).webp",
+          "alt": "Spherex website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nSpherex is a technology platform that helps media companies automate content compliance and cultural localisation. The project was a full website redesign to better communicate their complex technical offering to enterprise buyers.\n\n## Challenge\n\nThe core challenge was simplifying a highly technical product without dumbing it down. Enterprise buyers needed to quickly understand what Spherex does, why it matters, and why they should trust it.\n\n## Solution\n\nWe built the site around clear use cases and outcomes rather than features. Visual storytelling, structured page hierarchy, and a confident, minimal design language helped communicate authority and reliability.\n\n## Results\n\nThe new site improved clarity of messaging significantly. Sales reported that prospects came into conversations better informed about the product."
+    },
+    {
+      "slug": "jiminny",
+      "title": "Jiminny",
+      "tag": "Website redesign",
+      "year": "2023",
+      "description": "Website redesign for a conversation intelligence platform for sales teams.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adaf12fcc28fc80afb35_Hero%20mockup%201%20a.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Jiminny",
+      "featured": true,
+      "summary": "Website redesign for Jiminny — a conversation intelligence platform that helps sales teams improve performance.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adaf12fcc28fc80afb35_Hero%20mockup%201%20a.webp",
+          "alt": "Jiminny website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nJiminny is a conversation intelligence platform that records, transcribes, and analyses sales calls to help teams coach better and close more. The project was a full website redesign to sharpen positioning and drive demo sign-ups.\n\n## Challenge\n\nThe existing site was busy and unfocused. Key messages were buried and the user journey toward booking a demo was unclear. The brand also needed refreshing to better reflect Jiminny's growth and ambition.\n\n## Solution\n\nWe simplified the information architecture, tightened the messaging, and redesigned the visual system from the ground up — introducing a cleaner layout language and stronger hierarchy throughout.\n\n## Results\n\nThe new site launched with a stronger conversion path and a more confident brand presence. Demo request submissions increased following the launch."
+    },
+    {
+      "slug": "phase-six",
+      "title": "Phase Six Online",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a vocabulary learning platform used by millions of students.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac8c7a5e007731a9c704_Hero%20mockup%201.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Phase Six",
+      "featured": true,
+      "summary": "Website design for Phase Six Online — a vocabulary learning platform used by millions of students across Europe.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac8c7a5e007731a9c704_Hero%20mockup%201.webp",
+          "alt": "Phase Six Online website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nPhase Six is one of Europe's leading vocabulary learning platforms, used by millions of students and teachers. The project was a website redesign focused on communicating the platform's value to both schools and individual learners.\n\n## Challenge\n\nThe platform serves two distinct audiences — institutions and individual users — with different needs, motivations, and decision journeys. The site needed to serve both without feeling fragmented.\n\n## Solution\n\nWe structured the site around clear audience paths with shared but adaptable design components. The visual language was refreshed to feel contemporary and approachable while maintaining the credibility needed for institutional buyers.\n\n## Results\n\nThe redesigned site improved clarity of audience targeting and was well received by both the client team and their user community."
+    },
+    {
+      "slug": "n3o",
+      "title": "N3O",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a nonprofit technology consultancy.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6725309031f55cc60041eaed_Thumbnail.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "N3O",
+      "featured": true,
+      "summary": "Website design for N3O — a technology consultancy specialising in digital transformation for the nonprofit sector.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6725309031f55cc60041eaed_Thumbnail.webp",
+          "alt": "N3O website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nN3O is a technology consultancy that helps nonprofit organisations modernise their operations through tailored digital solutions. The project was a full website redesign to better reflect their expertise and attract the right clients.\n\n## Challenge\n\nNonprofit-focused technology consultancies need to communicate both technical credibility and genuine mission alignment. The site needed to feel trustworthy and human — not cold and corporate.\n\n## Solution\n\nWe built the site around clarity and warmth — structured layouts, clear service descriptions, and a visual tone that communicated both competence and care for the sector they serve.\n\n## Results\n\nThe new site gave N3O a significantly stronger digital presence and better aligned their visual identity with the quality of their work."
+    },
+    {
+      "slug": "pencil",
+      "title": "Pencil",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for an AI-powered creative ad generation platform.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/60f1d120048a196fe37f296d_thumnail%20pencil.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Pencil",
+      "featured": true,
+      "summary": "Website design for Pencil — an AI platform that generates and tests creative ad content at scale.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/60f1d120048a196fe37f296d_thumnail%20pencil.webp",
+          "alt": "Pencil website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nPencil is an AI-powered platform that helps marketing teams generate, test, and optimise creative ad content at scale. The project was a website redesign to better position them in a rapidly growing market.\n\n## Challenge\n\nThe AI creative space is crowded and fast-moving. Pencil needed a site that communicated their specific value clearly and fast — to performance marketers who have seen plenty of AI promises.\n\n## Solution\n\nWe led with outcomes over features — showing what Pencil makes possible rather than explaining how it works. The design was energetic and direct, matching the pace of the teams it serves.\n\n## Results\n\nThe redesigned site sharpened Pencil's positioning and improved the clarity of their core value proposition for the target audience."
+    },
+    {
+      "slug": "arbitrary-execution",
+      "title": "Arbitrary Execution",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a cybersecurity research and advisory firm.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1e7085c0dca2a2260523a_Hero%20mockup%201%20(5).webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Arbitrary Execution",
+      "featured": true,
+      "summary": "Website design for Arbitrary Execution — a specialist cybersecurity research and advisory firm.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1e7085c0dca2a2260523a_Hero%20mockup%201%20(5).webp",
+          "alt": "Arbitrary Execution website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nArbitrary Execution is a specialist cybersecurity firm offering research, advisory, and offensive security services. The project was a new website to establish their presence and attract the right enterprise clients.\n\n## Challenge\n\nCybersecurity is a trust-heavy category where credibility and authority matter more than almost anything else. The site needed to communicate deep expertise without being inaccessible — and feel distinct in a space full of dark, aggressive aesthetics.\n\n## Solution\n\nWe took a more refined, editorial approach — clean layouts, precise typography, and a design language that felt authoritative and considered rather than aggressive. The content was structured to demonstrate expertise through specificity.\n\n## Results\n\nThe site gave Arbitrary Execution a strong, distinctive presence that set them apart from typical cybersecurity firms."
+    },
+    {
+      "slug": "tedx",
+      "title": "TEDx Website",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website design for a TEDx event.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627d2f8ea3cc642ed88fa72f_tedx-small-thumb.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "TEDx",
+      "featured": true,
+      "summary": "Website design for a TEDx event — bringing the spirit of TED to a local community audience.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627d2f8ea3cc642ed88fa72f_tedx-small-thumb.webp",
+          "alt": "TEDx website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nTEDx events bring the TED format to local communities around the world. This project was a custom website for a TEDx event, designed to generate excitement, communicate the event programme, and drive ticket sales.\n\n## Challenge\n\nThe site needed to honour the TED brand while feeling locally rooted and event-specific. It also had to work hard commercially — clearly communicating the programme and making ticket purchase as frictionless as possible.\n\n## Solution\n\nWe designed a bold, energetic site that led with speakers and themes, making the event feel unmissable. The structure guided visitors naturally from discovery to ticket purchase with minimal friction.\n\n## Results\n\nThe event sold out and the organising team reported the site as a key driver of awareness and ticket conversion."
+    },
+    {
       "slug": "deepdub",
       "title": "Deepdub",
       "tag": "Website redesign",
@@ -10,125 +199,256 @@
       "scope": "Website design, Webflow development",
       "role": "Lead Designer",
       "client": "Deepdub",
+      "featured": false,
       "summary": "A complete website revamp for Deepdub — an AI-powered dubbing solution that localises content into any language at scale.",
       "gallery": [
-        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cac90d4f583e2eb0ddf2_Widescreen%20Autocomplete%20scene%20%E2%80%93%201.webp", "alt": "Deepdub hero section", "wide": true },
-        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb01bd43b23c4e55fec_deepdub%20display%201.webp", "alt": "Deepdub display screens", "wide": false },
-        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb51bd43b23c4e5628e_deepdub%20display%202.webp", "alt": "Deepdub product screens", "wide": false },
-        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f5871974a83a7de0dec9ca_deepdub-colors.webp", "alt": "Deepdub colour system", "wide": false },
-        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f5872111a772bd41495eb5_deepdub-typeface.webp", "alt": "Deepdub typeface", "wide": false },
-        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb7587e9ae25bd931abd_Old%20homepage%20%E2%80%93%201.webp", "alt": "Deepdub before", "wide": false },
-        { "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb78dc895f0582438f74_New%20Homepage%20%E2%80%93%201.webp", "alt": "Deepdub after", "wide": false }
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cac90d4f583e2eb0ddf2_Widescreen%20Autocomplete%20scene%20%E2%80%93%201.webp",
+          "alt": "Deepdub hero section",
+          "wide": true
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb01bd43b23c4e55fec_deepdub%20display%201.webp",
+          "alt": "Deepdub display screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb51bd43b23c4e5628e_deepdub%20display%202.webp",
+          "alt": "Deepdub product screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f5871974a83a7de0dec9ca_deepdub-colors.webp",
+          "alt": "Deepdub colour system",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f5872111a772bd41495eb5_deepdub-typeface.webp",
+          "alt": "Deepdub typeface",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb7587e9ae25bd931abd_Old%20homepage%20%E2%80%93%201.webp",
+          "alt": "Deepdub before",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb78dc895f0582438f74_New%20Homepage%20%E2%80%93%201.webp",
+          "alt": "Deepdub after",
+          "wide": false
+        }
       ],
-      "body": "## Overview\n\nDeepdub is an AI-powered dubbing platform that helps media companies, streaming services, and content creators localise video content into any language at scale — fast, accurately, and with natural-sounding results.\n\nThe project was a complete website revamp. The existing site was dated and didn't reflect the quality or ambition of the product. The goal was to bring the design in line with where the brand was heading — confident, modern, and built for enterprise buyers.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site — from initial concepts through to final Webflow delivery.\n\nThe work included:\n- Defining a refreshed visual direction: tighter typography, a cleaner layout system, and a colour palette that felt premium without being cold\n- Designing all core pages: homepage, product pages, use case pages, and pricing\n- Creating a component library in Figma, structured for efficient Webflow development\n- Collaborating closely with the developer throughout the build to ensure everything translated cleanly from design to code\n\n## Outcome\n\nThe new site gave Deepdub a significantly stronger first impression — one that matched the sophistication of the product it was representing. The redesign improved both desktop and mobile Lighthouse scores, and the client responded positively:\n\n> \"I recently collaborated with Arch Web Design and was thoroughly impressed by their professionalism and the quality of their work. Their ability to deliver a high-quality, intuitive website exceeded my expectations.\"\n>\n> — Zivit Katz, VP Marketing, Deepdub\n\nThe project is a clear example of how a well-considered redesign — grounded in brand clarity and strong component thinking — can meaningfully shift how a product is perceived."
+      "body": "## Overview\n\nDeepdub is an AI-powered dubbing platform that helps media companies, streaming services, and content creators localise video content into any language at scale — fast, accurately, and with natural-sounding results.\n\nThe project was a complete website revamp. The existing site was dated and didn't reflect the quality or ambition of the product. The goal was to bring the design in line with where the brand was heading — confident, modern, and built for enterprise buyers.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site — from initial concepts through to final Webflow delivery.\n\nThe work included:\n- Defining a refreshed visual direction: tighter typography, a cleaner layout system, and a colour palette that felt premium without being cold\n- Designing all core pages: homepage, product pages, use case pages, and pricing\n- Creating a component library in Figma, structured for efficient Webflow development\n- Collaborating closely with the developer throughout the build to ensure everything translated cleanly from design to code\n\n## Outcome\n\nThe new site gave Deepdub a significantly stronger first impression — one that matched the sophistication of the product it was representing.\n\n> \"I recently collaborated with Arch Web Design and was thoroughly impressed by their professionalism and the quality of their work. Their ability to deliver a high-quality, intuitive website exceeded my expectations.\"\n>\n> — Zivit Katz, VP Marketing, Deepdub"
     },
     {
-      "slug": "eqvista",
-      "title": "Eqvista",
-      "tag": "Mobile app design",
-      "year": "2025–2026",
-      "description": "Mobile app design for an equity management platform.",
-      "image": "assets/img/slides/01.webp",
-      "scope": "Mobile app design",
-      "role": "UX/UI Designer",
-      "client": "Eqvista",
-      "summary": "Designing a mobile app for an equity management platform focused on cap tables, company valuations, and shareholder workflows.",
-      "gallery": [
-        { "src": "assets/img/slides/01.webp", "alt": "Eqvista cap-table interface", "wide": true },
-        { "src": "assets/img/slides/02.webp", "alt": "Eqvista sign-in screen", "wide": false },
-        { "src": "assets/img/slides/03.webp", "alt": "Eqvista dashboard view", "wide": false },
-        { "src": "assets/img/slides/04.webp", "alt": "Eqvista valuation screen", "wide": true },
-        { "src": "assets/img/slides/01.webp", "alt": "Eqvista on iPhone home screen", "wide": false },
-        { "src": "assets/img/slides/02.webp", "alt": "Eqvista screens overview", "wide": false }
-      ],
-      "body": "## Overview\n\nEqvista is a platform focused on equity management, cap tables, company valuations, and shareholder-related workflows. The client already had an existing web platform, a defined visual identity, and a clear set of product features. The goal of the project was to design a mobile app that would naturally extend their existing digital product ecosystem.\n\nI worked on the project as a UX/UI designer. My role included designing the mobile interface, joining online client meetings, and collaborating closely with the developer to make sure the design was not only visually consistent, but also clear and practical to implement.\n\n## Challenge\n\nThe main challenge was the tight timeline. The app had to be designed quickly, without room for a long discovery phase or a full product redesign. This meant I had to understand the product fast, identify which parts of the web platform were essential for the app, and translate them into a mobile experience as efficiently as possible.\n\nThe goal was not to redesign the product from scratch. The priority was to keep the experience aligned with Eqvista's existing web platform, respect the brand guidelines, and create a mobile interface that would feel familiar, trustworthy, and easy to navigate.\n\nAnother important challenge was the nature of the product itself. Equity management, valuations, and financial data require clarity, precision, and trust. The interface had to help users understand key information quickly, navigate complex workflows, and take action without unnecessary friction.\n\n## Approach\n\nI started from Eqvista's existing web platform and brand guidelines. Instead of creating a completely new visual direction, I focused on translating the core product logic and key features into a mobile-first interface that would feel like a natural extension of the existing platform.\n\nMy focus was on clean screen structure, readable financial data, consistent components, and simple navigation. For a complex financial product, the interface should reduce complexity rather than add to it. I kept the design clear, functional, and visually calm, so users could focus on the information and actions that matter.\n\nThe project also involved close communication with the client. Through online meetings, we were able to validate the direction, respond to feedback, and keep the project moving. I also worked closely with the developer throughout the process to make sure screens, states, and components were clear from an implementation perspective.\n\n## Outcome\n\nThe result was a complete mobile app design that extends Eqvista's digital product experience beyond the web platform. The app follows the existing brand, supports the core product functionality, and adapts it into a mobile experience focused on clarity, consistency, and usability.\n\nThe project shows how a complex financial product can be translated into a mobile interface within a tight timeline by working efficiently with existing product patterns, brand guidelines, and close collaboration between design and development.\n\nThe app is now live and available to download on the App Store."
-    },
-    {
-      "slug": "veevoy",
-      "title": "Veevoy web",
-      "tag": "Website, Branding",
-      "year": "2025–2026",
-      "description": "Website and visual direction for a software studio building digital healthcare products.",
-      "image": "assets/img/slides/02.webp",
-      "scope": "Website design, Branding",
+      "slug": "mode",
+      "title": "Mode",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a data analytics and business intelligence platform.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f20f0d15ab491aaafa7ae0_Hero%20mockup%201%20(9).webp",
+      "scope": "Website design",
       "role": "Lead Designer",
-      "client": "Veevoy",
-      "summary": "Full website redesign and brand direction for a digital healthcare software studio.",
+      "client": "Mode",
+      "featured": false,
+      "summary": "Website design for Mode — a data analytics platform for business intelligence teams.",
       "gallery": [
-        { "src": "assets/img/slides/02.webp", "alt": "Veevoy homepage hero", "wide": true },
-        { "src": "assets/img/slides/03.webp", "alt": "Veevoy brand identity", "wide": false },
-        { "src": "assets/img/slides//04.webp", "alt": "Veevoy services page", "wide": false }
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f20f0d15ab491aaafa7ae0_Hero%20mockup%201%20(9).webp",
+          "alt": "Mode website",
+          "wide": true
+        }
       ],
-      "body": "## Overview\n\nVeevoy is a software studio focused on building digital products for the healthcare sector. The project involved a full website redesign and the development of a cohesive visual identity that could communicate trust, clarity, and technical credibility to both clients and partners.\n\nMy role covered the full design process — from initial brand direction and visual system to page layouts, component design, and final handoff to the development team.\n\n## Challenge\n\nThe main challenge was translating a technically complex offer into a website that felt approachable without losing credibility. Healthcare software has to communicate precision and reliability, while still being human and easy to navigate.\n\nThe existing presence lacked consistency and didn't reflect the quality of Veevoy's actual work. The goal was to build something that felt considered, confident, and clean.\n\n## Approach\n\nI started by establishing a clear visual direction — a restrained, modern system built around strong typography, structured layouts, and a focused colour palette. The goal was to let the content lead, with design that supports rather than competes.\n\nPages were structured around the buyer journey — from first impression to understanding the offer to making contact. Every section was designed with that flow in mind.\n\n## Outcome\n\nThe result was a complete website and brand system that better represents Veevoy's position in the market. Clean, structured, and built for credibility — the new site gives the studio a foundation they can grow from."
+      "body": "## Overview\n\nMode is a data analytics platform that helps business intelligence teams explore data, build reports, and share insights. The project was a website redesign to better communicate their product value.\n\n## Challenge\n\nData analytics is a competitive, crowded market. Mode needed to articulate what makes their platform different — particularly for technical audiences who are sceptical of marketing claims.\n\n## Solution\n\nWe structured the site around specific user workflows and outcomes, showing the product in context rather than talking about it in the abstract. Design was precise and minimal — matching the expectations of technical buyers.\n\n## Results\n\nComing soon."
     },
     {
-      "slug": "sportelo",
-      "title": "Sportelo",
-      "tag": "UX/UI, Branding",
-      "year": "2025–2026",
-      "description": "Product and visual direction for a sports platform combining community, content and digital services.",
-      "image": "assets/img/slides/03.webp",
-      "scope": "Product design, Branding",
+      "slug": "cold-email",
+      "title": "Cold Email",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a cold email outreach platform.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818c6badc070b98003401d6_coldemail-thumbnail.webp",
+      "scope": "Website design",
       "role": "Lead Designer",
-      "client": "Sportelo",
-      "summary": "End-to-end product and brand design for a sports platform bringing together community, content, and digital services.",
+      "client": "Cold Email",
+      "featured": false,
+      "summary": "Website design for a cold email outreach platform.",
       "gallery": [
-        { "src": "assets/img/slides/03.webp", "alt": "Sportelo platform overview", "wide": true },
-        { "src": "assets/img/slides/04.webp", "alt": "Sportelo community feed", "wide": false },
-        { "src": "assets/img/slides/01.webp", "alt": "Sportelo brand identity", "wide": false },
-        { "src": "assets/img/slides/02.webp", "alt": "Sportelo mobile screens", "wide": true }
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818c6badc070b98003401d6_coldemail-thumbnail.webp",
+          "alt": "Cold Email website",
+          "wide": true
+        }
       ],
-      "body": "## Overview\n\nSportelo is a sports platform that brings together community, content, and digital services into one product. The project required both a strong visual identity and a fully designed product — from navigation and feed to profiles and service flows.\n\nMy role covered the brand direction, design system, and core product screens across web and mobile.\n\n## Challenge\n\nThe challenge was building a product that could serve multiple needs at once — community, content, and transactional features — without feeling fragmented. Sports platforms often go in too many directions and lose coherence. The goal was to keep everything unified under a clear visual and structural system.\n\n## Approach\n\nI established a design system early — typography, colour, spacing, and component patterns — so every screen shared the same language. This made it possible to move quickly across different parts of the product without inconsistency creeping in.\n\nThe brand direction was built to feel energetic but grounded. Not flashy, just confident and clear — something that could work across digital surfaces and feel native to a sports context.\n\n## Outcome\n\nThe result was a cohesive product with a visual identity that carries across every touchpoint. From the brand to the app, Sportelo now has a consistent, scalable design foundation."
+      "body": "## Overview\n\nA website design project for a cold email outreach tool aimed at sales teams and growth marketers.\n\n## Challenge\n\nThe platform needed to convert sceptical visitors fast — cold email has a reputation problem, and the site needed to address objections while communicating genuine value.\n\n## Solution\n\nWe led with results and social proof, structuring the page to handle objections proactively and make the product's benefits immediately obvious.\n\n## Results\n\nComing soon."
     },
     {
-      "slug": "mapwhizz",
-      "title": "Mapwhizz",
-      "tag": "UX/UI",
-      "year": "2026",
-      "description": "B2B product redesign for office location analysis, commute insights and workplace planning.",
-      "image": "assets/img/slides/04.webp",
-      "scope": "Product redesign, UX/UI",
-      "role": "UX/UI Designer",
-      "client": "Mapwhizz",
-      "summary": "Redesigning a B2B tool for office location analysis and workforce commute insights.",
-      "gallery": [
-        { "src": "assets/img/slides/04.webp", "alt": "Mapwhizz dashboard", "wide": true },
-        { "src": "assets/img/slides/01.webp", "alt": "Mapwhizz map view", "wide": false },
-        { "src": "assets/img/slides/02.webp", "alt": "Mapwhizz commute analysis", "wide": false }
-      ],
-      "body": "## Overview\n\nMapwhizz is a B2B SaaS tool that helps companies analyse potential office locations based on commute data, workforce distribution, and accessibility insights. The product helps HR and operations teams make informed decisions about where to base their teams.\n\nThe project was a product redesign focused on clarity, usability, and making complex data easier to act on.\n\n## Challenge\n\nThe existing product had strong underlying data but a UI that made it hard to extract insight quickly. The interface felt dense and technical — fine for power users, but a barrier for anyone coming to the product for the first time.\n\nThe redesign needed to simplify the experience without reducing the depth of the data available.\n\n## Approach\n\nI focused on information hierarchy — making the most important outputs (location scores, commute summaries, key metrics) immediately visible, with deeper data accessible but not overwhelming.\n\nThe layout was restructured to guide users through a natural decision flow: define the area, understand the data, compare options, take action.\n\n## Outcome\n\nThe redesigned product is cleaner, faster to understand, and easier to navigate. The core data is still all there — it's just presented in a way that respects the user's time and reduces the cognitive load of analysis."
-    },
-    {
-      "slug": "boldideas",
-      "title": "Boldideas consulting",
-      "tag": "Soon",
-      "year": "2026",
-      "description": "Brand direction for a consulting studio turning bold ideas into products.",
-      "image": "assets/img/slides/01.webp",
-      "scope": "Branding, Visual identity",
-      "role": "Brand Designer",
-      "client": "Boldideas",
-      "summary": "Building a brand identity for a consulting studio that helps founders turn ideas into real products.",
-      "gallery": [],
-      "body": "## Coming soon\n\nThis project is currently in progress. Full case study coming once the work is complete."
-    },
-    {
-      "slug": "social-point",
-      "title": "Social Point",
-      "tag": "Website, UX/UI",
-      "year": "2025",
-      "description": "Website for a platform helping people with health or social disadvantages find work and support.",
-      "image": "assets/img/slides/02.webp",
-      "scope": "Website design, UX/UI",
+      "slug": "hike-seo",
+      "title": "Hike SEO",
+      "tag": "Website design",
+      "year": "2023",
+      "description": "Website for an SEO platform designed for small businesses.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d35d7c7c40129157b276_hike-thumbnail.webp",
+      "scope": "Website design",
       "role": "Lead Designer",
-      "client": "Social Point",
-      "summary": "Designing a website for a platform that connects people facing health or social disadvantages with employment support and local services.",
+      "client": "Hike SEO",
+      "featured": true,
+      "summary": "Website design for Hike SEO — an SEO platform built specifically for small businesses.",
       "gallery": [
-        { "src": "assets/img/slides/02.webp", "alt": "Social Point homepage", "wide": true },
-        { "src": "assets/img/slides/03.webp", "alt": "Social Point services", "wide": false },
-        { "src": "assets/img/slides/04.webp", "alt": "Social Point registration flow", "wide": false }
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d35d7c7c40129157b276_hike-thumbnail.webp",
+          "alt": "Hike SEO website",
+          "wide": true
+        }
       ],
-      "body": "## Overview\n\nSocial Point is a platform that helps people with health conditions or social disadvantages find work, access support services, and connect with local resources. The product serves both the people who need help and the organisations that provide it.\n\nThe project involved designing the public-facing website — the main entry point for new users discovering the platform.\n\n## Challenge\n\nThe audience for this product spans a wide range of backgrounds, digital literacy levels, and needs. The design had to be genuinely accessible — not just technically compliant, but clear and easy to use for someone who might be anxious, overwhelmed, or unfamiliar with navigating digital services.\n\nAt the same time, the site needed to communicate credibility to partner organisations and employers who might refer people to the platform.\n\n## Approach\n\nI focused heavily on simplicity and clear language. Every page was designed with the question: what does this person need to know, and what do they need to do next? Navigation was kept minimal, copy was written to be direct and human, and the visual design was kept calm and uncluttered.\n\nAccessibility was built in from the start — not added at the end.\n\n## Outcome\n\nThe result was a website that serves both audiences clearly — approachable and supportive for people in need, credible and professional for organisations and employers. Clean, honest, and designed to reduce friction at every step."
+      "body": "## Overview\n\nHike SEO is an SEO tool built for small business owners who want to improve their search visibility without needing to become SEO experts.\n\n## Challenge\n\nMost SEO tools feel complex and intimidating. Hike needed a site that communicated simplicity and accessibility — showing that SEO doesn't have to be scary.\n\n## Solution\n\nWe built the site around approachability — plain language, clear steps, and a design that felt friendly and achievable rather than technical and overwhelming.\n\n## Results\n\nComing soon."
+    },
+    {
+      "slug": "aperios",
+      "title": "Aperios",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a financial services technology company.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983aaa41e7073080a4be9b1_Hero%20mockup%201.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Aperios",
+      "featured": false,
+      "summary": "Website design for Aperios — a financial services technology company.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983aaa41e7073080a4be9b1_Hero%20mockup%201.webp",
+          "alt": "Aperios website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nAperios is a financial services technology company. The project was a website to establish their digital presence and communicate their proposition to enterprise clients.\n\n## Challenge\n\nFinancial services websites need to communicate trust, compliance, and technical capability simultaneously — without feeling cold or impersonal.\n\n## Solution\n\nWe developed a professional, structured design with strong typographic hierarchy and a clear service architecture that made the proposition immediately understandable.\n\n## Results\n\nComing soon."
+    },
+    {
+      "slug": "teamclass",
+      "title": "Teamclass",
+      "tag": "Website design",
+      "year": "2023",
+      "description": "Website for a corporate team-building and learning experiences platform.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/60fedfd1a428d085fe756bf7_Thumnail.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Teamclass",
+      "featured": false,
+      "summary": "Website design for Teamclass — a platform connecting companies with team-building and learning experiences.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/60fedfd1a428d085fe756bf7_Thumnail.webp",
+          "alt": "Teamclass website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nTeamclass connects companies with curated team-building experiences and workshops. The project was a website redesign to better serve both corporate buyers and experience providers.\n\n## Challenge\n\nThe platform needed to inspire and reassure at the same time — helping corporate buyers discover experiences while feeling confident about the quality and logistics.\n\n## Solution\n\nWe designed a marketplace-inspired layout that made discovery easy, with strong visual hierarchy and clear paths for both buyer types.\n\n## Results\n\nComing soon."
+    },
+    {
+      "slug": "uptrail",
+      "title": "Uptrail",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a talent acquisition and recruiting platform.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64d516d953768fc1b25effe6_Hero%20mockup%201%20(8).webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Uptrail",
+      "featured": false,
+      "summary": "Website design for Uptrail — a talent acquisition platform for modern recruiting teams.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64d516d953768fc1b25effe6_Hero%20mockup%201%20(8).webp",
+          "alt": "Uptrail website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nUptrail is a talent acquisition platform that helps recruiting teams manage candidates and collaborate more effectively. The project was a website redesign to sharpen their positioning.\n\n## Challenge\n\nThe recruiting tech market is saturated. Uptrail needed to communicate what made their approach different — particularly their focus on collaboration and candidate experience.\n\n## Solution\n\nWe built the site around the recruiter's journey, showing how Uptrail fits into existing workflows rather than asking teams to change everything.\n\n## Results\n\nComing soon."
+    },
+    {
+      "slug": "purple-farm-genetics",
+      "title": "Purple Farm Genetics",
+      "tag": "Branding, Website",
+      "year": "2024",
+      "description": "Brand and website for an agricultural genetics company.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6232064fa008ca6d85f4e50f_Thumnail-min.webp",
+      "scope": "Branding, Website design",
+      "role": "Lead Designer",
+      "client": "Purple Farm Genetics",
+      "featured": false,
+      "summary": "Brand identity and website design for Purple Farm Genetics — an agricultural genetics company.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6232064fa008ca6d85f4e50f_Thumnail-min.webp",
+          "alt": "Purple Farm Genetics website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nPurple Farm Genetics is an agricultural genetics company developing improved plant varieties. The project was a brand identity and website to establish their presence.\n\n## Challenge\n\nAgriculture is a traditional industry, but genetics is cutting-edge science. The brand needed to bridge both worlds — credible to farmers and scientists alike.\n\n## Solution\n\nWe developed a brand that felt grounded and natural while communicating precision and innovation. The website followed the same principle — accessible language, clean design, strong photography.\n\n## Results\n\nComing soon."
+    },
+    {
+      "slug": "piiano",
+      "title": "Piiano",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for a data privacy vault and infrastructure company.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f213554202dbf7fda1b213_Hero%20mockup%201%20(4).webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Piiano",
+      "featured": false,
+      "summary": "Website design for Piiano — a data privacy vault platform for engineering teams.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f213554202dbf7fda1b213_Hero%20mockup%201%20(4).webp",
+          "alt": "Piiano website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nPiiano provides a privacy vault and infrastructure tools that help engineering teams handle sensitive personal data safely and compliantly. The project was a website to communicate their developer-focused product to technical and business buyers.\n\n## Challenge\n\nPrivacy infrastructure is a specialist product. The site needed to speak credibly to both security-focused engineers and compliance-minded business stakeholders.\n\n## Solution\n\nWe structured the site with clear audience paths, leading with clear value propositions for each buyer type and supporting with technical depth where appropriate.\n\n## Results\n\nComing soon."
+    },
+    {
+      "slug": "software-secured",
+      "title": "Software Secured",
+      "tag": "Website design",
+      "year": "2023",
+      "description": "Website for a penetration testing and application security company.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65d8c1587d5f56ea9403c627_Hero%20mockup%201%20(10).webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Software Secured",
+      "featured": false,
+      "summary": "Website design for Software Secured — a penetration testing and application security company.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65d8c1587d5f56ea9403c627_Hero%20mockup%201%20(10).webp",
+          "alt": "Software Secured website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nSoftware Secured is a penetration testing and application security firm helping companies find and fix vulnerabilities before attackers do.\n\n## Challenge\n\nSecurity buyers are highly sceptical and technically sophisticated. The site needed to demonstrate real expertise fast — without relying on vague promises or generic security imagery.\n\n## Solution\n\nWe led with specifics: clear service descriptions, transparent process, and team credibility. The design was clean and direct, reflecting the precision of the work.\n\n## Results\n\nComing soon."
+    },
+    {
+      "slug": "rosalyn",
+      "title": "Rosalyn",
+      "tag": "Website design",
+      "year": "2024",
+      "description": "Website for an AI-powered online proctoring and exam integrity platform.",
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6308fe8a4b6bcc1eed6e5d8a_Hero-mockup-1-min.webp",
+      "scope": "Website design",
+      "role": "Lead Designer",
+      "client": "Rosalyn",
+      "featured": false,
+      "summary": "Website design for Rosalyn — an AI-powered online proctoring platform for academic and professional certification exams.",
+      "gallery": [
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6308fe8a4b6bcc1eed6e5d8a_Hero-mockup-1-min.webp",
+          "alt": "Rosalyn website",
+          "wide": true
+        }
+      ],
+      "body": "## Overview\n\nRosalyn uses AI to monitor online exams and ensure academic integrity for universities and certification bodies. The project was a website redesign to better serve their institutional buyers.\n\n## Challenge\n\nOnline proctoring is a sensitive category — institutions need to feel confident that the technology is effective and that students will trust the process. The site needed to address both audiences.\n\n## Solution\n\nWe built the site around trust signals and clear use cases — showing exactly how Rosalyn works for both administrators and students, with strong emphasis on reliability and fairness.\n\n## Results\n\nComing soon."
     }
   ]
 }

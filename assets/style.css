@@ -326,29 +326,51 @@ h1.display em{
 }
 
 /* ---------- page transition (staggered strips) ---------- */
-/* ---------- page transition ---------- */
+/* ---------- page transition (horizontal strips) ---------- */
 .pg-transition{
   position:fixed;
   inset:0;
   z-index:9000;
   pointer-events:none;
-  background:#ebe1b0;
-  transform:translateX(100%);
+  display:flex;
+  flex-direction:column;
+  transform:translateZ(0);
+  isolation:isolate;
+}
+.pg-transition__cell{
+  background:#aea8fe;
+  height:calc(100% / 5 + 1px);
+  flex:none;
+  transform:scaleX(0);
+  transform-origin:right;
   will-change:transform;
+  backface-visibility:hidden;
 }
-.pg-transition.is-entering{
-  animation:pgIn .65s cubic-bezier(.76,0,.24,1) forwards;
+.pg-transition.is-entering .pg-transition__cell{
+  animation:cellIn .4s cubic-bezier(.76,0,.24,1) forwards;
 }
-.pg-transition.is-leaving{
-  animation:pgOut .65s cubic-bezier(.76,0,.24,1) forwards;
+.pg-transition.is-entering .pg-transition__cell:nth-child(1){animation-delay:0ms}
+.pg-transition.is-entering .pg-transition__cell:nth-child(2){animation-delay:80ms}
+.pg-transition.is-entering .pg-transition__cell:nth-child(3){animation-delay:160ms}
+.pg-transition.is-entering .pg-transition__cell:nth-child(4){animation-delay:240ms}
+.pg-transition.is-entering .pg-transition__cell:nth-child(5){animation-delay:320ms}
+.pg-transition.is-leaving .pg-transition__cell{
+  animation:cellOut .4s cubic-bezier(.76,0,.24,1) forwards;
+  transform:scaleX(1);
+  transform-origin:left;
 }
-@keyframes pgIn{
-  from{transform:translateX(100%)}
-  to{transform:translateX(0%)}
+.pg-transition.is-leaving .pg-transition__cell:nth-child(1){animation-delay:0ms}
+.pg-transition.is-leaving .pg-transition__cell:nth-child(2){animation-delay:80ms}
+.pg-transition.is-leaving .pg-transition__cell:nth-child(3){animation-delay:160ms}
+.pg-transition.is-leaving .pg-transition__cell:nth-child(4){animation-delay:240ms}
+.pg-transition.is-leaving .pg-transition__cell:nth-child(5){animation-delay:320ms}
+@keyframes cellIn{
+  from{transform:scaleX(0);transform-origin:right}
+  to{transform:scaleX(1);transform-origin:right}
 }
-@keyframes pgOut{
-  from{transform:translateX(0%)}
-  to{transform:translateX(-100%)}
+@keyframes cellOut{
+  from{transform:scaleX(1);transform-origin:left}
+  to{transform:scaleX(0);transform-origin:left}
 }
 
 /* ---------- custom cursor ---------- */
@@ -546,14 +568,12 @@ h1.display em{
 .work__figure{
   position:relative;
   width:100%;
-  aspect-ratio:743.75/929.69;
   overflow:hidden;
   background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.05) 50%,rgba(255,255,255,0) 100%),rgba(255,255,255,.04);
 }
 .work__figure img{
   width:100%;
-  height:100%;
-  object-fit:cover;
+  height:auto;
   display:block;
   transition:transform .6s var(--ease);
 }
@@ -1062,12 +1082,6 @@ h1.display em{
   margin:0 auto;
   padding:0 40px;
   box-sizing:border-box;
-}
-@media (max-width:720px){
-  .cs-cover-wrap .cs-img--full,.cs-cover-wrap .cs-cover{
-    padding:0;
-  }
-  .cs-cover-wrap{margin-top:40px}
 }
 .cs-cover{width:100%;overflow:hidden}
 .cs-cover img{width:100%;height:auto;display:block}

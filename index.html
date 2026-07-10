@@ -455,7 +455,7 @@
       ]);
       renderSite(site);
       renderServices(services.services || []);
-      renderWork(proj.projects || []);
+      renderWork(proj.projects.filter(p => p.featured === true));
     }catch(err){
       console.error(err);
     }finally{
@@ -469,21 +469,23 @@
     }
   })();
 </script>
-  <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
+  <div class="pg-transition" id="pgTransition" aria-hidden="true"><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div>
 
 <script>
 (function(){
   const overlay = document.getElementById('pgTransition');
   if(!overlay) return;
 
+  // Total animation duration = longest delay (220ms) + animation (500ms) = 720ms
+  const DURATION = 750;
+
   function transitionTo(href){
     overlay.style.pointerEvents = 'all';
     overlay.classList.remove('is-leaving');
-    void overlay.offsetWidth;
     overlay.classList.add('is-entering');
-    overlay.addEventListener('animationend', () => {
+    setTimeout(() => {
       window.location.href = href;
-    }, {once: true});
+    }, DURATION);
   }
 
   document.addEventListener('click', function(e){
@@ -503,21 +505,26 @@
     transitionTo(href);
   });
 
-  // On page load: play the leave animation (panel slides out left revealing the page)
+  // On every page load: force cells to fully covered state, then animate out
   overlay.classList.remove('is-entering');
-  void overlay.offsetWidth;
-  // Set initial state to fully covering before animating out
-  overlay.style.transform = 'translateX(0%)';
-  overlay.style.animation = 'none';
+  overlay.classList.remove('is-leaving');
+  // Force cells to scaleY(1) first, then trigger leaving animation
+  overlay.querySelectorAll('.pg-transition__cell').forEach(c => {
+    c.style.transform = 'scaleY(1)';
+    c.style.transformOrigin = 'top';
+  });
   requestAnimationFrame(() => {
-    overlay.style.transform = '';
-    overlay.style.animation = '';
-    void overlay.offsetWidth;
-    overlay.classList.add('is-leaving');
-    overlay.addEventListener('animationend', () => {
-      overlay.classList.remove('is-leaving');
-      overlay.style.pointerEvents = '';
-    }, {once: true});
+    requestAnimationFrame(() => {
+      overlay.querySelectorAll('.pg-transition__cell').forEach(c => {
+        c.style.transform = '';
+        c.style.transformOrigin = '';
+      });
+      overlay.classList.add('is-leaving');
+      setTimeout(() => {
+        overlay.classList.remove('is-leaving');
+        overlay.style.pointerEvents = '';
+      }, DURATION);
+    });
   });
 })();
 </script>
