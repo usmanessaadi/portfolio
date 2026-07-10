@@ -476,16 +476,18 @@
   const overlay = document.getElementById('pgTransition');
   if(!overlay) return;
 
-  // Total animation duration = longest delay (220ms) + animation (500ms) = 720ms
-  const DURATION = 750;
+  function unlock(){ overlay.style.pointerEvents = ''; }
 
   function transitionTo(href){
     overlay.style.pointerEvents = 'all';
     overlay.classList.remove('is-leaving');
+    void overlay.offsetWidth;
     overlay.classList.add('is-entering');
-    setTimeout(() => {
+    overlay.addEventListener('animationend', function onEnd(){
+      overlay.removeEventListener('animationend', onEnd);
       window.location.href = href;
-    }, DURATION);
+    });
+    setTimeout(()=>{ window.location.href = href; }, 1000);
   }
 
   document.addEventListener('click', function(e){
@@ -497,33 +499,36 @@
     if(href.startsWith('mailto:')) return;
     if(href.startsWith('http')) return;
     if(href.startsWith('#')) return;
-    if(href.includes('work.html')) return;
-    const isSamePage = href.split('#')[0] === '' ||
-      href.split('#')[0] === window.location.pathname.split('/').pop();
-    if(isSamePage) return;
+    const base = href.split('#')[0];
+    if(base===''||base===window.location.pathname.split('/').pop()) return;
     e.preventDefault();
     transitionTo(href);
   });
 
-  // On every page load: force cells to fully covered state, then animate out
+  // On page load: force overlay fully visible then animate out
   overlay.classList.remove('is-entering');
   overlay.classList.remove('is-leaving');
-  // Force cells to scaleY(1) first, then trigger leaving animation
-  overlay.querySelectorAll('.pg-transition__cell').forEach(c => {
-    c.style.transform = 'scaleY(1)';
-    c.style.transformOrigin = 'top';
-  });
+  overlay.style.transform = 'translateX(0%)';
+  overlay.style.transition = 'none';
+  overlay.style.animation = 'none';
+  void overlay.offsetWidth;
+
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      overlay.querySelectorAll('.pg-transition__cell').forEach(c => {
-        c.style.transform = '';
-        c.style.transformOrigin = '';
-      });
+      overlay.style.transform = '';
+      overlay.style.transition = '';
+      overlay.style.animation = '';
+      void overlay.offsetWidth;
       overlay.classList.add('is-leaving');
-      setTimeout(() => {
+      overlay.addEventListener('animationend', function onLeave(){
+        overlay.removeEventListener('animationend', onLeave);
         overlay.classList.remove('is-leaving');
-        overlay.style.pointerEvents = '';
-      }, DURATION);
+        unlock();
+      });
+      setTimeout(()=>{
+        overlay.classList.remove('is-leaving');
+        unlock();
+      }, 1000);
     });
   });
 })();
