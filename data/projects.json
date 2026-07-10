@@ -217,6 +217,11 @@
           "wide": true
         },
         {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb7587e9ae25bd931abd_Old%20homepage%20%E2%80%93%201.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb78dc895f0582438f74_New%20Homepage%20%E2%80%93%201.webp"
+        },
+        {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb01bd43b23c4e55fec_deepdub%20display%201.webp",
           "alt": "Deepdub display screens",
           "wide": false
@@ -224,26 +229,6 @@
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb51bd43b23c4e5628e_deepdub%20display%202.webp",
           "alt": "Deepdub product screens",
-          "wide": false
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f5871974a83a7de0dec9ca_deepdub-colors.webp",
-          "alt": "Deepdub colour system",
-          "wide": false
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f5872111a772bd41495eb5_deepdub-typeface.webp",
-          "alt": "Deepdub typeface",
-          "wide": false
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb7587e9ae25bd931abd_Old%20homepage%20%E2%80%93%201.webp",
-          "alt": "Deepdub before",
-          "wide": false
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cb78dc895f0582438f74_New%20Homepage%20%E2%80%93%201.webp",
-          "alt": "Deepdub after",
           "wide": false
         }
       ],

@@ -3,131 +3,51 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio</title>
-<meta name="description" content="Product designer & engineer." />
+<title>Case study</title>
 <meta name="theme-color" content="#121417" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
 
-  <div class="site-fx" aria-hidden="true">
-    <div class="fx__grain"></div>
-    <div class="fx__glow" id="siteGlow"></div>
-  </div>
+  <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
 
   <div class="cursor" id="cursorFollower" aria-hidden="true">
     <svg class="cursor__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
   </div>
 
-  <header class="hero" id="top">
-    <nav class="nav" id="nav">
-      <div class="nav__inner">
-        <div class="nav__id">
-          <a href="/" class="nav__name" data-name></a>
-          <span class="nav__role" data-role-title></span>
-        </div>
-        <div class="nav__links">
-          <a href="#work" class="nav__link--desktop">Work</a>
-          <a href="#experience" class="nav__link--desktop">About</a>
-          <a href="#" class="nav__cta" data-nav-cta>Get in touch</a>
-          <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-            <span class="nav__burger-box">
-              <span></span><span></span>
-            </span>
-          </button>
-        </div>
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <div class="nav__id">
+        <a href="/" class="nav__name" data-name></a>
+        <span class="nav__role" data-role-title></span>
       </div>
-    </nav>
-
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <div class="mobile-menu__links">
-        <a href="#work">Work</a>
-        <a href="#experience">About</a>
-      </div>
-      <a href="#" class="mobile-menu__cta" data-mobile-cta>Get in touch</a>
-      <div class="mobile-menu__foot">
-        <a href="#" data-mobile-email></a>
-        <span data-mobile-location></span>
+      <div class="nav__links">
+        <a href="index.html#work" class="nav__link--desktop">Work</a>
+        <a href="index.html#services" class="nav__link--desktop">About</a>
+        <a href="mailto:hello@otmane.design" class="nav__cta">Get in touch</a>
+        <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="nav__burger-box"><span></span><span></span></span>
+        </button>
       </div>
     </div>
+  </nav>
 
-    <div class="hero__inner">
-      <h1 class="display" data-reveal data-headline></h1>
-      <div class="hero__bottom">
-        <div class="hero__meta" data-reveal data-meta></div>
-        <div class="hero__photo" data-reveal>
-          <img src="assets/img/portrait.webp" alt="Portrait of Otmane Essaadi" loading="eager" />
-        </div>
-      </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#services">About</a>
     </div>
-  </header>
+    <a href="mailto:hello@otmane.design" class="mobile-menu__cta">Get in touch</a>
+    <div class="mobile-menu__foot">
+      <a href="mailto:hello@otmane.design">hello@otmane.design</a>
+      <span>Marrakech, Morocco</span>
+    </div>
+  </div>
 
-  <section class="slider">
-    <div class="slider__frame" id="sliderFrame">
-      <img class="slider__img is-active" src="assets/img/slides/01.webp" alt="" />
-      <img class="slider__img" src="assets/img/slides/02.webp" alt="" />
-      <img class="slider__img" src="assets/img/slides/03.webp" alt="" />
-      <img class="slider__img" src="assets/img/slides/04.webp" alt="" />
-      <button class="slider__btn" id="sliderToggle" type="button" aria-label="Pause slideshow" aria-pressed="false">
-        <svg class="slider__ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20"/></svg>
-        <svg class="slider__icon slider__icon--pause" viewBox="0 0 10 12"><rect x="0" y="0" width="3" height="12"/><rect x="7" y="0" width="3" height="12"/></svg>
-        <svg class="slider__icon slider__icon--play" viewBox="0 0 10 12"><path d="M0 0 L10 6 L0 12 Z"/></svg>
-      </button>
-    </div>
-  </section>
-
-  <section class="work" id="work">
-    <div class="work__wrap">
-      <h2 class="work__heading">Selected work</h2>
-      <div class="work__cols">
-        <div class="work__col" data-work-col-a></div>
-        <div class="work__col work__col--offset" data-work-col-b></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="services" id="services">
-    <div class="services__wrap">
-      <h2 class="services__heading" data-reveal>What I do</h2>
-      <div class="services__grid" data-services></div>
-      <div class="services__cta">
-        <p class="services__cta-text" data-reveal>Have a project in mind? Let's talk.</p>
-        <a href="#" class="services__cta-btn" data-services-cta data-reveal>Get in touch
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="kindwords">
-    <div class="kindwords__wrap">
-      <h2 class="kindwords__heading" data-reveal>Kind words</h2>
-      <div class="kindwords__article" data-reveal>
-        <span class="kindwords__date">June 8, 2026 — reference letter</span>
-        <blockquote class="kindwords__quote">
-          <p>To Whom It May Concern,</p>
-          <p>It's my genuine pleasure to write this reference for Otmane Essaadi. Otmane has been with Arch Web Design since day one, over six years ago, and that alone tells you more than anything I could write in this letter.</p>
-          <p>He joined us as a Junior UX Designer and grew into our Lead Designer role, earning it every step of the way. He has the skills and experience to design any website, app or marketing material you can dream up. Over six years, he's delivered close to 150 projects for our clients.</p>
-          <p>But honestly, what I'll remember most isn't the technical output. It's the person. Otmane is truly an amazing person. He's kind, caring, honest, loyal and truly cares about the work he's putting out. Anytime I reach out to him, he's there and he genuinely loves what he does. That combination, real technical skills plus the kind of character you can actually count on, is something that's extremely hard to find these days. I've been truly grateful to have him on this team.</p>
-          <p>Most recently, Otmane played a key role in our push to integrate AI into our workflows, helping us work smarter and build better. He embraced it fully and made the whole team better for it.</p>
-          <p>The last thing I want to mention is how Otmane embodies all of our company values: love (for our team and our clients), work smarter not harder, proactive, going above and beyond, we not me.</p>
-          <p>Any team that brings Otmane on board is getting someone special. I can't recommend him highly enough.</p>
-          <p>Sincerely</p>
-        </blockquote>
-        <div class="kindwords__footer">
-          <div class="kindwords__author">
-            <span class="kindwords__author-name">Rhami Aboud</span>
-            <span class="kindwords__author-role">Founder &amp; CEO</span>
-            <span class="kindwords__author-role">Arch Web Design</span>
-          </div>
-          <img class="kindwords__signature" src="assets/img/signature.png" alt="Rhami Aboud signature" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <main id="caseContent"></main>
 
   <footer class="contact">
     <div class="contact__wrap">
@@ -151,69 +71,37 @@
     </div>
   </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script>
-  const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
-  const esc = (s='') => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const esc = (s='') => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const abs = (p='') => p.startsWith('http')||p.startsWith('/') ? p : '/'+p;
 
   async function loadJSON(path){
-    const r = await fetch(path, {cache:'no-store'});
-    if(!r.ok) throw new Error('Failed to load '+path);
+    const r = await fetch(path,{cache:'no-store'});
+    if(!r.ok) throw new Error('Failed: '+path);
     return r.json();
   }
 
-  function renderSite(s){
-    document.querySelectorAll('[data-name]').forEach(el => el.textContent = s.name || 'Your Name');
-    document.title = (s.name ? s.name + ' — ' : '') + (s.role_title || 'Product Designer + Engineer');
-    document.querySelectorAll('[data-role-title]').forEach(el => el.textContent = s.role_title || '');
-    const yearEl = document.querySelector('[data-year]');
-    if(yearEl) yearEl.textContent = new Date().getFullYear();
-
-    const navCta = document.querySelector('[data-nav-cta]');
-    if(navCta && s.email) navCta.href = 'mailto:' + s.email;
-    const mobileCta = document.querySelector('[data-mobile-cta]');
-    if(mobileCta && s.email) mobileCta.href = 'mailto:' + s.email;
-    const mobileEmail = document.querySelector('[data-mobile-email]');
-    if(mobileEmail && s.email){ mobileEmail.href = 'mailto:' + s.email; mobileEmail.textContent = s.email; }
-    const mobileLocation = document.querySelector('[data-mobile-location]');
-    if(mobileLocation && Array.isArray(s.meta_grid)){
-      const based = s.meta_grid.find(m => (m.label || '').toLowerCase() === 'based');
-      if(based) mobileLocation.textContent = based.value || '';
-    }
-
-    const h = document.querySelector('[data-headline]');
-    if(h){
-      const pre  = esc(s.headline_pre || '');
-      const city = s.headline_city ? '<em>'+esc(s.headline_city)+'</em>' : '';
-      const lines = Array.isArray(s.headline_lines) ? s.headline_lines.map(esc) : [];
-      h.innerHTML = pre + city + '.' + (lines.length ? '<br>' + lines.join('<br>') : '');
-    }
-
-    const meta = document.querySelector('[data-meta]');
-    if(meta && Array.isArray(s.meta_grid)){
-      meta.innerHTML = s.meta_grid.map(m =>
-        '<div class="hero__meta-item">'
-        + '<span class="hero__meta-label">'+esc(m.label || '')+'</span>'
-        + '<span class="hero__meta-value">'+esc(m.value || '')+'</span>'
-        + '</div>'
-      ).join('');
-    }
+  function renderChrome(site){
+    document.querySelectorAll('[data-name]').forEach(el=>el.textContent=site.name||'');
+    document.querySelectorAll('[data-role-title]').forEach(el=>el.textContent=site.role_title||'');
 
     const contactEmail = document.querySelector('[data-contact-email]');
-    if(contactEmail){ contactEmail.href = 'mailto:hello@otmane.design'; contactEmail.textContent = 'hello@otmane.design'; }
+    if(contactEmail){ contactEmail.href='mailto:hello@otmane.design'; contactEmail.textContent='hello@otmane.design'; }
 
     const credit = document.querySelector('[data-contact-credit]');
-    if(credit) credit.textContent = 'Designed and built by ' + (s.name || '');
+    if(credit) credit.textContent = 'Designed and built by ' + (site.name||'');
 
     const cityEl = document.querySelector('[data-contact-city]');
-    if(cityEl && Array.isArray(s.meta_grid)){
-      const based = s.meta_grid.find(m => (m.label || '').toLowerCase() === 'based');
-      if(cityEl) cityEl.textContent = based ? (based.value || '').split(',')[0] : '';
+    if(cityEl && Array.isArray(site.meta_grid)){
+      const based = site.meta_grid.find(m=>(m.label||'').toLowerCase()==='based');
+      if(cityEl) cityEl.textContent = based ? (based.value||'').split(',')[0] : '';
     }
 
     const timeEl = document.querySelector('[data-contact-time]');
     function updateClock(){
       if(!timeEl) return;
-      timeEl.textContent = new Intl.DateTimeFormat('en-GB', { hour:'2-digit', minute:'2-digit', hour12:false, timeZone:'Africa/Casablanca' }).format(new Date());
+      timeEl.textContent = new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Africa/Casablanca'}).format(new Date());
     }
     updateClock();
     setInterval(updateClock, 30000);
@@ -225,257 +113,275 @@
     };
 
     const socWrap = document.querySelector('[data-contact-socials]');
-    if(socWrap && Array.isArray(s.socials)){
-      socWrap.innerHTML = s.socials.map(l => {
-        const key = (l.label || '').toLowerCase();
-        const icon = SOCIAL_ICONS[key] || '';
+    if(socWrap && Array.isArray(site.socials)){
+      socWrap.innerHTML = site.socials.map(l=>{
+        const key=(l.label||'').toLowerCase();
+        const icon=SOCIAL_ICONS[key]||'';
         return '<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+icon+esc(l.label)+'</a>';
       }).join('');
     }
-
-    const servicesCta = document.querySelector('[data-services-cta]');
-    if(servicesCta) servicesCta.href = 'mailto:hello@otmane.design';
   }
 
-  function renderServices(list){
-    const grid = document.querySelector('[data-services]');
-    if(!grid) return;
-    grid.innerHTML = list.map((sv, i) =>
-      '<div class="services__item" data-reveal>'
-      + '<span class="services__num">'+String(i + 1).padStart(2, '0')+'</span>'
-      + '<h3 class="services__title">'+esc(sv.title || '')+'</h3>'
-      + '<p class="services__desc">'+esc(sv.description || '')+'</p>'
-      + '</div>'
+  function metaFact(label, value){
+    if(!value) return '';
+    return '<div class="cs-fact">'
+      + '<dt class="cs-fact__label">'+esc(label)+'</dt>'
+      + '<dd class="cs-fact__value">'+esc(value)+'</dd>'
+      + '</div>';
+  }
+
+  function renderCase(p, allProjects, site){
+    document.title = (p.title||'Case study')+' — '+(site.name||'');
+    const main = document.getElementById('caseContent');
+
+    // facts dl
+    const facts = [
+      metaFact('Scope', p.scope || p.tag),
+      metaFact('Role', p.role),
+      metaFact('Client', p.client || p.title),
+      metaFact('Year', p.year || (p.meta||'').match(/\d{4}[-–]\d{4}|\d{4}/)?.[0])
+    ].filter(Boolean).join('');
+
+    // body prose
+    const bodyHTML = p.body ? marked.parse(p.body) : '';
+
+    // more projects
+    const others = allProjects.filter(x=>x.slug!==p.slug).slice(0,3);
+    const moreCards = others.map(op=>'<a class="wcard" href="work.html#'+esc(op.slug||'')+'" data-reveal>'
+      + '<div class="wcard__img"><img src="'+esc(abs(op.image||''))+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
+      + '<div class="wcard__info">'
+      +   '<div class="wcard__left"><span class="wcard__title">'+esc(op.title||'')+'</span>'
+      +     '<span class="wcard__discipline">'+esc(op.tag||'')+'</span></div>'
+      +   '<span class="wcard__year">'+esc(op.year||'')+'</span>'
+      + '</div></a>'
     ).join('');
+
+    // build all gallery items — supports wide, pair, and before/after slider
+    function buildGalleryItems(gallery){
+      const items = [];
+      let i = 0;
+      while(i < gallery.length){
+        const img = gallery[i];
+        // Before/after slider — triggered by type:'slider' on the item
+        if(img.type === 'slider' && img.before && img.after){
+          const id = 'slider-'+i;
+          items.push(
+            '<div class="cs-slider" data-reveal id="'+id+'">'
+            + '<div class="cs-slider__track">'
+            +   '<div class="cs-slider__after"><img src="'+esc(abs(img.after))+'" alt="After" loading="lazy" /></div>'
+            +   '<div class="cs-slider__before"><img src="'+esc(abs(img.before))+'" alt="Before" loading="lazy" /></div>'
+            +   '<div class="cs-slider__divider">'
+            +     '<div class="cs-slider__line"></div>'
+            +     '<div class="cs-slider__handle">'
+            +       '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M8 5L3 12L8 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5L21 12L16 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            +     '</div>'
+            +   '</div>'
+            + '</div>'
+            + '<div class="cs-slider__labels">'
+            +   '<span class="cs-slider__label">Before</span>'
+            +   '<span class="cs-slider__label">After</span>'
+            + '</div>'
+            + '</div>'
+          );
+          i++;
+        } else if(img.wide){
+          items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
+          i++;
+        } else {
+          const next = gallery[i+1] && !gallery[i+1].wide && gallery[i+1].type !== 'slider' ? gallery[i+1] : null;
+          if(next){
+            items.push('<div class="cs-img-grid" data-reveal>'
+              + '<div class="cs-img"><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>'
+              + '<div class="cs-img"><img src="'+esc(abs(next.src))+'" alt="'+esc(next.alt||'')+'" loading="lazy" /></div>'
+              + '</div>');
+            i += 2;
+          } else {
+            items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
+            i++;
+          }
+        }
+      }
+      return items;
+    }
+
+    const gallery = Array.isArray(p.gallery) && p.gallery.length ? p.gallery : (p.image ? [{src:p.image,alt:p.title,wide:true}] : []);
+    const galleryItems = buildGalleryItems(gallery);
+    const coverHTML = galleryItems.length ? '<section class="cs-cover-wrap">'+galleryItems[0]+'</section>' : '';
+    const restGalleryHTML = galleryItems.length > 1 ? '<div class="cs-gallery">'+galleryItems.slice(1).join('')+'</div>' : '';
+
+    main.innerHTML =
+      '<section class="cs-hero" data-reveal>'
+      +   '<div class="cs-hero__wrap">'
+      +     '<a class="cs-back" href="work.html">← Work</a>'
+      +     '<p class="cs-category">'+esc(p.tag||p.scope||'Project')+'</p>'
+      +     '<div class="cs-title-row">'
+      +       '<h1 class="cs-title">'+esc(p.summary||p.title||'')+'</h1>'
+      +       (p.liveUrl ? '<a class="cs-live-link" href="'+esc(p.liveUrl)+'" target="_blank" rel="noopener">Visit live website <span class="cs-live-arrow">↗</span></a>' : '')
+      +     '</div>'
+      +     (facts ? '<dl class="cs-facts">'+facts+'</dl>' : '')
+      +   '</div>'
+      + '</section>'
+      + coverHTML
+      + (bodyHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+bodyHTML+'</div></div></section>' : '')
+      + (restGalleryHTML ? '<section class="cs-body"><div class="cs-body__wrap">'+restGalleryHTML+'</div></section>' : '')
+      + (moreCards ? '<section class="cs-more"><div class="cs-more__wrap"><h2 class="cs-section-heading" data-reveal>More projects</h2><div class="cs-more__list">'+moreCards+'</div></div></section>' : '');
+
+    // Init sliders after DOM is set
+    initSliders();
   }
 
-  function renderWork(list){
-    const colA = document.querySelector('[data-work-col-a]');
-    const colB = document.querySelector('[data-work-col-b]');
-    if(!colA || !colB) return;
-
-    const card = (p) => {
-      const isSoon = p.tag === 'Soon';
-      const tag = isSoon ? 'div' : 'a';
-      const hrefAttr = isSoon ? '' : ' href="work.html#'+esc(p.slug || '')+'"';
-      const titleHTML = esc(p.title || '') + (isSoon ? ' <span class="work__badge">Soon</span>' : '');
-      return '<'+tag+' class="work__card" data-reveal'+hrefAttr+'>'
-        + '<div class="work__figure"><img src="'+esc(p.image || '')+'" alt="'+esc(p.title || '')+'" loading="lazy" /></div>'
-        + '<div class="work__caption">'
-        +   '<div class="work__row">'
-        +     '<span class="work__title">'+titleHTML+'</span>'
-        +     '<span class="work__year">'+esc(p.year || '')+'</span>'
-        +   '</div>'
-        +   '<p class="work__desc">'+esc(p.description || '')+'</p>'
-        + '</div>'
-        + '</'+tag+'>';
-    };
-
-    const mid = Math.ceil(list.length / 2);
-    colA.innerHTML = list.slice(0, mid).map(card).join('');
-    colB.innerHTML = list.slice(mid).map(card).join('');
+  function renderNotFound(){
+    document.title = 'Not found';
+    document.getElementById('caseContent').innerHTML =
+      '<section class="cs-hero"><div class="cs-hero__wrap">'
+      + '<a class="cs-back" href="work.html">← Work</a>'
+      + '<h1 class="cs-title">Project not found</h1>'
+      + '<p class="cs-summary"><a href="index.html">Back to home</a></p>'
+      + '</div></section>';
   }
 
-  function setupFX(){
-    const siteFx = document.querySelector('.site-fx');
-    if(!siteFx) return;
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function setupNav(){
+    const nav = document.getElementById('nav');
+    const onScroll = ()=>nav.classList.toggle('scrolled', window.scrollY>8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+  }
 
-    let raf = null;
-    window.addEventListener('pointermove', (e) => {
-      siteFx.classList.add('is-active');
-      if(raf) return;
-      raf = requestAnimationFrame(() => {
-        siteFx.style.setProperty('--x', e.clientX + 'px');
-        siteFx.style.setProperty('--y', e.clientY + 'px');
-        raf = null;
+  function setupReveal(){
+    const io = new IntersectionObserver(entries=>{
+      const groups = new Map();
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const parent = e.target.parentElement;
+          const count = groups.get(parent)||0;
+          e.target.style.transitionDelay = (count*90)+'ms';
+          groups.set(parent, count+1);
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
       });
-    });
-    document.addEventListener('mouseleave', () => siteFx.classList.remove('is-active'));
+    }, {threshold:.06});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
   }
 
   function setupCursor(){
-    if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
     const cursor = document.getElementById('cursorFollower');
     if(!cursor) return;
-
-    let raf = null, mx = 0, my = 0;
-    document.addEventListener('mousemove', (e) => {
-      mx = e.clientX; my = e.clientY;
-      cursor.style.opacity = '1';
+    let raf=null, mx=0, my=0;
+    document.addEventListener('mousemove', e=>{
+      mx=e.clientX; my=e.clientY;
+      cursor.style.opacity='1';
       if(raf) return;
-      raf = requestAnimationFrame(() => {
-        cursor.style.transform = 'translate3d('+mx+'px,'+my+'px,0) translate(-50%,-50%)';
-        raf = null;
+      raf=requestAnimationFrame(()=>{
+        cursor.style.transform='translate3d('+mx+'px,'+my+'px,0) translate(-50%,-50%)';
+        raf=null;
       });
     });
-    document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
-
-    function bind(selector, cls){
-      document.querySelectorAll(selector).forEach((el) => {
-        el.addEventListener('mouseenter', () => cursor.classList.add(cls));
-        el.addEventListener('mouseleave', () => cursor.classList.remove(cls));
-      });
-    }
-    bind('.work__card', 'is-project');
-    bind('a:not(.work__card):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)', 'is-link');
-  }
-
-  function setupSlider(){
-    const frame = document.getElementById('sliderFrame');
-    if(!frame) return;
-    const imgs = Array.from(frame.querySelectorAll('.slider__img'));
-    const btn = document.getElementById('sliderToggle');
-    const ring = frame.querySelector('.slider__ring');
-    if(!imgs.length || !btn || !ring) return;
-
-    const DURATION = 3000;
-    const CIRCUMFERENCE = 126;
-    let idx = 0, timer = null, paused = false;
-    let elapsed = 0, lastTs = null, rafId = null;
-
-    ring.style.strokeDasharray = CIRCUMFERENCE;
-    ring.style.strokeDashoffset = CIRCUMFERENCE;
-
-    function animateRing(ts){
-      if(lastTs) elapsed += ts - lastTs;
-      lastTs = ts;
-      const progress = Math.min(elapsed / DURATION, 1);
-      ring.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress);
-      if(progress < 1 && !paused){
-        rafId = requestAnimationFrame(animateRing);
-      }
-    }
-
-    function startRing(){
-      if(rafId) cancelAnimationFrame(rafId);
-      elapsed = 0;
-      lastTs = null;
-      ring.style.strokeDashoffset = CIRCUMFERENCE;
-      rafId = requestAnimationFrame(animateRing);
-    }
-
-    function resumeRing(){
-      lastTs = null;
-      rafId = requestAnimationFrame(animateRing);
-    }
-
-    function goTo(next){
-      imgs[idx].classList.remove('is-active');
-      idx = next;
-      imgs[idx].classList.add('is-active');
-    }
-
-    function tick(){
-      if(paused) return;
-      goTo((idx + 1) % imgs.length);
-      startRing();
-      timer = setTimeout(tick, DURATION);
-    }
-
-    startRing();
-    timer = setTimeout(tick, DURATION);
-
-    btn.addEventListener('click', () => {
-      paused = !paused;
-      btn.classList.toggle('is-paused', paused);
-      btn.setAttribute('aria-pressed', String(paused));
-      btn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
-      if(paused){
-        clearTimeout(timer);
-        if(rafId) cancelAnimationFrame(rafId);
-      } else {
-        resumeRing();
-        const remaining = DURATION - elapsed;
-        timer = setTimeout(tick, remaining);
-      }
+    document.addEventListener('mouseleave',()=>{ cursor.style.opacity='0'; });
+    document.querySelectorAll('.wcard').forEach(el=>{
+      el.addEventListener('mouseenter',()=>cursor.classList.add('is-project'));
+      el.addEventListener('mouseleave',()=>cursor.classList.remove('is-project'));
+    });
+    document.querySelectorAll('a:not(.wcard):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)').forEach(el=>{
+      el.addEventListener('mouseenter',()=>cursor.classList.add('is-link'));
+      el.addEventListener('mouseleave',()=>cursor.classList.remove('is-link'));
     });
   }
 
   function setupMobileMenu(){
     const burger = document.getElementById('navBurger');
     const menu = document.getElementById('mobileMenu');
-    if(!burger || !menu) return;
-
-    function closeMenu(){
+    if(!burger||!menu) return;
+    function close(){
       burger.classList.remove('is-open');
       menu.classList.remove('is-open');
-      burger.setAttribute('aria-expanded', 'false');
-      menu.setAttribute('aria-hidden', 'true');
+      burger.setAttribute('aria-expanded','false');
+      menu.setAttribute('aria-hidden','true');
       document.body.classList.remove('menu-open');
     }
-    function openMenu(){
-      burger.classList.add('is-open');
-      menu.classList.add('is-open');
-      burger.setAttribute('aria-expanded', 'true');
-      menu.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('menu-open');
-    }
-
-    burger.addEventListener('click', () => {
-      burger.classList.contains('is-open') ? closeMenu() : openMenu();
+    burger.addEventListener('click',()=>{
+      burger.classList.contains('is-open') ? close() : (()=>{
+        burger.classList.add('is-open');
+        menu.classList.add('is-open');
+        burger.setAttribute('aria-expanded','true');
+        menu.setAttribute('aria-hidden','false');
+        document.body.classList.add('menu-open');
+      })();
     });
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-    window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeMenu(); });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    window.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
   }
 
-  function setupNav(){
-    const nav = document.getElementById('nav');
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, {passive:true});
-  }
+  function initSliders(){
+    document.querySelectorAll('.cs-slider').forEach(slider => {
+      const track = slider.querySelector('.cs-slider__track');
+      const beforePane = slider.querySelector('.cs-slider__before');
+      const beforeImg = beforePane?.querySelector('img');
+      const divider = slider.querySelector('.cs-slider__divider');
+      if(!track||!beforePane||!divider) return;
 
-  function setupReveal(){
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if(e.isIntersecting){
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
-    }, {threshold:.08, rootMargin:'0px 0px 0px 0px'});
+      function setPos(x){
+        const rect = track.getBoundingClientRect();
+        const pct = Math.min(100, Math.max(0, (x - rect.left) / rect.width * 100));
+        // Clip the before pane
+        beforePane.style.width = pct + '%';
+        // Stretch before image to track width so it doesn't squash
+        if(beforeImg) beforeImg.style.width = rect.width + 'px';
+        divider.style.left = pct + '%';
+      }
 
-    const groups = new Map();
-    document.querySelectorAll('[data-reveal]').forEach((el) => {
-      const parent = el.parentElement;
-      const count = groups.get(parent) || 0;
-      el.style.transitionDelay = (count * 90) + 'ms';
-      groups.set(parent, count + 1);
-      io.observe(el);
+      // Init at 50%
+      setPos(track.getBoundingClientRect().left + track.getBoundingClientRect().width * 0.5);
+
+      let dragging = false;
+      divider.addEventListener('mousedown', e => { dragging = true; e.preventDefault(); });
+      track.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); });
+      window.addEventListener('mousemove', e => { if(dragging) setPos(e.clientX); });
+      window.addEventListener('mouseup', () => { dragging = false; });
+      divider.addEventListener('touchstart', e => { dragging = true; e.preventDefault(); }, {passive:false});
+      track.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, {passive:true});
+      window.addEventListener('touchmove', e => { if(dragging) setPos(e.touches[0].clientX); }, {passive:true});
+      window.addEventListener('touchend', () => { dragging = false; });
+
+      // Recompute on resize
+      window.addEventListener('resize', () => {
+        setPos(track.getBoundingClientRect().left + track.getBoundingClientRect().width * parseFloat(beforePane.style.width) / 100);
+      }, {passive:true});
     });
   }
+
+  window.addEventListener('hashchange',()=>location.reload());
 
   (async function init(){
     try{
-      const [site, services, proj] = await Promise.all([
-        loadJSON('data/site.json'),
-        loadJSON('data/services.json'),
-        loadJSON('data/projects.json'),
-      ]);
-      renderSite(site);
-      renderServices(services.services || []);
-      renderWork(proj.projects.filter(p => p.featured === true));
+      const hashSlug = decodeURIComponent((location.hash||'').replace(/^#/,''));
+      const pathSlug = location.pathname.split('/').filter(Boolean).pop();
+      const slug = hashSlug || (pathSlug !== 'work.html' ? pathSlug : '');
+      const [site, proj] = await Promise.all([loadJSON('/data/site.json'), loadJSON('/data/projects.json')]);
+      renderChrome(site);
+      const list = proj.projects||[];
+      const p = list.find(x=>x.slug===slug);
+      if(!p) renderNotFound();
+      else renderCase(p, list, site);
     }catch(err){
-      console.error(err);
+      console.error(err); renderNotFound();
     }finally{
       document.body.classList.add('ready');
       setupNav();
       setupReveal();
-      setupSlider();
-      setupFX();
       setupCursor();
       setupMobileMenu();
     }
   })();
 </script>
-  <div class="pg-transition" id="pgTransition" aria-hidden="true"><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div>
 
 <script>
 (function(){
   const overlay = document.getElementById('pgTransition');
   if(!overlay) return;
 
+  // Always ensure overlay never blocks clicks unless actively animating in
   function unlock(){ overlay.style.pointerEvents = ''; }
 
   function transitionTo(href){
@@ -483,10 +389,12 @@
     overlay.classList.remove('is-leaving');
     void overlay.offsetWidth;
     overlay.classList.add('is-entering');
+    // Navigate when entering animation ends — animationend is the source of truth
     overlay.addEventListener('animationend', function onEnd(){
       overlay.removeEventListener('animationend', onEnd);
       window.location.href = href;
     });
+    // Safety net: if animationend never fires, navigate after 1s
     setTimeout(()=>{ window.location.href = href; }, 1000);
   }
 
@@ -494,18 +402,14 @@
     const a = e.target.closest('a');
     if(!a) return;
     const href = a.getAttribute('href');
-    if(!href) return;
-    if(a.target === '_blank') return;
-    if(href.startsWith('mailto:')) return;
-    if(href.startsWith('http')) return;
-    if(href.startsWith('#')) return;
+    if(!href||a.target==='_blank'||href.startsWith('mailto:')||href.startsWith('http')||href.startsWith('#')) return;
     const base = href.split('#')[0];
     if(base===''||base===window.location.pathname.split('/').pop()) return;
     e.preventDefault();
     transitionTo(href);
   });
 
-  // On page load: force overlay fully visible then animate out
+  // On page load: force overlay to fully visible, then animate out
   overlay.classList.remove('is-entering');
   overlay.classList.remove('is-leaving');
   overlay.style.transform = 'translateX(0%)';
@@ -513,18 +417,20 @@
   overlay.style.animation = 'none';
   void overlay.offsetWidth;
 
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
       overlay.style.transform = '';
       overlay.style.transition = '';
       overlay.style.animation = '';
       void overlay.offsetWidth;
       overlay.classList.add('is-leaving');
+      // After leaving animation ends, fully unlock
       overlay.addEventListener('animationend', function onLeave(){
         overlay.removeEventListener('animationend', onLeave);
         overlay.classList.remove('is-leaving');
         unlock();
       });
+      // Safety net
       setTimeout(()=>{
         overlay.classList.remove('is-leaving');
         unlock();
@@ -535,5 +441,4 @@
 </script>
 
 </body>
-
 </html>

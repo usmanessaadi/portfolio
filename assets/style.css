@@ -1129,6 +1129,95 @@ h1.display em{
 .cs-img img{width:100%;height:100%;object-fit:cover;display:block}
 
 
+/* before/after slider */
+.cs-slider{margin-top:48px;user-select:none}
+.cs-slider__track{
+  position:relative;
+  overflow:hidden;
+  cursor:ew-resize;
+  background:rgba(255,255,255,.04);
+  line-height:0;
+}
+.cs-slider__after,
+.cs-slider__before{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+}
+.cs-slider__after{position:relative;inset:unset;width:100%}
+.cs-slider__after img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.cs-slider__before{
+  position:absolute;
+  top:0;left:0;
+  height:100%;
+  width:50%;
+  overflow:hidden;
+}
+.cs-slider__before img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  pointer-events:none;
+  position:absolute;
+  top:0;left:0;
+  min-width:var(--slider-track-w, 100%);
+  max-width:none;
+}
+.cs-slider__divider{
+  position:absolute;
+  top:0;
+  left:50%;
+  height:100%;
+  width:0;
+  transform:translateX(-50%);
+  pointer-events:none;
+  z-index:2;
+}
+.cs-slider__line{
+  position:absolute;
+  top:0;left:50%;
+  width:1px;
+  height:100%;
+  background:rgba(255,255,255,.6);
+  transform:translateX(-50%);
+}
+.cs-slider__handle{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:44px;height:44px;
+  border-radius:50%;
+  background:rgba(18,20,23,.8);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fdfdfd;
+  pointer-events:all;
+  cursor:ew-resize;
+  transition:background .2s, border-color .2s, transform .15s;
+}
+.cs-slider__handle:hover{
+  background:rgba(18,20,23,.95);
+  border-color:rgba(255,255,255,.4);
+  transform:translate(-50%,-50%) scale(1.1);
+}
+.cs-slider__labels{
+  display:flex;
+  justify-content:space-between;
+  margin-top:12px;
+  padding:0 4px;
+}
+.cs-slider__label{
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+
 /* body */
 .cs-body{padding:120px 0}
 .cs-section-heading{
