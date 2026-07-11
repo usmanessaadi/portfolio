@@ -899,11 +899,21 @@ h1.display em{
   border-color:#ebe1b0;
 }
 
-/* project list */
+/* project list — 2-col staggered masonry matching homepage */
 .wl-list{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:64px 32px;
+  display:flex;
+  align-items:flex-start;
+  gap:34px;
+}
+.wl-col{
+  flex:1 1 0;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:96px;
+}
+.wl-col--offset{
+  margin-top:160px;
 }
 .wl-card{
   display:block;
@@ -937,12 +947,13 @@ h1.display em{
 
 /* wl responsive */
 @media (max-width:1521px){.wl-wrap{padding:0 40px}}
-@media (max-width:900px){.wl-list{grid-template-columns:repeat(2,1fr);gap:48px 24px}}
 @media (max-width:720px){
   .wl-hero{padding:120px 0 56px}
   .wl-wrap{padding:0 20px}
   .wl-filters{margin-bottom:40px}
-  .wl-list{grid-template-columns:1fr;gap:40px}
+  .wl-list{flex-direction:column;gap:56px}
+  .wl-col{gap:56px}
+  .wl-col--offset{margin-top:0}
   .wl-card__title{font-size:15px}
 }
 

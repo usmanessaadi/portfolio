@@ -234,6 +234,10 @@
       }).join('');
     }
 
+    // Split into two columns — odd-indexed left, even-indexed right (offset)
+    const colA = projects.filter((_, i) => i % 2 === 0);
+    const colB = projects.filter((_, i) => i % 2 === 1);
+
     main.innerHTML =
       '<section class="wl-hero">'
       +   '<div class="wl-wrap">'
@@ -243,7 +247,10 @@
       + '</section>'
       + '<section class="wl-main">'
       +   '<div class="wl-wrap">'
-      +     '<div class="wl-list" id="wlList">'+buildCards(projects)+'</div>'
+      +     '<div class="wl-list">'
+      +       '<div class="wl-col wl-col--offset">'+buildCards(colA)+'</div>'
+      +       '<div class="wl-col">'+buildCards(colB)+'</div>'
+      +     '</div>'
       +   '</div>'
       + '</section>';
 
