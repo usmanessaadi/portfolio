@@ -509,7 +509,15 @@
   overlay.style.animation = '';
   void overlay.offsetWidth;
   overlay.classList.add('is-leaving');
-  function onLeave(){ overlay.classList.remove('is-leaving'); overlay.style.pointerEvents = ''; }
+  function onLeave(){
+    overlay.classList.remove('is-leaving');
+    overlay.style.pointerEvents = '';
+    // After transition reveals page, scroll to hash target if present
+    if(location.hash){
+      const target = document.querySelector(location.hash);
+      if(target) target.scrollIntoView({behavior:'smooth'});
+    }
+  }
   overlay.addEventListener('animationend', onLeave, {once: true});
   setTimeout(onLeave, 700);
 })();
