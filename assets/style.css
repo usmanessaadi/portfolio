@@ -1141,27 +1141,17 @@ h1.display em{
   display:inline-flex;
   align-items:center;
   gap:6px;
-  font-size:15px;
-  font-weight:400;
+  height:38.5px;
+  padding:0 16px;
+  border:1px solid var(--line);
+  border-radius:9999px;
+  font-size:13px;
   color:var(--ink-soft);
   white-space:nowrap;
   flex-shrink:0;
-  padding-bottom:6px;
-  position:relative;
-  transition:color .3s var(--ease);
+  transition:color .25s var(--ease),border-color .25s var(--ease);
 }
-.cs-live-link::after{
-  content:'';
-  position:absolute;
-  bottom:0;left:0;
-  width:100%;height:1px;
-  background:linear-gradient(90deg,#ebe1b0,#aea8fe);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .4s var(--ease);
-}
-.cs-live-link:hover{color:#fdfdfd}
-.cs-live-link:hover::after{transform:scaleX(1)}
+.cs-live-link:hover{color:#fdfdfd;border-color:rgba(255,255,255,.5)}
 @media (max-width:720px){
   .cs-title-row{flex-direction:column;align-items:flex-start;gap:16px}
 }
