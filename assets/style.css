@@ -332,23 +332,23 @@ h1.display em{
   z-index:9000;
   pointer-events:none;
   background:#ebe1b0;
-  transform:translateX(-100%);
+  transform:translateX(-100%) translateZ(0);
   will-change:transform;
+  backface-visibility:hidden;
 }
 .pg-transition.is-entering{
-  animation:pgIn .55s cubic-bezier(.76,0,.24,1) forwards;
+  animation:pgIn .4s cubic-bezier(.76,0,.24,1) forwards;
 }
 .pg-transition.is-leaving{
-  transform:translateX(0%);
-  animation:pgOut .55s cubic-bezier(.76,0,.24,1) forwards;
+  animation:pgOut .5s cubic-bezier(.76,0,.24,1) forwards;
 }
 @keyframes pgIn{
-  from{transform:translateX(-100%)}
-  to{transform:translateX(0%)}
+  from{transform:translateX(-100%) translateZ(0)}
+  to{transform:translateX(0%) translateZ(0)}
 }
 @keyframes pgOut{
-  from{transform:translateX(0%)}
-  to{transform:translateX(100%)}
+  from{transform:translateX(0%) translateZ(0)}
+  to{transform:translateX(100%) translateZ(0)}
 }
 
 /* ---------- custom cursor ---------- */

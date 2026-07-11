@@ -411,18 +411,15 @@
   const overlay = document.getElementById('pgTransition');
   if(!overlay) return;
 
-  function unlock(){ overlay.style.pointerEvents = ''; }
+  overlay.style.willChange = 'transform';
 
   function transitionTo(href){
     overlay.style.pointerEvents = 'all';
     overlay.classList.remove('is-leaving');
     void overlay.offsetWidth;
     overlay.classList.add('is-entering');
-    overlay.addEventListener('animationend', function onEnd(){
-      overlay.removeEventListener('animationend', onEnd);
-      window.location.href = href;
-    });
-    setTimeout(()=>{ window.location.href = href; }, 700);
+    // Navigate after overlay covers screen — well before animationend
+    setTimeout(function(){ window.location.href = href; }, 450);
   }
 
   document.addEventListener('click', function(e){
@@ -437,18 +434,19 @@
     transitionTo(href);
   });
 
+  // Page load: force overlay visible then animate out
   overlay.classList.remove('is-entering');
   overlay.classList.remove('is-leaving');
   overlay.style.transform = 'translateX(0%)';
+  overlay.style.animation = 'none';
+  void overlay.offsetWidth;
+  overlay.style.transform = '';
+  overlay.style.animation = '';
   void overlay.offsetWidth;
   overlay.classList.add('is-leaving');
-  overlay.addEventListener('animationend', function onLeave(){
-    overlay.removeEventListener('animationend', onLeave);
-    overlay.classList.remove('is-leaving');
-    overlay.style.transform = '';
-    unlock();
-  });
-  setTimeout(()=>{ overlay.classList.remove('is-leaving'); overlay.style.transform=''; unlock(); }, 700);
+  function onLeave(){ overlay.classList.remove('is-leaving'); overlay.style.pointerEvents = ''; }
+  overlay.addEventListener('animationend', onLeave, {once: true});
+  setTimeout(onLeave, 700);
 })();
 </script>
 
