@@ -25,7 +25,7 @@
         <span class="nav__role" data-role-title></span>
       </div>
       <div class="nav__links">
-        <a href="index.html#work" class="nav__link--desktop">Work</a>
+        <a href="work.html" class="nav__link--desktop">Work</a>
         <a href="index.html#services" class="nav__link--desktop">About</a>
         <a href="mailto:hello@otmane.design" class="nav__cta">Get in touch</a>
         <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -37,7 +37,7 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__links">
-      <a href="index.html#work">Work</a>
+      <a href="work.html">Work</a>
       <a href="index.html#services">About</a>
     </div>
     <a href="mailto:hello@otmane.design" class="mobile-menu__cta">Get in touch</a>
@@ -197,7 +197,7 @@
     main.innerHTML =
       '<section class="cs-hero" data-reveal>'
       +   '<div class="cs-hero__wrap">'
-      +     '<a class="cs-back" href="work.html">← Work</a>'
+      +     '<a class="cs-back" href="work.html">← Back to all projects</a>'
       +     '<p class="cs-category">'+esc(p.tag||p.scope||'Project')+'</p>'
       +     '<div class="cs-title-row">'
       +       '<h1 class="cs-title">'+esc(p.summary||p.title||'')+'</h1>'
@@ -207,19 +207,60 @@
       +   '</div>'
       + '</section>'
       + coverHTML
-      + (bodyHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+bodyHTML+'</div></div></section>' : '')
-      + (sliderHTML ? '<section class="cs-body"><div class="cs-body__wrap">'+sliderHTML+'</div></section>' : '')
+      + (bodyHTML || sliderHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+bodyHTML+(sliderHTML ? '<h2>Before &amp; After</h2></div>'+sliderHTML : '</div>')+'</div></section>' : '')
       + (moreCards ? '<section class="cs-more"><div class="cs-more__wrap"><h2 class="cs-section-heading" data-reveal>More projects</h2><div class="cs-more__list">'+moreCards+'</div></div></section>' : '');
 
     // Init sliders after DOM is set
     initSliders();
   }
 
+  function renderWorkListing(projects, site){
+    document.title = 'Work — '+(site.name||'');
+    const main = document.getElementById('caseContent');
+
+    function buildCards(list){
+      return list.map(p=>{
+        const href = 'work.html#'+esc(p.slug||'');
+        return '<a class="wl-card" href="'+href+'" data-reveal>'
+          + '<div class="wl-card__img"><img src="'+esc(abs(p.image||''))+'" alt="'+esc(p.title||'')+'" loading="lazy" /></div>'
+          + '<div class="wl-card__info">'
+          +   '<div class="wl-card__left">'
+          +     '<span class="wl-card__title">'+esc(p.title||'')+'</span>'
+          +     '<span class="wl-card__tag">'+esc(p.tag||'')+'</span>'
+          +   '</div>'
+          +   '<span class="wl-card__year">'+esc(p.year||'')+'</span>'
+          + '</div>'
+          + '</a>';
+      }).join('');
+    }
+
+    main.innerHTML =
+      '<section class="wl-hero">'
+      +   '<div class="wl-wrap">'
+      +     '<p class="wl-eyebrow" data-reveal>Selected work</p>'
+      +     '<h1 class="wl-heading" data-reveal>A look at the work<br>I\'ve <em>helped shape</em></h1>'
+      +   '</div>'
+      + '</section>'
+      + '<section class="wl-main">'
+      +   '<div class="wl-wrap">'
+      +     '<div class="wl-list" id="wlList">'+buildCards(projects)+'</div>'
+      +   '</div>'
+      + '</section>';
+
+    // Cursor for cards
+    main.querySelectorAll('.wl-card').forEach(el=>{
+      const cursor = document.getElementById('cursorFollower');
+      if(!cursor) return;
+      el.addEventListener('mouseenter',()=>cursor.classList.add('is-project'));
+      el.addEventListener('mouseleave',()=>cursor.classList.remove('is-project'));
+    });
+  }
+
   function renderNotFound(){
     document.title = 'Not found';
     document.getElementById('caseContent').innerHTML =
       '<section class="cs-hero"><div class="cs-hero__wrap">'
-      + '<a class="cs-back" href="work.html">← Work</a>'
+      + '<a class="cs-back" href="work.html">← Back to all projects</a>'
       + '<h1 class="cs-title">Project not found</h1>'
       + '<p class="cs-summary"><a href="index.html">Back to home</a></p>'
       + '</div></section>';
@@ -346,9 +387,13 @@
       const [site, proj] = await Promise.all([loadJSON('/data/site.json'), loadJSON('/data/projects.json')]);
       renderChrome(site);
       const list = proj.projects||[];
-      const p = list.find(x=>x.slug===slug);
-      if(!p) renderNotFound();
-      else renderCase(p, list, site);
+      if(!slug){
+        renderWorkListing(list, site);
+      } else {
+        const p = list.find(x=>x.slug===slug);
+        if(!p) renderWorkListing(list, site);
+        else renderCase(p, list, site);
+      }
     }catch(err){
       console.error(err); renderNotFound();
     }finally{
