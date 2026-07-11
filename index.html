@@ -469,7 +469,7 @@
     }
   })();
 </script>
-  <div class="pg-transition" id="pgTransition" aria-hidden="true"><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div><div class="pg-transition__cell"></div></div>
+  <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
 
 <script>
 (function(){
@@ -487,53 +487,35 @@
       overlay.removeEventListener('animationend', onEnd);
       window.location.href = href;
     });
-    setTimeout(()=>{ window.location.href = href; }, 1000);
+    setTimeout(()=>{ window.location.href = href; }, 700);
   }
 
   document.addEventListener('click', function(e){
     const a = e.target.closest('a');
     if(!a) return;
     const href = a.getAttribute('href');
-    if(!href) return;
-    if(a.target === '_blank') return;
-    if(href.startsWith('mailto:')) return;
-    if(href.startsWith('http')) return;
-    if(href.startsWith('#')) return;
+    if(!href||a.target==='_blank'||href.startsWith('mailto:')||href.startsWith('http')||href.startsWith('#')) return;
     const base = href.split('#')[0];
-    if(base===''||base===window.location.pathname.split('/').pop()) return;
+    const cur = window.location.pathname.split('/').pop();
+    if(base===''||base===cur) return;
     e.preventDefault();
     transitionTo(href);
   });
 
-  // On page load: force overlay fully visible then animate out
   overlay.classList.remove('is-entering');
   overlay.classList.remove('is-leaving');
   overlay.style.transform = 'translateX(0%)';
-  overlay.style.transition = 'none';
-  overlay.style.animation = 'none';
   void overlay.offsetWidth;
-
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      overlay.style.transform = '';
-      overlay.style.transition = '';
-      overlay.style.animation = '';
-      void overlay.offsetWidth;
-      overlay.classList.add('is-leaving');
-      overlay.addEventListener('animationend', function onLeave(){
-        overlay.removeEventListener('animationend', onLeave);
-        overlay.classList.remove('is-leaving');
-        unlock();
-      });
-      setTimeout(()=>{
-        overlay.classList.remove('is-leaving');
-        unlock();
-      }, 1000);
-    });
+  overlay.classList.add('is-leaving');
+  overlay.addEventListener('animationend', function onLeave(){
+    overlay.removeEventListener('animationend', onLeave);
+    overlay.classList.remove('is-leaving');
+    overlay.style.transform = '';
+    unlock();
   });
+  setTimeout(()=>{ overlay.classList.remove('is-leaving'); overlay.style.transform=''; unlock(); }, 700);
 })();
 </script>
 
 </body>
-
 </html>
