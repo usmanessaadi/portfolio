@@ -156,15 +156,14 @@
       + '</div></a>'
     ).join('');
 
-    // build all gallery items — supports wide, pair, and before/after slider
+    // build gallery: only widescreen hero + before/after slider
     function buildGalleryItems(gallery){
       const items = [];
-      let i = 0;
-      while(i < gallery.length){
-        const img = gallery[i];
-        // Before/after slider — triggered by type:'slider' on the item
-        if(img.type === 'slider' && img.before && img.after){
-          const id = 'slider-'+i;
+      for(const img of gallery){
+        if(img.wide){
+          items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
+        } else if(img.type === 'slider' && img.before && img.after){
+          const id = 'slider-'+(Math.random().toString(36).slice(2));
           items.push(
             '<div class="cs-slider" data-reveal id="'+id+'">'
             + '<div class="cs-slider__track">'
@@ -183,31 +182,17 @@
             + '</div>'
             + '</div>'
           );
-          i++;
-        } else if(img.wide){
-          items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
-          i++;
-        } else {
-          const next = gallery[i+1] && !gallery[i+1].wide && gallery[i+1].type !== 'slider' ? gallery[i+1] : null;
-          if(next){
-            items.push('<div class="cs-img-grid" data-reveal>'
-              + '<div class="cs-img"><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>'
-              + '<div class="cs-img"><img src="'+esc(abs(next.src))+'" alt="'+esc(next.alt||'')+'" loading="lazy" /></div>'
-              + '</div>');
-            i += 2;
-          } else {
-            items.push('<div class="cs-img cs-img--full" data-reveal><img src="'+esc(abs(img.src))+'" alt="'+esc(img.alt||'')+'" loading="lazy" /></div>');
-            i++;
-          }
         }
+        // skip narrow display images — only wide and slider shown
       }
       return items;
     }
 
     const gallery = Array.isArray(p.gallery) && p.gallery.length ? p.gallery : (p.image ? [{src:p.image,alt:p.title,wide:true}] : []);
     const galleryItems = buildGalleryItems(gallery);
+    // First item is the widescreen cover, rest (slider) go in body
     const coverHTML = galleryItems.length ? '<section class="cs-cover-wrap">'+galleryItems[0]+'</section>' : '';
-    const restGalleryHTML = galleryItems.length > 1 ? '<div class="cs-gallery">'+galleryItems.slice(1).join('')+'</div>' : '';
+    const sliderHTML = galleryItems.length > 1 ? '<div class="cs-gallery">'+galleryItems.slice(1).join('')+'</div>' : '';
 
     main.innerHTML =
       '<section class="cs-hero" data-reveal>'
@@ -223,7 +208,7 @@
       + '</section>'
       + coverHTML
       + (bodyHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+bodyHTML+'</div></div></section>' : '')
-      + (restGalleryHTML ? '<section class="cs-body"><div class="cs-body__wrap">'+restGalleryHTML+'</div></section>' : '')
+      + (sliderHTML ? '<section class="cs-body"><div class="cs-body__wrap">'+sliderHTML+'</div></section>' : '')
       + (moreCards ? '<section class="cs-more"><div class="cs-more__wrap"><h2 class="cs-section-heading" data-reveal>More projects</h2><div class="cs-more__list">'+moreCards+'</div></div></section>' : '');
 
     // Init sliders after DOM is set
