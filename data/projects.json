@@ -14,9 +14,24 @@
       "summary": "Website design for a community platform connecting design leaders worldwide.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac09141dfcaefcb13241_Hero%20mockup%201%20(1).webp",
-          "alt": "Design Leadership Network website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac1037151d5d4642ccfe_Widescreen%20DLN%20scene.webp",
+          "alt": "Design Leadership Network — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac28614fb6c038ab3763_Old%20homepage.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac2a78f7c8e48c1a9b87_New%20Homepage.webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac1252f871633f189b7a_D1.webp",
+          "alt": "Design Leadership Network screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac14d4b19fd35a9538fe_D2.webp",
+          "alt": "Design Leadership Network screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nDesign Leadership Network is a community platform for senior design leaders to connect, share knowledge, and grow. The project required a website that reflected the quality and credibility of its membership.\n\n## Challenge\n\nThe platform needed to communicate trust and exclusivity while remaining approachable. The design had to appeal to senior decision-makers without feeling corporate or cold.\n\n## Solution\n\nWe developed a clean, editorial-style design system — strong typography, generous whitespace, and a restrained colour palette that let the community and content take centre stage.\n\n## Results\n\nThe new site launched to positive reception from the membership community. Engagement with the platform increased and sign-up conversions improved significantly.",
@@ -36,9 +51,24 @@
       "summary": "Website redesign for Emma — a global sleep technology brand bringing better sleep to millions.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818ced84cfbf76e254f22d1_emma-thumbnail.webp",
-          "alt": "Emma website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d0db62b7335b5fe57128_Widescreen%20Emma%20scene.webp",
+          "alt": "Emma — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d0f57bd9d91466ac75db_Old%20homepage.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d0f837881712170cf23e_New%20Homepage.webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818cee85867d0496e44f01d_emma-display1.webp",
+          "alt": "Emma screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818cef0a03097fad3be3f83_emma-display2.webp",
+          "alt": "Emma screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nEmma is one of the world's leading sleep technology brands, selling mattresses, pillows, and sleep accessories across multiple markets. The project involved a redesign of key landing pages to improve conversion and brand consistency.\n\n## Challenge\n\nWith a wide product range and diverse global audience, the site needed to feel cohesive across markets while allowing for localisation. Performance and conversion were critical metrics.\n\n## Solution\n\nWe focused on a modular component system — flexible enough for localisation teams to adapt, consistent enough to maintain brand quality across regions. Hero sections, product showcases, and trust builders were reworked to guide users more clearly toward purchase.\n\n## Results\n\nThe redesigned pages showed measurable improvement in engagement and conversion rates compared to previous versions.",
@@ -58,9 +88,24 @@
       "summary": "Website design for Spherex — a platform that automates content compliance and localisation for global media.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1f7cecdf5b390a119b907_Hero%20mockup%201%20(10).webp",
-          "alt": "Spherex website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1f7d85c0dca2a227146ac_Widescreen%20Spherex%20scene.webp",
+          "alt": "Spherex — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1f88559804b7552518480_Old%20homepage%20(1).webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1f8893b698c23871b3d23_New%20Homepage%20(1).webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f65996f9ac7939623fb8bc_spherex%20display%201.webp",
+          "alt": "Spherex screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f659a05e29eed800687917_spherex%20display%202.webp",
+          "alt": "Spherex screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nSpherex is a technology platform that helps media companies automate content compliance and cultural localisation. The project was a full website redesign to better communicate their complex technical offering to enterprise buyers.\n\n## Challenge\n\nThe core challenge was simplifying a highly technical product without dumbing it down. Enterprise buyers needed to quickly understand what Spherex does, why it matters, and why they should trust it.\n\n## Solution\n\nWe built the site around clear use cases and outcomes rather than features. Visual storytelling, structured page hierarchy, and a confident, minimal design language helped communicate authority and reliability.\n\n## Results\n\nThe new site improved clarity of messaging significantly. Sales reported that prospects came into conversations better informed about the product.",
@@ -80,9 +125,24 @@
       "summary": "Website redesign for Jiminny — a conversation intelligence platform that helps sales teams improve performance.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adaf12fcc28fc80afb35_Hero%20mockup%201%20a.webp",
-          "alt": "Jiminny website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adb9bda5ae02bd9a9e9f_Widescreen%20Jiminny%20scene.webp",
+          "alt": "Jiminny — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ade2bae16f72a265cf32_Old%20homepage.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ade374d9cd87f49ace8a_New%20Homepage.webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adb90403924a21ae8296_D1.webp",
+          "alt": "Jiminny screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adbcdaf6cfed7fd14860_D2.webp",
+          "alt": "Jiminny screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nJiminny is a conversation intelligence platform that records, transcribes, and analyses sales calls to help teams coach better and close more. The project was a full website redesign to sharpen positioning and drive demo sign-ups.\n\n## Challenge\n\nThe existing site was busy and unfocused. Key messages were buried and the user journey toward booking a demo was unclear. The brand also needed refreshing to better reflect Jiminny's growth and ambition.\n\n## Solution\n\nWe simplified the information architecture, tightened the messaging, and redesigned the visual system from the ground up — introducing a cleaner layout language and stronger hierarchy throughout.\n\n## Results\n\nThe new site launched with a stronger conversion path and a more confident brand presence. Demo request submissions increased following the launch.",
@@ -102,9 +162,24 @@
       "summary": "Website design for Phase Six Online — a vocabulary learning platform used by millions of students across Europe.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac8c7a5e007731a9c704_Hero%20mockup%201.webp",
-          "alt": "Phase Six Online website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac9212fcc28fc80abedf_Widescreen%20Phase%206%20scene.webp",
+          "alt": "Phase Six Online — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983accadf2be6224c6f068c_Old%20homepage.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983accc1c86410ccaa89f4a_New%20Homepage.webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac95caea9e07df1b8b31_D1.webp",
+          "alt": "Phase Six Online screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac94110dd78b0a238f56_D2.webp",
+          "alt": "Phase Six Online screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nPhase Six is one of Europe's leading vocabulary learning platforms, used by millions of students and teachers. The project was a website redesign focused on communicating the platform's value to both schools and individual learners.\n\n## Challenge\n\nThe platform serves two distinct audiences — institutions and individual users — with different needs, motivations, and decision journeys. The site needed to serve both without feeling fragmented.\n\n## Solution\n\nWe structured the site around clear audience paths with shared but adaptable design components. The visual language was refreshed to feel contemporary and approachable while maintaining the credibility needed for institutional buyers.\n\n## Results\n\nThe redesigned site improved clarity of audience targeting and was well received by both the client team and their user community.",
@@ -124,9 +199,24 @@
       "summary": "Website design for N3O — a technology consultancy specialising in digital transformation for the nonprofit sector.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6725309031f55cc60041eaed_Thumbnail.webp",
-          "alt": "N3O website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/672530a30f475da949d078fd_Widescreen%20N3O%20scene%20(1).webp",
+          "alt": "N3O — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/67253178dd0444f9171636aa_Old%20homepage.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6725317bb6738628420bbbfb_New%20Homepage.webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/672530aacebd5cc7b4fa106a_2.webp",
+          "alt": "N3O screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/672530b0564e31aed65ad83b_3.webp",
+          "alt": "N3O screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nN3O is a technology consultancy that helps nonprofit organisations modernise their operations through tailored digital solutions. The project was a full website redesign to better reflect their expertise and attract the right clients.\n\n## Challenge\n\nNonprofit-focused technology consultancies need to communicate both technical credibility and genuine mission alignment. The site needed to feel trustworthy and human — not cold and corporate.\n\n## Solution\n\nWe built the site around clarity and warmth — structured layouts, clear service descriptions, and a visual tone that communicated both competence and care for the sector they serve.\n\n## Results\n\nThe new site gave N3O a significantly stronger digital presence and better aligned their visual identity with the quality of their work.",
@@ -146,9 +236,24 @@
       "summary": "Website design for Pencil — an AI platform that generates and tests creative ad content at scale.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/60f1d120048a196fe37f296d_thumnail%20pencil.webp",
-          "alt": "Pencil website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6163edfdc084976a51a99c42_Widescreen-pencil%20scene-%E2%80%93-1-min.jpg",
+          "alt": "Pencil — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0701d72b1b23154674/6442b84b41e03940943e951c_Old%20homepage.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0701d72b1b23154674/6442b86e37abbb0e1d51640c_New%20Homepage.webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/67068cfedee64313fdae6ebc_pencil%20display%201.webp",
+          "alt": "Pencil screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/67068d029740a39212e93fad_pencil%20display%202.webp",
+          "alt": "Pencil screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nPencil is an AI-powered platform that helps marketing teams generate, test, and optimise creative ad content at scale. The project was a website redesign to better position them in a rapidly growing market.\n\n## Challenge\n\nThe AI creative space is crowded and fast-moving. Pencil needed a site that communicated their specific value clearly and fast — to performance marketers who have seen plenty of AI promises.\n\n## Solution\n\nWe led with outcomes over features — showing what Pencil makes possible rather than explaining how it works. The design was energetic and direct, matching the pace of the teams it serves.\n\n## Results\n\nThe redesigned site sharpened Pencil's positioning and improved the clarity of their core value proposition for the target audience.",
@@ -168,9 +273,24 @@
       "summary": "Website design for Arbitrary Execution — a specialist cybersecurity research and advisory firm.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1e7085c0dca2a2260523a_Hero%20mockup%201%20(5).webp",
-          "alt": "Arbitrary Execution website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1e714890b77421499f126_Widescreen%20AE%20scene.webp",
+          "alt": "Arbitrary Execution — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1ecaea753c1ed93b4e0c1_Old%20homepage.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1ecb2a1681bab1f5409fa_New%20Homepage.webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64faba674620883e725e5_ae%20display%201.webp",
+          "alt": "Arbitrary Execution screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64fb2ff62e47413342b9e_ae%20display%202.webp",
+          "alt": "Arbitrary Execution screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nArbitrary Execution is a specialist cybersecurity firm offering research, advisory, and offensive security services. The project was a new website to establish their presence and attract the right enterprise clients.\n\n## Challenge\n\nCybersecurity is a trust-heavy category where credibility and authority matter more than almost anything else. The site needed to communicate deep expertise without being inaccessible — and feel distinct in a space full of dark, aggressive aesthetics.\n\n## Solution\n\nWe took a more refined, editorial approach — clean layouts, precise typography, and a design language that felt authoritative and considered rather than aggressive. The content was structured to demonstrate expertise through specificity.\n\n## Results\n\nThe site gave Arbitrary Execution a strong, distinctive presence that set them apart from typical cybersecurity firms.",
@@ -190,9 +310,24 @@
       "summary": "Website design for a TEDx event — bringing the spirit of TED to a local community audience.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627d2f8ea3cc642ed88fa72f_tedx-small-thumb.webp",
-          "alt": "TEDx website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/5ebf5515e4440534a20c5e11_tedx-website-widescreen.webp",
+          "alt": "TEDx Website — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627e751058fd9b1006be614c_tedx-website-responsive.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627b720d302b1f86f6689d81_tedx-website-widescreen.jpg"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6706a425646deb0cd9694ec3_tedx%20display%201.webp",
+          "alt": "TEDx Website screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6706a43bdbd8d14c9b4cab11_tedx%20display%202.webp",
+          "alt": "TEDx Website screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nTEDx events bring the TED format to local communities around the world. This project was a custom website for a TEDx event, designed to generate excitement, communicate the event programme, and drive ticket sales.\n\n## Challenge\n\nThe site needed to honour the TED brand while feeling locally rooted and event-specific. It also had to work hard commercially — clearly communicating the programme and making ticket purchase as frictionless as possible.\n\n## Solution\n\nWe designed a bold, energetic site that led with speakers and themes, making the event feel unmissable. The structure guided visitors naturally from discovery to ticket purchase with minimal friction.\n\n## Results\n\nThe event sold out and the organising team reported the site as a key driver of awareness and ticket conversion.",
@@ -213,7 +348,7 @@
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cac90d4f583e2eb0ddf2_Widescreen%20Autocomplete%20scene%20%E2%80%93%201.webp",
-          "alt": "Deepdub hero section",
+          "alt": "Deepdub — website",
           "wide": true
         },
         {
@@ -223,12 +358,12 @@
         },
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb01bd43b23c4e55fec_deepdub%20display%201.webp",
-          "alt": "Deepdub display screens",
+          "alt": "Deepdub screens",
           "wide": false
         },
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb51bd43b23c4e5628e_deepdub%20display%202.webp",
-          "alt": "Deepdub product screens",
+          "alt": "Deepdub screens",
           "wide": false
         }
       ],
@@ -293,9 +428,24 @@
       "summary": "Website design for Hike SEO — an SEO platform built specifically for small businesses.",
       "gallery": [
         {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d35d7c7c40129157b276_hike-thumbnail.webp",
-          "alt": "Hike SEO website",
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d4c16757a7c204876486_Widescreen%20Hike%20SEO%20scene.webp",
+          "alt": "Hike SEO — website",
           "wide": true
+        },
+        {
+          "type": "slider",
+          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d49744c91b702b827912_Old%20homepage.webp",
+          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d49d7a705461a5fc6027_New%20Homepage.webp"
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d36441b7359cb028074d_hike-display1.webp",
+          "alt": "Hike SEO screens",
+          "wide": false
+        },
+        {
+          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d36c36db76b3dc701baf_hike-display2.webp",
+          "alt": "Hike SEO screens",
+          "wide": false
         }
       ],
       "body": "## Overview\n\nHike SEO is an SEO tool built for small business owners who want to improve their search visibility without needing to become SEO experts.\n\n## Challenge\n\nMost SEO tools feel complex and intimidating. Hike needed a site that communicated simplicity and accessibility — showing that SEO doesn't have to be scary.\n\n## Solution\n\nWe built the site around approachability — plain language, clear steps, and a design that felt friendly and achievable rather than technical and overwhelming.\n\n## Results\n\nComing soon.",
