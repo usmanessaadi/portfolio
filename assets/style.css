@@ -355,10 +355,11 @@ h1.display em{
 .cursor{
   position:fixed;
   top:0;left:0;
-  width:16px;
-  height:16px;
+  width:28px;
+  height:28px;
   border-radius:50%;
-  background:#fdfdfd;
+  background:transparent;
+  border:1.5px solid #fdfdfd;
   mix-blend-mode:difference;
   pointer-events:none;
   z-index:9999;
@@ -366,20 +367,27 @@ h1.display em{
   align-items:center;
   justify-content:center;
   opacity:0;
-  transform:translate3d(-50%,-50%,0);
-  transition:width .3s var(--ease),height .3s var(--ease),opacity .3s var(--ease);
+  transform:translate3d(-200px,-200px,0) translate(-50%,-50%);
+  transition:width .35s var(--ease), height .35s var(--ease), opacity .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
   will-change:transform;
 }
 .cursor__arrow{
-  width:20px;
-  height:20px;
+  width:18px;
+  height:18px;
   color:#000;
   opacity:0;
   transform:scale(.4);
   transition:opacity .25s var(--ease),transform .25s var(--ease);
 }
-.cursor.is-link{width:44px;height:44px}
-.cursor.is-project{width:104px;height:104px}
+.cursor.is-link{
+  width:44px;
+  height:44px;
+}
+.cursor.is-project{
+  width:104px;
+  height:104px;
+  background:rgba(235,225,176,.1);
+}
 .cursor.is-project .cursor__arrow{opacity:1;transform:scale(1)}
 
 @media (hover:hover) and (pointer:fine){

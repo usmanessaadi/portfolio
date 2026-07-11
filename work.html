@@ -301,25 +301,32 @@
     if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
     const cursor = document.getElementById('cursorFollower');
     if(!cursor) return;
-    let raf=null, mx=0, my=0;
+
+    let tx=-200, ty=-200, cx=-200, cy=-200, visible=false;
+    const LERP = 0.12;
+
     document.addEventListener('mousemove', e=>{
-      mx=e.clientX; my=e.clientY;
-      cursor.style.opacity='1';
-      if(raf) return;
-      raf=requestAnimationFrame(()=>{
-        cursor.style.transform='translate3d('+mx+'px,'+my+'px,0) translate(-50%,-50%)';
-        raf=null;
+      tx=e.clientX; ty=e.clientY;
+      if(!visible){ cx=tx; cy=ty; cursor.style.opacity='1'; visible=true; }
+    });
+    document.addEventListener('mouseleave',()=>{ cursor.style.opacity='0'; visible=false; });
+
+    function tick(){
+      cx += (tx-cx)*LERP;
+      cy += (ty-cy)*LERP;
+      cursor.style.transform='translate3d('+cx.toFixed(2)+'px,'+cy.toFixed(2)+'px,0) translate(-50%,-50%)';
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    function bind(sel, cls){
+      document.querySelectorAll(sel).forEach(el=>{
+        el.addEventListener('mouseenter',()=>cursor.classList.add(cls));
+        el.addEventListener('mouseleave',()=>cursor.classList.remove(cls));
       });
-    });
-    document.addEventListener('mouseleave',()=>{ cursor.style.opacity='0'; });
-    document.querySelectorAll('.wcard').forEach(el=>{
-      el.addEventListener('mouseenter',()=>cursor.classList.add('is-project'));
-      el.addEventListener('mouseleave',()=>cursor.classList.remove('is-project'));
-    });
-    document.querySelectorAll('a:not(.wcard):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)').forEach(el=>{
-      el.addEventListener('mouseenter',()=>cursor.classList.add('is-link'));
-      el.addEventListener('mouseleave',()=>cursor.classList.remove('is-link'));
-    });
+    }
+    bind('.wcard, .wl-card', 'is-project');
+    bind('a:not(.wcard):not(.wl-card):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)', 'is-link');
   }
 
   function setupMobileMenu(){
