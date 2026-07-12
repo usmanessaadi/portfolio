@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<script src="assets/ui.js"></script>
 </head>
 <body>
 
@@ -297,40 +298,6 @@
     document.addEventListener('mouseleave', () => siteFx.classList.remove('is-active'));
   }
 
-  function setupCursor(){
-    if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-    const cursor = document.getElementById('cursorFollower');
-    if(!cursor) return;
-
-    let tx=-200, ty=-200, tSize=20, cx=-200, cy=-200, cSize=20, visible=false;
-    const LP=0.12, LS=0.10, SD=20, SL=44, SP=100;
-
-    cursor.style.opacity='0';
-    cursor.style.width=SD+'px'; cursor.style.height=SD+'px';
-
-    document.addEventListener('mousemove', e=>{
-      tx=e.clientX; ty=e.clientY;
-      if(!visible){ cx=tx; cy=ty; cursor.style.opacity='1'; visible=true; }
-    });
-    document.addEventListener('mouseleave',()=>{ cursor.style.opacity='0'; visible=false; });
-
-    (function tick(){
-      cx+=(tx-cx)*LP; cy+=(ty-cy)*LP; cSize+=(tSize-cSize)*LS;
-      cursor.style.transform='translate3d('+cx.toFixed(1)+'px,'+cy.toFixed(1)+'px,0) translate(-50%,-50%)';
-      cursor.style.width=cSize.toFixed(1)+'px'; cursor.style.height=cSize.toFixed(1)+'px';
-      requestAnimationFrame(tick);
-    })();
-
-    function bind(sel, size, cls){
-      document.querySelectorAll(sel).forEach(el=>{
-        el.addEventListener('mouseenter',()=>{ tSize=size; if(cls) cursor.classList.add(cls); });
-        el.addEventListener('mouseleave',()=>{ tSize=SD; if(cls) cursor.classList.remove(cls); });
-      });
-    }
-    bind('.work__card, .wl-card', SP, 'is-project');
-    bind('a:not(.work__card):not(.wl-card):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)', SL, null);
-  }
-
 
   function setupMobileMenu(){
     const burger = document.getElementById('navBurger');
@@ -386,6 +353,8 @@
     });
   }
 
+
+
   const LOADER_IMAGES = [
     'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac09141dfcaefcb13241_Hero%20mockup%201%20(1).webp',
     'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818ced84cfbf76e254f22d1_emma-thumbnail.webp',
@@ -398,65 +367,6 @@
     'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627d2f8ea3cc642ed88fa72f_tedx-small-thumb.webp',
     'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cac2ce2b0db354908d2f_Hero%20mockup%201%20%E2%80%93%201.webp',
   ];
-
-  function runLoader(onDone){
-    const loader = document.getElementById('loader');
-    const imgsWrap = document.getElementById('loaderImgs');
-    const countEl = document.getElementById('loaderCount');
-    if(!loader||!imgsWrap||!countEl){ onDone(); return; }
-
-    // Inject images
-    LOADER_IMAGES.forEach((src, i) => {
-      const img = document.createElement('img');
-      img.src = src;
-      img.className = 'loader__img';
-      img.setAttribute('aria-hidden','true');
-      img.dataset.index = i;
-      imgsWrap.appendChild(img);
-    });
-
-    const total = 100;
-    const duration = 2200; // ms total loader time
-    const imgInterval = duration / LOADER_IMAGES.length;
-    let current = 0;
-    let pct = 0;
-    let start = null;
-    let imgTimer = null;
-
-    // Cycle images
-    function showImg(i){
-      imgsWrap.querySelectorAll('.loader__img').forEach((img, idx) => {
-        img.classList.toggle('is-active', idx === i);
-      });
-    }
-    showImg(0);
-    imgTimer = setInterval(() => {
-      current = (current + 1) % LOADER_IMAGES.length;
-      showImg(current);
-    }, imgInterval);
-
-    // Count up percentage smoothly
-    function tick(ts){
-      if(!start) start = ts;
-      const elapsed = ts - start;
-      pct = Math.min(100, Math.round((elapsed / duration) * 100));
-      countEl.textContent = pct + '%';
-      if(pct < 100){
-        requestAnimationFrame(tick);
-      } else {
-        clearInterval(imgTimer);
-        // Slide loader out
-        loader.classList.add('is-done');
-        loader.addEventListener('transitionend', () => {
-          loader.style.display = 'none';
-          onDone();
-        }, {once: true});
-        // Safety net
-        setTimeout(() => { loader.style.display='none'; onDone(); }, 900);
-      }
-    }
-    requestAnimationFrame(tick);
-  }
 
   (async function init(){
     // Start loader immediately
@@ -477,14 +387,13 @@
     });
 
     // Run loader AND page fetch in parallel — reveal when both done
-    runLoader(async () => {
+    UI.runLoader(LOADER_IMAGES, async () => {
       await pageReady;
       document.body.classList.add('ready');
       setupNav();
       setupReveal();
       setupSlider();
       setupFX();
-      setupCursor();
       setupMobileMenu();
     });
   })();
@@ -493,53 +402,48 @@
 
 <script>
 (function(){
-  const overlay = document.getElementById('pgTransition');
+  var overlay = document.getElementById('pgTransition');
   if(!overlay) return;
 
-  overlay.style.willChange = 'transform';
+  var COVER = 450;   // time for overlay to cover screen before navigating
+
+  function clearOverlay(){
+    overlay.classList.remove('is-entering');
+    overlay.classList.remove('is-leaving');
+    overlay.style.pointerEvents = '';
+  }
 
   function transitionTo(href){
     overlay.style.pointerEvents = 'all';
     overlay.classList.remove('is-leaving');
     void overlay.offsetWidth;
     overlay.classList.add('is-entering');
-    // Navigate after overlay covers screen — well before animationend
-    setTimeout(function(){ window.location.href = href; }, 450);
+    setTimeout(function(){ window.location.href = href; }, COVER);
   }
 
   document.addEventListener('click', function(e){
-    const a = e.target.closest('a');
+    var a = e.target.closest('a');
     if(!a) return;
-    const href = a.getAttribute('href');
-    if(!href||a.target==='_blank'||href.startsWith('mailto:')||href.startsWith('http')||href.startsWith('#')) return;
-    const base = href.split('#')[0];
-    const cur = window.location.pathname.split('/').pop();
-    if(base===''||base===cur) return;
+    var href = a.getAttribute('href');
+    if(!href) return;
+    if(a.target === '_blank') return;
+    if(href.startsWith('mailto:') || href.startsWith('http') || href.startsWith('#')) return;
+    var base = href.split('#')[0];
+    var cur = window.location.pathname.split('/').pop();
+    if(base === '' || base === cur) return;
     e.preventDefault();
     transitionTo(href);
   });
 
-  // Page load: force overlay visible then animate out
-  overlay.classList.remove('is-entering');
-  overlay.classList.remove('is-leaving');
-  overlay.style.transform = 'translateX(0%)';
-  overlay.style.animation = 'none';
-  void overlay.offsetWidth;
-  overlay.style.transform = '';
-  overlay.style.animation = '';
+  // On load: play the reveal, then ALWAYS clear (never leave the page covered)
+  clearOverlay();
   void overlay.offsetWidth;
   overlay.classList.add('is-leaving');
-  function onLeave(){
-    overlay.classList.remove('is-leaving');
-    overlay.style.pointerEvents = '';
-    // After transition reveals page, scroll to hash target if present
-    if(location.hash){
-      const target = document.querySelector(location.hash);
-      if(target) target.scrollIntoView({behavior:'smooth'});
-    }
-  }
-  overlay.addEventListener('animationend', onLeave, {once: true});
-  setTimeout(onLeave, 700);
+  overlay.addEventListener('animationend', clearOverlay, {once:true});
+  setTimeout(clearOverlay, 1200);              // safety net
+
+  // If the browser restores this page from bfcache, make sure it is not covered
+  window.addEventListener('pageshow', clearOverlay);
 })();
 </script>
 

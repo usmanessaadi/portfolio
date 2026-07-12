@@ -42,9 +42,10 @@
   position:absolute;
   bottom:32px;
   right:40px;
-  font-family:"Instrument Sans","Helvetica Neue",sans-serif;
+  font-family:"Newsreader","Georgia",serif;
+  font-style:italic;
+  font-weight:300;
   font-size:clamp(48px,7vw,96px);
-  font-weight:400;
   color:#121417;
   letter-spacing:-.04em;
   line-height:1;
@@ -407,6 +408,8 @@ h1.display em{
 @media (hover:hover) and (pointer:fine){
   *{cursor:none !important}
 }
+/* NOTE: do NOT add will-change / filter / opacity to an ancestor of .cursor —
+   any of those create a compositing layer and silently kill mix-blend-mode. */
 .cursor{
   position:fixed;
   top:0;left:0;
@@ -416,23 +419,24 @@ h1.display em{
   background:#fff;
   mix-blend-mode:difference;
   pointer-events:none;
+  z-index:9999;
+  opacity:0;
   display:flex;
   align-items:center;
   justify-content:center;
-  will-change:transform,width,height;
-  z-index:9999;
-  opacity:0;
-  transform:translate(-200px,-200px) translate(-50%,-50%);
+  transform:translate(-300px,-300px) translate(-50%,-50%);
 }
+/* Black arrow: inside a difference-blended circle, black leaves the backdrop
+   untouched, so the arrow reads as a cut-out (dark on light, light on dark). */
 .cursor__arrow{
-  width:20px;
-  height:20px;
+  width:22px;
+  height:22px;
+  flex:none;
+  color:#000;
+  stroke:#000;
   opacity:0;
   transform:scale(.4);
-  transition:opacity .2s, transform .2s;
-  color:#fff;
-  position:absolute;
-  stroke:#fff;
+  transition:opacity .25s var(--ease), transform .25s var(--ease);
 }
 .cursor.is-project .cursor__arrow{
   opacity:1;
