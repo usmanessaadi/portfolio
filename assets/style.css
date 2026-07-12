@@ -83,25 +83,23 @@ body{
   text-rendering:optimizeLegibility;
   overflow-x:hidden;
 }
-/* Hide page content until loaded — loader shows immediately */
+/* Hide page content until loader done — loader shows immediately */
 body:not(.ready) .site-fx,
-body:not(.ready) nav,
+body:not(.ready) .nav,
 body:not(.ready) main,
-body:not(.ready) footer,
-body:not(.ready) section,
-body:not(.ready) .pg-transition{
-  opacity:0;
-  pointer-events:none;
+body:not(.ready) footer{
+  visibility:hidden;
 }
-body.ready nav,
-body.ready main,
-body.ready footer,
-body.ready section,
 body.ready .site-fx,
-body.ready .pg-transition{
-  opacity:1;
-  transition:opacity .5s var(--ease);
-  pointer-events:auto;
+body.ready .nav,
+body.ready main,
+body.ready footer{
+  visibility:visible;
+  animation:fadeInPage .5s var(--ease) both;
+}
+@keyframes fadeInPage{
+  from{opacity:0}
+  to{opacity:1}
 }
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -1529,4 +1527,4 @@ h1.display em{
   [data-reveal]{opacity:1;transform:none}
   body{opacity:1}
   html{scroll-behavior:auto}
-}
+} 
