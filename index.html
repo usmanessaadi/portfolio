@@ -13,6 +13,11 @@
 </head>
 <body>
 
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__imgs" id="loaderImgs"></div>
+    <div class="loader__count" id="loaderCount">0%</div>
+  </div>
+
   <div class="site-fx" aria-hidden="true">
     <div class="fx__grain"></div>
     <div class="fx__glow" id="siteGlow"></div>
@@ -464,19 +469,99 @@
     });
   }
 
+  const LOADER_IMAGES = [
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac09141dfcaefcb13241_Hero%20mockup%201%20(1).webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818ced84cfbf76e254f22d1_emma-thumbnail.webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1f7cecdf5b390a119b907_Hero%20mockup%201%20(10).webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adaf12fcc28fc80afb35_Hero%20mockup%201%20a.webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac8c7a5e007731a9c704_Hero%20mockup%201.webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6725309031f55cc60041eaed_Thumbnail.webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/60f1d120048a196fe37f296d_thumnail%20pencil.webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1e7085c0dca2a2260523a_Hero%20mockup%201%20(5).webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627d2f8ea3cc642ed88fa72f_tedx-small-thumb.webp',
+    'https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cac2ce2b0db354908d2f_Hero%20mockup%201%20%E2%80%93%201.webp',
+  ];
+
+  function runLoader(onDone){
+    const loader = document.getElementById('loader');
+    const imgsWrap = document.getElementById('loaderImgs');
+    const countEl = document.getElementById('loaderCount');
+    if(!loader||!imgsWrap||!countEl){ onDone(); return; }
+
+    // Inject images
+    LOADER_IMAGES.forEach((src, i) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = 'loader__img';
+      img.setAttribute('aria-hidden','true');
+      img.dataset.index = i;
+      imgsWrap.appendChild(img);
+    });
+
+    const total = 100;
+    const duration = 2200; // ms total loader time
+    const imgInterval = duration / LOADER_IMAGES.length;
+    let current = 0;
+    let pct = 0;
+    let start = null;
+    let imgTimer = null;
+
+    // Cycle images
+    function showImg(i){
+      imgsWrap.querySelectorAll('.loader__img').forEach((img, idx) => {
+        img.classList.toggle('is-active', idx === i);
+      });
+    }
+    showImg(0);
+    imgTimer = setInterval(() => {
+      current = (current + 1) % LOADER_IMAGES.length;
+      showImg(current);
+    }, imgInterval);
+
+    // Count up percentage smoothly
+    function tick(ts){
+      if(!start) start = ts;
+      const elapsed = ts - start;
+      pct = Math.min(100, Math.round((elapsed / duration) * 100));
+      countEl.textContent = pct + '%';
+      if(pct < 100){
+        requestAnimationFrame(tick);
+      } else {
+        clearInterval(imgTimer);
+        // Slide loader out
+        loader.classList.add('is-done');
+        loader.addEventListener('transitionend', () => {
+          loader.style.display = 'none';
+          onDone();
+        }, {once: true});
+        // Safety net
+        setTimeout(() => { loader.style.display='none'; onDone(); }, 900);
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
   (async function init(){
-    try{
-      const [site, services, proj] = await Promise.all([
-        loadJSON('data/site.json'),
-        loadJSON('data/services.json'),
-        loadJSON('data/projects.json'),
-      ]);
-      renderSite(site);
-      renderServices(services.services || []);
-      renderWork(proj.projects.filter(p => p.featured === true));
-    }catch(err){
-      console.error(err);
-    }finally{
+    // Start loader immediately
+    const pageReady = new Promise(resolve => {
+      (async () => {
+        try{
+          const [site, services, proj] = await Promise.all([
+            loadJSON('data/site.json'),
+            loadJSON('data/services.json'),
+            loadJSON('data/projects.json'),
+          ]);
+          renderSite(site);
+          renderServices(services.services || []);
+          renderWork(proj.projects.filter(p => p.featured === true));
+        }catch(err){ console.error(err); }
+        resolve();
+      })();
+    });
+
+    // Run loader AND page fetch in parallel — reveal when both done
+    runLoader(async () => {
+      await pageReady;
       document.body.classList.add('ready');
       setupNav();
       setupReveal();
@@ -484,7 +569,7 @@
       setupFX();
       setupCursor();
       setupMobileMenu();
-    }
+    });
   })();
 </script>
   <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>

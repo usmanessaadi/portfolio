@@ -3,6 +3,60 @@
    Instrument Sans (body/UI) · Newsreader (headline) · dark ink (#121417) · restrained accents
    ============================================================ */
 
+/* ============================================================
+   Page loader
+   ============================================================ */
+.loader{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  background:#ebe1b0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  transition:transform .8s cubic-bezier(.76,0,.24,1);
+}
+.loader.is-done{
+  transform:translateY(-100%);
+}
+.loader__imgs{
+  position:relative;
+  width:clamp(260px,28vw,420px);
+  aspect-ratio:4/3;
+}
+.loader__img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity .3s ease;
+  border-radius:4px;
+}
+.loader__img.is-active{
+  opacity:1;
+}
+.loader__count{
+  position:absolute;
+  bottom:32px;
+  right:40px;
+  font-family:"Instrument Sans","Helvetica Neue",sans-serif;
+  font-size:clamp(48px,7vw,96px);
+  font-weight:400;
+  color:#121417;
+  letter-spacing:-.04em;
+  line-height:1;
+  z-index:2;
+  pointer-events:none;
+  font-variant-numeric:tabular-nums;
+}
+@media (max-width:720px){
+  .loader__count{bottom:24px;right:20px}
+  .loader__imgs{width:80vw}
+}
+
 :root{
   --bg:#121417;
   --ink:#fdfdfd;
@@ -28,10 +82,27 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   overflow-x:hidden;
-  opacity:0;
-  transition:opacity .5s var(--ease);
 }
-body.ready{opacity:1}
+/* Hide page content until loaded — loader shows immediately */
+body:not(.ready) .site-fx,
+body:not(.ready) nav,
+body:not(.ready) main,
+body:not(.ready) footer,
+body:not(.ready) section,
+body:not(.ready) .pg-transition{
+  opacity:0;
+  pointer-events:none;
+}
+body.ready nav,
+body.ready main,
+body.ready footer,
+body.ready section,
+body.ready .site-fx,
+body.ready .pg-transition{
+  opacity:1;
+  transition:opacity .5s var(--ease);
+  pointer-events:auto;
+}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 ::selection{background:var(--ink);color:var(--bg)}
