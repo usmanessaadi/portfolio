@@ -14,9 +14,7 @@
 
   <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
 
-  <div class="cursor" id="cursorFollower" aria-hidden="true">
-    <svg class="cursor__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
-  </div>
+  <div class="cursor" id="cursorFollower" aria-hidden="true"><svg class="cursor__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
 
   <nav class="nav" id="nav">
     <div class="nav__inner">
@@ -302,32 +300,35 @@
     const cursor = document.getElementById('cursorFollower');
     if(!cursor) return;
 
-    let tx=-200, ty=-200, cx=-200, cy=-200, visible=false;
-    const LERP = 0.12;
+    let tx=-200,ty=-200,tSize=20,cx=-200,cy=-200,cSize=20,visible=false;
+    const LP=0.12,LS=0.10,SD=20,SL=44,SP=100;
 
-    document.addEventListener('mousemove', e=>{
+    cursor.style.opacity='0';
+    cursor.style.width=SD+'px'; cursor.style.height=SD+'px';
+
+    document.addEventListener('mousemove',e=>{
       tx=e.clientX; ty=e.clientY;
       if(!visible){ cx=tx; cy=ty; cursor.style.opacity='1'; visible=true; }
     });
     document.addEventListener('mouseleave',()=>{ cursor.style.opacity='0'; visible=false; });
 
-    function tick(){
-      cx += (tx-cx)*LERP;
-      cy += (ty-cy)*LERP;
-      cursor.style.transform='translate3d('+cx.toFixed(2)+'px,'+cy.toFixed(2)+'px,0) translate(-50%,-50%)';
+    (function tick(){
+      cx+=(tx-cx)*LP; cy+=(ty-cy)*LP; cSize+=(tSize-cSize)*LS;
+      cursor.style.transform='translate3d('+cx.toFixed(1)+'px,'+cy.toFixed(1)+'px,0) translate(-50%,-50%)';
+      cursor.style.width=cSize.toFixed(1)+'px'; cursor.style.height=cSize.toFixed(1)+'px';
       requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
+    })();
 
-    function bind(sel, cls){
+    function bind(sel,size,cls){
       document.querySelectorAll(sel).forEach(el=>{
-        el.addEventListener('mouseenter',()=>cursor.classList.add(cls));
-        el.addEventListener('mouseleave',()=>cursor.classList.remove(cls));
+        el.addEventListener('mouseenter',()=>{ tSize=size; if(cls) cursor.classList.add(cls); });
+        el.addEventListener('mouseleave',()=>{ tSize=SD; if(cls) cursor.classList.remove(cls); });
       });
     }
-    bind('.wcard, .wl-card', 'is-project');
-    bind('a:not(.wcard):not(.wl-card):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)', 'is-link');
+    bind('.wcard, .wl-card',SP,'is-project');
+    bind('a:not(.wcard):not(.wl-card):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)',SL,null);
   }
+
 
   function setupMobileMenu(){
     const burger = document.getElementById('navBurger');

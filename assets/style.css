@@ -83,24 +83,7 @@ body{
   text-rendering:optimizeLegibility;
   overflow-x:hidden;
 }
-/* Hide page content until loader done — loader shows immediately */
-body:not(.ready) .site-fx,
-body:not(.ready) .nav,
-body:not(.ready) main,
-body:not(.ready) footer{
-  visibility:hidden;
-}
-body.ready .site-fx,
-body.ready .nav,
-body.ready main,
-body.ready footer{
-  visibility:visible;
-  animation:fadeInPage .5s var(--ease) both;
-}
-@keyframes fadeInPage{
-  from{opacity:0}
-  to{opacity:1}
-}
+/* Loader simply sits on top — no need to hide content underneath */
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 ::selection{background:var(--ink);color:var(--bg)}
@@ -421,46 +404,39 @@ h1.display em{
 }
 
 /* ---------- custom cursor ---------- */
+@media (hover:hover) and (pointer:fine){
+  *{cursor:none !important}
+}
 .cursor{
   position:fixed;
   top:0;left:0;
-  width:28px;
-  height:28px;
+  width:20px;
+  height:20px;
   border-radius:50%;
-  background:transparent;
-  border:1.5px solid #fdfdfd;
+  background:#fff;
   mix-blend-mode:difference;
   pointer-events:none;
-  z-index:9999;
   display:flex;
   align-items:center;
   justify-content:center;
+  will-change:transform,width,height;
+  z-index:9999;
   opacity:0;
-  transform:translate3d(-200px,-200px,0) translate(-50%,-50%);
-  transition:width .35s var(--ease), height .35s var(--ease), opacity .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
-  will-change:transform;
+  transform:translate(-200px,-200px) translate(-50%,-50%);
 }
 .cursor__arrow{
-  width:18px;
-  height:18px;
-  color:#000;
+  width:20px;
+  height:20px;
   opacity:0;
   transform:scale(.4);
-  transition:opacity .25s var(--ease),transform .25s var(--ease);
+  transition:opacity .2s, transform .2s;
+  color:#fff;
+  position:absolute;
+  stroke:#fff;
 }
-.cursor.is-link{
-  width:44px;
-  height:44px;
-}
-.cursor.is-project{
-  width:104px;
-  height:104px;
-  background:rgba(235,225,176,.1);
-}
-.cursor.is-project .cursor__arrow{opacity:1;transform:scale(1)}
-
-@media (hover:hover) and (pointer:fine){
-  *{cursor:none !important}
+.cursor.is-project .cursor__arrow{
+  opacity:1;
+  transform:scale(1);
 }
 .site-fx{
   position:fixed;
@@ -1527,4 +1503,4 @@ h1.display em{
   [data-reveal]{opacity:1;transform:none}
   body{opacity:1}
   html{scroll-behavior:auto}
-} 
+}

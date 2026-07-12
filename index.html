@@ -23,9 +23,7 @@
     <div class="fx__glow" id="siteGlow"></div>
   </div>
 
-  <div class="cursor" id="cursorFollower" aria-hidden="true">
-    <svg class="cursor__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
-  </div>
+  <div class="cursor" id="cursorFollower" aria-hidden="true"><svg class="cursor__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
 
   <header class="hero" id="top">
     <nav class="nav" id="nav">
@@ -304,116 +302,35 @@
     const cursor = document.getElementById('cursorFollower');
     if(!cursor) return;
 
-    // Target position (actual mouse)
-    let tx = -200, ty = -200;
-    // Current rendered position (lerped)
-    let cx = -200, cy = -200;
-    let visible = false;
-    const LERP = 0.12; // lower = smoother/slower, higher = snappier
+    let tx=-200, ty=-200, tSize=20, cx=-200, cy=-200, cSize=20, visible=false;
+    const LP=0.12, LS=0.10, SD=20, SL=44, SP=100;
 
-    document.addEventListener('mousemove', e => {
-      tx = e.clientX;
-      ty = e.clientY;
-      if(!visible){
-        cx = tx; cy = ty; // snap on first move
-        cursor.style.opacity = '1';
-        visible = true;
-      }
-    });
-    document.addEventListener('mouseleave', () => {
-      cursor.style.opacity = '0';
-      visible = false;
-    });
+    cursor.style.opacity='0';
+    cursor.style.width=SD+'px'; cursor.style.height=SD+'px';
 
-    // RAF loop — lerp toward target every frame
-    function tick(){
-      cx += (tx - cx) * LERP;
-      cy += (ty - cy) * LERP;
-      cursor.style.transform = 'translate3d('+cx.toFixed(2)+'px,'+cy.toFixed(2)+'px,0) translate(-50%,-50%)';
+    document.addEventListener('mousemove', e=>{
+      tx=e.clientX; ty=e.clientY;
+      if(!visible){ cx=tx; cy=ty; cursor.style.opacity='1'; visible=true; }
+    });
+    document.addEventListener('mouseleave',()=>{ cursor.style.opacity='0'; visible=false; });
+
+    (function tick(){
+      cx+=(tx-cx)*LP; cy+=(ty-cy)*LP; cSize+=(tSize-cSize)*LS;
+      cursor.style.transform='translate3d('+cx.toFixed(1)+'px,'+cy.toFixed(1)+'px,0) translate(-50%,-50%)';
+      cursor.style.width=cSize.toFixed(1)+'px'; cursor.style.height=cSize.toFixed(1)+'px';
       requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
+    })();
 
-    function bind(selector, cls){
-      document.querySelectorAll(selector).forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add(cls));
-        el.addEventListener('mouseleave', () => cursor.classList.remove(cls));
+    function bind(sel, size, cls){
+      document.querySelectorAll(sel).forEach(el=>{
+        el.addEventListener('mouseenter',()=>{ tSize=size; if(cls) cursor.classList.add(cls); });
+        el.addEventListener('mouseleave',()=>{ tSize=SD; if(cls) cursor.classList.remove(cls); });
       });
     }
-    bind('.work__card, .wl-card', 'is-project');
-    bind('a:not(.work__card):not(.wl-card):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)', 'is-link');
+    bind('.work__card, .wl-card', SP, 'is-project');
+    bind('a:not(.work__card):not(.wl-card):not(.nav__cta):not(.mobile-menu__cta), button:not(.slider__btn)', SL, null);
   }
 
-  function setupSlider(){
-    const frame = document.getElementById('sliderFrame');
-    if(!frame) return;
-    const imgs = Array.from(frame.querySelectorAll('.slider__img'));
-    const btn = document.getElementById('sliderToggle');
-    const ring = frame.querySelector('.slider__ring');
-    if(!imgs.length || !btn || !ring) return;
-
-    const DURATION = 3000;
-    const CIRCUMFERENCE = 126;
-    let idx = 0, timer = null, paused = false;
-    let elapsed = 0, lastTs = null, rafId = null;
-
-    ring.style.strokeDasharray = CIRCUMFERENCE;
-    ring.style.strokeDashoffset = CIRCUMFERENCE;
-
-    function animateRing(ts){
-      if(lastTs) elapsed += ts - lastTs;
-      lastTs = ts;
-      const progress = Math.min(elapsed / DURATION, 1);
-      ring.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress);
-      if(progress < 1 && !paused){
-        rafId = requestAnimationFrame(animateRing);
-      }
-    }
-
-    function startRing(){
-      if(rafId) cancelAnimationFrame(rafId);
-      elapsed = 0;
-      lastTs = null;
-      ring.style.strokeDashoffset = CIRCUMFERENCE;
-      rafId = requestAnimationFrame(animateRing);
-    }
-
-    function resumeRing(){
-      lastTs = null;
-      rafId = requestAnimationFrame(animateRing);
-    }
-
-    function goTo(next){
-      imgs[idx].classList.remove('is-active');
-      idx = next;
-      imgs[idx].classList.add('is-active');
-    }
-
-    function tick(){
-      if(paused) return;
-      goTo((idx + 1) % imgs.length);
-      startRing();
-      timer = setTimeout(tick, DURATION);
-    }
-
-    startRing();
-    timer = setTimeout(tick, DURATION);
-
-    btn.addEventListener('click', () => {
-      paused = !paused;
-      btn.classList.toggle('is-paused', paused);
-      btn.setAttribute('aria-pressed', String(paused));
-      btn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
-      if(paused){
-        clearTimeout(timer);
-        if(rafId) cancelAnimationFrame(rafId);
-      } else {
-        resumeRing();
-        const remaining = DURATION - elapsed;
-        timer = setTimeout(tick, remaining);
-      }
-    });
-  }
 
   function setupMobileMenu(){
     const burger = document.getElementById('navBurger');
