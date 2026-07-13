@@ -205,7 +205,7 @@
     }
 
     const contactEmail = document.querySelector('[data-contact-email]');
-    if(contactEmail){ contactEmail.href = 'mailto:mrotmanessaadi@gmail.com'; contactEmail.textContent = 'mrotmanessaadi@gmail.com'; }
+    if(contactEmail){ contactEmail.href = 'mailto:hello@otmane.design'; contactEmail.textContent = 'hello@otmane.design'; }
 
     const credit = document.querySelector('[data-contact-credit]');
     if(credit) credit.textContent = 'Designed and built by ' + (s.name || '');
@@ -240,7 +240,7 @@
     }
 
     const servicesCta = document.querySelector('[data-services-cta]');
-    if(servicesCta) servicesCta.href = 'mailto:mrotmanessaadi@gmail.com';
+    if(servicesCta) servicesCta.href = 'mailto:hello@otmane.design';
   }
 
   function renderServices(list){
@@ -300,6 +300,76 @@
     document.addEventListener('mouseleave', () => siteFx.classList.remove('is-active'));
   }
 
+
+  function setupSlider(){
+    const frame = document.getElementById('sliderFrame');
+    if(!frame) return;
+    const imgs = Array.from(frame.querySelectorAll('.slider__img'));
+    const btn = document.getElementById('sliderToggle');
+    const ring = frame.querySelector('.slider__ring');
+    if(!imgs.length || !btn || !ring) return;
+
+    const DURATION = 3000;
+    const CIRCUMFERENCE = 126;
+    let idx = 0, timer = null, paused = false;
+    let elapsed = 0, lastTs = null, rafId = null;
+
+    ring.style.strokeDasharray = CIRCUMFERENCE;
+    ring.style.strokeDashoffset = CIRCUMFERENCE;
+
+    function animateRing(ts){
+      if(lastTs) elapsed += ts - lastTs;
+      lastTs = ts;
+      const progress = Math.min(elapsed / DURATION, 1);
+      ring.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress);
+      if(progress < 1 && !paused){
+        rafId = requestAnimationFrame(animateRing);
+      }
+    }
+
+    function startRing(){
+      if(rafId) cancelAnimationFrame(rafId);
+      elapsed = 0; lastTs = null;
+      ring.style.strokeDashoffset = CIRCUMFERENCE;
+      rafId = requestAnimationFrame(animateRing);
+    }
+
+    function resumeRing(){
+      lastTs = null;
+      rafId = requestAnimationFrame(animateRing);
+    }
+
+    function goTo(next){
+      imgs[idx].classList.remove('is-active');
+      idx = next;
+      imgs[idx].classList.add('is-active');
+    }
+
+    function tick(){
+      if(paused) return;
+      goTo((idx + 1) % imgs.length);
+      startRing();
+      timer = setTimeout(tick, DURATION);
+    }
+
+    startRing();
+    timer = setTimeout(tick, DURATION);
+
+    btn.addEventListener('click', () => {
+      paused = !paused;
+      btn.classList.toggle('is-paused', paused);
+      btn.setAttribute('aria-pressed', String(paused));
+      btn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+      if(paused){
+        clearTimeout(timer);
+        if(rafId) cancelAnimationFrame(rafId);
+      } else {
+        resumeRing();
+        const remaining = DURATION - elapsed;
+        timer = setTimeout(tick, remaining);
+      }
+    });
+  }
 
   function setupMobileMenu(){
     const burger = document.getElementById('navBurger');
