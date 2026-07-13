@@ -3,7 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio</title>
+<title>Otmane Essaadi — UX/UI Designer</title>
+<meta name="description" content="Otmane Essaadi is a UX/UI Designer based in Marrakech, shaping digital products, websites and design systems with clarity and character. Open for full-time and part-time opportunities." />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://otmane.design/" />
+<meta property="og:title" content="Otmane Essaadi — UX/UI Designer" />
+<meta property="og:description" content="UX/UI Designer based in Marrakech, shaping digital products, websites and design systems with clarity and character." />
+<meta property="og:image" content="https://otmane.design/assets/img/portrait.webp" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Otmane Essaadi — UX/UI Designer" />
+<meta name="twitter:description" content="UX/UI Designer based in Marrakech, shaping digital products, websites and design systems with clarity and character." />
+<meta name="twitter:image" content="https://otmane.design/assets/img/portrait.webp" />
 <meta name="description" content="Product designer & engineer." />
 <meta name="theme-color" content="#121417" />
 <link rel="icon" type="image/png" href="assets/img/favicon.png" />
@@ -38,6 +55,7 @@
         <div class="nav__links">
           <a href="work.html" class="nav__link--desktop">Work</a>
           <a href="#kindwords" class="nav__link--desktop">Kind words</a>
+          <a href="#" class="nav__link--desktop" data-nav-resume>Resume</a>
           <a href="#" class="nav__cta" data-nav-cta>Get in touch</a>
           <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
             <span class="nav__burger-box">
@@ -52,6 +70,7 @@
       <div class="mobile-menu__links">
         <a href="work.html">Work</a>
         <a href="#kindwords">Kind words</a>
+        <a href="#" data-mobile-resume>Resume</a>
       </div>
       <a href="#" class="mobile-menu__cta" data-mobile-cta>Get in touch</a>
       <div class="mobile-menu__foot">
@@ -178,6 +197,13 @@
     if(navCta && s.email) navCta.href = 'mailto:' + s.email;
     const mobileCta = document.querySelector('[data-mobile-cta]');
     if(mobileCta && s.email) mobileCta.href = 'mailto:' + s.email;
+    // CV / Resume links
+    const resumeUrl = s.resume_url || '#';
+    document.querySelectorAll('[data-nav-resume],[data-mobile-resume]').forEach(el => {
+      el.href = resumeUrl;
+      el.target = '_blank';
+      el.rel = 'noopener';
+    });
     const mobileEmail = document.querySelector('[data-mobile-email]');
     if(mobileEmail && s.email){ mobileEmail.href = 'mailto:' + s.email; mobileEmail.textContent = s.email; }
     const mobileLocation = document.querySelector('[data-mobile-location]');
@@ -485,6 +511,11 @@
     overlay.classList.remove('is-entering');
     overlay.classList.remove('is-leaving');
     overlay.style.pointerEvents = '';
+    // Scroll to hash target after overlay reveals the page
+    if(location.hash){
+      const target = document.querySelector(location.hash);
+      if(target) setTimeout(()=> target.scrollIntoView({behavior:'smooth'}), 50);
+    }
   }
 
   function transitionTo(href){

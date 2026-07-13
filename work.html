@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Case study</title>
+<title>Work — Otmane Essaadi</title>
+<meta name="description" content="Selected work by Otmane Essaadi — UX/UI Designer based in Marrakech. Website design, digital product design, and design systems for clients worldwide." />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://otmane.design/work" />
+<meta property="og:title" content="Work — Otmane Essaadi" />
+<meta property="og:description" content="Selected work by Otmane Essaadi — UX/UI Designer based in Marrakech." />
+<meta property="og:image" content="https://otmane.design/assets/img/portrait.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Work — Otmane Essaadi" />
+<meta name="twitter:image" content="https://otmane.design/assets/img/portrait.webp" />
 <meta name="theme-color" content="#121417" />
 <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 <link rel="apple-touch-icon" href="/assets/img/favicon.png" />
@@ -28,6 +38,7 @@
       <div class="nav__links">
         <a href="work.html" class="nav__link--desktop">Work</a>
         <a href="index.html#kindwords" class="nav__link--desktop">Kind words</a>
+        <a href="#" class="nav__link--desktop" data-nav-resume>Resume</a>
         <a href="#" class="nav__cta" data-work-cta>Get in touch</a>
         <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span class="nav__burger-box"><span></span><span></span></span>
@@ -40,6 +51,7 @@
     <div class="mobile-menu__links">
       <a href="work.html">Work</a>
       <a href="index.html#kindwords">Kind words</a>
+      <a href="#" data-mobile-resume>Resume</a>
     </div>
     <a href="#" class="mobile-menu__cta" data-work-mobile-cta>Get in touch</a>
     <div class="mobile-menu__foot">
@@ -94,6 +106,10 @@
     document.querySelectorAll('[data-work-cta],[data-work-mobile-cta]').forEach(el=>{ el.href='mailto:'+email; });
     const mobileEmailEl = document.querySelector('[data-work-mobile-email]');
     if(mobileEmailEl){ mobileEmailEl.href='mailto:'+email; mobileEmailEl.textContent=email; }
+    const resumeUrl = site.resume_url || '#';
+    document.querySelectorAll('[data-nav-resume],[data-mobile-resume]').forEach(el=>{
+      el.href=resumeUrl; el.target='_blank'; el.rel='noopener';
+    });
 
     const credit = document.querySelector('[data-contact-credit]');
     if(credit) credit.textContent = 'Designed and built by ' + (site.name||'');
