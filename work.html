@@ -28,7 +28,7 @@
       <div class="nav__links">
         <a href="work.html" class="nav__link--desktop">Work</a>
         <a href="index.html#kindwords" class="nav__link--desktop">Kind words</a>
-        <a href="mailto:mrotmanessaadi@gmail.com" class="nav__cta">Get in touch</a>
+        <a href="#" class="nav__cta" data-work-cta>Get in touch</a>
         <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span class="nav__burger-box"><span></span><span></span></span>
         </button>
@@ -41,9 +41,9 @@
       <a href="work.html">Work</a>
       <a href="index.html#kindwords">Kind words</a>
     </div>
-    <a href="mailto:mrotmanessaadi@gmail.com" class="mobile-menu__cta">Get in touch</a>
+    <a href="#" class="mobile-menu__cta" data-work-mobile-cta>Get in touch</a>
     <div class="mobile-menu__foot">
-      <a href="mailto:mrotmanessaadi@gmail.com">mrotmanessaadi@gmail.com</a>
+      <a href="#" data-work-mobile-email></a>
       <span>Marrakech, Morocco</span>
     </div>
   </div>
@@ -88,7 +88,12 @@
     document.querySelectorAll('[data-role-title]').forEach(el=>el.textContent=site.role_title||'');
 
     const contactEmail = document.querySelector('[data-contact-email]');
-    if(contactEmail){ contactEmail.href='mailto:mrotmanessaadi@gmail.com'; contactEmail.textContent='mrotmanessaadi@gmail.com'; }
+    if(contactEmail){ contactEmail.href='mailto:'+(site.email||''); contactEmail.textContent=site.email||''; }
+
+    const email = site.email || '';
+    document.querySelectorAll('[data-work-cta],[data-work-mobile-cta]').forEach(el=>{ el.href='mailto:'+email; });
+    const mobileEmailEl = document.querySelector('[data-work-mobile-email]');
+    if(mobileEmailEl){ mobileEmailEl.href='mailto:'+email; mobileEmailEl.textContent=email; }
 
     const credit = document.querySelector('[data-contact-credit]');
     if(credit) credit.textContent = 'Designed and built by ' + (site.name||'');
