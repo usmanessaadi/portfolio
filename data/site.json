@@ -1,24 +1,15 @@
 {
   "meta_grid": [
     { "label": "Based", "value": "Marrakech, Morocco" },
-    { "label": "Focus", "value": "UX/UI Designer" },
+    { "label": "Focus", "value": "Product UX/UI, Design Systems" },
     { "label": "Languages", "value": "English, French, Arabic" },
-    { "label": "Open for", "value": "Smaller freelance work" }
+    { "label": "Open for", "value": "Full-time & part-time" }
   ],
   "socials": [
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/usmanessaadi/"
-      },
-      {
-        "label": "Behance",
-        "url": "https://www.behance.net/otmaneessaadi"
-      },
-      {
-        "label": "Dribbble",
-        "url": "https://dribbble.com/otmaneessaadi"
-      }
-    ],
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/usmanessaadi/" },
+    { "label": "Behance", "url": "https://www.behance.net/otmaneessaadi" },
+    { "label": "Dribbble", "url": "https://dribbble.com/otmaneessaadi" }
+  ],
   "headline_pre": "Designer based in ",
   "headline_city": "Marrakech",
   "headline_lines": [
@@ -28,7 +19,7 @@
   ],
   "eyebrow": "UX/UI Designer · open for 2026",
   "name": "Otmane Essaadi",
-  "role_title": "UX/UI Designer ",
-  "email": "hello@otmane.design",
+  "role_title": "UX/UI Designer",
+  "email": "mrotmanessaadi@gmail.com",
   "resume_url": "https://drive.google.com/file/d/16vMfSImp61lLP7h5ARGm9ZMyYeIUetr_/view?usp=sharing"
 }

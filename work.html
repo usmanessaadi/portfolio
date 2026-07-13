@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Case study</title>
 <meta name="theme-color" content="#121417" />
+<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+<link rel="apple-touch-icon" href="/assets/img/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
@@ -26,7 +28,7 @@
       <div class="nav__links">
         <a href="work.html" class="nav__link--desktop">Work</a>
         <a href="index.html#kindwords" class="nav__link--desktop">Kind words</a>
-        <a href="mailto:hello@otmane.design" class="nav__cta">Get in touch</a>
+        <a href="mailto:mrotmanessaadi@gmail.com" class="nav__cta">Get in touch</a>
         <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span class="nav__burger-box"><span></span><span></span></span>
         </button>
@@ -39,9 +41,9 @@
       <a href="work.html">Work</a>
       <a href="index.html#kindwords">Kind words</a>
     </div>
-    <a href="mailto:hello@otmane.design" class="mobile-menu__cta">Get in touch</a>
+    <a href="mailto:mrotmanessaadi@gmail.com" class="mobile-menu__cta">Get in touch</a>
     <div class="mobile-menu__foot">
-      <a href="mailto:hello@otmane.design">hello@otmane.design</a>
+      <a href="mailto:mrotmanessaadi@gmail.com">mrotmanessaadi@gmail.com</a>
       <span>Marrakech, Morocco</span>
     </div>
   </div>
@@ -86,7 +88,7 @@
     document.querySelectorAll('[data-role-title]').forEach(el=>el.textContent=site.role_title||'');
 
     const contactEmail = document.querySelector('[data-contact-email]');
-    if(contactEmail){ contactEmail.href='mailto:hello@otmane.design'; contactEmail.textContent='hello@otmane.design'; }
+    if(contactEmail){ contactEmail.href='mailto:mrotmanessaadi@gmail.com'; contactEmail.textContent='mrotmanessaadi@gmail.com'; }
 
     const credit = document.querySelector('[data-contact-credit]');
     if(credit) credit.textContent = 'Designed and built by ' + (site.name||'');
@@ -127,6 +129,37 @@
       + '<dt class="cs-fact__label">'+esc(label)+'</dt>'
       + '<dd class="cs-fact__value">'+esc(value)+'</dd>'
       + '</div>';
+  }
+
+  // Transforms marked prose HTML into two-column aside layout:
+  // h2 title left (~30%), following paragraphs right (~70%)
+  function reformatProse(html){
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    const children = Array.from(tmp.children);
+    let out = '';
+    let i = 0;
+    while(i < children.length){
+      const el = children[i];
+      if(el.tagName === 'H2'){
+        // Collect all content until next h2
+        const title = el.outerHTML;
+        let content = '';
+        i++;
+        while(i < children.length && children[i].tagName !== 'H2'){
+          content += children[i].outerHTML;
+          i++;
+        }
+        out += '<div class="prose-row">'
+          + '<div class="prose-row__title">'+title+'</div>'
+          + '<div class="prose-row__content">'+content+'</div>'
+          + '</div>';
+      } else {
+        out += el.outerHTML;
+        i++;
+      }
+    }
+    return out;
   }
 
   function renderCase(p, allProjects, site){
@@ -206,7 +239,7 @@
       +   '</div>'
       + '</section>'
       + coverHTML
-      + (bodyHTML || sliderHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+bodyHTML+(sliderHTML ? '<h2>Before &amp; After</h2></div>'+sliderHTML : '</div>')+'</div></section>' : '')
+      + (bodyHTML || sliderHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+reformatProse(bodyHTML)+'</div>'+(sliderHTML ? '<h2 class="cs-section-heading" data-reveal>Before &amp; After</h2>'+sliderHTML : '')+'</div></section>' : '')
       + (moreCards ? '<section class="cs-more"><div class="cs-more__wrap"><h2 class="cs-section-heading" data-reveal>More projects</h2><div class="cs-more__list">'+moreCards+'</div></div></section>' : '');
 
     // Init sliders after DOM is set

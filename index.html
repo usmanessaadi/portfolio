@@ -6,6 +6,8 @@
 <title>Portfolio</title>
 <meta name="description" content="Product designer & engineer." />
 <meta name="theme-color" content="#121417" />
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="apple-touch-icon" href="assets/img/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
@@ -98,7 +100,7 @@
       <h2 class="services__heading" data-reveal>What I do</h2>
       <div class="services__grid" data-services></div>
       <div class="services__cta">
-        <p class="services__cta-text" data-reveal>Have a project in mind? Let's talk.</p>
+        <p class="services__cta-text" data-reveal>Open to full-time and part-time opportunities.</p>
         <a href="#" class="services__cta-btn" data-services-cta data-reveal>Get in touch
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
         </a>
@@ -203,7 +205,7 @@
     }
 
     const contactEmail = document.querySelector('[data-contact-email]');
-    if(contactEmail){ contactEmail.href = 'mailto:hello@otmane.design'; contactEmail.textContent = 'hello@otmane.design'; }
+    if(contactEmail){ contactEmail.href = 'mailto:mrotmanessaadi@gmail.com'; contactEmail.textContent = 'mrotmanessaadi@gmail.com'; }
 
     const credit = document.querySelector('[data-contact-credit]');
     if(credit) credit.textContent = 'Designed and built by ' + (s.name || '');
@@ -238,7 +240,7 @@
     }
 
     const servicesCta = document.querySelector('[data-services-cta]');
-    if(servicesCta) servicesCta.href = 'mailto:hello@otmane.design';
+    if(servicesCta) servicesCta.href = 'mailto:mrotmanessaadi@gmail.com';
   }
 
   function renderServices(list){
@@ -392,11 +394,13 @@
       document.body.classList.add('ready');
       setupNav();
       setupReveal();
-    //  setupSlider();
+      setupSlider();
       setupFX();
-      setupMobileMenu();
     });
   })();
+
+  // Mobile menu must be responsive immediately — not gated behind the loader
+  setupMobileMenu();
 </script>
   <div class="pg-transition" id="pgTransition" aria-hidden="true"></div>
 

@@ -15,7 +15,7 @@
   align-items:center;
   justify-content:center;
   overflow:hidden;
-  transition:transform .8s cubic-bezier(.76,0,.24,1);
+  transition:transform .6s cubic-bezier(.76,0,.24,1);
 }
 .loader.is-done{
   transform:translateY(-100%);
@@ -1014,10 +1014,64 @@ h1.display em{
   .wl-card__title{font-size:15px}
 }
 
+/* prose aside layout */
+.prose-row{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:0 80px;
+  padding:56px 0;
+  border-top:1px solid var(--line);
+}
+.prose-row:first-child{border-top:none;padding-top:0}
+.prose-row--full{
+  padding:56px 0 0;
+  border-top:1px solid var(--line);
+  display:block;
+}
+.prose-row__title h2{
+  font-family:"Newsreader","Georgia",serif;
+  font-weight:300;
+  font-size:clamp(24px,2.5vw,36px);
+  letter-spacing:-.02em;
+  line-height:1.15;
+  color:#fdfdfd;
+  margin:0;
+  position:sticky;
+  top:100px;
+}
+.prose-row__content p{
+  font-size:clamp(15px,1.5vw,17px);
+  line-height:1.72;
+  color:rgba(253,253,253,.75);
+  margin:0 0 1.2em;
+}
+.prose-row__content p:last-child{margin-bottom:0}
+.prose-row__content ul,.prose-row__content ol{
+  padding-left:1.3em;
+  color:rgba(253,253,253,.75);
+  font-size:clamp(15px,1.5vw,17px);
+  line-height:1.72;
+}
+.prose-row__content li{margin-bottom:.4em}
+.prose-row__content blockquote{
+  border-left:2px solid rgba(174,168,254,.5);
+  padding-left:20px;
+  color:rgba(253,253,253,.6);
+  font-style:italic;
+}
+@media (max-width:720px){
+  .prose-row{
+    grid-template-columns:1fr;
+    gap:16px;
+    padding:40px 0;
+  }
+  .prose-row__title h2{position:static}
+  .prose-row--full{padding-top:40px}
+}
+
 /* prose (case study body) */
 .prose{font-size:clamp(16px,1.6vw,18px);line-height:1.72;color:rgba(253,253,253,.8)}
 .prose > * + *{margin-top:1.3em}
-.prose h2{font-family:"Newsreader","Georgia",serif;font-weight:300;font-size:clamp(24px,2.5vw,36px);letter-spacing:-.02em;margin-top:2em;line-height:1.15;color:#fdfdfd}
 .prose h3{font-family:"Newsreader","Georgia",serif;font-weight:300;font-size:clamp(20px,2vw,28px);letter-spacing:-.02em;margin-top:1.8em;color:#fdfdfd}
 .prose a{color:#aea8fe;text-decoration:underline;text-underline-offset:3px}
 .prose ul,.prose ol{padding-left:1.4em}
@@ -1364,6 +1418,7 @@ h1.display em{
   letter-spacing:-.02em;
   line-height:1.1;
   color:#fdfdfd;
+  margin-top:80px;
   margin-bottom:48px;
 }
 
