@@ -48,7 +48,7 @@
       "role": "Lead Designer",
       "client": "Emma",
       "featured": true,
-      "summary": "Website redesign for Emma — a global sleep technology brand bringing better sleep to millions.",
+      "summary": "Website redesign for Emma — an award-winning event management and fundraising platform for charities.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d0db62b7335b5fe57128_Widescreen%20Emma%20scene.webp",
@@ -71,7 +71,7 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nEmma is one of the world's leading sleep technology brands, selling mattresses, pillows, and sleep accessories across multiple markets. The project involved a redesign of key landing pages to improve conversion and brand consistency.\n\n## Challenge\n\nWith a wide product range and diverse global audience, the site needed to feel cohesive across markets while allowing for localisation. Performance and conversion were critical metrics.\n\n## Solution\n\nWe focused on a modular component system — flexible enough for localisation teams to adapt, consistent enough to maintain brand quality across regions. Hero sections, product showcases, and trust builders were reworked to guide users more clearly toward purchase.\n\n## Results\n\nThe redesigned pages showed measurable improvement in engagement and conversion rates compared to previous versions.",
+      "body": "## Overview\n\nEmma is an all-in-one event management and fundraising platform built specifically for charities and nonprofits. It helps organisations plan, run, and maximise the impact of their fundraising events — from silent auctions and ticketing to peer-to-peer donations and real-time reporting. Emma serves charities of all sizes, with a mission to give nonprofits access to the most powerful event technology available.\n\n## Challenge\n\nEmma had a strong product and a loyal client base, but their website wasn't keeping pace with the platform's evolution. The visual identity felt dated and the site wasn't clearly communicating Emma's full breadth of features or the scale of impact it enables. They needed a redesign that would position Emma as the clear market leader in charity event management.\n\n## Solution\n\nI redesigned Emma's website with a bold, modern visual direction that matched the ambition behind the platform. The new design led with outcomes — higher ticket sales, bigger donations, smoother events — and structured the page to speak directly to charity event managers who need to justify the investment. Clear feature presentation, strong social proof, and intuitive navigation helped communicate both the power and the approachability of the product.\n\n## Results\n\nThe redesigned site gave Emma a significantly stronger market presence, better aligned with their positioning as the most comprehensive event management platform for charities worldwide.",
       "liveUrl": "https://www.emma-live.com"
     },
     {
@@ -159,7 +159,7 @@
       "role": "Lead Designer",
       "client": "Phase Six",
       "featured": true,
-      "summary": "Website design for Phase Six Online — a vocabulary learning platform used by millions of students across Europe.",
+      "summary": "Website redesign for a holistic movement and fitness education platform.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac9212fcc28fc80abedf_Widescreen%20Phase%206%20scene.webp",
@@ -182,7 +182,7 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nPhase Six is one of Europe's leading vocabulary learning platforms, used by millions of students and teachers. The project was a website redesign focused on communicating the platform's value to both schools and individual learners.\n\n## Challenge\n\nThe platform serves two distinct audiences — institutions and individual users — with different needs, motivations, and decision journeys. The site needed to serve both without feeling fragmented.\n\n## Solution\n\nWe structured the site around clear audience paths with shared but adaptable design components. The visual language was refreshed to feel contemporary and approachable while maintaining the credibility needed for institutional buyers.\n\n## Results\n\nThe redesigned site improved clarity of audience targeting and was well received by both the client team and their user community.",
+      "body": "## Overview\n\nPhase SiX is a fitness education platform founded on the belief that strength, mobility, and unconventional movement belong together. Built for coaches, athletes, and dedicated movers, the Phase SiX Method™ blends ground-based movement, joint resilience, and rotational strength into one cohesive system — teaching people not just what to do, but how and why to move.\n\n## Challenge\n\nThe previous website was bold but chaotic — too many competing fonts and images, no clear visual flow, and a mobile experience that didn't do justice to a brand that lives on Instagram. Calls to action were inconsistent, sections lacked context, and the site felt too busy for what is essentially a movement philosophy with deep visual appeal.\n\n## Solution\n\nI redesigned the site with a clean, spacious visual language that lets the movement content breathe. The new layout creates a clear entry point for different audiences — coaches, athletes, and casual movers — with structured page flow, consistent CTAs, and a design that feels as intentional and refined as the method it represents.\n\n## Results\n\nA modern, fast-loading website that translates the Phase SiX identity from social media to web — giving visitors a clear path to explore the method, join programs, or attend workshops.",
       "liveUrl": "https://www.phase6online.com"
     },
     {
@@ -381,7 +381,7 @@
       "role": "Lead Designer",
       "client": "Mode",
       "featured": false,
-      "summary": "Website design for Mode — a data analytics platform for business intelligence teams.",
+      "summary": "Website redesign for a post-quantum encrypted team communication platform.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f20f0d15ab491aaafa7ae0_Hero%20mockup%201%20(9).webp",
@@ -389,7 +389,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nMode is a data analytics platform that helps business intelligence teams explore data, build reports, and share insights. The project was a website redesign to better communicate their product value.\n\n## Challenge\n\nData analytics is a competitive, crowded market. Mode needed to articulate what makes their platform different — particularly for technical audiences who are sceptical of marketing claims.\n\n## Solution\n\nWe structured the site around specific user workflows and outcomes, showing the product in context rather than talking about it in the abstract. Design was precise and minimal — matching the expectations of technical buyers.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nMode is a secure team communication platform built for businesses that can't afford to have their data compromised. As cyberattacks grow more sophisticated — including the looming threat of quantum computing — Mode offers post-quantum encryption to protect sensitive conversations and files shared across remote, hybrid, and in-office teams.\n\n## Challenge\n\nMode's existing website captured the brand's visual identity but fell short of communicating the product's value clearly. The information architecture was unclear, key benefits were buried, and the design relied too heavily on product screenshots rather than conveying the confidence and security the platform promises. The goal was a redesign that felt as secure and progressive as the technology behind it.\n\n## Solution\n\nI redesigned the website with a clean, structured layout — focused on clear messaging, purposeful use of brand colours, and custom illustrations that communicated security without overwhelming the visitor. The new architecture guides users through the product's key benefits logically, with concise copy and strong visual hierarchy that builds trust at each scroll.\n\n## Results\n\nThe redesigned site better positions Mode as a credible, forward-thinking security platform — moving away from a template feel toward something that reflects the seriousness of post-quantum encryption.",
       "liveUrl": "https://mode.com"
     },
     {
@@ -403,7 +403,7 @@
       "role": "Lead Designer",
       "client": "Cold Email",
       "featured": false,
-      "summary": "Website design for a cold email outreach platform.",
+      "summary": "Brand new website for a premium cold email lead generation agency.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818c6badc070b98003401d6_coldemail-thumbnail.webp",
@@ -411,7 +411,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nA website design project for a cold email outreach tool aimed at sales teams and growth marketers.\n\n## Challenge\n\nThe platform needed to convert sceptical visitors fast — cold email has a reputation problem, and the site needed to address objections while communicating genuine value.\n\n## Solution\n\nWe led with results and social proof, structuring the page to handle objections proactively and make the product's benefits immediately obvious.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nCold.Email is a specialist lead generation agency focused entirely on cold email outreach. Unlike competitors who rely on Clay-based workflows or broad digital marketing tools, Cold.Email targets businesses that need direct, high-quality outreach to book sales calls — positioning itself as the premium option in the space.\n\n## Challenge\n\nThe agency had no website at all. With strong results and a clear market position, they needed a site built from scratch that would immediately signal quality and convert visitors into booked calls. The challenge was translating a founder-led personal brand and bold voice into a website that felt polished and premium — not scrappy.\n\n## Solution\n\nI designed a conversion-focused site that leaned into the agency's confidence and results. The design is clean and direct — no filler content, every section earns its place. The visual language communicates premium positioning, while the copy and structure drive visitors toward a single action: booking a call.\n\n## Results\n\nA brand new web presence that positions Cold.Email as the high-end option in a crowded agency market, built to convert the right clients.",
       "liveUrl": "https://www.coldemail.com"
     },
     {
@@ -425,7 +425,7 @@
       "role": "Lead Designer",
       "client": "Hike SEO",
       "featured": true,
-      "summary": "Website design for Hike SEO — an SEO platform built specifically for small businesses.",
+      "summary": "Website redesign for an AI-powered done-for-you SEO service for small businesses.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d4c16757a7c204876486_Widescreen%20Hike%20SEO%20scene.webp",
@@ -448,7 +448,7 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nHike SEO is an SEO tool built for small business owners who want to improve their search visibility without needing to become SEO experts.\n\n## Challenge\n\nMost SEO tools feel complex and intimidating. Hike needed a site that communicated simplicity and accessibility — showing that SEO doesn't have to be scary.\n\n## Solution\n\nWe built the site around approachability — plain language, clear steps, and a design that felt friendly and achievable rather than technical and overwhelming.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nHike SEO provides an affordable, done-for-you SEO solution aimed at micro-businesses — builders, plumbers, electricians, and one-person operations who need leads from Google but can't afford agency fees or the time to learn SEO themselves. Their AI agent handles all the expert decision-making and implementation on the client's behalf.\n\n## Challenge\n\nHike's existing website had clear structure and brand identity but felt dated and no longer communicated the product's value effectively. The imagery was weak, the pricing page was confusing, and the site had grown slow. It needed a complete refresh that matched the warmth and approachability of the brand while better converting visitors into subscribers.\n\n## Solution\n\nI redesigned the site with a clean, friendly aesthetic that reflects Hike's voice — assured and warm without being corporate. The new layout simplifies the user journey toward sign-up, improves the communication of the product's unique value proposition, and replaces outdated imagery with visuals that feel relevant and modern.\n\n## Results\n\nA refreshed website that clearly communicates what Hike does, who it's for, and why it's the right choice — removing friction from the path to conversion.",
       "liveUrl": "https://www.hikeseo.co"
     },
     {
@@ -462,7 +462,7 @@
       "role": "Lead Designer",
       "client": "Aperios",
       "featured": false,
-      "summary": "Website design for Aperios — a financial services technology company.",
+      "summary": "Website design for a cybersecurity firm protecting small businesses from modern threats.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983aaa41e7073080a4be9b1_Hero%20mockup%201.webp",
@@ -470,7 +470,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nAperios is a financial services technology company. The project was a website to establish their digital presence and communicate their proposition to enterprise clients.\n\n## Challenge\n\nFinancial services websites need to communicate trust, compliance, and technical capability simultaneously — without feeling cold or impersonal.\n\n## Solution\n\nWe developed a professional, structured design with strong typographic hierarchy and a clear service architecture that made the proposition immediately understandable.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nAperios is a cybersecurity company built specifically for small and medium-sized businesses. They combine offensive security testing with rapid incident response — helping SMBs uncover threats before attackers do, and recover fast if something gets through. Their approach removes the enterprise-level complexity that typically makes security inaccessible to smaller teams.\n\n## Challenge\n\nAperios had no existing website. They needed a site built from scratch that could communicate complex security concepts in a way that felt approachable and trustworthy to non-technical business owners — not intimidating like typical cybersecurity brands. The goal was to evoke peace of mind, confidence, and clarity.\n\n## Solution\n\nI designed a clean, modern site that speaks directly to the SMB audience — using plain language, structured content, and a calm visual tone that contrasts with the fear-driven aesthetic common in the security industry. Every design decision was focused on building trust and making Aperios feel like an expert partner, not a faceless vendor.\n\n## Results\n\nA new web presence that positions Aperios as the approachable, expert cybersecurity partner for SMBs — ready to compete against enterprise solutions and local IT shops alike.",
       "liveUrl": "https://www.aperios.net"
     },
     {
@@ -550,7 +550,7 @@
       "role": "Lead Designer",
       "client": "Piiano",
       "featured": false,
-      "summary": "Website design for Piiano — a data privacy vault platform for engineering teams.",
+      "summary": "Website redesign for a developer infrastructure platform that protects sensitive data.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f213554202dbf7fda1b213_Hero%20mockup%201%20(4).webp",
@@ -558,7 +558,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nPiiano provides a privacy vault and infrastructure tools that help engineering teams handle sensitive personal data safely and compliantly. The project was a website to communicate their developer-focused product to technical and business buyers.\n\n## Challenge\n\nPrivacy infrastructure is a specialist product. The site needed to speak credibly to both security-focused engineers and compliance-minded business stakeholders.\n\n## Solution\n\nWe structured the site with clear audience paths, leading with clear value propositions for each buyer type and supporting with technical depth where appropriate.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nPiiano builds security infrastructure for developers — tools that help engineering teams protect sensitive customer data, prevent breaches, and meet data privacy compliance requirements in cloud applications. Founded by a team of security experts, Piiano sits at the intersection of developer tooling and enterprise-grade data protection.\n\n## Challenge\n\nPiiano's existing website had already brought in paying customers, but parts of it were becoming outdated. The focus on privacy engineering was no longer accurate, and the site needed to evolve alongside the product. The redesign needed to feel elegant, instil trust, and clearly communicate that building secure, compliant infrastructure with Piiano is achievable — not overwhelming.\n\n## Solution\n\nI redesigned the site with a sophisticated visual tone that matches the product's technical credibility. Clean layout, precise copy, and a structured presentation of the platform's core value help developers and security teams quickly understand what Piiano does and why it's the right choice over alternatives like Skyflow.\n\n## Results\n\nA refined website that elevates Piiano's positioning as the trusted infrastructure layer for sensitive data — communicating elegance and expertise to both technical and non-technical decision makers.",
       "liveUrl": "https://www.piiano.com"
     },
     {
@@ -572,7 +572,7 @@
       "role": "Lead Designer",
       "client": "Software Secured",
       "featured": false,
-      "summary": "Website design for Software Secured — a penetration testing and application security company.",
+      "summary": "Website redesign for a Canadian penetration testing firm helping companies achieve security compliance.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65d8c1587d5f56ea9403c627_Hero%20mockup%201%20(10).webp",
@@ -580,7 +580,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nSoftware Secured is a penetration testing and application security firm helping companies find and fix vulnerabilities before attackers do.\n\n## Challenge\n\nSecurity buyers are highly sceptical and technically sophisticated. The site needed to demonstrate real expertise fast — without relying on vague promises or generic security imagery.\n\n## Solution\n\nWe led with specifics: clear service descriptions, transparent process, and team credibility. The design was clean and direct, reflecting the precision of the work.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nSoftware Secured is a penetration testing company based in Canada, helping software companies meet security compliance requirements — SOC 2, ISO 27001, PCI, HIPAA — and defend against real-world breaches. Their team of full-time, highly trained security professionals runs comprehensive manual pentests, averaging four times more vulnerabilities found per test than leading competitors.\n\n## Challenge\n\nSoftware Secured's old website was underperforming on every front. The hero image was a generic stock photo, the design was outdated, the colour usage was heavy, and pages didn't flow together — leading to high exit rates and poor conversion. The site was pushing too many features in the wrong places and failing to connect with the buyers who needed to trust them most.\n\n## Solution\n\nI redesigned the site with a cleaner, more modern visual language — strong use of white space, custom illustrations instead of stock imagery, and a tighter information architecture that guides visitors from problem to solution. The new design prioritises the credibility signals that matter to security buyers: methodology, expertise, and proof of results.\n\n## Results\n\nA significantly improved web presence that speaks directly to security-conscious buyers, reduces friction in the sales funnel, and positions Software Secured as the high-quality, trustworthy option in a competitive market.",
       "liveUrl": "https://www.softwaresecured.com"
     },
     {
@@ -594,7 +594,7 @@
       "role": "Lead Designer",
       "client": "Rosalyn",
       "featured": false,
-      "summary": "Website design for Rosalyn — an AI-powered online proctoring platform for academic and professional certification exams.",
+      "summary": "Website redesign for an AI-powered online exam proctoring platform.",
       "gallery": [
         {
           "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6308fe8a4b6bcc1eed6e5d8a_Hero-mockup-1-min.webp",
@@ -602,8 +602,23 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nRosalyn uses AI to monitor online exams and ensure academic integrity for universities and certification bodies. The project was a website redesign to better serve their institutional buyers.\n\n## Challenge\n\nOnline proctoring is a sensitive category — institutions need to feel confident that the technology is effective and that students will trust the process. The site needed to address both audiences.\n\n## Solution\n\nWe built the site around trust signals and clear use cases — showing exactly how Rosalyn works for both administrators and students, with strong emphasis on reliability and fairness.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nRosalyn is an AI-powered proctoring platform designed for the post-pandemic era of online education. It helps institutions prevent cheating on online exams — identity fraud, browser violations, and unauthorized materials — while delivering a respectful, privacy-conscious experience for students. Rosalyn is 80% more cost effective than traditional proctoring solutions and works even in low-bandwidth environments.\n\n## Challenge\n\nRosalyn's existing website had a visual identity they were happy with — the colours, graphics, and fonts were on point — but the layout wasn't working. The site wasn't communicating the platform's unique advantages clearly enough to differentiate from established competitors like Honorlock, Proctorio, and ProctorU.\n\n## Solution\n\nI redesigned the layout to better structure the narrative flow — leading with the credibility problem online education faces, then clearly presenting Rosalyn's breakthrough approach. The design builds on the existing brand strengths while improving clarity, hierarchy, and the emotional arc from first impression to conversion.\n\n## Results\n\nA redesigned website that better communicates Rosalyn's differentiated value — positioning it as the modern, accessible alternative in a market dominated by expensive, friction-heavy legacy solutions.",
       "liveUrl": "https://www.rosalyn.ai"
+    },
+    {
+      "slug": "canvas-envision",
+      "title": "Canvas Envision",
+      "tag": "Website Design",
+      "scope": "Website design",
+      "role": "UX/UI Designer",
+      "client": "Canvas Envision Inc.",
+      "year": "2024",
+      "featured": false,
+      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb01bd43b23c4e55fec_deepdub%20display%201.webp",
+      "liveUrl": "https://www.canvasgfx.com/",
+      "summary": "Website redesign for an AI-powered work instructions platform for manufacturers.",
+      "body": "## Overview\n\nCanvas Envision is a manufacturing software platform that uses AI to transform PDFs, videos, and 3D models into interactive, intelligent work instructions. It helps manufacturers move away from disconnected, outdated documentation workflows — making it faster and easier to create, update, and distribute accurate instructions to the frontline.\n\n## Challenge\n\nThe existing Canvas Envision website had significant structural problems: a confusing mega menu, poor CTA buttons, separate legacy and current sites to manage, and a template look that didn't reflect the platform's innovation. The content was poorly organised — legal pages were one massive block, the about section lacked depth, and past webinars had no links to replays.\n\n## Solution\n\nI redesigned the website from the ground up with a clear, modern visual direction inspired by software-forward design. The new structure consolidates the platform's offering into a logical hierarchy — platform, solutions, use cases, and resources — with strong CTAs, consistent branding, and a design language that signals both precision and innovation to manufacturing decision-makers.\n\n## Results\n\nA fully rebuilt web presence that positions Canvas Envision as the intelligent, forward-thinking choice for manufacturers ready to modernise their documentation workflows.",
+      "gallery": []
     }
   ]
 }
