@@ -295,6 +295,35 @@ body.menu-open{overflow:hidden}
   padding:104px 0 40px;
   box-sizing:border-box;
 }
+.hero__badge{
+  display:inline-flex;
+  align-items:center;
+  align-self:flex-start;
+  gap:8px;
+  padding:10px 20px;
+  border:1px solid var(--line);
+  border-radius:9999px;
+  font-size:20px;
+  font-family:"Newsreader","Georgia",serif;
+  font-weight:300;
+  font-style:normal;
+  color:var(--ink-soft);
+  text-decoration:none;
+  margin-bottom:32px;
+  width:fit-content;
+  transition:border-color .25s var(--ease), color .25s var(--ease);
+}
+.hero__badge:hover{border-color:rgba(255,255,255,.3);color:#fdfdfd}
+.hero__badge em{
+  font-style:italic;
+  font-family:"Newsreader","Georgia",serif;
+  font-weight:300;
+  background:linear-gradient(90deg,#ebe1b0,#aea8fe);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
 .hero__inner{
   position:relative;
   z-index:1;
@@ -1277,7 +1306,7 @@ h1.display em{
 /* facts dl */
 .cs-facts{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(5,1fr);
   border-top:1px solid var(--line);
   margin-top:48px;
 }
@@ -1299,6 +1328,14 @@ h1.display em{
   margin-bottom:12px;
 }
 .cs-fact__value{font-size:15px;color:#fdfdfd}
+.cs-fact__link{
+  color:#fdfdfd;
+  text-decoration:none;
+  border-bottom:1px solid var(--line);
+  transition:border-color .2s var(--ease), color .2s var(--ease);
+  padding-bottom:1px;
+}
+.cs-fact__link:hover{color:#ebe1b0;border-color:#ebe1b0}
 
 /* cover */
 .cs-cover-wrap{margin-top:80px}

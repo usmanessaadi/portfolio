@@ -4,7 +4,7 @@
       "slug": "design-leadership-network",
       "title": "Design Leadership Network",
       "tag": "Website design",
-      "year": "2024",
+      "year": "2026",
       "description": "Website for a community platform connecting design leaders worldwide.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac09141dfcaefcb13241_Hero%20mockup%201%20(1).webp",
       "scope": "Website design",
@@ -34,14 +34,14 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nDesign Leadership Network is a community platform for senior design leaders to connect, share knowledge, and grow. The project required a website that reflected the quality and credibility of its membership.\n\n## Challenge\n\nThe platform needed to communicate trust and exclusivity while remaining approachable. The design had to appeal to senior decision-makers without feeling corporate or cold.\n\n## Solution\n\nWe developed a clean, editorial-style design system — strong typography, generous whitespace, and a restrained colour palette that let the community and content take centre stage.\n\n## Results\n\nThe new site launched to positive reception from the membership community. Engagement with the platform increased and sign-up conversions improved significantly.",
+      "body": "## Overview\n\nDesign Leadership Network is a community platform for senior design leaders — a space to connect, share ideas, and move the profession forward. The project was a new marketing website to reflect the quality of the community behind it.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the site from concept to Webflow delivery.\n\nThe work included:\n- Developing an editorial visual direction: clean Newsreader typography, restrained colour palette, generous white space\n- Designing the homepage and key inner pages\n- Creating a Figma component library structured for clean developer handoff\n- Ensuring the design felt exclusive and credible without being cold or corporate\n\n## Outcome\n\nThe site launched to strong reception from the membership. The design was well received as a genuine reflection of the network's calibre — and sign-up conversions improved after launch.",
       "liveUrl": "https://www.designleadershipnetwork.org"
     },
     {
       "slug": "emma",
       "title": "Emma",
       "tag": "Website design",
-      "year": "2024",
+      "year": "2025",
       "description": "Website redesign for a sleep technology brand.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818ced84cfbf76e254f22d1_emma-thumbnail.webp",
       "scope": "Website design",
@@ -71,7 +71,7 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nEmma is an all-in-one event management and fundraising platform built specifically for charities and nonprofits. It helps organisations plan, run, and maximise the impact of their fundraising events — from silent auctions and ticketing to peer-to-peer donations and real-time reporting. Emma serves charities of all sizes, with a mission to give nonprofits access to the most powerful event technology available.\n\n## Challenge\n\nEmma had a strong product and a loyal client base, but their website wasn't keeping pace with the platform's evolution. The visual identity felt dated and the site wasn't clearly communicating Emma's full breadth of features or the scale of impact it enables. They needed a redesign that would position Emma as the clear market leader in charity event management.\n\n## Solution\n\nI redesigned Emma's website with a bold, modern visual direction that matched the ambition behind the platform. The new design led with outcomes — higher ticket sales, bigger donations, smoother events — and structured the page to speak directly to charity event managers who need to justify the investment. Clear feature presentation, strong social proof, and intuitive navigation helped communicate both the power and the approachability of the product.\n\n## Results\n\nThe redesigned site gave Emma a significantly stronger market presence, better aligned with their positioning as the most comprehensive event management platform for charities worldwide.",
+      "body": "## Overview\n\nEmma is an all-in-one event management and fundraising platform built for charities. It helps nonprofits run everything from gala dinners to peer-to-peer campaigns — ticketing, silent auctions, donations, and reporting in one place.\n\nThe project was a full website redesign. The brief was to position Emma clearly as the leading platform in the charity events space and make the site work harder at converting visitors into customers.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site.\n\nThe work included:\n- Redesigning the homepage and product pages with a bold, modern visual direction\n- Restructuring the content hierarchy to lead with outcomes rather than features\n- Building a consistent component system across all pages\n- Designing a clear, low-friction path to booking a demo\n\n## Outcome\n\nThe redesigned site gave Emma a significantly stronger market presence and a clearer pitch to charity event managers evaluating platforms.",
       "liveUrl": "https://www.emma-live.com"
     },
     {
@@ -108,14 +108,14 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nSpherex is a technology platform that helps media companies automate content compliance and cultural localisation. The project was a full website redesign to better communicate their complex technical offering to enterprise buyers.\n\n## Challenge\n\nThe core challenge was simplifying a highly technical product without dumbing it down. Enterprise buyers needed to quickly understand what Spherex does, why it matters, and why they should trust it.\n\n## Solution\n\nWe built the site around clear use cases and outcomes rather than features. Visual storytelling, structured page hierarchy, and a confident, minimal design language helped communicate authority and reliability.\n\n## Results\n\nThe new site improved clarity of messaging significantly. Sales reported that prospects came into conversations better informed about the product.",
+      "body": "## Overview\n\nSpherex is a technology platform that automates content compliance and cultural localisation for media companies. The project was a full website redesign aimed at enterprise buyers — broadcasters, streaming services, and studios.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design from initial concepts through to Webflow delivery.\n\nThe work included:\n- Simplifying a complex technical product into a clear, outcome-focused narrative\n- Designing the homepage, product, and use case pages\n- Developing a visual direction that felt confident and premium without over-engineering\n- Structuring content so enterprise buyers could get to the point fast\n\n## Outcome\n\nThe new site improved messaging clarity significantly. The product became easier to understand at a glance — and sales conversations improved as a result.",
       "liveUrl": "https://www.spherex.com"
     },
     {
       "slug": "jiminny",
       "title": "Jiminny",
       "tag": "Website redesign",
-      "year": "2023",
+      "year": "2026",
       "description": "Website redesign for a conversation intelligence platform for sales teams.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adaf12fcc28fc80afb35_Hero%20mockup%201%20a.webp",
       "scope": "Website design",
@@ -145,14 +145,14 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nJiminny is a conversation intelligence platform that records, transcribes, and analyses sales calls to help teams coach better and close more. The project was a full website redesign to sharpen positioning and drive demo sign-ups.\n\n## Challenge\n\nThe existing site was busy and unfocused. Key messages were buried and the user journey toward booking a demo was unclear. The brand also needed refreshing to better reflect Jiminny's growth and ambition.\n\n## Solution\n\nWe simplified the information architecture, tightened the messaging, and redesigned the visual system from the ground up — introducing a cleaner layout language and stronger hierarchy throughout.\n\n## Results\n\nThe new site launched with a stronger conversion path and a more confident brand presence. Demo request submissions increased following the launch.",
+      "body": "## Overview\n\nJiminny is a conversation intelligence platform that records, transcribes, and analyses sales calls — helping teams coach better, spot patterns, and close more deals.\n\nThe project was a full website redesign to sharpen Jiminny's positioning and drive more demo sign-ups at a point where the company was scaling fast.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the site.\n\nThe work included:\n- Auditing and restructuring the information architecture\n- Designing a new visual system with cleaner hierarchy and tighter messaging\n- Rebuilding the homepage and core product pages\n- Designing a clear, direct path to the demo sign-up\n\n## Outcome\n\nThe site launched with a more confident brand presence. The conversion path became clearer and demo requests increased after launch.",
       "liveUrl": "https://jiminny.com"
     },
     {
       "slug": "phase-six",
       "title": "Phase Six Online",
       "tag": "Website design",
-      "year": "2024",
+      "year": "2026",
       "description": "Website for a vocabulary learning platform used by millions of students.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ac8c7a5e007731a9c704_Hero%20mockup%201.webp",
       "scope": "Website design",
@@ -182,14 +182,14 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nPhase SiX is a fitness education platform founded on the belief that strength, mobility, and unconventional movement belong together. Built for coaches, athletes, and dedicated movers, the Phase SiX Method™ blends ground-based movement, joint resilience, and rotational strength into one cohesive system — teaching people not just what to do, but how and why to move.\n\n## Challenge\n\nThe previous website was bold but chaotic — too many competing fonts and images, no clear visual flow, and a mobile experience that didn't do justice to a brand that lives on Instagram. Calls to action were inconsistent, sections lacked context, and the site felt too busy for what is essentially a movement philosophy with deep visual appeal.\n\n## Solution\n\nI redesigned the site with a clean, spacious visual language that lets the movement content breathe. The new layout creates a clear entry point for different audiences — coaches, athletes, and casual movers — with structured page flow, consistent CTAs, and a design that feels as intentional and refined as the method it represents.\n\n## Results\n\nA modern, fast-loading website that translates the Phase SiX identity from social media to web — giving visitors a clear path to explore the method, join programs, or attend workshops.",
+      "body": "## Overview\n\nPhase SiX is a fitness education platform built around the Phase SiX Method — a training system that combines ground-based movement, joint resilience, and rotational strength. It's built for coaches, athletes, and people who want to understand how to move well, not just how to lift heavy.\n\nThe project was a website redesign. The previous site had strong brand energy but no visual discipline — too many fonts, competing images, no clear flow, and a mobile experience that wasn't doing the brand justice.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site.\n\nThe work included:\n- Developing a clean, spacious visual language that lets the movement content breathe\n- Creating clear entry points for different audiences: coaches, athletes, and casual movers\n- Redesigning the homepage, method, and programme pages with consistent CTAs\n- Designing a mobile experience that matched the quality of the brand's social media presence\n\n## Outcome\n\nA modern site that translates the Phase SiX identity from social media to web — and gives visitors a clear path to explore the method, join a programme, or book a workshop.",
       "liveUrl": "https://www.phase6online.com"
     },
     {
       "slug": "n3o",
       "title": "N3O",
       "tag": "Website design",
-      "year": "2024",
+      "year": "2025",
       "description": "Website for a nonprofit technology consultancy.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6725309031f55cc60041eaed_Thumbnail.webp",
       "scope": "Website design",
@@ -219,7 +219,7 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nN3O is a technology consultancy that helps nonprofit organisations modernise their operations through tailored digital solutions. The project was a full website redesign to better reflect their expertise and attract the right clients.\n\n## Challenge\n\nNonprofit-focused technology consultancies need to communicate both technical credibility and genuine mission alignment. The site needed to feel trustworthy and human — not cold and corporate.\n\n## Solution\n\nWe built the site around clarity and warmth — structured layouts, clear service descriptions, and a visual tone that communicated both competence and care for the sector they serve.\n\n## Results\n\nThe new site gave N3O a significantly stronger digital presence and better aligned their visual identity with the quality of their work.",
+      "body": "## Overview\n\nN3O is a technology consultancy that helps charities and nonprofits modernise their operations through purpose-built digital tools. The project was a full website redesign to better reflect their expertise and help them win new clients.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design from concept to delivery.\n\nThe work included:\n- Developing a visual direction that balanced technical credibility with warmth — important for a charity sector audience\n- Designing the homepage, services, and about pages\n- Structuring content around clear service areas and client outcomes\n- Building a component library in Figma for clean developer handoff\n\n## Outcome\n\nThe new site gave N3O a cleaner, more credible web presence that matched the quality of the work they were already doing.",
       "liveUrl": "https://www.n3o.ltd"
     },
     {
@@ -256,7 +256,7 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nPencil is an AI-powered platform that helps marketing teams generate, test, and optimise creative ad content at scale. The project was a website redesign to better position them in a rapidly growing market.\n\n## Challenge\n\nThe AI creative space is crowded and fast-moving. Pencil needed a site that communicated their specific value clearly and fast — to performance marketers who have seen plenty of AI promises.\n\n## Solution\n\nWe led with outcomes over features — showing what Pencil makes possible rather than explaining how it works. The design was energetic and direct, matching the pace of the teams it serves.\n\n## Results\n\nThe redesigned site sharpened Pencil's positioning and improved the clarity of their core value proposition for the target audience.",
+      "body": "## Overview\n\nPencil is an AI platform that helps performance marketing teams generate, test, and scale ad creative. The project was a website redesign aimed at a sceptical audience — marketers who've heard plenty of AI promises and need to see the proof.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site.\n\nThe work included:\n- Designing a homepage and product pages built around outcomes, not features\n- Developing an energetic, direct visual language that matched the pace of the teams Pencil is built for\n- Structuring the content to get to the value proposition as fast as possible\n- Building a full component system for developer handoff\n\n## Outcome\n\nThe redesigned site sharpened Pencil's positioning and made their core value land faster with the right audience.",
       "liveUrl": "https://www.trypencil.com"
     },
     {
@@ -293,14 +293,14 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nArbitrary Execution is a specialist cybersecurity firm offering research, advisory, and offensive security services. The project was a new website to establish their presence and attract the right enterprise clients.\n\n## Challenge\n\nCybersecurity is a trust-heavy category where credibility and authority matter more than almost anything else. The site needed to communicate deep expertise without being inaccessible — and feel distinct in a space full of dark, aggressive aesthetics.\n\n## Solution\n\nWe took a more refined, editorial approach — clean layouts, precise typography, and a design language that felt authoritative and considered rather than aggressive. The content was structured to demonstrate expertise through specificity.\n\n## Results\n\nThe site gave Arbitrary Execution a strong, distinctive presence that set them apart from typical cybersecurity firms.",
+      "body": "## Overview\n\nArbitrary Execution is a specialist cybersecurity firm offering research, advisory, and offensive security services to enterprise clients.\n\nThe project was a new website built from scratch — to establish a credible web presence and attract the kind of clients that take security seriously.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the site.\n\nThe work included:\n- Developing a refined, editorial visual direction — deliberately different from the dark, aggressive look typical of the cybersecurity space\n- Designing all core pages: homepage, services, and about\n- Structuring content to demonstrate expertise through specificity rather than buzzwords\n- Creating a Figma component library for developer handoff\n\n## Outcome\n\nThe site gave Arbitrary Execution a distinctive, authoritative presence — one that set them apart from the competition and spoke credibly to enterprise security buyers.",
       "liveUrl": "https://www.arbitraryexecution.com"
     },
     {
       "slug": "tedx",
       "title": "TEDx Website",
       "tag": "Website design",
-      "year": "2024",
+      "year": "2022",
       "description": "Website design for a TEDx event.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627d2f8ea3cc642ed88fa72f_tedx-small-thumb.webp",
       "scope": "Website design",
@@ -330,14 +330,14 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nTEDx events bring the TED format to local communities around the world. This project was a custom website for a TEDx event, designed to generate excitement, communicate the event programme, and drive ticket sales.\n\n## Challenge\n\nThe site needed to honour the TED brand while feeling locally rooted and event-specific. It also had to work hard commercially — clearly communicating the programme and making ticket purchase as frictionless as possible.\n\n## Solution\n\nWe designed a bold, energetic site that led with speakers and themes, making the event feel unmissable. The structure guided visitors naturally from discovery to ticket purchase with minimal friction.\n\n## Results\n\nThe event sold out and the organising team reported the site as a key driver of awareness and ticket conversion.",
+      "body": "## Overview\n\nTEDx events bring the TED Ideas Worth Spreading format to local communities. The project was a custom website for a TEDx event — built to generate excitement, communicate the programme, and drive ticket sales.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the site.\n\nThe work included:\n- Designing a bold, event-forward homepage that led with speakers and themes\n- Building out event, schedule, and ticketing pages\n- Creating a design that honoured the TED brand while feeling locally rooted and specific to this event\n- Minimising friction between first impression and ticket purchase\n\n## Outcome\n\nThe event sold out. The organising team credited the website as a key driver of awareness and ticket sales.",
       "liveUrl": "https://www.tedx.com"
     },
     {
       "slug": "deepdub",
       "title": "Deepdub",
       "tag": "Website redesign",
-      "year": "2024",
+      "year": "2025",
       "description": "Complete website revamp for an AI-powered dubbing platform.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/65e0cac2ce2b0db354908d2f_Hero%20mockup%201%20%E2%80%93%201.webp",
       "scope": "Website design, Webflow development",
@@ -374,7 +374,7 @@
       "slug": "mode",
       "title": "Mode",
       "tag": "Website design",
-      "year": "2024",
+      "year": "2025",
       "description": "Website for a data analytics and business intelligence platform.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f20f0d15ab491aaafa7ae0_Hero%20mockup%201%20(9).webp",
       "scope": "Website design",
@@ -389,7 +389,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nMode is a secure team communication platform built for businesses that can't afford to have their data compromised. As cyberattacks grow more sophisticated — including the looming threat of quantum computing — Mode offers post-quantum encryption to protect sensitive conversations and files shared across remote, hybrid, and in-office teams.\n\n## Challenge\n\nMode's existing website captured the brand's visual identity but fell short of communicating the product's value clearly. The information architecture was unclear, key benefits were buried, and the design relied too heavily on product screenshots rather than conveying the confidence and security the platform promises. The goal was a redesign that felt as secure and progressive as the technology behind it.\n\n## Solution\n\nI redesigned the website with a clean, structured layout — focused on clear messaging, purposeful use of brand colours, and custom illustrations that communicated security without overwhelming the visitor. The new architecture guides users through the product's key benefits logically, with concise copy and strong visual hierarchy that builds trust at each scroll.\n\n## Results\n\nThe redesigned site better positions Mode as a credible, forward-thinking security platform — moving away from a template feel toward something that reflects the seriousness of post-quantum encryption.",
+      "body": "## Overview\n\nMode is a secure team communication platform with post-quantum encryption — built for businesses where the cost of a data breach is simply too high.\n\nThe project was a full website redesign to bring the brand in line with the product's ambition. The existing site communicated the right idea but didn't look the part.\n\n## What I did\n\nI led the visual design for the new site from concept through to final delivery.\n\nThe work included:\n- Developing a clean, structured visual direction that matched the seriousness of the product\n- Designing the homepage and core product pages\n- Replacing generic imagery with custom-illustrated visuals that communicated security without being clichéd\n- Structuring the content hierarchy to build trust at each scroll\n\n## Outcome\n\nThe redesigned site positions Mode as a credible, forward-thinking security platform — one that looks as solid as the technology behind it.",
       "liveUrl": "https://mode.com"
     },
     {
@@ -411,14 +411,14 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nCold.Email is a specialist lead generation agency focused entirely on cold email outreach. Unlike competitors who rely on Clay-based workflows or broad digital marketing tools, Cold.Email targets businesses that need direct, high-quality outreach to book sales calls — positioning itself as the premium option in the space.\n\n## Challenge\n\nThe agency had no website at all. With strong results and a clear market position, they needed a site built from scratch that would immediately signal quality and convert visitors into booked calls. The challenge was translating a founder-led personal brand and bold voice into a website that felt polished and premium — not scrappy.\n\n## Solution\n\nI designed a conversion-focused site that leaned into the agency's confidence and results. The design is clean and direct — no filler content, every section earns its place. The visual language communicates premium positioning, while the copy and structure drive visitors toward a single action: booking a call.\n\n## Results\n\nA brand new web presence that positions Cold.Email as the high-end option in a crowded agency market, built to convert the right clients.",
+      "body": "## Overview\n\nCold.Email is a specialist outreach agency focused entirely on cold email lead generation. They're positioning as the premium option in a space that's often associated with spam and shortcuts.\n\nThe project was building a website from scratch. No existing site, no previous design — just a brief, a strong founder voice, and a clear market position.\n\n## What I did\n\nI led the visual design and structure for the site from the ground up.\n\nThe work included:\n- Developing a conversion-focused layout with a single goal: get visitors to book a call\n- Designing a visual direction that felt premium and confident without being flashy\n- Structuring the page to address objections directly and lead with results\n- Keeping the design tight — no filler, every section earns its place\n\n## Outcome\n\nCold.Email launched with a website that matched the quality of their client work — a strong first impression in a crowded agency market.",
       "liveUrl": "https://www.coldemail.com"
     },
     {
       "slug": "hike-seo",
       "title": "Hike SEO",
       "tag": "Website design",
-      "year": "2023",
+      "year": "2025",
       "description": "Website for an SEO platform designed for small businesses.",
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6818d35d7c7c40129157b276_hike-thumbnail.webp",
       "scope": "Website design",
@@ -448,7 +448,7 @@
           "wide": false
         }
       ],
-      "body": "## Overview\n\nHike SEO provides an affordable, done-for-you SEO solution aimed at micro-businesses — builders, plumbers, electricians, and one-person operations who need leads from Google but can't afford agency fees or the time to learn SEO themselves. Their AI agent handles all the expert decision-making and implementation on the client's behalf.\n\n## Challenge\n\nHike's existing website had clear structure and brand identity but felt dated and no longer communicated the product's value effectively. The imagery was weak, the pricing page was confusing, and the site had grown slow. It needed a complete refresh that matched the warmth and approachability of the brand while better converting visitors into subscribers.\n\n## Solution\n\nI redesigned the site with a clean, friendly aesthetic that reflects Hike's voice — assured and warm without being corporate. The new layout simplifies the user journey toward sign-up, improves the communication of the product's unique value proposition, and replaces outdated imagery with visuals that feel relevant and modern.\n\n## Results\n\nA refreshed website that clearly communicates what Hike does, who it's for, and why it's the right choice — removing friction from the path to conversion.",
+      "body": "## Overview\n\nHike SEO is a done-for-you SEO platform for micro-businesses — builders, plumbers, electricians, and one-person operations that need leads from Google but can't afford agency fees or the time to learn SEO themselves.\n\nTheir AI agent handles all the expert work on the client's behalf, making agency-quality SEO accessible at a price small businesses can actually afford.\n\nThe project was a website redesign. The existing site had a clear structure but felt dated and wasn't communicating the product's value as effectively as it needed to.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the redesigned site.\n\nThe work included:\n- Refreshing the visual direction to feel warmer and more contemporary\n- Restructuring the homepage to communicate Hike's unique value proposition more clearly\n- Simplifying the user journey toward sign-up\n- Replacing outdated imagery with visuals that felt relevant and on-brand\n\n## Outcome\n\nA refreshed site that communicates what Hike does, who it's for, and why it's worth it — with less friction between landing and signing up.",
       "liveUrl": "https://www.hikeseo.co"
     },
     {
@@ -470,7 +470,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nAperios is a cybersecurity company built specifically for small and medium-sized businesses. They combine offensive security testing with rapid incident response — helping SMBs uncover threats before attackers do, and recover fast if something gets through. Their approach removes the enterprise-level complexity that typically makes security inaccessible to smaller teams.\n\n## Challenge\n\nAperios had no existing website. They needed a site built from scratch that could communicate complex security concepts in a way that felt approachable and trustworthy to non-technical business owners — not intimidating like typical cybersecurity brands. The goal was to evoke peace of mind, confidence, and clarity.\n\n## Solution\n\nI designed a clean, modern site that speaks directly to the SMB audience — using plain language, structured content, and a calm visual tone that contrasts with the fear-driven aesthetic common in the security industry. Every design decision was focused on building trust and making Aperios feel like an expert partner, not a faceless vendor.\n\n## Results\n\nA new web presence that positions Aperios as the approachable, expert cybersecurity partner for SMBs — ready to compete against enterprise solutions and local IT shops alike.",
+      "body": "## Overview\n\nAperios is a cybersecurity company built specifically for small and medium-sized businesses. They offer offensive security testing and rapid incident response — helping SMBs find threats before attackers do, and recover quickly when something gets through.\n\nThe project was a new website built from scratch. Aperios needed a presence that could compete with enterprise security firms but speak plainly to non-technical business owners.\n\n## What I did\n\nI led the visual design for the site from initial brief to final delivery.\n\nThe work included:\n- Developing a clean, approachable visual direction — deliberately different from the fear-driven aesthetic common in the security industry\n- Designing the homepage and core service pages\n- Writing-ready layout structures that communicated complex concepts in plain language\n- Building a Figma component library for developer handoff\n\n## Outcome\n\nAperios launched with a web presence that positions them as an expert, approachable security partner for SMBs — rather than another intimidating enterprise vendor.",
       "liveUrl": "https://www.aperios.net"
     },
     {
@@ -492,7 +492,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nTeamclass connects companies with curated team-building experiences and workshops. The project was a website redesign to better serve both corporate buyers and experience providers.\n\n## Challenge\n\nThe platform needed to inspire and reassure at the same time — helping corporate buyers discover experiences while feeling confident about the quality and logistics.\n\n## Solution\n\nWe designed a marketplace-inspired layout that made discovery easy, with strong visual hierarchy and clear paths for both buyer types.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nTeamclass connects companies with curated team-building experiences and workshops. The project was a website redesign to better serve both corporate buyers and experience providers.\n\n## Challenge\n\nThe platform needed to inspire and reassure at the same time — helping corporate buyers discover experiences while feeling confident about the quality and logistics.\n\n## Solution\n\nI designed a marketplace-inspired layout that made discovery easy, with strong visual hierarchy and clear paths for both buyer types.\n\n## Results\n\nComing soon.",
       "liveUrl": "https://www.teamclass.com"
     },
     {
@@ -514,7 +514,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nUptrail is a talent acquisition platform that helps recruiting teams manage candidates and collaborate more effectively. The project was a website redesign to sharpen their positioning.\n\n## Challenge\n\nThe recruiting tech market is saturated. Uptrail needed to communicate what made their approach different — particularly their focus on collaboration and candidate experience.\n\n## Solution\n\nWe built the site around the recruiter's journey, showing how Uptrail fits into existing workflows rather than asking teams to change everything.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nUptrail is a talent acquisition platform that helps recruiting teams manage candidates and collaborate more effectively. The project was a website redesign to sharpen their positioning.\n\n## Challenge\n\nThe recruiting tech market is saturated. Uptrail needed to communicate what made their approach different — particularly their focus on collaboration and candidate experience.\n\n## Solution\n\nI built the site around the recruiter's journey, showing how Uptrail fits into existing workflows rather than asking teams to change everything.\n\n## Results\n\nComing soon.",
       "liveUrl": "https://www.uptrail.com"
     },
     {
@@ -536,7 +536,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nPurple Farm Genetics is an agricultural genetics company developing improved plant varieties. The project was a brand identity and website to establish their presence.\n\n## Challenge\n\nAgriculture is a traditional industry, but genetics is cutting-edge science. The brand needed to bridge both worlds — credible to farmers and scientists alike.\n\n## Solution\n\nWe developed a brand that felt grounded and natural while communicating precision and innovation. The website followed the same principle — accessible language, clean design, strong photography.\n\n## Results\n\nComing soon.",
+      "body": "## Overview\n\nPurple Farm Genetics is an agricultural genetics company developing improved plant varieties. The project was a brand identity and website to establish their presence.\n\n## Challenge\n\nAgriculture is a traditional industry, but genetics is modern science. The brand needed to bridge both worlds — credible to farmers and scientists alike.\n\n## Solution\n\nI developed a brand that felt grounded and natural while communicating precision and innovation. The website followed the same principle — accessible language, clean design, strong photography.\n\n## Results\n\nComing soon.",
       "liveUrl": "https://www.purplefarmgenetics.com"
     },
     {
@@ -558,7 +558,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nPiiano builds security infrastructure for developers — tools that help engineering teams protect sensitive customer data, prevent breaches, and meet data privacy compliance requirements in cloud applications. Founded by a team of security experts, Piiano sits at the intersection of developer tooling and enterprise-grade data protection.\n\n## Challenge\n\nPiiano's existing website had already brought in paying customers, but parts of it were becoming outdated. The focus on privacy engineering was no longer accurate, and the site needed to evolve alongside the product. The redesign needed to feel elegant, instil trust, and clearly communicate that building secure, compliant infrastructure with Piiano is achievable — not overwhelming.\n\n## Solution\n\nI redesigned the site with a sophisticated visual tone that matches the product's technical credibility. Clean layout, precise copy, and a structured presentation of the platform's core value help developers and security teams quickly understand what Piiano does and why it's the right choice over alternatives like Skyflow.\n\n## Results\n\nA refined website that elevates Piiano's positioning as the trusted infrastructure layer for sensitive data — communicating elegance and expertise to both technical and non-technical decision makers.",
+      "body": "## Overview\n\nPiiano builds security infrastructure for developer teams — tools that help engineering teams protect sensitive customer data, prevent breaches, and stay compliant with data privacy regulations.\n\nThe project was a partial website redesign. The site had already been performing well, but parts of it were becoming outdated as the product evolved. The focus on privacy engineering no longer reflected what Piiano had grown into.\n\n## What I did\n\nWorking within the Arch Web Design team, I updated and redesigned the core pages of the site.\n\nThe work included:\n- Updating the visual direction to reflect the product's current positioning\n- Redesigning the homepage and key product pages\n- Improving the hierarchy and clarity of the technical content\n- Ensuring the design felt sophisticated and trustworthy to both developers and security decision-makers\n\n## Outcome\n\nA refined site that better reflects where Piiano is today — clear, credible, and built for an audience that takes data security seriously.",
       "liveUrl": "https://www.piiano.com"
     },
     {
@@ -580,7 +580,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nSoftware Secured is a penetration testing company based in Canada, helping software companies meet security compliance requirements — SOC 2, ISO 27001, PCI, HIPAA — and defend against real-world breaches. Their team of full-time, highly trained security professionals runs comprehensive manual pentests, averaging four times more vulnerabilities found per test than leading competitors.\n\n## Challenge\n\nSoftware Secured's old website was underperforming on every front. The hero image was a generic stock photo, the design was outdated, the colour usage was heavy, and pages didn't flow together — leading to high exit rates and poor conversion. The site was pushing too many features in the wrong places and failing to connect with the buyers who needed to trust them most.\n\n## Solution\n\nI redesigned the site with a cleaner, more modern visual language — strong use of white space, custom illustrations instead of stock imagery, and a tighter information architecture that guides visitors from problem to solution. The new design prioritises the credibility signals that matter to security buyers: methodology, expertise, and proof of results.\n\n## Results\n\nA significantly improved web presence that speaks directly to security-conscious buyers, reduces friction in the sales funnel, and positions Software Secured as the high-quality, trustworthy option in a competitive market.",
+      "body": "## Overview\n\nSoftware Secured is a penetration testing company based in Canada. They help software companies find vulnerabilities, meet compliance requirements — SOC 2, ISO 27001, PCI, HIPAA — and defend against real-world attacks.\n\nTheir team runs comprehensive manual pentests, finding on average four times more vulnerabilities per engagement than leading automated tools.\n\nThe project was a full website redesign. The existing site had a generic stock photo hero, heavy colour use, disjointed pages, and was underperforming on every conversion metric.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site.\n\nThe work included:\n- Replacing stock imagery with custom illustrations and a cleaner visual language\n- Redesigning the homepage, service, and trust pages with a tighter layout and better hierarchy\n- Structuring the content to prioritise credibility signals — methodology, expertise, and proof\n- Building a complete component system in Figma for developer handoff\n\n## Outcome\n\nThe new site significantly improved Software Secured's first impression — a design that speaks directly to security-conscious buyers and reflects the quality of the work behind it.",
       "liveUrl": "https://www.softwaresecured.com"
     },
     {
@@ -602,7 +602,7 @@
           "wide": true
         }
       ],
-      "body": "## Overview\n\nRosalyn is an AI-powered proctoring platform designed for the post-pandemic era of online education. It helps institutions prevent cheating on online exams — identity fraud, browser violations, and unauthorized materials — while delivering a respectful, privacy-conscious experience for students. Rosalyn is 80% more cost effective than traditional proctoring solutions and works even in low-bandwidth environments.\n\n## Challenge\n\nRosalyn's existing website had a visual identity they were happy with — the colours, graphics, and fonts were on point — but the layout wasn't working. The site wasn't communicating the platform's unique advantages clearly enough to differentiate from established competitors like Honorlock, Proctorio, and ProctorU.\n\n## Solution\n\nI redesigned the layout to better structure the narrative flow — leading with the credibility problem online education faces, then clearly presenting Rosalyn's breakthrough approach. The design builds on the existing brand strengths while improving clarity, hierarchy, and the emotional arc from first impression to conversion.\n\n## Results\n\nA redesigned website that better communicates Rosalyn's differentiated value — positioning it as the modern, accessible alternative in a market dominated by expensive, friction-heavy legacy solutions.",
+      "body": "## Overview\n\nRosalyn is an AI-powered exam proctoring platform built for the era of online education. It helps universities and testing organisations prevent cheating — identity fraud, browser violations, unauthorised materials — while keeping the experience respectful and stress-free for students.\n\nRosalyn is 80% more cost-effective than traditional proctoring solutions and works in low-bandwidth environments, making it genuinely accessible to institutions that need it most.\n\nThe project was a website redesign. The existing visual identity — colours, graphics, and fonts — was in good shape. The issue was the layout and how the product's differentiation was being communicated.\n\n## What I did\n\nWorking within the Arch Web Design team, I redesigned the core pages of the site.\n\nThe work included:\n- Restructuring the page hierarchy to lead with the credibility problem online education faces, then present Rosalyn's solution clearly\n- Improving visual hierarchy throughout to guide visitors toward the key message\n- Refreshing the layout while preserving the brand identity the client was happy with\n- Designing a cleaner path from first impression to conversion\n\n## Outcome\n\nA redesigned site that makes Rosalyn's differentiation clear — and positions it as the modern, accessible alternative to expensive, friction-heavy legacy proctoring tools.",
       "liveUrl": "https://www.rosalyn.ai"
     },
     {
@@ -617,7 +617,7 @@
       "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64cb01bd43b23c4e55fec_deepdub%20display%201.webp",
       "liveUrl": "https://www.canvasgfx.com/",
       "summary": "Website redesign for an AI-powered work instructions platform for manufacturers.",
-      "body": "## Overview\n\nCanvas Envision is a manufacturing software platform that uses AI to transform PDFs, videos, and 3D models into interactive, intelligent work instructions. It helps manufacturers move away from disconnected, outdated documentation workflows — making it faster and easier to create, update, and distribute accurate instructions to the frontline.\n\n## Challenge\n\nThe existing Canvas Envision website had significant structural problems: a confusing mega menu, poor CTA buttons, separate legacy and current sites to manage, and a template look that didn't reflect the platform's innovation. The content was poorly organised — legal pages were one massive block, the about section lacked depth, and past webinars had no links to replays.\n\n## Solution\n\nI redesigned the website from the ground up with a clear, modern visual direction inspired by software-forward design. The new structure consolidates the platform's offering into a logical hierarchy — platform, solutions, use cases, and resources — with strong CTAs, consistent branding, and a design language that signals both precision and innovation to manufacturing decision-makers.\n\n## Results\n\nA fully rebuilt web presence that positions Canvas Envision as the intelligent, forward-thinking choice for manufacturers ready to modernise their documentation workflows.",
+      "body": "## Overview\n\nCanvas Envision is a manufacturing software platform that uses AI to turn PDFs, videos, and 3D models into interactive, digital work instructions. It helps manufacturers move away from disconnected, paper-based documentation — making it faster to create, update, and push accurate instructions to the frontline.\n\nThe project was a full website redesign. The existing site had structural problems throughout: a confusing mega menu, weak CTAs, an outdated template look, and separate legacy and current sites running side by side.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the rebuilt site.\n\nThe work included:\n- Developing a clean, modern visual direction that reflects the platform's technical innovation\n- Restructuring the site architecture: platform, solutions, use cases, and resources — each with a clear role\n- Designing all core pages with strong, consistent CTAs and a visual language that reads as precise and forward-thinking\n- Building a full component library in Figma for developer handoff\n\n## Outcome\n\nA fully rebuilt web presence that gives Canvas Envision a platform worthy of the product — clear, credible, and ready to speak to manufacturers who are serious about modernising their operations.",
       "gallery": []
     }
   ]

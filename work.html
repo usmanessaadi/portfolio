@@ -191,6 +191,7 @@
     const facts = [
       metaFact('Scope', p.scope || p.tag),
       metaFact('Role', p.role),
+      '<div class="cs-fact"><dt class="cs-fact__label">Studio</dt><dd class="cs-fact__value"><a href="https://www.archcowebdesign.com" target="_blank" rel="noopener" class="cs-fact__link">Arch Web Design ↗</a></dd></div>',
       metaFact('Client', p.client || p.title),
       metaFact('Year', p.year || (p.meta||'').match(/\d{4}[-–]\d{4}|\d{4}/)?.[0])
     ].filter(Boolean).join('');
