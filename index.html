@@ -301,7 +301,7 @@
         +     '<span class="work__title">'+titleHTML+'</span>'
         +     '<span class="work__year">'+esc(p.year || '')+'</span>'
         +   '</div>'
-        +   '<p class="work__desc">'+esc(p.description || '')+'</p>'
+        +   '<p class="work__desc">'+esc(p.summary || p.description || '')+'</p>'
         + '</div>'
         + '</'+tag+'>';
     };
