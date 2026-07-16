@@ -308,12 +308,9 @@ body.menu-open{overflow:hidden}
   font-weight:300;
   font-style:normal;
   color:var(--ink-soft);
-  text-decoration:none;
   margin-bottom:32px;
   width:fit-content;
-  transition:border-color .25s var(--ease), color .25s var(--ease);
 }
-.hero__badge:hover{border-color:rgba(255,255,255,.3);color:#fdfdfd}
 .hero__badge em{
   font-style:italic;
   font-family:"Newsreader","Georgia",serif;
@@ -1036,6 +1033,7 @@ h1.display em{
 @media (max-width:720px){
   .wl-hero{padding:120px 0 56px}
   .wl-wrap{padding:0 20px}
+  .wl-eyebrow{font-size:16px;letter-spacing:.08em}
   .wl-filters{margin-bottom:40px}
   .wl-list{flex-direction:column;gap:56px}
   .wl-col{gap:56px}
@@ -1306,7 +1304,7 @@ h1.display em{
 /* facts dl */
 .cs-facts{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:repeat(4,1fr);
   border-top:1px solid var(--line);
   margin-top:48px;
 }
