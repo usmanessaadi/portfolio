@@ -320,6 +320,7 @@ body.menu-open{overflow:hidden}
   background-clip:text;
   color:transparent;
 }
+@media (max-width:720px){.hero__badge{font-size:16px}}
 
 .hero__inner{
   position:relative;
