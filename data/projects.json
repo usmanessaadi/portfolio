@@ -364,7 +364,7 @@
       "scope": "Website design, Webflow development",
       "role": "Lead Designer",
       "client": "Deepdub",
-      "featured": false,
+      "featured": true,
       "summary": "A complete website revamp for Deepdub, an AI-powered dubbing solution that localises content into any language at scale.",
       "gallery": [
         {
