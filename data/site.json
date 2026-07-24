@@ -1,14 +1,35 @@
 {
   "meta_grid": [
-    { "label": "Based", "value": "Marrakech, Morocco" },
-    { "label": "Focus", "value": "UX/UI Design" },
-    { "label": "Languages", "value": "English, French, Arabic" },
-    { "label": "Open for", "value": "Full-time & part-time" }
+    {
+      "label": "Based",
+      "value": "Marrakech, Morocco"
+    },
+    {
+      "label": "Focus",
+      "value": "UX/UI Design"
+    },
+    {
+      "label": "Experience",
+      "value": "6+ years experience with over 150 projects"
+    },
+    {
+      "label": "Open for",
+      "value": "Full-time & part-time"
+    }
   ],
   "socials": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/usmanessaadi/" },
-    { "label": "Behance", "url": "https://www.behance.net/otmaneessaadi" },
-    { "label": "Dribbble", "url": "https://dribbble.com/otmaneessaadi" }
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/usmanessaadi/"
+    },
+    {
+      "label": "Behance",
+      "url": "https://www.behance.net/otmaneessaadi"
+    },
+    {
+      "label": "Dribbble",
+      "url": "https://dribbble.com/otmaneessaadi"
+    }
   ],
   "headline_pre": "Designer based in ",
   "headline_city": "Marrakech",

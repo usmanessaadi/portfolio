@@ -661,6 +661,27 @@
       "summary": "Website redesign for an AI-powered work instructions platform for manufacturers.",
       "body": "## Overview\n\nCanvas Envision is a manufacturing software platform that uses AI to turn PDFs, videos, and 3D models into interactive, digital work instructions. It helps manufacturers move away from disconnected, paper-based documentation, making it faster to create, update, and push accurate instructions to the frontline.\n\nThe project was a full website redesign. The existing site had structural problems throughout: a confusing mega menu, weak CTAs, an outdated template look, and separate legacy and current sites running side by side.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the rebuilt site.\n\nThe work included:\n- Developing a clean, modern visual direction that reflects the platform's technical innovation\n- Restructuring the site architecture: platform, solutions, use cases, and resources, each with a clear role\n- Designing all core pages with strong, consistent CTAs and a visual language that reads as precise and forward-thinking\n- Building a full component library in Figma for developer handoff\n\n## Outcome\n\nA fully rebuilt web presence that gives Canvas Envision a platform worthy of the product, clear, credible, and ready to speak to manufacturers who are serious about modernising their operations.",
       "gallery": []
+    },
+    {
+      "slug": "go-contracting",
+      "title": "GO Contracting",
+      "tag": "Website Design",
+      "scope": "Website redesign",
+      "role": "UX/UI Designer",
+      "client": "GO Contracting",
+      "year": "2025",
+      "featured": true,
+      "liveUrl": "https://go-contracting.com/",
+      "image": "/assets/img/go-contracting/thumbnail-go-contracting.webp",
+      "summary": "Full website redesign for a family-owned commercial interior contractor serving the Dallas-Fort Worth Metroplex.",
+      "body": "## Overview\n\nGO Contracting is a family-owned commercial interior contractor based in Northlake, Texas. They specialise in interior finish-outs for commercial spaces across the Dallas-Fort Worth Metroplex, covering metal framing, sheetrock, acoustical ceilings, painting, and flooring. With 40+ years of combined experience and a client base that includes Coca-Cola and other major Texas businesses, they needed a website that matched the quality of their work.\n\nThe project was a full website redesign, done while working with Method Marketing.\n\n## What I did\n\nI worked as the UX/UI designer on the project, handling the full visual redesign from concept to delivery.\n\nThe work included:\n- Redesigning the homepage and all service pages with a clean, professional visual direction\n- Structuring the content to balance local trust signals with commercial credibility\n- Designing sections to showcase project portfolio, client testimonials, and certifications\n- Building a clear path from landing to quote request across every page\n\n## Outcome\n\nGO Contracting launched with a significantly stronger web presence, one that reflects the family-owned story and the scale of their commercial work at the same time.",
+      "gallery": [
+        {
+          "src": "/assets/img/go-contracting/widescreen-go-contracting.webp",
+          "alt": "GO Contracting website redesign",
+          "wide": true
+        }
+      ]
     }
   ]
 }
