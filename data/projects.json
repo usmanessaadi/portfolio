@@ -96,6 +96,27 @@
       "liveUrl": "https://www.emma-live.com"
     },
     {
+      "slug": "highspire",
+      "title": "Highspire Capital",
+      "tag": "Landing Page Design",
+      "scope": "Landing page & homepage tweaks",
+      "role": "UX/UI Designer",
+      "client": "Highspire",
+      "year": "2025",
+      "featured": true,
+      "liveUrl": "https://www.highspire.com/capital/",
+      "image": "/assets/img/highspire/thumbnail-highspire.webp",
+      "summary": "Landing page design and homepage tweaks for Highspire Capital, a real estate investment fund turning builders into developers.",
+      "body": "## Overview\n\nHighspire is a coaching and capital platform that helps construction business owners grow into real estate developers. Their Capital Fund gives investors access to exclusive, off-market real estate deals across the Pacific Northwest and Seattle, backed by a committee of seasoned developers with over $670M in created value.\n\nThe project was a new landing page for the Capital Fund, plus a set of homepage tweaks, done while working with Method Marketing.\n\n## What I did\n\nI worked as the UX/UI designer on the project, collaborating with the Method Marketing team to design and deliver the updated pages.\n\nThe work included:\n- Designing the /capital landing page from scratch, focused on converting prospective investors\n- Structuring the page to build trust quickly: social proof, fund stats, team credentials, and featured projects\n- Applying homepage tweaks to improve visual consistency across the site\n- Working within Highspire's existing brand identity while improving hierarchy and conversion focus\n\n## Outcome\n\nThe Capital Fund page launched with a clear, credible structure that speaks directly to serious investors and positions Highspire as a premium, community-led investment opportunity.",
+      "gallery": [
+        {
+          "src": "/assets/img/highspire/widescreen-highspire.webp",
+          "alt": "Highspire Capital landing page",
+          "wide": true
+        }
+      ]
+    },
+    {
       "slug": "spherex",
       "title": "Spherex",
       "tag": "Website design",
@@ -364,7 +385,7 @@
       "scope": "Website design, Webflow development",
       "role": "Lead Designer",
       "client": "Deepdub",
-      "featured": true,
+      "featured": false,
       "summary": "A complete website revamp for Deepdub, an AI-powered dubbing solution that localises content into any language at scale.",
       "gallery": [
         {
