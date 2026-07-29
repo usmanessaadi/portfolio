@@ -16,6 +16,7 @@
   justify-content:center;
   overflow:hidden;
   transition:transform .6s cubic-bezier(.76,0,.24,1);
+  will-change:transform;
 }
 .loader.is-done{
   transform:translateY(-100%);
