@@ -210,7 +210,7 @@
     const STATIC_SLUGS = ['canvas-envision','deepdub','highspire','emma','hike-seo','design-leadership-network'];
     const others = allProjects.filter(x=>x.slug!==p.slug).slice(0,3);
     const moreCards = others.map(op=>{
-      const opHref = STATIC_SLUGS.indexOf(op.slug)>=0 ? '/work/'+op.slug : 'work.html#'+esc(op.slug||'');
+      const opHref = 'work.html#'+esc(op.slug||'');
       return '<a class="wcard" href="'+opHref+'" data-reveal>'
         + '<div class="wcard__img"><img src="'+esc(abs(op.image||''))+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
         + '<div class="wcard__info">'
@@ -291,7 +291,7 @@
     const ordered = [...featured, ...rest];
 
     function buildCard(p){
-      const href = STATIC.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
+      const href = 'work.html#'+esc(p.slug||'');
       return '<a class="wl-card" href="'+href+'">'
         + '<div class="wl-card__img"><img src="'+esc(abs(p.image||''))+'" alt="'+esc(p.title||'')+'" loading="lazy" /></div>'
         + '<div class="wl-card__info">'

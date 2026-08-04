@@ -309,7 +309,7 @@
       const isSoon = p.tag === 'Soon';
       const tag = isSoon ? 'div' : 'a';
       const staticPages = ['canvas-envision', 'deepdub', 'highspire', 'emma', 'hike-seo', 'design-leadership-network'];
-      const workHref = staticPages.indexOf(p.slug) >= 0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
+      const workHref = 'work.html#'+esc(p.slug||'');
       const hrefAttr = isSoon ? '' : ' href="'+workHref+'"';
       const titleHTML = esc(p.title || '') + (isSoon ? ' <span class="work__badge">Soon</span>' : '');
       return '<'+tag+' class="work__card" data-reveal'+hrefAttr+'>'
