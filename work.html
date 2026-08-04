@@ -207,15 +207,18 @@
     const bodyHTML = p.body ? marked.parse(p.body) : '';
 
     // more projects
+    const STATIC_SLUGS = ['canvas-envision','deepdub','highspire','emma','hike-seo','design-leadership-network'];
     const others = allProjects.filter(x=>x.slug!==p.slug).slice(0,3);
-    const moreCards = others.map(op=>'<a class="wcard" href="'+(['canvas-envision', 'deepdub', 'highspire', 'emma', 'hike-seo', 'design-leadership-network'].indexOf(op.slug)>=0?'/work/'+op.slug:'work.html#'+esc(op.slug||''))+('" data-reveal>'
-      + '<div class="wcard__img"><img src="'+esc(abs(op.image||''))+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
-      + '<div class="wcard__info">'
-      +   '<div class="wcard__left"><span class="wcard__title">'+esc(op.title||'')+'</span>'
-      +     '<span class="wcard__discipline">'+esc(op.tag||'')+'</span></div>'
-      +   '<span class="wcard__year">'+esc(op.year||'')+'</span>'
-      + '</div></a>'
-    ).join('');
+    const moreCards = others.map(op=>{
+      const opHref = STATIC_SLUGS.indexOf(op.slug)>=0 ? '/work/'+op.slug : 'work.html#'+esc(op.slug||'');
+      return '<a class="wcard" href="'+opHref+'" data-reveal>'
+        + '<div class="wcard__img"><img src="'+esc(abs(op.image||''))+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
+        + '<div class="wcard__info">'
+        +   '<div class="wcard__left"><span class="wcard__title">'+esc(op.title||'')+'</span>'
+        +     '<span class="wcard__discipline">'+esc(op.tag||'')+'</span></div>'
+        +   '<span class="wcard__year">'+esc(op.year||'')+'</span>'
+        + '</div></a>';
+    }).join('');
 
     // build gallery: only widescreen hero + before/after slider
     function buildGalleryItems(gallery){
