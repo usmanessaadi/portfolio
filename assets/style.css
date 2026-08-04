@@ -853,7 +853,7 @@ h1.display em{
 }
 
 /* ---------- final contact / footer ---------- */
-.contact{padding:120px 0 60px}
+.contact{padding:120px 0 60px;margin-top:200px}
 .contact__wrap{max-width:1521.5px;margin:0 auto;min-height:400px}
 .contact__label{
   display:block;

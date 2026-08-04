@@ -309,8 +309,10 @@
       const colB = document.getElementById('wlColB');
       if(!colA||!colB) return;
       const cards = [];
+      // Use total cards already in DOM to decide which column
+      const offset = colA.children.length + colB.children.length;
       batch.forEach((p,i)=>{
-        const col = i%2===0 ? colA : colB;
+        const col = (offset+i)%2===0 ? colA : colB;
         const el = document.createElement('a');
         el.className = 'wl-card' + (animate ? ' wl-card--entering' : ' wl-card--visible');
         el.href = STATIC.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
@@ -489,7 +491,7 @@
       const list = proj.projects||[];
       const featured = list.filter(p => p.featured);
       if(!slug){
-        renderWorkListing(featured, site);
+        renderWorkListing(list, site);
       } else {
         const p = list.find(x=>x.slug===slug);
         if(!p) renderWorkListing(list, site);
