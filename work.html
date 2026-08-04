@@ -210,7 +210,7 @@
     const STATIC_SLUGS = ['canvas-envision','deepdub','highspire','emma','hike-seo','design-leadership-network'];
     const others = allProjects.filter(x=>x.slug!==p.slug).slice(0,3);
     const moreCards = others.map(op=>{
-      const opHref = 'work.html#'+esc(op.slug||'');
+      const opHref = STATIC_SLUGS.indexOf(op.slug)>=0 ? '/work/'+op.slug : 'work.html#'+esc(op.slug||'');
       return '<a class="wcard" href="'+opHref+'" data-reveal>'
         + '<div class="wcard__img"><img src="'+esc(abs(op.image||''))+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
         + '<div class="wcard__info">'
@@ -262,7 +262,6 @@
       '<section class="cs-hero" data-reveal>'
       +   '<div class="cs-hero__wrap">'
       +     '<a class="cs-back" href="work.html">← Back to all projects</a>'
-      +     '<p class="cs-category">'+esc(p.tag||p.scope||'Project')+'</p>'
       +     '<div class="cs-title-row">'
       +       '<h1 class="cs-title">'+esc(p.summary||p.title||'')+'</h1>'
       +       (p.liveUrl ? '<a class="cs-live-link" href="'+esc(p.liveUrl)+'" target="_blank" rel="noopener">Visit live website <span class="cs-live-arrow">↗</span></a>' : '')
@@ -274,7 +273,6 @@
       + (bodyHTML || sliderHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+reformatProse(bodyHTML)+'</div>'+(sliderHTML ? '<h2 class="cs-section-heading" data-reveal>Before &amp; After</h2>'+sliderHTML : '')+'</div></section>' : '')
       + (moreCards ? '<section class="cs-more"><div class="cs-more__wrap"><h2 class="cs-section-heading" data-reveal>More projects</h2><div class="cs-more__list">'+moreCards+'</div></div></section>' : '');
 
-    if(window.UI && window.UI.addOwnershipDisclosure) window.UI.addOwnershipDisclosure(main);
 
     // Init sliders after DOM is set
     initSliders();
@@ -291,7 +289,7 @@
     const ordered = [...featured, ...rest];
 
     function buildCard(p){
-      const href = 'work.html#'+esc(p.slug||'');
+      const href = STATIC.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
       return '<a class="wl-card" href="'+href+'">'
         + '<div class="wl-card__img"><img src="'+esc(abs(p.image||''))+'" alt="'+esc(p.title||'')+'" loading="lazy" /></div>'
         + '<div class="wl-card__info">'

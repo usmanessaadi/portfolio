@@ -138,30 +138,35 @@
     }, DURATION + SLIDE + 1500);
   }
 
-  function addOwnershipDisclosure(root) {
+  function setupMarrakechClock(root) {
     root = root || document;
-    var hero = root.querySelector('.cs-hero__wrap');
-    if (!hero || hero.querySelector('.cs-ownership')) return;
-    var facts = hero.querySelectorAll('.cs-fact');
-    var role = '';
-    facts.forEach(function (fact) {
-      var label = fact.querySelector('.cs-fact__label');
-      var value = fact.querySelector('.cs-fact__value');
-      if (label && value && label.textContent.trim().toLowerCase() === 'role') role = value.textContent.trim();
-    });
-    var note = document.createElement('p');
-    note.className = 'cs-ownership';
-    note.innerHTML = '<strong>My contribution</strong><span>' + (role || 'Designer') + '. The design work shown is mine; on studio engagements, strategy, development and client delivery were collaborative unless noted otherwise.</span>';
-    hero.appendChild(note);
+    var locations = root.querySelectorAll('.contact__location');
+    if (!locations.length) return;
+    function update() {
+      var value = new Intl.DateTimeFormat('en-GB', {
+        hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Africa/Casablanca'
+      }).format(new Date());
+      locations.forEach(function (location) {
+        var time = location.querySelector('[data-contact-time]');
+        if (!time) {
+          time = document.createElement('span');
+          time.setAttribute('data-contact-time', '');
+          location.appendChild(time);
+        }
+        time.textContent = value;
+      });
+    }
+    update();
+    window.setInterval(update, 30000);
   }
 
-  window.UI = { setupCursor: setupCursor, runLoader: runLoader, addOwnershipDisclosure: addOwnershipDisclosure };
+  window.UI = { setupCursor: setupCursor, runLoader: runLoader, setupMarrakechClock: setupMarrakechClock };
 
   // Cursor is independent of everything else — start it as soon as the DOM exists.
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () { setupCursor(); addOwnershipDisclosure(document); });
+    document.addEventListener('DOMContentLoaded', function () { setupCursor(); setupMarrakechClock(document); });
   } else {
     setupCursor();
-    addOwnershipDisclosure(document);
+    setupMarrakechClock(document);
   }
 })();

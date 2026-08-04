@@ -875,8 +875,8 @@ h1.display em{
 }
 
 /* ---------- final contact / footer ---------- */
-.contact{padding:120px 0 60px;margin-top:200px}
-.contact__wrap{max-width:1521.5px;margin:0 auto;min-height:400px}
+.contact{padding:72px 0 40px;margin-top:96px}
+.contact__wrap{max-width:1521.5px;margin:0 auto}
 .contact__label{
   display:block;
   font-size:11px;
@@ -1260,6 +1260,7 @@ h1.display em{
 .cs-back:hover::after{transform:scaleX(1)}
 
 .cs-category{
+  display:none;
   font-size:12px;
   letter-spacing:.18em;
   text-transform:uppercase;
@@ -1565,7 +1566,7 @@ h1.display em{
   .work{padding:64px 0}
   .services{padding:64px 0}
   .kindwords{padding:64px 0}
-  .contact{padding:64px 0}
+  .contact{padding:48px 0 32px;margin-top:64px}
 
   .services__heading{font-size:36px;letter-spacing:-1px;text-align:left;margin-bottom:20px}
   .services__grid{grid-template-columns:1fr}
