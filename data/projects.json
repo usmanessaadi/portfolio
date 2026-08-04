@@ -159,44 +159,6 @@
       "workUrl": "/work.html#spherex"
     },
     {
-      "slug": "jiminny",
-      "title": "Jiminny",
-      "tag": "Website redesign",
-      "year": "2023",
-      "description": "Website redesign for a conversation intelligence platform for sales teams.",
-      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adaf12fcc28fc80afb35_Hero%20mockup%201%20a.webp",
-      "scope": "Website design",
-      "role": "Lead Designer",
-      "client": "Jiminny",
-      "featured": false,
-      "summary": "Website redesign for a conversation intelligence platform that helps sales teams coach better and close more.",
-      "gallery": [
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adb9bda5ae02bd9a9e9f_Widescreen%20Jiminny%20scene.webp",
-          "alt": "Jiminny — website",
-          "wide": true
-        },
-        {
-          "type": "slider",
-          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ade2bae16f72a265cf32_Old%20homepage.webp",
-          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983ade374d9cd87f49ace8a_New%20Homepage.webp"
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adb90403924a21ae8296_D1.webp",
-          "alt": "Jiminny screens",
-          "wide": false
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6983adbcdaf6cfed7fd14860_D2.webp",
-          "alt": "Jiminny screens",
-          "wide": false
-        }
-      ],
-      "body": "## Overview\n\nJiminny is a conversation intelligence platform that records, transcribes, and analyses sales calls, helping teams coach better, spot patterns, and close more deals.\n\nThe project was a full website redesign to sharpen Jiminny's positioning and drive more demo sign-ups at a point where the company was scaling fast.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the site.\n\nThe work included:\n- Auditing and restructuring the information architecture\n- Designing a new visual system with cleaner hierarchy and tighter messaging\n- Rebuilding the homepage and core product pages\n- Designing a clear, direct path to the demo sign-up\n\n## Outcome\n\nThe site launched with a more confident brand presence. The conversion path became clearer and demo requests increased after launch.",
-      "liveUrl": "https://jiminny.com",
-      "workUrl": "/work.html#jiminny"
-    },
-    {
       "slug": "phase-six",
       "title": "Phase Six Online",
       "tag": "Website design",
@@ -311,82 +273,6 @@
       "workUrl": "/work.html#pencil"
     },
     {
-      "slug": "arbitrary-execution",
-      "title": "Arbitrary Execution",
-      "tag": "Website design",
-      "year": "2024",
-      "description": "Website for a cybersecurity research and advisory firm.",
-      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1e7085c0dca2a2260523a_Hero%20mockup%201%20(5).webp",
-      "scope": "Website design",
-      "role": "Lead Designer",
-      "client": "Arbitrary Execution",
-      "featured": false,
-      "summary": "Website design for a specialist cybersecurity research and advisory firm serving enterprise clients.",
-      "gallery": [
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1e714890b77421499f126_Widescreen%20AE%20scene.webp",
-          "alt": "Arbitrary Execution — website",
-          "wide": true
-        },
-        {
-          "type": "slider",
-          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1ecaea753c1ed93b4e0c1_Old%20homepage.webp",
-          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f1ecb2a1681bab1f5409fa_New%20Homepage.webp"
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64faba674620883e725e5_ae%20display%201.webp",
-          "alt": "Arbitrary Execution screens",
-          "wide": false
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/66f64fb2ff62e47413342b9e_ae%20display%202.webp",
-          "alt": "Arbitrary Execution screens",
-          "wide": false
-        }
-      ],
-      "body": "## Overview\n\nArbitrary Execution is a specialist cybersecurity firm offering research, advisory, and offensive security services to enterprise clients.\n\nThe project was a new website built from scratch, to establish a credible web presence and attract the kind of clients that take security seriously.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the site.\n\nThe work included:\n- Developing a refined, editorial visual direction, deliberately different from the dark, aggressive look typical of the cybersecurity space\n- Designing all core pages: homepage, services, and about\n- Structuring content to demonstrate expertise through specificity rather than buzzwords\n- Creating a Figma component library for developer handoff\n\n## Outcome\n\nThe site gave Arbitrary Execution a distinctive, authoritative presence, one that set them apart from the competition and spoke credibly to enterprise security buyers.",
-      "liveUrl": "https://www.arbitraryexecution.com",
-      "workUrl": "/work.html#arbitrary-execution"
-    },
-    {
-      "slug": "tedx",
-      "title": "TEDx Website",
-      "tag": "Website design",
-      "year": "2024",
-      "description": "Website design for a TEDx event.",
-      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627d2f8ea3cc642ed88fa72f_tedx-small-thumb.webp",
-      "scope": "Website design",
-      "role": "Lead Designer",
-      "client": "TEDx",
-      "featured": false,
-      "summary": "Website design for a TEDx event, built to generate excitement and drive ticket sales.",
-      "gallery": [
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/5ebf5515e4440534a20c5e11_tedx-website-widescreen.webp",
-          "alt": "TEDx Website — website",
-          "wide": true
-        },
-        {
-          "type": "slider",
-          "before": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627e751058fd9b1006be614c_tedx-website-responsive.webp",
-          "after": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/627b720d302b1f86f6689d81_tedx-website-widescreen.jpg"
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6706a425646deb0cd9694ec3_tedx%20display%201.webp",
-          "alt": "TEDx Website screens",
-          "wide": false
-        },
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6706a43bdbd8d14c9b4cab11_tedx%20display%202.webp",
-          "alt": "TEDx Website screens",
-          "wide": false
-        }
-      ],
-      "body": "## Overview\n\nTEDx events bring the TED Ideas Worth Spreading format to local communities. The project was a custom website for a TEDx event, built to generate excitement, communicate the programme, and drive ticket sales.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the site.\n\nThe work included:\n- Designing a bold, event-forward homepage that led with speakers and themes\n- Building out event, schedule, and ticketing pages\n- Creating a design that honoured the TED brand while feeling locally rooted and specific to this event\n- Minimising friction between first impression and ticket purchase\n\n## Outcome\n\nThe event sold out. The organising team credited the website as a key driver of awareness and ticket sales.",
-      "liveUrl": "https://www.tedx.com",
-      "workUrl": "/work.html#tedx"
-    },
-    {
       "slug": "deepdub",
       "title": "Deepdub",
       "tag": "Website redesign",
@@ -423,29 +309,6 @@
       "body": "## Overview\n\nDeepdub is an AI-powered dubbing platform that helps media companies, streaming services, and content creators localise video content into any language at scale, fast, accurately, and with natural-sounding results.\n\nThe project was a complete website revamp. The existing site was dated and didn't reflect the quality or ambition of the product. The goal was to bring the design in line with where the brand was heading, confident, modern, and built for enterprise buyers.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site, from initial concepts through to final Webflow delivery.\n\nThe work included:\n- Defining a refreshed visual direction: tighter typography, a cleaner layout system, and a colour palette that felt premium without being cold\n- Designing all core pages: homepage, product pages, use case pages, and pricing\n- Creating a component library in Figma, structured for efficient Webflow development\n- Collaborating closely with the developer throughout the build to ensure everything translated cleanly from design to code\n\n## Outcome\n\nThe new site gave Deepdub a significantly stronger first impression, one that matched the sophistication of the product it was representing.\n\n> \"I recently collaborated with Arch Web Design and was thoroughly impressed by their professionalism and the quality of their work. Their ability to deliver a high-quality, intuitive website exceeded my expectations.\"\n>\n>, Zivit Katz, VP Marketing, Deepdub",
       "liveUrl": "https://www.deepdub.ai",
       "workUrl": "/work/deepdub"
-    },
-    {
-      "slug": "mode",
-      "title": "Mode",
-      "tag": "Website design",
-      "year": "2024",
-      "description": "Website for a data analytics and business intelligence platform.",
-      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f20f0d15ab491aaafa7ae0_Hero%20mockup%201%20(9).webp",
-      "scope": "Website design",
-      "role": "Lead Designer",
-      "client": "Mode",
-      "featured": false,
-      "summary": "Website redesign for a post-quantum encrypted team communication platform.",
-      "gallery": [
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f20f0d15ab491aaafa7ae0_Hero%20mockup%201%20(9).webp",
-          "alt": "Mode website",
-          "wide": true
-        }
-      ],
-      "body": "## Overview\n\nMode is a secure team communication platform with post-quantum encryption, built for businesses where the cost of a data breach is simply too high.\n\nThe project was a full website redesign to bring the brand in line with the product's ambition. The existing site communicated the right idea but didn't look the part.\n\n## What I did\n\nI led the visual design for the new site from concept through to final delivery.\n\nThe work included:\n- Developing a clean, structured visual direction that matched the seriousness of the product\n- Designing the homepage and core product pages\n- Replacing generic imagery with custom-illustrated visuals that communicated security without being clichéd\n- Structuring the content hierarchy to build trust at each scroll\n\n## Outcome\n\nThe redesigned site positions Mode as a credible, forward-thinking security platform, one that looks as solid as the technology behind it.",
-      "liveUrl": "https://mode.com",
-      "workUrl": "/work.html#mode"
     },
     {
       "slug": "cold-email",
@@ -555,75 +418,6 @@
       "workUrl": "/work.html#teamclass"
     },
     {
-      "slug": "uptrail",
-      "title": "Uptrail",
-      "tag": "Website design",
-      "year": "2024",
-      "description": "Website for a talent acquisition and recruiting platform.",
-      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64d516d953768fc1b25effe6_Hero%20mockup%201%20(8).webp",
-      "scope": "Website design",
-      "role": "Lead Designer",
-      "client": "Uptrail",
-      "featured": false,
-      "summary": "Website design for Uptrail, a talent acquisition platform for modern recruiting teams.",
-      "gallery": [
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64d516d953768fc1b25effe6_Hero%20mockup%201%20(8).webp",
-          "alt": "Uptrail website",
-          "wide": true
-        }
-      ],
-      "body": "## Overview\n\nUptrail is a talent acquisition platform that helps recruiting teams manage candidates and collaborate more effectively. The project was a website redesign to sharpen their positioning.\n\n## Challenge\n\nThe recruiting tech market is saturated. Uptrail needed to communicate what made their approach different, particularly their focus on collaboration and candidate experience.\n\n## Solution\n\nI built the site around the recruiter's journey, showing how Uptrail fits into existing workflows rather than asking teams to change everything.\n\n## Results\n\nComing soon.",
-      "liveUrl": "https://www.uptrail.com",
-      "workUrl": "/work.html#uptrail"
-    },
-    {
-      "slug": "purple-farm-genetics",
-      "title": "Purple Farm Genetics",
-      "tag": "Branding, Website",
-      "year": "2024",
-      "description": "Brand and website for an agricultural genetics company.",
-      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6232064fa008ca6d85f4e50f_Thumnail-min.webp",
-      "scope": "Branding, Website design",
-      "role": "Lead Designer",
-      "client": "Purple Farm Genetics",
-      "featured": false,
-      "summary": "Brand identity and website design for Purple Farm Genetics, an agricultural genetics company.",
-      "gallery": [
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6232064fa008ca6d85f4e50f_Thumnail-min.webp",
-          "alt": "Purple Farm Genetics website",
-          "wide": true
-        }
-      ],
-      "body": "## Overview\n\nPurple Farm Genetics is an agricultural genetics company developing improved plant varieties. The project was a brand identity and website to establish their presence.\n\n## Challenge\n\nAgriculture is a traditional industry, but genetics is modern science. The brand needed to bridge both worlds, credible to farmers and scientists alike.\n\n## Solution\n\nI developed a brand that felt grounded and natural while communicating precision and innovation. The website followed the same principle, accessible language, clean design, strong photography.\n\n## Results\n\nComing soon.",
-      "liveUrl": "https://www.purplefarmgenetics.com",
-      "workUrl": "/work.html#purple-farm-genetics"
-    },
-    {
-      "slug": "piiano",
-      "title": "Piiano",
-      "tag": "Website design",
-      "year": "2024",
-      "description": "Website for a data privacy vault and infrastructure company.",
-      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f213554202dbf7fda1b213_Hero%20mockup%201%20(4).webp",
-      "scope": "Website design",
-      "role": "Lead Designer",
-      "client": "Piiano",
-      "featured": false,
-      "summary": "Website redesign for a developer infrastructure platform that protects sensitive data.",
-      "gallery": [
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/64f213554202dbf7fda1b213_Hero%20mockup%201%20(4).webp",
-          "alt": "Piiano website",
-          "wide": true
-        }
-      ],
-      "body": "## Overview\n\nPiiano builds security infrastructure for developer teams, tools that help engineering teams protect sensitive customer data, prevent breaches, and stay compliant with data privacy regulations.\n\nThe project was a partial website redesign. The site had already been performing well, but parts of it were becoming outdated as the product evolved. The focus on privacy engineering no longer reflected what Piiano had grown into.\n\n## What I did\n\nWorking within the Arch Web Design team, I updated and redesigned the core pages of the site.\n\nThe work included:\n- Updating the visual direction to reflect the product's current positioning\n- Redesigning the homepage and key product pages\n- Improving the hierarchy and clarity of the technical content\n- Ensuring the design felt sophisticated and trustworthy to both developers and security decision-makers\n\n## Outcome\n\nA refined site that better reflects where Piiano is today, clear, credible, and built for an audience that takes data security seriously.",
-      "liveUrl": "https://www.piiano.com",
-      "workUrl": "/work.html#piiano"
-    },
-    {
       "slug": "software-secured",
       "title": "Software Secured",
       "tag": "Website design",
@@ -645,29 +439,6 @@
       "body": "## Overview\n\nSoftware Secured is a penetration testing company based in Canada. They help software companies find vulnerabilities, meet compliance requirements, SOC 2, ISO 27001, PCI, HIPAA, and defend against real-world attacks.\n\nTheir team runs comprehensive manual pentests, finding on average four times more vulnerabilities per engagement than leading automated tools.\n\nThe project was a full website redesign. The existing site had a generic stock photo hero, heavy colour use, disjointed pages, and was underperforming on every conversion metric.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the new site.\n\nThe work included:\n- Replacing stock imagery with custom illustrations and a cleaner visual language\n- Redesigning the homepage, service, and trust pages with a tighter layout and better hierarchy\n- Structuring the content to prioritise credibility signals, methodology, expertise, and proof\n- Building a complete component system in Figma for developer handoff\n\n## Outcome\n\nThe new site significantly improved Software Secured's first impression, a design that speaks directly to security-conscious buyers and reflects the quality of the work behind it.",
       "liveUrl": "https://www.softwaresecured.com",
       "workUrl": "/work.html#software-secured"
-    },
-    {
-      "slug": "rosalyn",
-      "title": "Rosalyn",
-      "tag": "Website design",
-      "year": "2024",
-      "description": "Website for an AI-powered online proctoring and exam integrity platform.",
-      "image": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6308fe8a4b6bcc1eed6e5d8a_Hero-mockup-1-min.webp",
-      "scope": "Website design",
-      "role": "Lead Designer",
-      "client": "Rosalyn",
-      "featured": false,
-      "summary": "Website redesign for an AI-powered online exam proctoring platform.",
-      "gallery": [
-        {
-          "src": "https://cdn.prod.website-files.com/5bb43d0801d72b3ab715469f/6308fe8a4b6bcc1eed6e5d8a_Hero-mockup-1-min.webp",
-          "alt": "Rosalyn website",
-          "wide": true
-        }
-      ],
-      "body": "## Overview\n\nRosalyn is an AI-powered exam proctoring platform built for the era of online education. It helps universities and testing organisations prevent cheating, identity fraud, browser violations, unauthorised materials, while keeping the experience respectful and stress-free for students.\n\nRosalyn is 80% more cost-effective than traditional proctoring solutions and works in low-bandwidth environments, making it genuinely accessible to institutions that need it most.\n\nThe project was a website redesign. The existing visual identity, colours, graphics, and fonts, was in good shape. The issue was the layout and how the product's differentiation was being communicated.\n\n## What I did\n\nWorking within the Arch Web Design team, I redesigned the core pages of the site.\n\nThe work included:\n- Restructuring the page hierarchy to lead with the credibility problem online education faces, then present Rosalyn's solution clearly\n- Improving visual hierarchy throughout to guide visitors toward the key message\n- Refreshing the layout while preserving the brand identity the client was happy with\n- Designing a cleaner path from first impression to conversion\n\n## Outcome\n\nA redesigned site that makes Rosalyn's differentiation clear, and positions it as the modern, accessible alternative to expensive, friction-heavy legacy proctoring tools.",
-      "liveUrl": "https://www.rosalyn.ai",
-      "workUrl": "/work.html#rosalyn"
     },
     {
       "slug": "canvas-envision",
