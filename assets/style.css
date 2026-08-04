@@ -1030,6 +1030,69 @@ h1.display em{
 .wl-card__tag{font-size:13px;color:var(--ink-soft)}
 .wl-card__year{font-size:13px;color:var(--ink-soft);white-space:nowrap}
 
+
+/* wl load more */
+.wl-loadmore-wrap{
+  display:flex;
+  justify-content:center;
+  margin-top:80px;
+}
+.wl-loadmore{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  height:52px;
+  padding:0 32px;
+  border:1px solid var(--line);
+  border-radius:9999px;
+  font-family:"Instrument Sans",sans-serif;
+  font-size:15px;
+  font-weight:500;
+  color:var(--ink-soft);
+  background:transparent;
+  cursor:pointer;
+  transition:color .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
+}
+.wl-loadmore:hover{
+  color:#fdfdfd;
+  border-color:rgba(255,255,255,.3);
+}
+.wl-loadmore svg{
+  transition:transform .3s var(--ease);
+}
+.wl-loadmore:hover svg{
+  transform:translateY(3px);
+}
+.wl-loadmore.is-loading{
+  pointer-events:none;
+  border-color:rgba(255,255,255,.08);
+}
+.wl-loadmore__spinner{
+  width:18px;
+  height:18px;
+  border:2px solid rgba(255,255,255,.15);
+  border-top-color:rgba(255,255,255,.6);
+  border-radius:50%;
+  animation:wlSpin .7s linear infinite;
+  display:inline-block;
+}
+@keyframes wlSpin{to{transform:rotate(360deg)}}
+
+/* wl card enter animation */
+.wl-card{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .5s var(--ease), transform .5s var(--ease);
+}
+.wl-card--visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.wl-card--entering{
+  opacity:0;
+  transform:translateY(24px);
+}
+
 /* wl responsive */
 @media (max-width:1521px){.wl-wrap{padding:0 40px}}
 @media (max-width:720px){

@@ -281,43 +281,102 @@
   function renderWorkListing(projects, site){
     document.title = 'Work — '+(site.name||'');
     const main = document.getElementById('caseContent');
+    const PAGE = 6;
+    const STATIC = ['canvas-envision','deepdub','highspire','emma','hike-seo','design-leadership-network'];
 
-    function buildCards(list){
-      return list.map(p=>{
-        const staticP = ['canvas-envision', 'deepdub', 'highspire', 'emma', 'hike-seo', 'design-leadership-network'];
-        const href = staticP.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
-        return '<a class="wl-card" href="'+href+'" data-reveal>'
-          + '<div class="wl-card__img"><img src="'+esc(abs(p.image||''))+'" alt="'+esc(p.title||'')+'" loading="lazy" /></div>'
-          + '<div class="wl-card__info">'
-          +   '<div class="wl-card__left">'
-          +     '<span class="wl-card__title">'+esc(p.title||'')+'</span>'
-          +     '<span class="wl-card__tag">'+esc(p.tag||'')+'</span>'
-          +   '</div>'
-          +   '<span class="wl-card__year">'+esc(p.year||'')+'</span>'
-          + '</div>'
-          + '</a>';
-      }).join('');
+    // Featured first, then rest
+    const featured = projects.filter(p=>p.featured);
+    const rest = projects.filter(p=>!p.featured);
+    const ordered = [...featured, ...rest];
+    let shown = 0;
+
+    function buildCard(p){
+      const href = STATIC.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
+      return '<a class="wl-card" href="'+href+'">'
+        + '<div class="wl-card__img"><img src="'+esc(abs(p.image||''))+'" alt="'+esc(p.title||'')+'" loading="lazy" /></div>'
+        + '<div class="wl-card__info">'
+        +   '<div class="wl-card__left">'
+        +     '<span class="wl-card__title">'+esc(p.title||'')+'</span>'
+        +     '<span class="wl-card__tag">'+esc(p.tag||'')+'</span>'
+        +   '</div>'
+        +   '<span class="wl-card__year">'+esc(p.year||'')+'</span>'
+        + '</div>'
+        + '</a>';
     }
 
-    // Split into two columns — odd-indexed left, even-indexed right (offset)
-    const colA = projects.filter((_, i) => i % 2 === 0);
-    const colB = projects.filter((_, i) => i % 2 === 1);
+    function addCards(batch, animate){
+      const colA = document.getElementById('wlColA');
+      const colB = document.getElementById('wlColB');
+      if(!colA||!colB) return;
+      const cards = [];
+      batch.forEach((p,i)=>{
+        const col = i%2===0 ? colA : colB;
+        const el = document.createElement('a');
+        el.className = 'wl-card' + (animate ? ' wl-card--entering' : ' wl-card--visible');
+        el.href = STATIC.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
+        el.innerHTML = '<div class="wl-card__img"><img src="'+esc(abs(p.image||''))+'" alt="'+esc(p.title||'')+'" loading="lazy" /></div>'
+          + '<div class="wl-card__info"><div class="wl-card__left"><span class="wl-card__title">'+esc(p.title||'')+'</span><span class="wl-card__tag">'+esc(p.tag||'')+'</span></div><span class="wl-card__year">'+esc(p.year||'')+'</span></div>';
+        col.appendChild(el);
+        cards.push(el);
+      });
+      if(animate){
+        requestAnimationFrame(()=>requestAnimationFrame(()=>{
+          cards.forEach((c,i)=>setTimeout(()=>c.classList.add('wl-card--visible'),i*80));
+        }));
+      }
+    }
+
+    function updateBtn(){
+      const btn = document.getElementById('wlLoadMore');
+      if(!btn) return;
+      if(shown>=ordered.length){ btn.style.display='none'; return; }
+      btn.disabled=false;
+      btn.classList.remove('is-loading');
+      btn.innerHTML='Load more work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>';
+    }
+
+    const first = ordered.slice(0,PAGE);
+    shown = first.length;
+    const hasMore = ordered.length > PAGE;
 
     main.innerHTML =
       '<section class="wl-hero">'
       +   '<div class="wl-wrap">'
       +     '<p class="wl-eyebrow" data-reveal>All projects</p>'
-      +     '<h1 class="wl-heading" data-reveal>A look at the work<br>I\'ve <em>helped shape</em></h1>'
+      +     '<h1 class="wl-heading" data-reveal>A look at the work<br>I&#39;ve <em>helped shape</em></h1>'
       +   '</div>'
       + '</section>'
       + '<section class="wl-main">'
       +   '<div class="wl-wrap">'
       +     '<div class="wl-list">'
-      +       '<div class="wl-col wl-col--offset">'+buildCards(colA)+'</div>'
-      +       '<div class="wl-col">'+buildCards(colB)+'</div>'
+      +       '<div class="wl-col wl-col--offset" id="wlColA"></div>'
+      +       '<div class="wl-col" id="wlColB"></div>'
       +     '</div>'
+      +     (hasMore ? '<div class="wl-loadmore-wrap"><button class="wl-loadmore" id="wlLoadMore" type="button">Load more work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button></div>' : '')
       +   '</div>'
       + '</section>';
+
+    addCards(first, false);
+
+    const btn = document.getElementById('wlLoadMore');
+    if(btn){
+      btn.addEventListener('click',()=>{
+        btn.disabled=true;
+        btn.classList.add('is-loading');
+        btn.innerHTML='<span class="wl-loadmore__spinner"></span>';
+        setTimeout(()=>{
+          const next = ordered.slice(shown, shown+PAGE);
+          shown += next.length;
+          addCards(next, true);
+          updateBtn();
+          // Scroll to first new card
+          setTimeout(()=>{
+            const allCards = document.querySelectorAll('.wl-card');
+            if(allCards[shown-next.length]) allCards[shown-next.length].scrollIntoView({behavior:'smooth',block:'start'});
+          }, next.length*80+100);
+        }, 500);
+      });
+    }
   }
 
   function renderNotFound(){
