@@ -281,14 +281,12 @@
   function renderWorkListing(projects, site){
     document.title = 'Work — '+(site.name||'');
     const main = document.getElementById('caseContent');
-    const PAGE = 6;
     const STATIC = ['canvas-envision','deepdub','highspire','emma','hike-seo','design-leadership-network'];
 
     // Featured first, then rest
     const featured = projects.filter(p=>p.featured);
     const rest = projects.filter(p=>!p.featured);
     const ordered = [...featured, ...rest];
-    let shown = 0;
 
     function buildCard(p){
       const href = STATIC.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
@@ -304,42 +302,8 @@
         + '</a>';
     }
 
-    function addCards(batch, animate){
-      const colA = document.getElementById('wlColA');
-      const colB = document.getElementById('wlColB');
-      if(!colA||!colB) return;
-      const cards = [];
-      // Use total cards already in DOM to decide which column
-      const offset = colA.children.length + colB.children.length;
-      batch.forEach((p,i)=>{
-        const col = (offset+i)%2===0 ? colA : colB;
-        const el = document.createElement('a');
-        el.className = 'wl-card' + (animate ? ' wl-card--entering' : ' wl-card--visible');
-        el.href = STATIC.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
-        el.innerHTML = '<div class="wl-card__img"><img src="'+esc(abs(p.image||''))+'" alt="'+esc(p.title||'')+'" loading="lazy" /></div>'
-          + '<div class="wl-card__info"><div class="wl-card__left"><span class="wl-card__title">'+esc(p.title||'')+'</span><span class="wl-card__tag">'+esc(p.tag||'')+'</span></div><span class="wl-card__year">'+esc(p.year||'')+'</span></div>';
-        col.appendChild(el);
-        cards.push(el);
-      });
-      if(animate){
-        requestAnimationFrame(()=>requestAnimationFrame(()=>{
-          cards.forEach((c,i)=>setTimeout(()=>c.classList.add('wl-card--visible'),i*80));
-        }));
-      }
-    }
-
-    function updateBtn(){
-      const btn = document.getElementById('wlLoadMore');
-      if(!btn) return;
-      if(shown>=ordered.length){ btn.style.display='none'; return; }
-      btn.disabled=false;
-      btn.classList.remove('is-loading');
-      btn.innerHTML='Load more work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>';
-    }
-
-    const first = ordered.slice(0,PAGE);
-    shown = first.length;
-    const hasMore = ordered.length > PAGE;
+    const colA = ordered.filter((_,i)=>i%2===0);
+    const colB = ordered.filter((_,i)=>i%2===1);
 
     main.innerHTML =
       '<section class="wl-hero">'
@@ -351,34 +315,19 @@
       + '<section class="wl-main">'
       +   '<div class="wl-wrap">'
       +     '<div class="wl-list">'
-      +       '<div class="wl-col wl-col--offset" id="wlColA"></div>'
-      +       '<div class="wl-col" id="wlColB"></div>'
+      +       '<div class="wl-col wl-col--offset">'+colA.map(buildCard).join('')+'</div>'
+      +       '<div class="wl-col">'+colB.map(buildCard).join('')+'</div>'
       +     '</div>'
-      +     (hasMore ? '<div class="wl-loadmore-wrap"><button class="wl-loadmore" id="wlLoadMore" type="button">Load more work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button></div>' : '')
       +   '</div>'
       + '</section>';
 
-    addCards(first, false);
-
-    const btn = document.getElementById('wlLoadMore');
-    if(btn){
-      btn.addEventListener('click',()=>{
-        btn.disabled=true;
-        btn.classList.add('is-loading');
-        btn.innerHTML='<span class="wl-loadmore__spinner"></span>';
-        setTimeout(()=>{
-          const next = ordered.slice(shown, shown+PAGE);
-          shown += next.length;
-          addCards(next, true);
-          updateBtn();
-          // Scroll to first new card
-          setTimeout(()=>{
-            const allCards = document.querySelectorAll('.wl-card');
-            if(allCards[shown-next.length]) allCards[shown-next.length].scrollIntoView({behavior:'smooth',block:'start'});
-          }, next.length*80+100);
-        }, 500);
+    // Scroll-reveal each card as it enters the viewport
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('wl-card--visible'); obs.unobserve(e.target); }
       });
-    }
+    },{threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+    main.querySelectorAll('.wl-card').forEach(c=>obs.observe(c));
   }
 
   function renderNotFound(){
