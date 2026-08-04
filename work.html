@@ -425,8 +425,9 @@
       const [site, proj] = await Promise.all([loadJSON('/data/site.json'), loadJSON('/data/projects.json')]);
       renderChrome(site);
       const list = proj.projects||[];
+      const featured = list.filter(p => p.featured);
       if(!slug){
-        renderWorkListing(list, site);
+        renderWorkListing(featured, site);
       } else {
         const p = list.find(x=>x.slug===slug);
         if(!p) renderWorkListing(list, site);
