@@ -1,1 +1,10 @@
-/work/*    /work.html    200
+# Static case study pages — served as real HTML files
+/work/canvas-envision    /work/canvas-envision.html    200
+/work/deepdub            /work/deepdub.html            200
+/work/highspire          /work/highspire.html          200
+/work/emma               /work/emma.html               200
+/work/hike-seo           /work/hike-seo.html           200
+/work/design-leadership-network  /work/design-leadership-network.html  200
+
+# Fallback for all other /work/* routes (hidden projects)
+/work/*                  /work.html                    200

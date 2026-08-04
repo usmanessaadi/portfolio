@@ -208,7 +208,7 @@
 
     // more projects
     const others = allProjects.filter(x=>x.slug!==p.slug).slice(0,3);
-    const moreCards = others.map(op=>'<a class="wcard" href="work.html#'+esc(op.slug||'')+'" data-reveal>'
+    const moreCards = others.map(op=>'<a class="wcard" href="'+(['canvas-envision', 'deepdub', 'highspire', 'emma', 'hike-seo', 'design-leadership-network'].indexOf(op.slug)>=0?'/work/'+op.slug:'work.html#'+esc(op.slug||''))+('" data-reveal>'
       + '<div class="wcard__img"><img src="'+esc(abs(op.image||''))+'" alt="'+esc(op.title||'')+'" loading="lazy"/></div>'
       + '<div class="wcard__info">'
       +   '<div class="wcard__left"><span class="wcard__title">'+esc(op.title||'')+'</span>'
@@ -281,7 +281,8 @@
 
     function buildCards(list){
       return list.map(p=>{
-        const href = 'work.html#'+esc(p.slug||'');
+        const staticP = ['canvas-envision', 'deepdub', 'highspire', 'emma', 'hike-seo', 'design-leadership-network'];
+        const href = staticP.indexOf(p.slug)>=0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
         return '<a class="wl-card" href="'+href+'" data-reveal>'
           + '<div class="wl-card__img"><img src="'+esc(abs(p.image||''))+'" alt="'+esc(p.title||'')+'" loading="lazy" /></div>'
           + '<div class="wl-card__info">'

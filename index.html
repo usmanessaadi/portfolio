@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Otmane Essaadi — UX/UI Designer</title>
-<meta name="description" content="UX/UI Designer with 6+ years and 150+ projects. Based in Marrakech, open to full-time and part-time remote roles. Specialising in SaaS, marketing websites and design systems." />
+<meta name="description" content="Otmane Essaadi is a UX/UI Designer based in Marrakech, shaping digital products, websites and design systems with clarity and character. Open for full-time and part-time opportunities." />
 <meta name="robots" content="index, follow" />
 
 <!-- Open Graph -->
@@ -303,7 +303,9 @@
     const card = (p) => {
       const isSoon = p.tag === 'Soon';
       const tag = isSoon ? 'div' : 'a';
-      const hrefAttr = isSoon ? '' : ' href="work.html#'+esc(p.slug || '')+'"';
+      const staticPages = ['canvas-envision', 'deepdub', 'highspire', 'emma', 'hike-seo', 'design-leadership-network'];
+      const workHref = staticPages.indexOf(p.slug) >= 0 ? '/work/'+p.slug : 'work.html#'+esc(p.slug||'');
+      const hrefAttr = isSoon ? '' : ' href="'+workHref+'"';
       const titleHTML = esc(p.title || '') + (isSoon ? ' <span class="work__badge">Soon</span>' : '');
       return '<'+tag+' class="work__card" data-reveal'+hrefAttr+'>'
         + '<div class="work__figure"><img src="'+esc(p.image || '')+'" alt="'+esc(p.title || '')+'" loading="lazy" /></div>'
