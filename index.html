@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Otmane Essaadi — UX/UI Designer</title>
-<meta name="description" content="Otmane Essaadi is a UX/UI Designer based in Marrakech, shaping digital products, websites and design systems with clarity and character. Open for full-time and part-time opportunities." />
+<title>Otmane Essaadi | UX/UI Designer</title>
+<meta name="description" content="UX/UI Designer helping SaaS and B2B teams turn complex ideas into clear, conversion-ready websites, interfaces and developer-ready design systems." />
 <meta name="robots" content="index, follow" />
 
 <!-- Open Graph -->
@@ -21,7 +21,6 @@
 <meta name="twitter:title" content="Otmane Essaadi — UX/UI Designer" />
 <meta name="twitter:description" content="UX/UI Designer based in Marrakech, shaping digital products, websites and design systems with clarity and character." />
 <meta name="twitter:image" content="https://otmane.design/assets/img/highspire/mockup-3.webp" />
-<meta name="description" content="Product designer & engineer." />
 <meta name="theme-color" content="#121417" />
 <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 <link rel="apple-touch-icon" href="assets/img/favicon.png" />
@@ -41,6 +40,7 @@
 </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader__imgs" id="loaderImgs"></div>
@@ -62,7 +62,7 @@
           <span class="nav__role" data-role-title></span>
         </div>
         <div class="nav__links">
-          <a href="work.html" class="nav__link--desktop">Work</a>
+          <a href="#work" class="nav__link--desktop">Selected work</a>
           <a href="#kindwords" class="nav__link--desktop">Kind words</a>
           <a href="#" class="nav__link--desktop" data-nav-resume>Resume</a>
           <a href="#" class="nav__cta" data-nav-cta>Get in touch</a>
@@ -77,7 +77,7 @@
 
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <div class="mobile-menu__links">
-        <a href="work.html">Work</a>
+        <a href="#work">Selected work</a>
         <a href="#kindwords">Kind words</a>
         <a href="#" data-mobile-resume>Resume</a>
       </div>
@@ -88,18 +88,19 @@
       </div>
     </div>
 
-    <div class="hero__inner">
+    <main class="hero__inner" id="main-content">
       <span class="hero__badge" data-reveal>
         Previously Lead Designer at <em>Arch Web Design</em>
       </span>
       <h1 class="display" data-reveal data-headline></h1>
+      <p class="hero__statement" data-reveal>Product, web and design-system work that teams can confidently build.</p>
       <div class="hero__bottom">
         <div class="hero__meta" data-reveal data-meta></div>
         <div class="hero__photo" data-reveal>
           <img src="assets/img/portrait.webp" alt="Portrait of Otmane Essaadi" loading="eager" />
         </div>
       </div>
-    </div>
+    </main>
   </header>
 
   <section class="slider">
@@ -146,15 +147,11 @@
       <div class="kindwords__article" data-reveal>
         <span class="kindwords__date">June 8, 2026 — reference letter</span>
         <blockquote class="kindwords__quote">
-          <p>To Whom It May Concern,</p>
-          <p>It's my genuine pleasure to write this reference for Otmane Essaadi. Otmane has been with Arch Web Design since day one, over six years ago, and that alone tells you more than anything I could write in this letter.</p>
           <p>He joined us as a Junior UX Designer and grew into our Lead Designer role, earning it every step of the way. He has the skills and experience to design any website, app or marketing material you can dream up. Over six years, he's delivered close to 150 projects for our clients.</p>
-          <p>But honestly, what I'll remember most isn't the technical output. It's the person. Otmane is truly an amazing person. He's kind, caring, honest, loyal and truly cares about the work he's putting out. Anytime I reach out to him, he's there and he genuinely loves what he does. That combination, real technical skills plus the kind of character you can actually count on, is something that's extremely hard to find these days. I've been truly grateful to have him on this team.</p>
-          <p>Most recently, Otmane played a key role in our push to integrate AI into our workflows, helping us work smarter and build better. He embraced it fully and made the whole team better for it.</p>
-          <p>The last thing I want to mention is how Otmane embodies all of our company values: love (for our team and our clients), work smarter not harder, proactive, going above and beyond, we not me.</p>
-          <p>Any team that brings Otmane on board is getting someone special. I can't recommend him highly enough.</p>
-          <p>Sincerely</p>
         </blockquote>
+        <a class="kindwords__link" href="https://drive.google.com/file/d/1XlR3CCmjpRQ0XWfE2bCJECdwpQb5hz2L/view?usp=sharing" target="_blank" rel="noopener">Read full reference letter
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
         <div class="kindwords__footer">
           <div class="kindwords__author">
             <span class="kindwords__author-name">Rhami Aboud</span>
@@ -169,7 +166,7 @@
 
   <footer class="contact">
     <div class="contact__wrap">
-      <span class="contact__label" data-reveal>Let's work together</span>
+      <span class="contact__label" data-reveal>Start a conversation</span>
       <a href="#" class="contact__email" data-contact-email data-reveal></a>
       <div class="contact__row" data-reveal>
         <div class="contact__meta">
@@ -201,7 +198,7 @@
 
   function renderSite(s){
     document.querySelectorAll('[data-name]').forEach(el => el.textContent = s.name || 'Your Name');
-    document.title = (s.name ? s.name + ' — ' : '') + (s.role_title || 'Product Designer + Engineer');
+    document.title = (s.name ? s.name + ' | ' : '') + (s.role_title || 'UX/UI Designer');
     document.querySelectorAll('[data-role-title]').forEach(el => el.textContent = s.role_title || '');
     const yearEl = document.querySelector('[data-year]');
     if(yearEl) yearEl.textContent = new Date().getFullYear();
@@ -227,10 +224,10 @@
 
     const h = document.querySelector('[data-headline]');
     if(h){
-      const pre  = esc(s.headline_pre || '');
-      const city = s.headline_city ? '<em>'+esc(s.headline_city)+'</em>' : '';
-      const lines = Array.isArray(s.headline_lines) ? s.headline_lines.map(esc) : [];
-      h.innerHTML = pre + city + '.' + (lines.length ? '<br>' + lines.join('<br>') : '');
+      const pre = esc(s.headline_pre || '');
+      const emphasis = s.headline_city ? '<em>'+esc(s.headline_city)+'</em>' : '';
+      const bridge = Array.isArray(s.headline_lines) && s.headline_lines.length ? esc(s.headline_lines[0]) : '';
+      h.innerHTML = pre + (bridge ? '<br>' + bridge + ' ' : '') + emphasis + '.';
     }
 
     const meta = document.querySelector('[data-meta]');
@@ -300,6 +297,14 @@
     const colB = document.querySelector('[data-work-col-b]');
     if(!colA || !colB) return;
 
+    const yearOverrides = {
+      'design-leadership-network': '2026',
+      'deepdub': '2026',
+      'emma': '2024',
+      'highspire': '2025',
+      'canvas-envision': '2026'
+    };
+
     const card = (p) => {
       const isSoon = p.tag === 'Soon';
       const tag = isSoon ? 'div' : 'a';
@@ -312,7 +317,7 @@
         + '<div class="work__caption">'
         +   '<div class="work__row">'
         +     '<span class="work__title">'+titleHTML+'</span>'
-        +     '<span class="work__year">'+esc(p.year || '')+'</span>'
+        +     '<span class="work__year">'+esc(yearOverrides[p.slug] || p.year || '')+'</span>'
         +   '</div>'
         +   '<p class="work__desc">'+esc(p.summary || p.description || '')+'</p>'
         + '</div>'

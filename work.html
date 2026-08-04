@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Work — Otmane Essaadi</title>
+<title>Work | Otmane Essaadi</title>
 <meta name="description" content="Selected work by Otmane Essaadi — UX/UI Designer based in Marrakech. Website design, digital product design, and design systems for clients worldwide." />
 <meta name="robots" content="index, follow" />
 <meta property="og:type" content="website" />
@@ -192,7 +192,7 @@
   }
 
   function renderCase(p, allProjects, site){
-    document.title = (p.title||'Case study')+' — '+(site.name||'');
+    document.title = (p.title||'Case study')+' | '+(site.name||'');
     const main = document.getElementById('caseContent');
 
     // facts dl
@@ -274,12 +274,14 @@
       + (bodyHTML || sliderHTML ? '<section class="cs-body"><div class="cs-body__wrap"><div class="prose" data-reveal>'+reformatProse(bodyHTML)+'</div>'+(sliderHTML ? '<h2 class="cs-section-heading" data-reveal>Before &amp; After</h2>'+sliderHTML : '')+'</div></section>' : '')
       + (moreCards ? '<section class="cs-more"><div class="cs-more__wrap"><h2 class="cs-section-heading" data-reveal>More projects</h2><div class="cs-more__list">'+moreCards+'</div></div></section>' : '');
 
+    if(window.UI && window.UI.addOwnershipDisclosure) window.UI.addOwnershipDisclosure(main);
+
     // Init sliders after DOM is set
     initSliders();
   }
 
   function renderWorkListing(projects, site){
-    document.title = 'Work — '+(site.name||'');
+    document.title = 'Work | '+(site.name||'');
     const main = document.getElementById('caseContent');
     const STATIC = ['canvas-envision','deepdub','highspire','emma','hike-seo','design-leadership-network'];
 
