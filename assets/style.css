@@ -1976,6 +1976,11 @@ h1.display em{
   letter-spacing:-.035em;
   color:#fdfdfd;
 }
+.canvas-case__metric-value--coverage{
+  max-width:9ch;
+  font-size:28px;
+  line-height:.95;
+}
 .canvas-case__metric-label{
   margin-top:12px;
   font-size:13px;
