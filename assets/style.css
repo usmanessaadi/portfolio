@@ -1894,6 +1894,12 @@ h1.display em{
   box-shadow:none;
   clip-path:inset(0 2px 2px 0);
 }
+.canvas-case__row-image figcaption{
+  margin:12px 0 0;
+  font-size:12px;
+  line-height:1.4;
+  color:rgba(253,253,253,.5);
+}
 .canvas-case__workflow-row .prose-row__title h2{max-width:10ch}
 .canvas-case__workflows{
   display:grid;
