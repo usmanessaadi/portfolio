@@ -2010,6 +2010,9 @@ h1.display em{
   justify-content:flex-end;
   background:rgba(255,255,255,.035);
 }
+.canvas-case__metrics--delivery .canvas-case__metric{
+  background:rgba(255,255,255,.06);
+}
 .canvas-case__metric-value{
   font-family:"Newsreader","Georgia",serif;
   font-size:40px;
