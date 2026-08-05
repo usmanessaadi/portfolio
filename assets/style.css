@@ -1894,6 +1894,24 @@ h1.display em{
   box-shadow:none;
   clip-path:inset(0 2px 2px 0);
 }
+.canvas-case__workflow-row .prose-row__title h2{max-width:10ch}
+.canvas-case__workflows{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+  margin-top:36px;
+}
+.canvas-case__workflow h3{
+  margin:0;
+  font-size:17px;
+  line-height:1.25;
+  color:#fdfdfd;
+}
+.canvas-case__workflow p{
+  margin-top:12px!important;
+  font-size:14px!important;
+  line-height:1.6!important;
+}
 .canvas-case__decisions{
   margin-top:120px;
   padding:0;
@@ -1949,6 +1967,7 @@ h1.display em{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:24px;
+  margin:48px 0 0;
   overflow:visible;
 }
 .canvas-case__design-system figure{
@@ -1956,16 +1975,18 @@ h1.display em{
   min-width:0;
 }
 .canvas-case__design-system figcaption{
-  margin:0 0 10px;
+  margin:12px 0 0;
   font-size:12px;
-  line-height:1.2;
-  color:rgba(253,253,253,.38);
+  line-height:1.4;
+  color:rgba(253,253,253,.5);
 }
-.canvas-case__design-frame{
-  padding:28px 18%;
-  background:rgba(255,255,255,.018);
+.canvas-case__design-system img{
+  clip-path:none;
+  background:transparent;
+  border:0;
+  outline:0;
+  box-shadow:none;
 }
-.canvas-case__design-frame img{clip-path:none}
 .canvas-case__prose--closing{margin-top:120px}
 .canvas-case__metrics{margin-top:40px}
 .canvas-case__metrics-title{
@@ -1998,9 +2019,9 @@ h1.display em{
   color:#fdfdfd;
 }
 .canvas-case__metric-value--coverage{
-  max-width:9ch;
   font-size:28px;
   line-height:.95;
+  white-space:nowrap;
 }
 .canvas-case__metric-label{
   margin-top:12px;
@@ -2041,6 +2062,8 @@ h1.display em{
   .canvas-case__hero .cs-title-row{align-items:flex-start}
   .canvas-case__hero .cs-live-link{margin:0}
   .canvas-case__row-image{margin-top:28px}
+  .canvas-case__workflow-row .prose-row__title h2{max-width:none}
+  .canvas-case__workflows{grid-template-columns:1fr;gap:28px;margin-top:28px}
   .canvas-case__figure--wide{margin:48px -20px 0}
   .canvas-case__decisions{margin-top:80px}
   .canvas-case__decisions > h2{font-size:28px;max-width:none}
@@ -2067,11 +2090,10 @@ h1.display em{
   .canvas-case__decision p{margin-top:12px}
   .canvas-case__story-image{margin:64px -20px 0}
   .canvas-case__design-system{
-    margin:64px 0 0;
+    margin:48px 0 0;
     grid-template-columns:1fr;
     gap:16px;
   }
-  .canvas-case__design-frame{padding:18px 8%}
   .canvas-case__prose--closing{margin-top:80px}
   .canvas-case__metrics{margin-top:32px}
   .canvas-case__metrics-grid{grid-template-columns:1fr;gap:8px}
