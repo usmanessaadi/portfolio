@@ -356,7 +356,7 @@ h1.display em{
   text-underline-offset:.16em;
 }
 .hero__statement{
-  width:100%;
+  width:30%;
   margin:28px 0 0;
   font-family:"Instrument Sans",system-ui,sans-serif;
   font-size:clamp(18px,1.8vw,26px);
@@ -1553,6 +1553,7 @@ h1.display em{
   .contact__wrap{padding:0 20px}
 
   h1.display{font-size:clamp(36px,9vw,56px)}
+  .hero__statement{width:100%}
 
   .hero{padding-top:128px}
   .hero__meta{grid-template-columns:repeat(2,1fr);column-gap:16px;width:100%}
