@@ -293,7 +293,8 @@
   }
 
   function renderWork(list){
-    list = list.slice().sort((a, b) => a.slug === 'canvas-envision' ? -1 : b.slug === 'canvas-envision' ? 1 : 0);
+    const projectPriority = {'canvas-envision': 0, 'emma': 1};
+    list = list.slice().sort((a, b) => (projectPriority[a.slug] ?? 2) - (projectPriority[b.slug] ?? 2));
     const colA = document.querySelector('[data-work-col-a]');
     const colB = document.querySelector('[data-work-col-b]');
     if(!colA || !colB) return;
@@ -325,9 +326,28 @@
         + '</'+tag+'>';
     };
 
-    const mid = Math.ceil(list.length / 2);
-    colA.innerHTML = list.slice(0, mid).map(card).join('');
-    colB.innerHTML = list.slice(mid).map(card).join('');
+    const isSingleColumn = window.matchMedia('(max-width: 720px)').matches;
+    if(isSingleColumn){
+      colA.innerHTML = list.map(card).join('');
+      colB.innerHTML = '';
+    }else{
+      const firstProject = list.find((p) => p.slug === 'canvas-envision');
+      const secondProject = list.find((p) => p.slug === 'emma');
+      const remainingProjects = list.filter((p) => p !== firstProject && p !== secondProject);
+      const leftRestCount = Math.ceil(remainingProjects.length / 2);
+      const leftProjects = (firstProject ? [firstProject] : []).concat(remainingProjects.slice(0, leftRestCount));
+      const rightProjects = (secondProject ? [secondProject] : []).concat(remainingProjects.slice(leftRestCount));
+      colA.innerHTML = leftProjects.map(card).join('');
+      colB.innerHTML = rightProjects.map(card).join('');
+    }
+
+    if(!window.__workOrderResponsive){
+      window.__workOrderResponsive = true;
+      window.matchMedia('(max-width: 720px)').addEventListener('change', () => {
+        renderWork(list);
+        document.querySelectorAll('.work__card[data-reveal]').forEach((el) => el.classList.add('in'));
+      });
+    }
   }
 
   function setupFX(){
