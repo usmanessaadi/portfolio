@@ -1945,6 +1945,16 @@ h1.display em{
   box-shadow:none;
   clip-path:inset(0 2px 2px 0);
 }
+.canvas-case__design-system{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  overflow:visible;
+}
+.canvas-case__design-system figure{
+  margin:0;
+  min-width:0;
+}
 .canvas-case__prose--closing{margin-top:120px}
 .canvas-case__metrics{margin-top:40px}
 .canvas-case__metrics-title{
@@ -2045,6 +2055,10 @@ h1.display em{
   }
   .canvas-case__decision p{margin-top:12px}
   .canvas-case__story-image{margin:64px -20px 0}
+  .canvas-case__design-system{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
   .canvas-case__prose--closing{margin-top:80px}
   .canvas-case__metrics{margin-top:32px}
   .canvas-case__metrics-grid{grid-template-columns:1fr;gap:8px}
