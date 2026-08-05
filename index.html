@@ -293,6 +293,7 @@
   }
 
   function renderWork(list){
+    list = list.slice().sort((a, b) => a.slug === 'canvas-envision' ? -1 : b.slug === 'canvas-envision' ? 1 : 0);
     const colA = document.querySelector('[data-work-col-a]');
     const colB = document.querySelector('[data-work-col-b]');
     if(!colA || !colB) return;
@@ -490,7 +491,7 @@
           const [site, services, proj] = await Promise.all([
             loadJSON('data/site.json'),
             loadJSON('data/services.json'),
-            loadJSON('data/projects.json'),
+            loadJSON('data/projects.json?v=canvas-home-20260805'),
           ]);
           renderSite(site);
           renderServices(services.services || []);

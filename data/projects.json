@@ -449,7 +449,7 @@
       "client": "Canvas Envision Inc.",
       "year": "2026",
       "featured": true,
-      "image": "/assets/img/canvas-envision/thumbnail.webp",
+      "image": "/assets/img/canvas-envision/ce-thumbnail.webp",
       "liveUrl": "https://www.canvasgfx.com/",
       "summary": "Website redesign for an AI platform that turns PDFs and videos into interactive work instructions for manufacturers.",
       "body": "## Overview\n\nCanvas Envision is a manufacturing software platform that uses AI to turn PDFs, videos, and 3D models into interactive, digital work instructions. It helps manufacturers move away from disconnected, paper-based documentation, making it faster to create, update, and push accurate instructions to the frontline.\n\nThe project was a full website redesign. The existing site had structural problems throughout: a confusing mega menu, weak CTAs, an outdated template look, and separate legacy and current sites running side by side.\n\n## What I did\n\nWorking within the Arch Web Design team, I led the visual design for the rebuilt site.\n\nThe work included:\n- Developing a clean, modern visual direction that reflects the platform's technical innovation\n- Restructuring the site architecture: platform, solutions, use cases, and resources, each with a clear role\n- Designing all core pages with strong, consistent CTAs and a visual language that reads as precise and forward-thinking\n- Building a full component library in Figma for developer handoff\n\n## Outcome\n\nA fully rebuilt web presence that gives Canvas Envision a platform worthy of the product, clear, credible, and ready to speak to manufacturers who are serious about modernising their operations.",
