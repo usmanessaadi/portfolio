@@ -2056,6 +2056,7 @@ h1.display em{
   .canvas-case__decision p{margin-top:12px}
   .canvas-case__story-image{margin:64px -20px 0}
   .canvas-case__design-system{
+    margin:64px 0 0;
     grid-template-columns:1fr;
     gap:16px;
   }
