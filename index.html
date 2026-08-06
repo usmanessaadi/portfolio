@@ -511,7 +511,7 @@
           const [site, services, proj] = await Promise.all([
             loadJSON('data/site.json'),
             loadJSON('data/services.json'),
-            loadJSON('data/projects.json?v=canvas-home-20260805'),
+            loadJSON('data/projects.json?v=portfolio-20260806'),
           ]);
           renderSite(site);
           renderServices(services.services || []);
