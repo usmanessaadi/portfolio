@@ -100,11 +100,12 @@
 
   <section class="slider">
     <div class="slider__frame" id="sliderFrame">
-      <img class="slider__img is-active" src="assets/img/slides/01.webp" alt="" />
-      <img class="slider__img" src="assets/img/slides/02.webp" alt="" />
+      <img class="slider__img is-active" src="assets/img/slides/02.webp" alt="" />
+      <img class="slider__img" src="assets/img/slides/01.webp" alt="" />
       <img class="slider__img" src="assets/img/slides/03.webp" alt="" />
       <img class="slider__img" src="assets/img/slides/04.webp" alt="" />
-      <img class="slider__img" src="assets/img/jollyseo/hero.webp" alt="" />
+      <img class="slider__img" src="assets/img/slides/05.webp" alt="" />
+      <img class="slider__img" src="assets/img/slides/06.webp" alt="" />
       <button class="slider__btn" id="sliderToggle" type="button" aria-label="Pause slideshow" aria-pressed="false">
         <svg class="slider__ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20"/></svg>
         <svg class="slider__icon slider__icon--pause" viewBox="0 0 10 12"><rect x="0" y="0" width="3" height="12"/><rect x="7" y="0" width="3" height="12"/></svg>
@@ -369,7 +370,7 @@
     const ring = frame.querySelector('.slider__ring');
     if(!imgs.length || !btn || !ring) return;
 
-    const DURATION = 3000;
+    const DURATION = 2000;
     const CIRCUMFERENCE = 126;
     let idx = 0, timer = null, paused = false;
     let elapsed = 0, lastTs = null, rafId = null;
