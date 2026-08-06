@@ -322,6 +322,7 @@
         +     '<span class="work__year">'+esc(yearOverrides[p.slug] || p.year || '')+'</span>'
         +   '</div>'
         +   '<p class="work__desc">'+esc(p.summary || p.description || '')+'</p>'
+        +   (isSoon ? '' : '<span class="work__case-link">View full case study <span class="work__case-arrow" aria-hidden="true">↗</span></span>')
         + '</div>'
         + '</'+tag+'>';
     };

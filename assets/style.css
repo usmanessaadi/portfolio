@@ -691,6 +691,32 @@ h1.display em{
   color:rgba(253,253,253,.65);
   max-width:400px;
 }
+.work__case-link{
+  display:inline-flex;
+  align-items:center;
+  align-self:flex-start;
+  gap:7px;
+  margin-top:12px;
+  padding-bottom:3px;
+  border-bottom:1px solid rgba(253,253,253,.28);
+  font-family:"Instrument Sans",system-ui,sans-serif;
+  font-size:13px;
+  font-weight:500;
+  line-height:1.35;
+  color:rgba(253,253,253,.82);
+  transition:color .3s var(--ease),border-color .3s var(--ease);
+}
+.work__case-arrow{
+  display:inline-block;
+  transition:transform .3s var(--ease);
+}
+.work__card:hover .work__case-link,
+.work__card:focus-visible .work__case-link{
+  color:#fdfdfd;
+  border-color:#aea8fe;
+}
+.work__card:hover .work__case-arrow,
+.work__card:focus-visible .work__case-arrow{transform:translate(2px,-2px)}
 
 /* ---------- work grid ---------- */
 .grid{margin-top:10px;display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
