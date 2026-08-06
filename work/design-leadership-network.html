@@ -20,6 +20,19 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/style.css" />
+<style>
+.dln-dash-full{width:100%;border-radius:4px;margin-top:40px;display:block;}
+.dln-dash-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;}
+.dln-dash-pair img{width:100%;border-radius:4px;}
+.dln-styleguide{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px;margin-bottom:12px;}
+.dln-styleguide img{width:100%;border-radius:4px;}
+.dln-fig{display:block;}
+.dln-fig figcaption,.dln-styleguide-wrap figcaption{margin:12px 0 0;font-size:12px;line-height:1.4;color:rgba(253,253,253,.5);}
+@media(max-width:720px){
+  .dln-dash-pair{grid-template-columns:1fr;}
+  .dln-styleguide{grid-template-columns:1fr;}
+}
+</style>
 <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 <link rel="apple-touch-icon" href="/assets/img/favicon.png" />
 <script type="text/javascript">
@@ -90,16 +103,26 @@
           <section class="prose-row"><div class="prose-row__title"><h2>Overview</h2></div><div class="prose-row__content">
             <p>Design Leadership Network is a professional membership organisation serving principals and leaders of architecture, interior design, landscape architecture, and related creative fields across North America. For 19 years, it has built community through events, resources, collaboration, and peer connection in the high-end design industry.</p>
             <p>The engagement combined a full marketing-website redesign with a new member dashboard. Prospective members and partners needed to understand the value of the network, while existing members needed one place to discover content, manage their profiles, find peers, and participate in events.</p>
+            <img src="/assets/img/dln/overview.webp" alt="Design Leadership Network website overview" loading="lazy" style="width:100%;margin-top:32px;border-radius:4px;" />
           </div></section>
 
           <section class="prose-row"><div class="prose-row__title"><h2>The challenge</h2></div><div class="prose-row__content">
             <p>The existing WordPress experience was slow and fragmented. Event registration relied on separate CVENT microsites, the member portal lived outside the main website, content was difficult to search, and the experience did not translate consistently to mobile.</p>
             <p>DLN already had a strong brand identity, but its digital presence did not communicate the credibility, inspiration, connection, and longevity behind the organisation. The new experience needed to feel premium and intentional without making an established members-only community feel unwelcoming.</p>
+            <p>Finding the right visual direction took several rounds. The client reviewed multiple distinct approaches before we reached a direction everyone was confident in, which then became the foundation for the full build.</p>
+            <figure class="dln-fig" style="margin-top:32px;">
+              <img src="/assets/img/dln/the-problem.webp" alt="Multiple visual directions explored before reaching the final design" loading="lazy" style="width:100%;border-radius:4px;" />
+              <figcaption>Several distinct visual directions were explored and presented before the client settled on a final approach.</figcaption>
+            </figure>
           </div></section>
 
           <section class="prose-row"><div class="prose-row__title"><h2>Approach</h2></div><div class="prose-row__content">
             <p>Working within the Arch Web Design team, I led the visual design of the marketing website and designed the member-dashboard experience in parallel. I worked within DLN&rsquo;s existing brand guide, presented the work directly to the client, and refined both experiences through feedback.</p>
             <p>The website introduced clearer routes for events, membership, resources, the directory, and DLN&rsquo;s story. The interface was also designed around planned Mailchimp, MemberClicks, and Authorize.net integrations supporting communications, membership management, and payments; implementation of those systems was outside my design scope.</p>
+            <figure class="dln-fig" style="margin-top:32px;">
+              <img src="/assets/img/dln/sitemap-dln.webp" alt="DLN website sitemap showing page structure and navigation" loading="lazy" style="width:100%;border-radius:4px;" />
+              <figcaption>A clearer sitemap gave membership, events, resources, the directory, and company content distinct destinations.</figcaption>
+            </figure>
           </div></section>
 
           <section class="prose-row canvas-case__workflow-row"><div class="prose-row__title"><h2>Member dashboard</h2></div><div class="prose-row__content">
@@ -110,16 +133,29 @@
               <article class="canvas-case__workflow"><h3>Events</h3><p>All events, personal events, individual event pages, registration pathways, and calendar views.</p></article>
               <article class="canvas-case__workflow"><h3>Content library</h3><p>Resources, bookmarks, and dedicated experiences for audio, video, and document content.</p></article>
             </div>
+            <img src="/assets/img/dln/dash1.webp" alt="DLN dashboard home screen" loading="lazy" class="dln-dash-full" />
+            <div class="dln-dash-pair">
+              <img src="/assets/img/dln/dash2.webp" alt="DLN messages screen" loading="lazy" />
+              <img src="/assets/img/dln/dash3.webp" alt="DLN member profile screen" loading="lazy" />
+            </div>
           </div></section>
         </div>
 
         <div class="prose canvas-case__prose canvas-case__prose--closing">
           <section class="prose-row"><div class="prose-row__title"><h2>What shipped</h2></div><div class="prose-row__content">
             <p>The final design delivery covered the complete responsive marketing website and a member dashboard spanning more than 20 desktop and mobile screens.</p>
+            <figure class="dln-styleguide-wrap">
+              <div class="dln-styleguide">
+                <img src="/assets/img/dln/styleguide.webp" alt="DLN colour and interface style guide" loading="lazy" />
+                <img src="/assets/img/dln/styleguide-typo.webp" alt="DLN typography style guide" loading="lazy" />
+                <img src="/assets/img/dln/styleguide-typo-rules.webp" alt="DLN typography rules" loading="lazy" />
+              </div>
+              <figcaption>Shared colour tokens, typography scale, spacing rules, and component patterns kept the website and dashboard visually consistent across 30+ screens.</figcaption>
+            </figure>
             <div class="canvas-case__metrics canvas-case__metrics--delivery" aria-label="Design delivery scale">
               <h3 class="canvas-case__metrics-title">Delivery scale</h3>
               <div class="canvas-case__metrics-grid">
-                <div class="canvas-case__metric"><span class="canvas-case__metric-value">20+</span><span class="canvas-case__metric-label">Dashboard screens</span></div>
+                <div class="canvas-case__metric"><span class="canvas-case__metric-value">30+</span><span class="canvas-case__metric-label">Dashboard screens &amp; website pages</span></div>
                 <div class="canvas-case__metric"><span class="canvas-case__metric-value canvas-case__metric-value--coverage">Website + product</span><span class="canvas-case__metric-label">Connected experience</span></div>
                 <div class="canvas-case__metric"><span class="canvas-case__metric-value canvas-case__metric-value--coverage">Desktop + mobile</span><span class="canvas-case__metric-label">Responsive coverage</span></div>
               </div>
