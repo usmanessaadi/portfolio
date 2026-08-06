@@ -160,13 +160,112 @@
     window.setInterval(update, 30000);
   }
 
-  window.UI = { setupCursor: setupCursor, runLoader: runLoader, setupMarrakechClock: setupMarrakechClock };
+  /* ---------- optional analytics consent ---------- */
+  var ANALYTICS_CONSENT_KEY = 'otmane-analytics-consent';
+
+  function getAnalyticsConsent() {
+    try { return window.localStorage.getItem(ANALYTICS_CONSENT_KEY); }
+    catch (err) { return null; }
+  }
+
+  function applyAnalyticsConsent(value) {
+    if (typeof window.clarity !== 'function') return;
+    window.clarity('consentv2', {
+      ad_Storage: 'denied',
+      analytics_Storage: value === 'granted' ? 'granted' : 'denied'
+    });
+  }
+
+  function saveAnalyticsConsent(value) {
+    try { window.localStorage.setItem(ANALYTICS_CONSENT_KEY, value); }
+    catch (err) { /* Continue in cookieless mode when storage is unavailable. */ }
+    applyAnalyticsConsent(value);
+  }
+
+  function setupAnalyticsConsent() {
+    if (document.getElementById('analyticsConsent')) return;
+
+    var savedChoice = getAnalyticsConsent();
+    if (savedChoice === 'granted' || savedChoice === 'denied') {
+      applyAnalyticsConsent(savedChoice);
+    }
+
+    var banner = document.createElement('section');
+    banner.className = 'analytics-consent';
+    banner.id = 'analyticsConsent';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Analytics choices');
+    banner.hidden = Boolean(savedChoice);
+    banner.innerHTML =
+      '<div class="analytics-consent__copy">' +
+        '<p>I use optional Microsoft Clarity analytics to understand whether my case studies are clear and engaging. Your choice won\'t affect access.</p>' +
+      '</div>' +
+      '<div class="analytics-consent__actions">' +
+        '<button class="analytics-consent__button analytics-consent__button--primary" type="button" data-analytics-choice="granted">Allow analytics</button>' +
+        '<button class="analytics-consent__button analytics-consent__button--quiet" type="button" data-analytics-choice="denied">Continue without</button>' +
+      '</div>';
+    document.body.appendChild(banner);
+
+    function showBanner() {
+      banner.hidden = false;
+      banner.classList.remove('is-leaving');
+      window.requestAnimationFrame(function () {
+        banner.classList.add('is-visible');
+      });
+      var firstChoice = banner.querySelector('[data-analytics-choice="granted"]');
+      if (firstChoice) firstChoice.focus({ preventScroll: true });
+    }
+
+    function hideBanner() {
+      banner.classList.remove('is-visible');
+      banner.classList.add('is-leaving');
+      window.setTimeout(function () {
+        banner.hidden = true;
+        banner.classList.remove('is-leaving');
+      }, 240);
+    }
+
+    banner.addEventListener('click', function (event) {
+      var choice = event.target.closest('[data-analytics-choice]');
+      if (!choice) return;
+      saveAnalyticsConsent(choice.getAttribute('data-analytics-choice'));
+      hideBanner();
+    });
+
+    var footerMeta = document.querySelector('.contact__meta');
+    if (footerMeta) {
+      var preferences = document.createElement('button');
+      preferences.className = 'analytics-preferences';
+      preferences.type = 'button';
+      preferences.textContent = 'Analytics choices';
+      preferences.addEventListener('click', showBanner);
+      footerMeta.appendChild(preferences);
+    }
+
+    if (!savedChoice) {
+      window.requestAnimationFrame(function () {
+        banner.classList.add('is-visible');
+      });
+    }
+  }
+
+  window.UI = {
+    setupCursor: setupCursor,
+    runLoader: runLoader,
+    setupMarrakechClock: setupMarrakechClock,
+    setupAnalyticsConsent: setupAnalyticsConsent
+  };
 
   // Cursor is independent of everything else — start it as soon as the DOM exists.
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () { setupCursor(); setupMarrakechClock(document); });
+    document.addEventListener('DOMContentLoaded', function () {
+      setupCursor();
+      setupMarrakechClock(document);
+      setupAnalyticsConsent();
+    });
   } else {
     setupCursor();
     setupMarrakechClock(document);
+    setupAnalyticsConsent();
   }
 })();
