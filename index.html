@@ -293,8 +293,8 @@
   }
 
   function renderWork(list){
-    const projectPriority = {'canvas-envision': 0, 'emma': 1};
-    list = list.slice().sort((a, b) => (projectPriority[a.slug] ?? 2) - (projectPriority[b.slug] ?? 2));
+    const projectPriority = {'canvas-envision': 0, 'emma': 1, 'design-leadership-network': 2, 'highspire': 3, 'deepdub': 4};
+    list = list.slice().sort((a, b) => (projectPriority[a.slug] ?? 99) - (projectPriority[b.slug] ?? 99));
     const colA = document.querySelector('[data-work-col-a]');
     const colB = document.querySelector('[data-work-col-b]');
     if(!colA || !colB) return;
@@ -331,12 +331,8 @@
       colA.innerHTML = list.map(card).join('');
       colB.innerHTML = '';
     }else{
-      const firstProject = list.find((p) => p.slug === 'canvas-envision');
-      const secondProject = list.find((p) => p.slug === 'emma');
-      const remainingProjects = list.filter((p) => p !== firstProject && p !== secondProject);
-      const leftRestCount = Math.ceil(remainingProjects.length / 2);
-      const leftProjects = (firstProject ? [firstProject] : []).concat(remainingProjects.slice(0, leftRestCount));
-      const rightProjects = (secondProject ? [secondProject] : []).concat(remainingProjects.slice(leftRestCount));
+      const leftProjects = list.filter((_, index) => index % 2 === 0);
+      const rightProjects = list.filter((_, index) => index % 2 === 1);
       colA.innerHTML = leftProjects.map(card).join('');
       colB.innerHTML = rightProjects.map(card).join('');
     }
@@ -511,7 +507,7 @@
           const [site, services, proj] = await Promise.all([
             loadJSON('data/site.json'),
             loadJSON('data/services.json'),
-            loadJSON('data/projects.json?v=portfolio-20260806'),
+            loadJSON('data/projects.json?v=portfolio-20260806-2'),
           ]);
           renderSite(site);
           renderServices(services.services || []);
