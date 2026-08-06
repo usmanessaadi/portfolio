@@ -293,7 +293,7 @@
   }
 
   function renderWork(list){
-    const projectPriority = {'canvas-envision': 0, 'emma': 1, 'design-leadership-network': 2, 'highspire': 3, 'deepdub': 4};
+    const projectPriority = {'canvas-envision': 0, 'emma': 1, 'design-leadership-network': 2, 'highspire': 3, 'deepdub': 4, 'hike-seo': 5};
     list = list.slice().sort((a, b) => (projectPriority[a.slug] ?? 99) - (projectPriority[b.slug] ?? 99));
     const colA = document.querySelector('[data-work-col-a]');
     const colB = document.querySelector('[data-work-col-b]');
@@ -507,7 +507,7 @@
           const [site, services, proj] = await Promise.all([
             loadJSON('data/site.json'),
             loadJSON('data/services.json'),
-            loadJSON('data/projects.json?v=portfolio-20260806-2'),
+            loadJSON('data/projects.json?v=portfolio-20260806-3'),
           ]);
           renderSite(site);
           renderServices(services.services || []);
