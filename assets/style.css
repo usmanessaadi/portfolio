@@ -1271,6 +1271,32 @@ h1.display em{
 .prose pre code{background:none;padding:0}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2.5em 0}
 
+/* Emma case-study client feedback */
+.emma-case__testimonial{margin:clamp(36px,5vw,64px) 0 0}
+.prose-row__content .emma-case__testimonial blockquote{
+  margin:0;
+  padding:0;
+  border:0;
+  font-family:"Newsreader","Georgia",serif;
+  font-size:clamp(30px,4.4vw,58px);
+  font-weight:300;
+  font-style:normal;
+  line-height:1.05;
+  letter-spacing:-.035em;
+  color:transparent;
+  background:linear-gradient(90deg,#ebe1b0 0%,#aea8fe 88%);
+  -webkit-background-clip:text;
+  background-clip:text;
+}
+.emma-case__testimonial figcaption{
+  margin-top:24px;
+  font-size:14px;
+  line-height:1.55;
+  color:rgba(253,253,253,.82);
+}
+.emma-case__testimonial figcaption span{color:rgba(253,253,253,.48)}
+@media (max-width:720px){.emma-case__testimonial{margin-top:32px}}
+
 .notfound{padding:200px 0;text-align:center}
 .notfound h1{font-family:"Newsreader","Georgia",serif;font-weight:300;font-size:48px;letter-spacing:-.04em;color:#fdfdfd}
 .notfound p{margin-top:16px;color:var(--ink-soft)}
