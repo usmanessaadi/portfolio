@@ -293,7 +293,7 @@
   }
 
   function renderWork(list){
-    const projectPriority = {'canvas-envision': 0, 'emma': 1, 'design-leadership-network': 2, 'highspire': 3, 'deepdub': 4, 'hike-seo': 5};
+    const projectPriority = {'canvas-envision': 0, 'deepdub': 1, 'design-leadership-network': 2, 'emma': 3, 'hike-seo': 4, 'highspire': 5};
     list = list.slice().sort((a, b) => (projectPriority[a.slug] ?? 99) - (projectPriority[b.slug] ?? 99));
     const colA = document.querySelector('[data-work-col-a]');
     const colB = document.querySelector('[data-work-col-b]');
