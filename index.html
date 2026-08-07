@@ -289,7 +289,7 @@
   }
 
   function renderWork(list){
-    const projectPriority = {'canvas-envision': 0, 'deepdub': 1, 'design-leadership-network': 2, 'emma': 3, 'hike-seo': 4, 'highspire': 5};
+    const projectPriority = {'design-leadership-network': 0, 'canvas-envision': 1, 'emma': 2, 'deepdub': 3, 'hike-seo': 4, 'highspire': 5};
     list = list.slice().sort((a, b) => (projectPriority[a.slug] ?? 99) - (projectPriority[b.slug] ?? 99));
     const colA = document.querySelector('[data-work-col-a]');
     const colB = document.querySelector('[data-work-col-b]');
@@ -311,14 +311,15 @@
       const hrefAttr = isSoon ? '' : ' href="'+workHref+'"';
       const titleHTML = esc(p.title || '') + (isSoon ? ' <span class="work__badge">Soon</span>' : '');
       return '<'+tag+' class="work__card" data-reveal'+hrefAttr+'>'
-        + '<div class="work__figure"><img src="'+esc(p.image || '')+'" alt="'+esc(p.title || '')+'" loading="lazy" /></div>'
+        + '<div class="work__figure"><img src="'+esc(p.image || '')+'" alt="'+esc(p.title || '')+'" loading="lazy" />'
+        +   (isSoon ? '' : '<span class="work__case-link">View full case study <span class="work__case-arrow" aria-hidden="true">↗</span></span>')
+        + '</div>'
         + '<div class="work__caption">'
         +   '<div class="work__row">'
         +     '<span class="work__title">'+titleHTML+'</span>'
         +     '<span class="work__year">'+esc(yearOverrides[p.slug] || p.year || '')+'</span>'
         +   '</div>'
         +   '<p class="work__desc">'+esc(p.summary || p.description || '')+'</p>'
-        +   (isSoon ? '' : '<span class="work__case-link">View full case study <span class="work__case-arrow" aria-hidden="true">↗</span></span>')
         + '</div>'
         + '</'+tag+'>';
     };
