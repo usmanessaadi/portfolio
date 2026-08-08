@@ -1299,6 +1299,59 @@ h1.display em{
 .prose pre code{background:none;padding:0}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2.5em 0}
 
+/* prose — single captioned image row */
+.prose-row-image{margin:2em 0!important;overflow:hidden;background:transparent}
+.prose-row-image img{display:block;width:100%;height:auto;margin:0}
+.prose-row-image figcaption{margin:12px 0 0;font-size:12px;line-height:1.4;color:rgba(253,253,253,.5)}
+
+/* prose — two-up captioned image pair */
+.prose-image-pair{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin:2em 0!important;
+}
+.prose-image-pair figure{margin:0;min-width:0}
+.prose-image-pair img{display:block;width:100%;height:auto;margin:0}
+.prose-image-pair figcaption{margin:12px 0 0;font-size:12px;line-height:1.4;color:rgba(253,253,253,.5)}
+
+/* prose — stat cards (e.g. "Delivery scale") */
+.cs-stats{margin:2em 0!important}
+.cs-stats-title{
+  margin:0 0 20px;
+  font-family:"Instrument Sans",system-ui,sans-serif;
+  font-size:13px;
+  font-weight:500;
+  color:#fdfdfd;
+}
+.cs-stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.cs-stat{
+  min-height:144px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:rgba(255,255,255,.06);
+}
+.cs-stat__value{
+  font-family:"Newsreader","Georgia",serif;
+  font-size:40px;
+  font-weight:300;
+  line-height:1;
+  letter-spacing:-.035em;
+  color:#fdfdfd;
+}
+.cs-stat__label{
+  margin-top:12px;
+  font-size:13px;
+  line-height:1.3;
+  color:rgba(253,253,253,.78);
+}
+
 /* Emma case-study client feedback */
 .emma-case__testimonial{margin:clamp(36px,5vw,64px) 0 0}
 .prose-row__content .emma-case__testimonial blockquote{
@@ -1700,6 +1753,10 @@ h1.display em{
   .cs-more{padding:64px 0}
   .cs-more__list{grid-template-columns:1fr;gap:48px}
   .cs-cover-wrap{margin-top:48px}
+  .prose-image-pair{grid-template-columns:1fr;gap:28px}
+  .cs-stats-grid{grid-template-columns:1fr;gap:8px}
+  .cs-stat{min-height:128px;padding:18px}
+  .cs-stat__value{font-size:34px}
 }
 
 /* ---------- responsive ---------- */

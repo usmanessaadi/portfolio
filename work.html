@@ -208,7 +208,7 @@
 
     // more projects
     const STATIC_SLUGS = ['canvas-envision','deepdub','highspire','emma','hike-seo','design-leadership-network'];
-    const others = allProjects.filter(x=>x.slug!==p.slug).slice(0,3);
+    const others = allProjects.filter(x=>x.slug!==p.slug && x.featured).slice(0,3);
     const moreCards = others.map(op=>{
       const opHref = STATIC_SLUGS.indexOf(op.slug)>=0 ? '/work/'+op.slug : 'work.html#'+esc(op.slug||'');
       return '<a class="wcard" href="'+opHref+'" data-reveal>'

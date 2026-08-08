@@ -101,6 +101,7 @@
   <section class="slider">
     <div class="slider__frame" id="sliderFrame">
       <img class="slider__img is-active" src="assets/img/slides/02.webp" alt="" />
+      <img class="slider__img" src="assets/img/lifesten/cover.webp" alt="" />
       <img class="slider__img" src="assets/img/slides/01.webp" alt="" />
       <img class="slider__img" src="assets/img/slides/03.webp" alt="" />
       <img class="slider__img" src="assets/img/slides/04.webp" alt="" />
@@ -289,7 +290,7 @@
   }
 
   function renderWork(list){
-    const projectPriority = {'design-leadership-network': 0, 'canvas-envision': 1, 'emma': 2, 'deepdub': 3, 'hike-seo': 4, 'highspire': 5};
+    const projectPriority = {'design-leadership-network': 0, 'canvas-envision': 1, 'emma': 2, 'lifesten': 3, 'deepdub': 4, 'highspire': 5};
     list = list.slice().sort((a, b) => (projectPriority[a.slug] ?? 99) - (projectPriority[b.slug] ?? 99));
     const colA = document.querySelector('[data-work-col-a]');
     const colB = document.querySelector('[data-work-col-b]');
