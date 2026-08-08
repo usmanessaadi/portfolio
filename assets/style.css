@@ -1299,6 +1299,10 @@ h1.display em{
 .prose pre code{background:none;padding:0}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2.5em 0}
 
+/* prose-row content that breaks out of the two-column grid to full width */
+.prose-row-full{margin:40px 0 0}
+.prose-row-full .prose-row-image{margin:0!important}
+
 /* prose — single captioned image row */
 .prose-row-image{margin:2em 0!important;overflow:hidden;background:transparent}
 .prose-row-image img{display:block;width:100%;height:auto;margin:0}
