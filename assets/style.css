@@ -1306,7 +1306,7 @@ h1.display em{
 /* prose — single captioned image row */
 .prose-row-image{margin:2em 0!important;overflow:hidden;background:transparent}
 .prose-row-image img{display:block;width:100%;height:auto;margin:0}
-.prose-row-image figcaption{margin:12px 0 0;font-size:12px;line-height:1.4;color:rgba(253,253,253,.5)}
+.prose-row-image figcaption{margin:12px 0 0;font-size:12px;line-height:1.4;color:rgba(253,253,253,.5);text-align:center}
 
 /* prose — two-up captioned image pair */
 .prose-image-pair{
@@ -1317,7 +1317,7 @@ h1.display em{
 }
 .prose-image-pair figure{margin:0;min-width:0}
 .prose-image-pair img{display:block;width:100%;height:auto;margin:0}
-.prose-image-pair figcaption{margin:12px 0 0;font-size:12px;line-height:1.4;color:rgba(253,253,253,.5)}
+.prose-image-pair figcaption{margin:12px 0 0;font-size:12px;line-height:1.4;color:rgba(253,253,253,.5);text-align:center}
 
 /* prose — stat cards (e.g. "Delivery scale") */
 .cs-stats{margin:2em 0!important}
@@ -2168,6 +2168,7 @@ h1.display em{
   font-size:12px;
   line-height:1.4;
   color:rgba(253,253,253,.5);
+  text-align:center;
 }
 .canvas-case__workflow-row .prose-row__title h2{max-width:10ch}
 .canvas-case__workflows{
@@ -2255,6 +2256,7 @@ h1.display em{
   font-size:12px;
   line-height:1.4;
   color:rgba(253,253,253,.5);
+  text-align:center;
 }
 .canvas-case__design-system img{
   clip-path:none;
